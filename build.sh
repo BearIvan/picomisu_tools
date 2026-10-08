@@ -10,7 +10,7 @@
 #   PICOMISU_BOOT     boot image the headset runs (e.g. a Magisk boot read from it); vbmeta carries
 #                     its hash. Default: the factory boot of the pinned OTA.
 #   PICOMISU_VARIANT  userdebug (default) or user
-#   OUT_DIR, PICOMISU_WORK, JOBS
+#   OUT_DIR, PICOMISU_WORK, JOBS (default 8), PICOMISU_CPUS (taskset CPU list, e.g. 0-7)
 # Root steps (read-only loop mounts of the factory/built images) run through sudo.
 set -euo pipefail
 here=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)

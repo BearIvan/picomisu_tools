@@ -6,8 +6,12 @@
 #   PICOMISU_HOST_COMPAT  directory with libncurses.so.5/libtinfo.so.5 for the old prebuilt Clang
 #                     (tools/prepare-host-compat.py; not needed if the host has them)
 #   JOBS              make -j (default 8)
+#   PICOMISU_CPUS     pin the build to these CPUs (taskset list, e.g. 0-7); default: no pinning
 # Default target: systemimage.
 set -eo pipefail
+if [[ -n ${PICOMISU_CPUS:-} && ${PICOMISU_CPU_BOUND:-0} != 1 ]]; then
+    exec env PICOMISU_CPU_BOUND=1 taskset -c "$PICOMISU_CPUS" bash "$0" "$@"
+fi
 cd "${PICOMISU_TREE:-$PWD}"
 test -f build/envsetup.sh -a -d device/pico/PICOA8110 || { echo "not a picomisu checkout: $PWD" >&2; exit 1; }
 test -f device/pico/PICOA8110/factory-libs/factory/lib64/libvraudio.so || {
