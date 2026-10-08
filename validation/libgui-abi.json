@@ -1,0 +1,22 @@
+[
+  {
+    "abi": 64,
+    "factory_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+    "aosp_sha256": "be057d7a4f4a6210f25f282807e0256d9c3d719a76e414b425148ae1f5788f5b",
+    "inspected_factory_elf_count": 493,
+    "changed_vtable_sizes": {},
+    "full_abi_compatibility_proven": false,
+    "consumers_with_missing_symbols": {},
+    "missing_used_symbol_count": 0
+  },
+  {
+    "abi": 32,
+    "factory_sha256": "09e91a368003bf8112abaf4adc98f1a78df9ac88ada3f9c81f1eb12f51e68db0",
+    "aosp_sha256": "10223df945ae2af595449993927765aa9eed51ed02fc69e7d137fecb0563d203",
+    "inspected_factory_elf_count": 0,
+    "changed_vtable_sizes": {},
+    "full_abi_compatibility_proven": false,
+    "consumers_with_missing_symbols": {},
+    "missing_used_symbol_count": null
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "producers": [
+    {
+      "abi": 64,
+      "factory_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+      "source_symbols_sha256": "8821134474dbd6acc30f336dd76ba88b15ec3d80452c8649ac9a06748927c017",
+      "listener_vtable_offset": 272,
+      "listener_slot_identity_matches": true,
+      "source_shape": {
+        "bytes": 328,
+        "fields": {
+          "mCore": 40,
+          "mSlots": 48,
+          "mConsumerName": 56,
+          "mStickyTransform": 64,
+          "mConsumerIsSurfaceFlinger": 68,
+          "mLastQueueBufferFence": 72,
+          "mLastQueuedCrop": 80,
+          "mLastQueuedTransform": 96,
+          "mCallbackMutex": 100,
+          "mNextCallbackTicket": 140,
+          "mCurrentCallbackTicket": 144,
+          "mCallbackCondition": 148,
+          "mDequeueTimeout": 200,
+          "mDequeueWaitingForAllocation": 208,
+          "mDequeueWaitingForAllocationCondition": 212,
+          "mPicoFenceReadyMode": 260,
+          "mBufferCache": 264,
+          "mPicoUnfreezePending": 288,
+          "mPicoSingleLayerDequeues": 304
+        }
+      }
+    },
+    {
+      "abi": 32,
+      "factory_sha256": "09e91a368003bf8112abaf4adc98f1a78df9ac88ada3f9c81f1eb12f51e68db0",
+      "source_symbols_sha256": "78c0a10e82a68376e20c27bfac5147f501373bfcbfcaca9fa02b8a1b25a23b98",
+      "listener_vtable_offset": 136,
+      "listener_slot_identity_matches": true,
+      "source_shape": {
+        "bytes": 136,
+        "fields": {
+          "mCore": 20,
+          "mSlots": 24,
+          "mConsumerName": 28,
+          "mStickyTransform": 32,
+          "mConsumerIsSurfaceFlinger": 36,
+          "mLastQueueBufferFence": 40,
+          "mLastQueuedCrop": 44,
+          "mLastQueuedTransform": 60,
+          "mCallbackMutex": 64,
+          "mNextCallbackTicket": 68,
+          "mCurrentCallbackTicket": 72,
+          "mCallbackCondition": 76,
+          "mDequeueTimeout": 80,
+          "mDequeueWaitingForAllocation": 88,
+          "mDequeueWaitingForAllocationCondition": 92,
+          "mPicoFenceReadyMode": 96,
+          "mBufferCache": 100,
+          "mPicoUnfreezePending": 112,
+          "mPicoSingleLayerDequeues": 120
+        }
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "address": "0x7aa48",
+      "bytes": "12780194",
+      "observation": "listener obtains FreezeManager singleton"
+    },
+    {
+      "address": "0x7aa64",
+      "bytes": "e10313aa",
+      "observation": "self registration key is producer this"
+    },
+    {
+      "address": "0x7aa68",
+      "bytes": "e3031faa",
+      "observation": "self registration argument is null"
+    },
+    {
+      "address": "0x7aa6c",
+      "bytes": "e4031f2a",
+      "observation": "self registration flag is false"
+    },
+    {
+      "address": "0x7aa78",
+      "bytes": "b6780194",
+      "observation": "register self callback"
+    },
+    {
+      "address": "0x7b034",
+      "bytes": "686e40f9",
+      "observation": "callback loads producer flag pointer at 216"
+    },
+    {
+      "address": "0x7b03c",
+      "bytes": "09010039",
+      "observation": "callback sets flag byte"
+    },
+    {
+      "address": "0x7458c",
+      "bytes": "ea100034",
+      "observation": "no queued frame bypasses max-count recovery branch"
+    },
+    {
+      "address": "0x74590",
+      "bytes": "057d55b9",
+      "observation": "read maximum dequeued count"
+    },
+    {
+      "address": "0x74594",
+      "bytes": "3f01056b",
+      "observation": "compare dequeued count with maximum"
+    },
+    {
+      "address": "0x74598",
+      "bytes": "8b100054",
+      "observation": "below maximum bypasses recovery branch"
+    },
+    {
+      "address": "0x745c4",
+      "bytes": "c86e40f9",
+      "observation": "at limit read pending flag pointer"
+    },
+    {
+      "address": "0x745cc",
+      "bytes": "692a0034",
+      "observation": "no pending event returns INVALID_OPERATION"
+    },
+    {
+      "address": "0x74600",
+      "bytes": "8e1140b9",
+      "observation": "candidate uses slot dequeue count at 16"
+    },
+    {
+      "address": "0x7460c",
+      "bytes": "7b038d1a",
+      "observation": "last nonzero dequeue-count slot is retained"
+    },
+    {
+      "address": "0x7467c",
+      "bytes": "29050051",
+      "observation": "cancel one dequeue ownership count"
+    },
+    {
+      "address": "0x74680",
+      "bytes": "090100b9",
+      "observation": "save decremented ownership count"
+    },
+    {
+      "address": "0x74778",
+      "bytes": "28670af9",
+      "observation": "increment free-buffer list size"
+    },
+    {
+      "address": "0x74790",
+      "bytes": "b88f0194",
+      "observation": "assign NO_FENCE to recovered slot"
+    },
+    {
+      "address": "0x747a4",
+      "bytes": "1f010039",
+      "observation": "consume pending flag"
+    },
+    {
+      "address": "0x787a8",
+      "bytes": "1f010039",
+      "observation": "successful queue also clears pending flag"
+    }
+  ],
+  "trigger": "queued frame exists, producer dequeue count reaches maximum, pending self-unfreeze event",
+  "slot_rule": "last active slot with nonzero dequeue count; cancel one, move to free buffers, clear fence",
+  "source_differences": [
+    "shared atomic flag capture avoids raw producer callback access and data race"
+  ],
+  "full_private_type_abi_proven": false,
+  "real_freeze_events_qualified": false,
+  "gpu_fences_qualified": false,
+  "runtime_evidence": "validation/native-runtime-current.json"
+}

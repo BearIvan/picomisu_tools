@@ -1,0 +1,262 @@
+{
+ "fixture": "ShiftedAidlFixture",
+ "prefix": "shifted-aidl",
+ "component_commits": {
+  "frameworks/native": "6492c7e475412061aae739f0693b8abbeae1274e",
+  "frameworks/base": "50ddf37c73e99be728e450432d33214efd5761be",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "decd8cbb75dc68be59b9c95581b5d2b456f88979",
+  "packages/apps/Bluetooth": "7901ce4963d41339794367b85f3c607a4f6cff0e",
+  "packages/services/Telecomm": "6f4c3eafcde6b1fcf6d9cbf3e18cf909515a9401",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "91fc2a5a8522b096754e8312d670e5f711d10247",
+  "packages/services/Telephony": "eb80603f8dea569b5c014c415822e05bf189bd9a",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+  "prebuilts/abi-dumps/vndk": "caff0280e109e265570456a540c7390d1f3acbc2",
+  "packages/apps/Settings": "2cce6b7b8351155f485dd9bffacc13f680181b79",
+  "build/make": "cfcc0fa78c797b7eefb339e82bf3e653243671ba",
+  "system/vold": "31356f7fe637fa7eca84ea8f70a38035367face2",
+  "packages/modules/NetworkStack": "d0ce5f35272d80fa895e1184824aa90a2618ce7a",
+  "packages/apps/Nfc": "6b1d334fc3f55a2a3e2138bb3483a9db4e21deb8"
+ },
+ "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+ "source_framework_sha256": "d3548ef62d6b074a7691b2d6c6b661b90187ef387fc7328fd1541f1ccbafc087",
+ "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+ "package": "outputs/framework-boot-image-test-24",
+ "interfaces": {
+  "android.accounts.IAccountManager": {
+   "methods": 48,
+   "oneway": []
+  },
+  "android.app.INotificationManager": {
+   "methods": 121,
+   "oneway": [
+    "notifyConditions",
+    "setZenMode"
+   ]
+  },
+  "android.app.ITaskStackListener": {
+   "methods": 23,
+   "oneway": [
+    "onActivityDismissingDockedStack",
+    "onActivityForcedResizable",
+    "onActivityLaunchOnSecondaryDisplayFailed",
+    "onActivityLaunchOnSecondaryDisplayRerouted",
+    "onActivityPinned",
+    "onActivityRequestedOrientationChanged",
+    "onActivityUnpinned",
+    "onBackPressedOnTaskRoot",
+    "onPinnedActivityRestartAttempt",
+    "onPinnedStackAnimationEnded",
+    "onPinnedStackAnimationStarted",
+    "onSingleTaskDisplayDrawn",
+    "onSingleTaskDisplayEmpty",
+    "onSizeCompatModeActivityChanged",
+    "onTaskCreated",
+    "onTaskDescriptionChanged",
+    "onTaskDisplayChanged",
+    "onTaskMovedToFront",
+    "onTaskProfileLocked",
+    "onTaskRemovalStarted",
+    "onTaskRemoved",
+    "onTaskSnapshotChanged",
+    "onTaskStackChanged"
+   ]
+  },
+  "android.bluetooth.IBluetoothManager": {
+   "methods": 20,
+   "oneway": []
+  },
+  "android.hardware.biometrics.IBiometricService": {
+   "methods": 11,
+   "oneway": []
+  },
+  "android.hardware.display.IDisplayManager": {
+   "methods": 30,
+   "oneway": []
+  },
+  "android.net.INetworkMonitor": {
+   "methods": 13,
+   "oneway": [
+    "forceReevaluation",
+    "launchCaptivePortalApp",
+    "notifyCaptivePortalAppFinished",
+    "notifyDnsResponse",
+    "notifyLinkPropertiesChanged",
+    "notifyNetworkCapabilitiesChanged",
+    "notifyNetworkConnected",
+    "notifyNetworkDisconnected",
+    "notifyPrivateDnsChanged",
+    "setAcceptPartialConnectivity",
+    "start",
+    "updateDnsEvent",
+    "updateDnsEvents"
+   ]
+  },
+  "android.net.INetworkMonitorCallbacks": {
+   "methods": 6,
+   "oneway": [
+    "hideProvisioningNotification",
+    "notifyNetworkTested",
+    "notifyPrivateDnsConfigResolved",
+    "notifyProbeStatusChanged",
+    "onNetworkMonitorCreated",
+    "showProvisioningNotification"
+   ]
+  },
+  "android.net.ip.IIpClient": {
+   "methods": 14,
+   "oneway": [
+    "addKeepalivePacketFilter",
+    "addNattKeepalivePacketFilter",
+    "completedPreDhcpAction",
+    "confirmConfiguration",
+    "notifyPreconnectionComplete",
+    "readPacketFilterComplete",
+    "removeKeepalivePacketFilter",
+    "setHttpProxy",
+    "setL2KeyAndGroupHint",
+    "setMulticastFilter",
+    "setTcpBufferSizes",
+    "shutdown",
+    "startProvisioning",
+    "stop"
+   ]
+  },
+  "android.net.ip.IIpClientCallbacks": {
+   "methods": 14,
+   "oneway": [
+    "installPacketFilter",
+    "onIpClientCreated",
+    "onLinkPropertiesChange",
+    "onNewDhcpResults",
+    "onPostDhcpAction",
+    "onPreDhcpAction",
+    "onPreconnectionStart",
+    "onProvisioningFailure",
+    "onProvisioningSuccess",
+    "onQuit",
+    "onReachabilityLost",
+    "setFallbackMulticastFilter",
+    "setNeighborDiscoveryOffload",
+    "startReadPacketFilter"
+   ]
+  },
+  "android.nfc.INfcAdapter": {
+   "methods": 28,
+   "oneway": [
+    "invokeBeam",
+    "invokeBeamInternal"
+   ]
+  },
+  "android.os.IInstalld": {
+   "methods": 43,
+   "oneway": []
+  },
+  "android.os.IUserManager": {
+   "methods": 64,
+   "oneway": []
+  },
+  "android.os.IVold": {
+   "methods": 71,
+   "oneway": []
+  },
+  "android.view.IWindow": {
+   "methods": 18,
+   "oneway": [
+    "closeSystemDialogs",
+    "dispatchAppVisibility",
+    "dispatchDragEvent",
+    "dispatchGetNewSurface",
+    "dispatchPointerCaptureChanged",
+    "dispatchSystemUiVisibilityChanged",
+    "dispatchWallpaperCommand",
+    "dispatchWallpaperOffsets",
+    "dispatchWindowShown",
+    "executeCommand",
+    "insetsChanged",
+    "insetsControlChanged",
+    "locationInParentDisplayChanged",
+    "moved",
+    "requestAppKeyboardShortcuts",
+    "resized",
+    "updatePointerIcon",
+    "windowFocusChanged"
+   ]
+  },
+  "com.android.internal.telecom.IConnectionService": {
+   "methods": 34,
+   "oneway": [
+    "abort",
+    "addConnectionServiceAdapter",
+    "addParticipantWithConference",
+    "answer",
+    "answerVideo",
+    "conference",
+    "connectionServiceFocusGained",
+    "connectionServiceFocusLost",
+    "createConnection",
+    "createConnectionComplete",
+    "createConnectionFailed",
+    "deflect",
+    "disconnect",
+    "handoverComplete",
+    "handoverFailed",
+    "hold",
+    "mergeConference",
+    "onCallAudioStateChanged",
+    "onExtrasChanged",
+    "onPostDialContinue",
+    "playDtmfTone",
+    "pullExternalCall",
+    "reject",
+    "rejectWithMessage",
+    "removeConnectionServiceAdapter",
+    "respondToRttUpgradeRequest",
+    "sendCallEvent",
+    "silence",
+    "splitFromConference",
+    "startRtt",
+    "stopDtmfTone",
+    "stopRtt",
+    "swapConference",
+    "unhold"
+   ]
+  },
+  "com.android.internal.telephony.IIccPhoneBook": {
+   "methods": 11,
+   "oneway": []
+  },
+  "com.android.internal.telephony.ISms": {
+   "methods": 31,
+   "oneway": []
+  },
+  "com.android.internal.telephony.ITelephonyRegistry": {
+   "methods": 40,
+   "oneway": []
+  }
+ },
+ "comparison": {
+  "arm64": {
+   "scenarios": 1207,
+   "matched": 1207,
+   "mismatched": {}
+  },
+  "arm": {
+   "scenarios": 1207,
+   "matched": 1207,
+   "mismatched": {}
+  }
+ },
+ "unexpected_differences": [],
+ "factory_run": {
+  "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true
+ },
+ "system_partitions_modified": false
+}

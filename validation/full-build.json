@@ -1,0 +1,99 @@
+{
+ "title": "Full aosp_pico4pro-userdebug droid build after the Settings FaceManager fix",
+ "build_log": "logs/build-fullk-220716.log (ext4 project), m -j8 droid, taskset 0-7",
+ "result": "success, including system.img, check_boot_jars, VNDK header-abi-diff and VINTF",
+ "fixes": {
+  "packages/apps/Settings (0070)": "FaceEnrollSidecar/FaceSettingsAttentionPreferenceController pass mUserId/getUserId() to the factory FaceManager signatures from 0046, exactly as CodeLinaro Settings LA.UM.8.12.c3-64900-sm8250.0 (bc335afb)",
+  "build/make (0071)": "check_boot_jars whitelist lists exactly the 13 ported PICO framework.jar packages",
+  "prebuilts/abi-dumps/vndk (0072)": "libbinder and libstagefright_bufferqueue_helper reference dumps (arm64, arm) regenerated from the Source build"
+ },
+ "vndk_abi_evidence": {
+  "libbinder": "added FreezeManager/IFreezeManager/IUnFreezeCallback/IPCThreadState::getLastFrozenPid symbols are all exported by the factory 5.13.7 vndk-29 libbinder (only libc++ template instantiations differ); IPCThreadState::getLastFrozenPid reads the same field offset as the factory (arm64 #460, arm #244)",
+  "libstagefright_bufferqueue_helper": "IProducerListener/ProducerListener/BnProducerListener vtable sizes equal the factory vndk-29 library on both ABIs (arm64 240/176, arm 120/88/212)",
+  "open_native_parity": "factory vndk-29 libbinder exports ~150 further PICO/Smartisan symbols (e.g. ProcessState::selfForRuntime, mSceneMutex, mMutexSound) that Source lacks; libstagefright_bufferqueue_helper differs in 6 factory-only BufferQueue helpers - stage 3 native parity input"
+ },
+ "stale_outputs_removed": "out/.../system/lib{,64}/libart,libartbase,libartpalette,libdexfile,libprofile,libsigchain.so left by an earlier direct module build (08:31); the runtime APEX copies are used",
+ "system_partitions_modified": false,
+ "rebuild_after_0073_0074": {
+  "build_log": "logs/build-fullk-002436.log (ext4 project), m -j8 droid, taskset 0-7",
+  "result": "success, including system.img and the Metalava system/test API checks",
+  "frameworks/base_commit": "a5dc0b7100549075cf5561fd7aa2f0e98363245d"
+ },
+ "rebuild_after_0075_0087": {
+  "build_log": "logs/build-droid-aidl-014435.log (ext4 project), m -j8 droid -k, taskset 0-7",
+  "result": "success, including system.img and the Metalava system/test API checks",
+  "frameworks/base_commit": "8e0669dec0a74f5c0c49779684d7db7a9120e44c (0079 amended afterwards to 50ddf37c73e99be728e450432d33214efd5761be: probe fixture char/short arguments only, rebuilt with tools/build-framework-runtime.sh)",
+  "new_components": [
+   "system/vold",
+   "packages/modules/NetworkStack",
+   "packages/apps/Nfc"
+  ]
+ },
+ "rebuild_after_0088_0090": {
+  "build_log": "logs/build-fullk-023554.log (ext4 project), m -j8 droid -k, taskset 0-7",
+  "result": "success, including selinux_policy (checkpolicy/secilc neverallow checks, sepolicy_freeze_test, treble_sepolicy_tests 26.0-28.0) and system.img",
+  "system/sepolicy_commit": "b70dcb852d79b48b8698d71b0199482b85910d3a",
+  "device/qcom/sepolicy_commit": "830b6eb97a27468a23fe5e91ef912d4df0d22066 (CodeLinaro LA.UM.8.12.c3-64900-sm8250.0, unmodified)",
+  "system_img_sha256": "3ca5fbdf7cf0c7b0dd9c125d9e1e1e59ecb319d0cffacef37cb77f6f65f80b8f",
+  "new_components": [
+   "system/sepolicy",
+   "device/qcom/sepolicy"
+  ]
+ },
+ "rebuild_after_0091_0096": {
+  "build_log": "logs/build-fullk-032617.log (ext4 project), m -j8 droid -k, taskset 0-7",
+  "targets_log": "logs/build-wk-032331.log: vold vdc init_second_stage init_first_stage libfs_mgr libfscrypt fs_mgr_unit_test checkpoint_gc libkeymaster4support",
+  "result": "success, 0 FAILED, including system.img",
+  "system/vold_commit": "06a50b10bd9f9e398450e4f3ab1ea56fcc6be884",
+  "system/core_commit": "e50e65e1f3878c0816e671407ee81d3d51fc2d88",
+  "system/extras_commit": "72fdb7cfdc0a3a84191e9ebdc48cd8a18b682565",
+  "system_img_sha256": "d44dc4b82e86db4bf5e747733c3b5fe3ca12dbf64ea49973a04271dea0b7b495",
+  "new_components": [
+   "system/core",
+   "system/extras"
+  ],
+  "details": "validation/vold-wrappedkey-port.json"
+ },
+ "rebuild_after_0097_0105": {
+  "build_log": "logs/build-fullk-050332.log (ext4 project), build-vr-bridge.sh -k droid, m -j8, taskset 0-7",
+  "result": "success (droid incl. system.img, check_boot_jars with smartisanos.util, hiddenapi, Metalava API checks for the CodeLinaro ImsUtImplBase system API, NDK/VNDK header-abi-diff)",
+  "abi_references": "prebuilts/abi-dumps/ndk libaaudio (arm64, arm) regenerated for PlayerBase::setExtVolume; PlayerBase/TrackPlayerBase/AAudio MyPlayerBase vtable sizes equal the factory libaudioclient/libaaudio (arm64 440, arm 220)",
+  "runtime_group": "logs/build-app-045728.log: build-framework-runtime.sh services framework-res telephony-common ims-common Settings SystemUI BackupRestoreConfirmation libcamera_client libcameraservice cameraserver libcamera2ndk libaudioclient libaaudio libmediautils libOpenSLES"
+ },
+ "rebuild_after_0106_0109": {
+  "build_log": "logs/build-fullk-055913.log (ext4 project), build-vr-bridge.sh -k droid, m -j8, taskset 0-7",
+  "result": "success (droid incl. system.img, check_boot_jars, hiddenapi, Metalava API check for the public StatsLog.write(int, Object...), statsd with CarStatsPuller, libbluetooth-binder, Bluetooth)",
+  "runtime_group": "logs/build-c4-055241.log: build-framework-runtime.sh services framework-res telephony-common SystemUI Bluetooth statsd libbluetooth-binder Settings"
+ },
+ "rebuild_after_0110_0115": {
+  "build_log": "logs/build-fullk-c5-073200.log (after logs/build-fullk-c5-072348.log -k: libbinder VNDK ABI extension and smartisanos.tnt whitelist fixed by 0112/0110), m -j8 droid -k, taskset 0-7",
+  "result": "success, including the boot image with 21 compiled boot JARs per ABI in the factory order, hiddenapi, check_boot_jars, VNDK header-abi-diff and system.img",
+  "system_img_sha256": "d0d451d6675f9468203e4343405043586b8d2a7255b3e584db9f9490cf9feb5d",
+  "frameworks/base_commit": "bcc8cbf1cbad386c0aede87e444b5437e21ee0d1",
+  "frameworks/native_commit": "a58b15af561dee86af7dc49c958179761de8d3b5",
+  "build/make_commit": "46cb685283889773ef99afb01420309729a07345",
+  "new_components": [
+   "vendor/codeaurora/telephony",
+   "vendor/qcom/opensource/fm-commonsys"
+  ],
+  "bootclasspath": "core-oj:core-libart:okhttp:bouncycastle:apache-xml:sysmonitor-framework:sys-framework:devicemiddlewareimpl:vrex-framework:framework:ext:telephony-common:voip-common:ims-common:android.test.base:tcmiface:telephony-ext:qcom.fmradio:QPerformance:UxPerformance:WfdCommon:conscrypt:updatable-media (= factory)",
+  "systemserverclasspath": "vrex-services:services:ethernet-service:wifi-service:com.android.location.provider (factory without sys-services, sysmonitor-services)"
+ },
+ "rebuild_after_0116_0124": {
+  "build_log": "logs/build-fullk-090250.log (ext4 project), m -j8 droid -k, taskset 0-7",
+  "result": "success (0 FAILED), including system.img and VNDK header-abi-diff (libbinder arm64/arm COMPATIBLE against the regenerated references, new libbinder_call_stat references)",
+  "commits": {
+   "frameworks/native": "611325dad0e3017d966dbe560accf1a2322a59fc",
+   "frameworks/base": "144d2a35fa27e9a06403390f17b594caf21f0287",
+   "frameworks/av": "ffb4075152362ea3ee9f378fe175fa3138527901",
+   "build/make": "d224f24cebae6685c6af9ae7fb22bb4162e29e9b",
+   "prebuilts/abi-dumps/vndk": "f12412c97cf9af30e8145dcd13f12c467ad6870d"
+  },
+  "new_modules": [
+   "libbinder_call_stat (VNDK-SP)",
+   "libspatialaudio",
+   "hwui_pxrguiex_test",
+   "picomisu_binder_parity_probe"
+  ]
+ }
+}

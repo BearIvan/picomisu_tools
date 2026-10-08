@@ -1,0 +1,154 @@
+{
+  "factory_sha256": "9e5bdf585d73baddf17bbc646b4daea0e2b15d4fb6d8dc244d08412dd1be86a9",
+  "source_sha256": "7877f723bff6c334a554a92e303808275a6df3f8b82a84e217dd900e19b9dd4f",
+  "source_arm64_shape": {
+    "bytes": 144,
+    "fields": {
+      "_vptr$FreezeManager": 0,
+      "mCallback": 8,
+      "mServiceMutex": 16,
+      "mService": 56,
+      "mPid": 64,
+      "mOnceRegistry": 72,
+      "mPersistentRegistry": 96,
+      "mSelfRegistry": 120
+    }
+  },
+  "source_arm32_shape": {
+    "bytes": 56,
+    "fields": {
+      "_vptr$FreezeManager": 0,
+      "mCallback": 4,
+      "mServiceMutex": 8,
+      "mService": 12,
+      "mPid": 16,
+      "mOnceRegistry": 20,
+      "mPersistentRegistry": 32,
+      "mSelfRegistry": 44
+    }
+  },
+  "arm64_vtables": {
+    "_ZTVN7android13FreezeManagerE": {
+      "bytes": 32,
+      "slots_matched": 4
+    },
+    "_ZTVN7android13FreezeManager8CallbackE": {
+      "bytes": 344,
+      "slots_matched": 43
+    }
+  },
+  "recovered_arm64_prefix_matches": true,
+  "full_private_type_abi_proven": false,
+  "source_differences": [
+    "shared ownership releases callback records on removal",
+    "recursive registry lock and snapshot support reentrant removal"
+  ],
+  "remote_registry_behavior_ported": false,
+  "instructions": [
+    {
+      "address": "0x56518",
+      "bytes": "00128052",
+      "observation": "singleton allocation is 144 bytes"
+    },
+    {
+      "address": "0x56174",
+      "bytes": "9f8e00f8",
+      "observation": "callback strong pointer at offset 8"
+    },
+    {
+      "address": "0x56178",
+      "bytes": "e20c0194",
+      "observation": "service mutex starts at offset 16"
+    },
+    {
+      "address": "0x56244",
+      "bytes": "604200b9",
+      "observation": "process PID at offset 64"
+    },
+    {
+      "address": "0x56584",
+      "bytes": "08e28452",
+      "observation": "public PID register UID threshold is 10000"
+    },
+    {
+      "address": "0x5658c",
+      "bytes": "6c020054",
+      "observation": "UID threshold uses signed greater-than"
+    },
+    {
+      "address": "0x56634",
+      "bytes": "8b0c0194",
+      "observation": "inner PID register reaches service without UID guard"
+    },
+    {
+      "address": "0x566e0",
+      "bytes": "081540f9",
+      "observation": "explicit PID unregister invokes service slot 40"
+    },
+    {
+      "address": "0x56d98",
+      "bytes": "a84640f9",
+      "observation": "self registry size read at 136"
+    },
+    {
+      "address": "0x56e28",
+      "bytes": "b94240b9",
+      "observation": "first self registration uses process PID"
+    },
+    {
+      "address": "0x56e50",
+      "bytes": "081140f9",
+      "observation": "first self registration invokes service slot 32"
+    },
+    {
+      "address": "0x56eb8",
+      "bytes": "a0e20191",
+      "observation": "self registry starts at 120"
+    },
+    {
+      "address": "0x56ec8",
+      "bytes": "820a0194",
+      "observation": "self registration emplaces a unique key"
+    },
+    {
+      "address": "0x56fb4",
+      "bytes": "80e20191",
+      "observation": "self unregister accesses registry at 120"
+    },
+    {
+      "address": "0x56fbc",
+      "bytes": "490a0194",
+      "observation": "self unregister erases local key without remote unregister"
+    },
+    {
+      "address": "0x57a04",
+      "bytes": "094140b9",
+      "observation": "self callback reads process PID at 64"
+    },
+    {
+      "address": "0x57a0c",
+      "bytes": "a1080054",
+      "observation": "self callback filters PID equality"
+    },
+    {
+      "address": "0x57a10",
+      "bytes": "173d40f9",
+      "observation": "self callback iterates registry begin at 120"
+    },
+    {
+      "address": "0x57a80",
+      "bytes": "081b40f9",
+      "observation": "self callback passes saved argument at record offset 48"
+    },
+    {
+      "address": "0x57b84",
+      "bytes": "93060194",
+      "observation": "registry lock remains held until callbacks finish"
+    },
+    {
+      "address": "0x57040",
+      "bytes": "2c0a0194",
+      "observation": "remote registration depends on getLastFrozenPid"
+    }
+  ]
+}

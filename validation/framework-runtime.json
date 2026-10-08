@@ -1,0 +1,86 @@
+{
+  "framework_commit": "e73b3bbf3f23c7779c58ae0291ce54c2dc0be05e",
+  "native_commit": "028df933e0cebf3b011a7589406be38b0e4152f8",
+  "patch": "patches/0025-source-framework-runtime-probe.patch",
+  "package": "outputs/framework-runtime-test-06",
+  "manifest_sha256": "9034f4201cd78570a8cdef6782b330bfe2ad426435f72db390ee28ad96a78d74",
+  "source_artifact_count": 386,
+  "framework_jar_sha256": "ed8354441d5b0411c738bb6dd5b2c4f13d210119f81c08b74be016ad468f5e70",
+  "boot_jar_sha256": {
+    "runtime/javalib/core-oj.jar": "c45e35d4aea7768c83ec48f322197dbf2d04a0a0a96be7263ab82d6fa7c97630",
+    "runtime/javalib/core-libart.jar": "c6c0ebb94bf0a16f07f67f80d4b1416415de8bf17766b4895bbf82ef5bad0606",
+    "runtime/javalib/okhttp.jar": "9a9e38f789ad754f5fd7a45e7c6e4d05cab2258f255344dfb9c2bc6c8f017c81",
+    "runtime/javalib/bouncycastle.jar": "093cdf54f83c03058b0e60f0d7086326ecfc5b562d80ef7d3c0857914f4ae9f2",
+    "runtime/javalib/apache-xml.jar": "9003ae017ac79ed0f50c54616b532f90c81579c82af30010195c3db33ba93619",
+    "system/framework/framework.jar": "ed8354441d5b0411c738bb6dd5b2c4f13d210119f81c08b74be016ad468f5e70",
+    "system/framework/ext.jar": "fb6105e4b9750f1e43ab1efd1da145f720b0ca45fc3f5dda789251343014bef9",
+    "system/framework/telephony-common.jar": "8595d9faddd5e47491e4c4a6c24e84f5b80904934e154562acd251c335956f1d",
+    "system/framework/voip-common.jar": "0b0bc59ea765638224936112bf540b6851215aef1e1bf750d5a67e338a68025f",
+    "system/framework/ims-common.jar": "afc4ed8f2ef6e79092686cc90699d84ec64a09089da45a8cbd2d2a61dd63de55",
+    "system/framework/android.test.base.jar": "493e0d69431bf5a85bfdce83e1c4e11c5d08bf8fb12132234c868c067f826d29",
+    "apex/com.android.conscrypt/javalib/conscrypt.jar": "b33bc50558b7c5baa6698b9f78bdaa82df913d898d66b34a7e48ad38e009ce98",
+    "apex/com.android.media/javalib/updatable-media.jar": "0d255ea39a49da51f7dadc29873500cfdeb867f70d5ebba799f0afa86341670b"
+  },
+  "native_sha256": {
+    "arm64": {
+      "libart.so": "ee7566f2b4a08dfcec0e873c94fcaacf0ceac577212593e07795bed299130320",
+      "libart-compiler.so": "3afe1c9ac381bb98921c164a5c89613034b170c76efe68bdce4eef70ce5dc5ee",
+      "libandroid_runtime.so": "74bf1d5b71fda5b4ff998b830bb83096eb1222547fae5a555132c5b8269252fc",
+      "libgui.so": "a732e96df4eb032a7145a25ceb35505a580e2638cde1a9a0f3e7c302363dfd75",
+      "libbinder.so": "09006f847458112519de684f3b1b717089b4f6cf3063e9c2138b04fd44971a87",
+      "libnativehelper.so": "16af1d04a6d3d5977068e7c9d0a5e85dd088a6f1f1d2c4c2416721baa9bd2fba",
+      "libnativeloader.so": "cacd85c959565a9bc27bddc943fb193d1c2b5acd9001b07db88ed0b1ae2ce7ab",
+      "libjavacore.so": "658d430554ff9a03685fd20e84631d3ab117fede7b170612cbd04b02e67199fe",
+      "libopenjdk.so": "0aa5ec191704ff75dda95086b5fb1c0d36158962b2c1811e207263fb634a7386"
+    },
+    "arm": {
+      "libart.so": "acbcd35f0d031368e4f5a9b61b14ee2e780adbd6e99ed414c513de7aada92515",
+      "libart-compiler.so": "120087255e1199c42384c527509e3cf9b2cba291878eec2befe7c4f27ef19b25",
+      "libandroid_runtime.so": "bd24459c7d22dea823a512009d6ea874741227c23629634f9470716365662b0d",
+      "libgui.so": "8538760cadfe11274c5753ae9c422a8a854de59a86dbd907f74c59ef6d814c29",
+      "libbinder.so": "37ae32f75ec55513ac5b992a7bb87a55b10f207268b770dc50e6b50e4993a212",
+      "libnativehelper.so": "23e2045afcd2558e3e22646512fd6654aa88d44254c06dfd4443a3cc6477c151",
+      "libnativeloader.so": "4ce355f09859ee28061a535454fcf0a8837881eda43eab815d77fa39c206b6c0",
+      "libjavacore.so": "f3aedecad1839be492e85ac61fff2e218c5a45667c73d24f6e4a3a2bfb5bc7d7",
+      "libopenjdk.so": "25c1bdb8d91de25c7afe155198dfc8fc345b410d5b9c0313d779c8202a503437"
+    }
+  },
+  "runtime_verified_source_libraries": [
+    "libart.so",
+    "libandroid_runtime.so",
+    "libgui.so"
+  ],
+  "java_fixtures_per_abi": {
+    "arm64": 9,
+    "arm": 9
+  },
+  "fixtures": [
+    "source-runtime-and-local-service",
+    "empty-and-released-surface-noop",
+    "java-surface-registers-producer",
+    "repeated-java-registration-is-shared",
+    "java-surface-jni-producer-recovery",
+    "virtual-display-constructor-recovery",
+    "virtual-display-set-surface-recovery",
+    "unchanged-virtual-display-surface-noop",
+    "virtual-display-null-surface-detaches"
+  ],
+  "test_artifacts_in_system_image": false,
+  "java_execution_with_source_boot_classpath_qualified": true,
+  "compiled_boot_image_qualified": false,
+  "jit_code_generation_qualified": false,
+  "real_binder_service_calls_qualified": false,
+  "real_process_freeze_qualified": false,
+  "gpu_fences_qualified": false,
+  "full_runtime_abi_proven": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "scope": "Source app_process registers full Source JNI and executes Java VirtualDisplay/Surface on Source ART with 13 Source boot JARs; local display/freeze services and synthetic buffers, imageless VM, fixture reflection with hidden API policy disabled",
+  "pending": [
+    "coherent CPU properties and Source boot-image qualification",
+    "real Binder services, freeze events, GPU rendering and full VR qualification"
+  ],
+  "observed_runtime_warning": "Source JIT rejects installed factory ARM64 variant kryo300; compiled-code qualification remains open"
+}

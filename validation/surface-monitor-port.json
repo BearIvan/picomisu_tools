@@ -1,0 +1,46 @@
+{
+  "native_commit": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+  "framework_commit": "dda074e6beafa16657264b8e4c508493dff6e6c5",
+  "art_commit": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "patch": "patches/0032-pico-surface-monitor.patch",
+  "package": "outputs/bufferqueue-test-32",
+  "manifest_sha256": "fee7d26fa60ff311f3da8ff156e37892114a6414cce30bbeebfcd91b75db9101",
+  "framework_package": "outputs/framework-boot-image-test-14",
+  "abis": {
+    "arm64": {
+      "native_gtests_passed": 189,
+      "monitored_producer_gtests_passed": 5,
+      "monitor_scenarios_matched": 17,
+      "monitor_state_snapshots_matched": 74,
+      "java_jni_art_fixtures_passed": 12,
+      "source_sha256": {
+        "libgui.so": "be057d7a4f4a6210f25f282807e0256d9c3d719a76e414b425148ae1f5788f5b",
+        "libbinder.so": "32bccd3904614bc3d8bacfb45f3847dcd5b5ef4f1f5700b825606203ba789e01"
+      }
+    },
+    "arm": {
+      "native_gtests_passed": 189,
+      "monitored_producer_gtests_passed": 5,
+      "monitor_scenarios_matched": 17,
+      "monitor_state_snapshots_matched": 74,
+      "java_jni_art_fixtures_passed": 12,
+      "source_sha256": {
+        "libgui.so": "10223df945ae2af595449993927765aa9eed51ed02fc69e7d137fecb0563d203",
+        "libbinder.so": "7b9e0d54898a39ada46745c4d396f5e3e5f893ce689e39435a864c6134485a9a"
+      }
+    }
+  },
+  "monitor_abi_evidence": "validation/surface-monitor-abi.json",
+  "remaining_used_arm64_gui_symbols": 0,
+  "unresolved_factory_prefix_bytes": 40,
+  "system_partitions_modified": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "properties_unchanged": true,
+  "full_graphics_abi_proven": false,
+  "real_display_frequency_qualified": false,
+  "real_remote_binder_qualified": false,
+  "hardware_vr_qualified": false,
+  "scope": "Source/factory process-local monitor state, parcel, service lookup and file traces; mock producer/layer integration; compiled Source Java/JNI/ART/Bionic; valid/default configuration inputs; no global graphics or VR replacement"
+}

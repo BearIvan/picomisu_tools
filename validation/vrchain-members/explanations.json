@@ -1,0 +1,8 @@
+{
+ "Landroid/app/ActivityThread;": "<init>: the factory creates the extension through com.pico.util.ExtImplFactory reflection and also initialises Smartisan mMonitorEx/mSmtEx; Source creates ExtActivityThreadImpl directly.",
+ "Landroid/app/ExtActivityThreadImpl;": "isActivityForceRender keeps the Source null check for ActivityClientRecord.activity (one extra field read); the factory throws NullPointerException there.",
+ "Landroid/content/pm/ExtPackageParserImpl;": "parseVrFlags: all references match; D8 allocates one extra const/4 1 differently.",
+ "Landroid/content/pm/PackageParser;": "<init>: ExtImplFactory reflection instead of direct creation; parseBaseApkCommon: the factory uses the later Android 10 getSplitPermissions()/SplitPermissionInfoParcelable revision; parsePackage: Smartisan PackageParserSmtBase.verifyLibraryFiles.",
+ "Landroid/view/Display;": "<init>: ExtImplFactory reflection instead of direct creation of ExtDisplayImpl.",
+ "Landroid/view/ViewRootImpl;": "<init>: ExtImplFactory reflection, mHaveMoveEvent and resource IDs; setView: AOSP revision differences around mWindowAttributes.inputFeatures and InputChannel.isValid(). All PICO hooks match the factory."
+}

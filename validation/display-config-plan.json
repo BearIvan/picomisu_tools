@@ -1,0 +1,42 @@
+{
+  "donor_commit": "71e1890b755f126274e8225875050c7b785006e4",
+  "factory_arm64_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+  "factory_constructor_address": "0xa574c",
+  "factory_proxy_address": "0xac668",
+  "factory_proxy_transaction": 4,
+  "factory_proxy_flags": 0,
+  "request_fields_after_interface_token": [
+    "int32 vsyncSource",
+    "int32 configChanged"
+  ],
+  "source_scope": [
+    "libgui constructor, enum and Binder proxy/stub",
+    "SurfaceFlinger forwarding",
+    "Scheduler retains r47 resync callback and forwards configChanged",
+    "EventThread per-connection suppression",
+    "QPR3 EventThread tests plus mock signature updates"
+  ],
+  "runtime_verified": true,
+  "factory_arm32_wire_verified": true,
+  "full_abi_proven": false,
+  "native_commit": "2e61240cc102483e73db91836054fea8a6a5eee4",
+  "build_verified": true,
+  "build_exit_code": 0,
+  "built_targets": [
+    "framework",
+    "libandroid_runtime",
+    "libgui",
+    "libsurfaceflinger",
+    "libsurfaceflinger_unittest",
+    "picomisu_bufferqueue_test"
+  ],
+  "factory_arm32_proxy_thumb_address": "0x78ec4",
+  "factory_arm32_request_layout_statically_inspected": true,
+  "probe_native_commit": "0d3eecfb4abb29af729f95b0d5654ee9cb17f827",
+  "probe_build_exit_code": 0,
+  "expected_probe_fixtures_per_abi": 5,
+  "probe_scope": "BpSurfaceComposer via local BBinder relay; no running SurfaceFlinger or kernel Binder IPC",
+  "package": "outputs/bufferqueue-test-09",
+  "runtime_status": "passed in isolated package 12; see native-runtime-current.json",
+  "latest_runtime_evidence": "validation/native-runtime-current.json"
+}

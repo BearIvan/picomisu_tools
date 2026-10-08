@@ -1,0 +1,49 @@
+{
+  "native_commit": "028df933e0cebf3b011a7589406be38b0e4152f8",
+  "patch": "patches/0023-pico-producer-self-unfreeze.patch",
+  "build_exit_code": 0,
+  "package": "outputs/bufferqueue-test-25",
+  "runtime_evidence": "validation/native-runtime-current.json",
+  "abi_evidence": "validation/producer-unfreeze-abi.json",
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 9,
+    "arm": 9
+  },
+  "fixtures": [
+    "fake-service-preflight",
+    "virtual-self-registration",
+    "repeat-listen-keeps-process-registration",
+    "wrong-pid-retains-dequeue-limit",
+    "thaw-reclaims-held-slot-preserves-consumer",
+    "single-event-consumed",
+    "successful-queue-clears-event",
+    "last-producer-slot-only-is-reclaimed",
+    "destructor-removes-self-key"
+  ],
+  "implemented": [
+    "local virtual self listener and destructor self unregister",
+    "pending self-unfreeze event gates max-dequeued-count recovery after a queued frame",
+    "cancel last active slot with nonzero dequeue count, move it to free buffers, reset fence",
+    "consume event once and reset on successful queue"
+  ],
+  "source_differences": [
+    "callback captures shared atomic flag instead of raw producer pointer and heap bool"
+  ],
+  "producer_self_listener_implemented": true,
+  "source_caller_integration_qualified": true,
+  "source_caller_integration_ported": true,
+  "source_caller_evidence": "validation/surface-freeze-port.json",
+  "real_process_freeze_performed": false,
+  "real_freeze_events_qualified": false,
+  "gpu_fences_qualified": false,
+  "full_private_producer_core_abi_proven": false,
+  "system_partitions_modified": false,
+  "pending": [
+    "shared-buffer and concurrent frame edge cases",
+    "complete producer/core private ABI where required by binary callers",
+    "real freeze event, GPU fences and live VR qualification"
+  ],
+  "scope": "local queues with synthetic GraphicBuffer and fake freeze service; selected listener slots and ARM64 instructions, not full VR qualification",
+  "source_java_caller_evidence": "validation/framework-boot-image.json",
+  "latest_regression_evidence": "validation/native-runtime-current.json"
+}

@@ -1,0 +1,44 @@
+{
+  "native_commit": "8e6c490e3009018ab800261a8384a3564e1da158",
+  "patch": "patches/0028-pico-dequeue-count-allowances.patch",
+  "abi_evidence": "validation/dequeue-count-abi.json",
+  "package": "outputs/bufferqueue-test-28",
+  "manifest_sha256": "b4441cc01d67db4b365e9bf3c5b48b96be99f424bcaabc92be694b98b3145475",
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 108,
+    "arm": 108
+  },
+  "source_sha256": {
+    "arm64": {
+      "libgui.so": "fab7198a96c581c9c044037683275c52a8dd6adc0480c32fd9a3e02ba49f49ae",
+      "libbinder.so": "09006f847458112519de684f3b1b717089b4f6cf3063e9c2138b04fd44971a87",
+      "picomisu_dequeue_count_probe": "d972b41d49e18ff303965a118e4c134a8de8727866b42ecda4cbbd5d9fc6b1d6"
+    },
+    "arm": {
+      "libgui.so": "a58d92dd3f1c37b3d63301ca4b69df29aa627572485bb17737b1390591d799c5",
+      "libbinder.so": "37ae32f75ec55513ac5b992a7bb87a55b10f207268b770dc50e6b50e4993a212",
+      "picomisu_dequeue_count_probe": "418cdb137768cf40f0fd09d11b60902a7826621b001bd5494c46958d6c938e32"
+    }
+  },
+  "source_count_api_qualified": true,
+  "display_flags_composition_path_complete": false,
+  "full_private_object_abi_proven": false,
+  "gpu_or_real_freeze_qualified": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "scope": "Public count/status and queue dump comparisons with pinned factory GUI using padded local queues, private consumer transaction 10000 and fake freeze service; no GraphicBuffer allocation, GPU or running SurfaceFlinger calls",
+  "coverage": [
+    "SurfaceFlinger/non-SurfaceFlinger producer",
+    "private consumer marker present/absent",
+    "unarmed/armed -2 command",
+    "requests -3,-2,-1,0,1,2,3,61,62,63,64,INT_MIN,INT_MAX",
+    "special command on abandoned queue"
+  ],
+  "source_difference": "Mode and private marker are read under the queue mutex; factory reads them before taking its mutex",
+  "pending": [
+    "SurfaceFlinger property/display-flag/creation-flag caller integration and complete composition branch",
+    "full private C++ ABI, real Binder/GPU and VR qualification"
+  ]
+}

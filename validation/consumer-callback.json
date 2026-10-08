@@ -1,0 +1,21 @@
+{
+  "native_commit": "ef2661bfbcb54cee11c510767a43443111ea32fd",
+  "build_exit_code": 0,
+  "arm64": {
+    "wire_sha256": "4d9eb313f2baf1ea1a4b6e7264d37af8ff062eb2eb2e91896c8ce18abcb8f83e",
+    "wire_fixtures_matched": 102,
+    "tests_passed": 12
+  },
+  "arm": {
+    "wire_sha256": "4d9eb313f2baf1ea1a4b6e7264d37af8ff062eb2eb2e91896c8ce18abcb8f83e",
+    "wire_fixtures_matched": 102,
+    "tests_passed": 12
+  },
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "factory_vr_services_replaced": false,
+  "wire_fixture_scope": "POD and Region, no graphics handles, fence descriptors or populated HDR metadata",
+  "full_libgui_abi_compatibility_proven": false
+}

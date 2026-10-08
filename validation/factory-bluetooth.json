@@ -1,0 +1,1605 @@
+{
+ "config": "device/pico/PICOA8110/factory-bluetooth.json",
+ "factory_tree": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root",
+ "source_product": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/aosp-10/target/product/PICOA8110",
+ "files": {
+  "system/app/Bluetooth/Bluetooth.apk": {
+   "sha256": "45ee13eaf08feeca90c56fe83d4caa32bf0f4ee588aa7e7ceeb4c474b5dbbea2",
+   "size": 7767616
+  },
+  "system/app/BluetoothExt/BluetoothExt.apk": {
+   "sha256": "ef65f654a8d6720a05f59f5e703cf88762da27c01069e9b6d40b287be42f5b0a",
+   "size": 98795
+  },
+  "system/lib64/libbluetooth_jni.so": {
+   "sha256": "3aa823fbdd868e92d968501f3f00395620c2652c5b90ba15c19ada3e0072b991",
+   "size": 391720
+  },
+  "system/lib64/libbluetooth_qti.so": {
+   "sha256": "a6722f5a560aa06cfd8744ec7b8a7a132fa10380deb294fe0c9c2a41c68a39db",
+   "size": 3639104
+  },
+  "system/lib64/libbluetooth.so": {
+   "sha256": "24e892c6c5b105b92a974af805dbd1ea01d487dce55e6bc216e4d63dcf70960a",
+   "size": 4861976
+  },
+  "system/lib64/libbluetooth-binder.so": {
+   "sha256": "bb0d23a268608be63b80ea92732ab079be205de57eac1ba1d02b5dde58eafe17",
+   "size": 58128
+  },
+  "system/lib64/libbtconfigstore.so": {
+   "sha256": "d59a0567dfbe86dbe45aa95efe8f6b9d3cbb5785296d02e636b047e7d9610af7",
+   "size": 42400
+  },
+  "system/lib64/libldacBT_abr.so": {
+   "sha256": "794c2a0fd4df27668709e90516d2bd74071a6e59d12dfa16455cf94313e83a8a",
+   "size": 15064
+  },
+  "system/lib64/libldacBT_enc.so": {
+   "sha256": "1537db32ffab96d5a4fd7dccecbb6cac2f949b59940a96c37bfd8a2e41ef15ff",
+   "size": 56888
+  },
+  "system/lib64/hw/audio.a2dp.default.so": {
+   "sha256": "d5ca83581f7b1e68b3641caab41d1bfd038457ded131848422001d0fb3b99fd1",
+   "size": 50696
+  },
+  "system/lib/libbluetooth_qti.so": {
+   "sha256": "287d15c6c2cfa6e8f30e7bf07e882bc61481703ebdf1f3d6291f976e24ce7033",
+   "size": 2835332
+  },
+  "system/lib/libbluetooth.so": {
+   "sha256": "79204d5b340c2ba2a24dcaf2b9c7fee592e3ecf3838ef1be9fe4785c7e3551fe",
+   "size": 3264376
+  },
+  "system/lib/libbtconfigstore.so": {
+   "sha256": "f9e030142a0e8272c65303d7fe22b0b5a4e357c3dbc69530f8de44c40bbf9fb6",
+   "size": 43344
+  },
+  "system/lib/libldacBT_abr.so": {
+   "sha256": "66be40b446fdf64265097d20e3efa5a3319a57403280bdffb40883d23258fc9a",
+   "size": 15012
+  },
+  "system/lib/libldacBT_enc.so": {
+   "sha256": "358a67cf0141982775f2dee9f29f9b60a69e80b12608efea02bb15f4c86596ae",
+   "size": 52784
+  },
+  "system/lib/hw/audio.a2dp.default.so": {
+   "sha256": "4e003860d968f26b29dfd5c90ffc715b0e989df0ee46858534c0e178c706b696",
+   "size": 46708
+  },
+  "system/bin/bt_logger": {
+   "sha256": "84bcb523fd1474e8e803a4eaf99cc9b510f8e5089092f811d4b3bbace976518f",
+   "size": 24560
+  },
+  "system/etc/bluetooth/bt_configstore.conf": {
+   "sha256": "40771329a24c12cdce87c1e526d1e2ab2424626f6f4fde66652c61973a2ec3f0",
+   "size": 6111
+  },
+  "system/etc/bluetooth/bt_did.conf": {
+   "sha256": "309f395e16b14e4c8b7cf62c429ce9eca7d3c42d4880b740c61e4e1d4ba4235e",
+   "size": 2618
+  },
+  "system/etc/bluetooth/bt_profile.conf": {
+   "sha256": "f2aeb20ce34057b9f531b251cd836b15d9360c0d9a5913750732ad264a0b4933",
+   "size": 1568
+  },
+  "system/etc/bluetooth/bt_stack.conf": {
+   "sha256": "07ba80bbf4e7305a626e906479ad45783b36a79901e4d1b057d9f373e00facdb",
+   "size": 3158
+  }
+ },
+ "native": {
+  "system/lib64/libbluetooth_jni.so": {
+   "abi": "arm64",
+   "needed": [
+    "libandroid_runtime.so",
+    "libbinder.so",
+    "libbluetooth-binder.so",
+    "libchrome.so",
+    "libnativehelper.so",
+    "liblog.so",
+    "libutils.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libnativehelper.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so",
+    "libandroidicu.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 36,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/libbluetooth_qti.so": {
+   "abi": "arm64",
+   "needed": [
+    "libchrome.so",
+    "android.hardware.bluetooth@1.0.so",
+    "com.qualcomm.qti.bluetooth_audio@1.0.so",
+    "vendor.qti.hardware.bluetooth_audio@2.0.so",
+    "libaudioclient.so",
+    "libcutils.so",
+    "libfmq.so",
+    "libhidlbase.so",
+    "libhidltransport.so",
+    "libhwbinder.so",
+    "liblog.so",
+    "libprotobuf-cpp-lite.so",
+    "libprocessgroup.so",
+    "libutils.so",
+    "libtinyxml2.so",
+    "libz.so",
+    "libcrypto.so",
+    "libbtconfigstore.so",
+    "android.hardware.keymaster@4.0.so",
+    "android.hardware.keymaster@3.0.so",
+    "libkeymaster4support.so",
+    "libkeystore_aidl.so",
+    "libkeystore_binder.so",
+    "libkeystore_parcelables.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "com.qualcomm.qti.bluetooth_audio@1.0.so",
+    "vendor.qti.hardware.bluetooth_audio@2.0.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so",
+    "vendor.qti.hardware.btconfigstore@1.0.so"
+   ],
+   "source_missing_libraries": [
+    "com.qualcomm.qti.bluetooth_audio@1.0.so",
+    "vendor.qti.hardware.bluetooth_audio@2.0.so",
+    "vendor.qti.hardware.btconfigstore@1.0.so"
+   ],
+   "factory_unresolved_symbols": 182,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/libbluetooth.so": {
+   "abi": "arm64",
+   "needed": [
+    "libchrome.so",
+    "libstatslog.so",
+    "android.hardware.bluetooth@1.0.so",
+    "android.hardware.bluetooth.a2dp@1.0.so",
+    "android.hardware.bluetooth.audio@2.0.so",
+    "libaudioclient.so",
+    "libcutils.so",
+    "libfmq.so",
+    "libhidlbase.so",
+    "libhidltransport.so",
+    "libhwbinder.so",
+    "liblog.so",
+    "libprocessgroup.so",
+    "libprotobuf-cpp-lite.so",
+    "libutils.so",
+    "libtinyxml2.so",
+    "libz.so",
+    "libcrypto.so",
+    "android.hardware.keymaster@4.0.so",
+    "android.hardware.keymaster@3.0.so",
+    "libkeymaster4support.so",
+    "libkeystore_aidl.so",
+    "libkeystore_binder.so",
+    "libkeystore_parcelables.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 141,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/libbluetooth-binder.so": {
+   "abi": "arm64",
+   "needed": [
+    "libandroid_runtime.so",
+    "libbinder.so",
+    "libchrome.so",
+    "libnativehelper.so",
+    "libcutils.so",
+    "libutils.so",
+    "liblog.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libnativehelper.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so",
+    "libandroidicu.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 10,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/libbtconfigstore.so": {
+   "abi": "arm64",
+   "needed": [
+    "libchrome.so",
+    "libcutils.so",
+    "libbase.so",
+    "libhidlbase.so",
+    "libhidltransport.so",
+    "libhwbinder.so",
+    "libutils.so",
+    "liblog.so",
+    "android.hidl.base@1.0.so",
+    "vendor.qti.hardware.btconfigstore@1.0.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "vendor.qti.hardware.btconfigstore@1.0.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [
+    "vendor.qti.hardware.btconfigstore@1.0.so"
+   ],
+   "factory_unresolved_symbols": 32,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/libldacBT_abr.so": {
+   "abi": "arm64",
+   "needed": [
+    "libldacBT_enc.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 4,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/libldacBT_enc.so": {
+   "abi": "arm64",
+   "needed": [
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 7,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib64/hw/audio.a2dp.default.so": {
+   "abi": "arm64",
+   "needed": [
+    "libchrome.so",
+    "libstatslog.so",
+    "liblog.so",
+    "libcutils.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 30,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib/libbluetooth_qti.so": {
+   "abi": "arm",
+   "needed": [
+    "libchrome.so",
+    "android.hardware.bluetooth@1.0.so",
+    "com.qualcomm.qti.bluetooth_audio@1.0.so",
+    "vendor.qti.hardware.bluetooth_audio@2.0.so",
+    "libaudioclient.so",
+    "libcutils.so",
+    "libfmq.so",
+    "libhidlbase.so",
+    "libhidltransport.so",
+    "libhwbinder.so",
+    "liblog.so",
+    "libprotobuf-cpp-lite.so",
+    "libprocessgroup.so",
+    "libutils.so",
+    "libtinyxml2.so",
+    "libz.so",
+    "libcrypto.so",
+    "libbtconfigstore.so",
+    "android.hardware.keymaster@4.0.so",
+    "android.hardware.keymaster@3.0.so",
+    "libkeymaster4support.so",
+    "libkeystore_aidl.so",
+    "libkeystore_binder.so",
+    "libkeystore_parcelables.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "com.qualcomm.qti.bluetooth_audio@1.0.so",
+    "vendor.qti.hardware.bluetooth_audio@2.0.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so",
+    "vendor.qti.hardware.btconfigstore@1.0.so"
+   ],
+   "source_missing_libraries": [
+    "com.qualcomm.qti.bluetooth_audio@1.0.so",
+    "vendor.qti.hardware.bluetooth_audio@2.0.so",
+    "vendor.qti.hardware.btconfigstore@1.0.so"
+   ],
+   "factory_unresolved_symbols": 184,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib/libbluetooth.so": {
+   "abi": "arm",
+   "needed": [
+    "libchrome.so",
+    "libstatslog.so",
+    "android.hardware.bluetooth@1.0.so",
+    "android.hardware.bluetooth.a2dp@1.0.so",
+    "android.hardware.bluetooth.audio@2.0.so",
+    "libaudioclient.so",
+    "libcutils.so",
+    "libfmq.so",
+    "libhidlbase.so",
+    "libhidltransport.so",
+    "libhwbinder.so",
+    "liblog.so",
+    "libprocessgroup.so",
+    "libprotobuf-cpp-lite.so",
+    "libutils.so",
+    "libtinyxml2.so",
+    "libz.so",
+    "libcrypto.so",
+    "android.hardware.keymaster@4.0.so",
+    "android.hardware.keymaster@3.0.so",
+    "libkeymaster4support.so",
+    "libkeystore_aidl.so",
+    "libkeystore_binder.so",
+    "libkeystore_parcelables.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 143,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib/libbtconfigstore.so": {
+   "abi": "arm",
+   "needed": [
+    "libchrome.so",
+    "libcutils.so",
+    "libbase.so",
+    "libhidlbase.so",
+    "libhidltransport.so",
+    "libhwbinder.so",
+    "libutils.so",
+    "liblog.so",
+    "android.hidl.base@1.0.so",
+    "vendor.qti.hardware.btconfigstore@1.0.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "vendor.qti.hardware.btconfigstore@1.0.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [
+    "vendor.qti.hardware.btconfigstore@1.0.so"
+   ],
+   "factory_unresolved_symbols": 36,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib/libldacBT_abr.so": {
+   "abi": "arm",
+   "needed": [
+    "libldacBT_enc.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 6,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib/libldacBT_enc.so": {
+   "abi": "arm",
+   "needed": [
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 8,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/lib/hw/audio.a2dp.default.so": {
+   "abi": "arm",
+   "needed": [
+    "libchrome.so",
+    "libstatslog.so",
+    "liblog.so",
+    "libcutils.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 32,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  },
+  "system/bin/bt_logger": {
+   "abi": "arm64",
+   "needed": [
+    "libcutils.so",
+    "liblog.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "factory_missing_libraries": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "source_missing_libraries": [],
+   "factory_unresolved_symbols": 38,
+   "source_only_missing_libraries": [],
+   "source_only_unresolved_symbols": []
+  }
+ },
+ "external_native_providers": {
+  "system/apex/com.android.runtime.debug/lib/bionic/libc.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so",
+   "system/lib/libldacBT_abr.so",
+   "system/lib/libldacBT_enc.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib/bionic/libdl.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so",
+   "system/lib/libldacBT_abr.so",
+   "system/lib/libldacBT_enc.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib/bionic/libm.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so",
+   "system/lib/libldacBT_abr.so",
+   "system/lib/libldacBT_enc.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/bionic/libc.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so",
+   "system/lib64/libldacBT_abr.so",
+   "system/lib64/libldacBT_enc.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/bionic/libdl.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so",
+   "system/lib64/libldacBT_abr.so",
+   "system/lib64/libldacBT_enc.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/bionic/libm.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so",
+   "system/lib64/libldacBT_abr.so",
+   "system/lib64/libldacBT_enc.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/libandroidicu.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/libicui18n.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/libicuuc.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/apex/com.android.runtime.debug/lib64/libnativehelper.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib/android.hardware.audio.common@5.0.so": [
+   "system/lib/libbluetooth.so"
+  ],
+  "system/lib/android.hardware.bluetooth.a2dp@1.0.so": [
+   "system/lib/libbluetooth.so"
+  ],
+  "system/lib/android.hardware.bluetooth.audio@2.0.so": [
+   "system/lib/libbluetooth.so"
+  ],
+  "system/lib/android.hardware.bluetooth@1.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hardware.graphics.bufferqueue@1.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hardware.graphics.common@1.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hardware.keymaster@3.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hardware.keymaster@4.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hardware.media@1.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hidl.base@1.0.so": [
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/android.hidl.safe_union@1.0.so": [
+   "system/lib/libbluetooth.so"
+  ],
+  "system/lib/android.hidl.token@1.0-utils.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/android.hidl.token@1.0.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/ld-android.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so",
+   "system/lib/libldacBT_abr.so",
+   "system/lib/libldacBT_enc.so"
+  ],
+  "system/lib/libaudioclient.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libaudiomanager.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libaudiopolicy.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libaudioutils.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libbase.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libbinder.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libbinderthreadstate.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libc++.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so",
+   "system/lib/libldacBT_abr.so",
+   "system/lib/libldacBT_enc.so"
+  ],
+  "system/lib/libcgrouprc.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libchrome.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libcrypto.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libcutils.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libdl_android.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libevent.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libfmq.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libhardware.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libhidlbase.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libhidltransport.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libhwbinder.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libkeymaster4support.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libkeystore_aidl.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libkeystore_binder.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libkeystore_parcelables.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/liblog.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libmedia_helper.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libmediametrics.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libmediautils.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libmemunreachable.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libnblog.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libpackagelistparser.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libpcre2.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libprocessgroup.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libprotobuf-cpp-lite.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libselinux.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libspeexresampler.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libstatslog.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so"
+  ],
+  "system/lib/libtinyxml2.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libutils.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libvibrator.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib/libvndksupport.so": [
+   "system/lib/hw/audio.a2dp.default.so",
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so",
+   "system/lib/libbtconfigstore.so"
+  ],
+  "system/lib/libz.so": [
+   "system/lib/libbluetooth.so",
+   "system/lib/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.frameworks.bufferhub@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.audio.common@5.0.so": [
+   "system/lib64/libbluetooth.so"
+  ],
+  "system/lib64/android.hardware.bluetooth.a2dp@1.0.so": [
+   "system/lib64/libbluetooth.so"
+  ],
+  "system/lib64/android.hardware.bluetooth.audio@2.0.so": [
+   "system/lib64/libbluetooth.so"
+  ],
+  "system/lib64/android.hardware.bluetooth@1.0.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hardware.configstore-utils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.configstore@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.configstore@1.1.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.allocator@2.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.allocator@3.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.bufferqueue@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hardware.graphics.bufferqueue@2.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.common@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hardware.graphics.common@1.1.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.common@1.2.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.mapper@2.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.mapper@2.1.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.graphics.mapper@3.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.keymaster@3.0.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hardware.keymaster@4.0.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hardware.media.omx@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hardware.media@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hardware.memtrack@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/android.hidl.base@1.0.so": [
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/android.hidl.safe_union@1.0.so": [
+   "system/lib64/libbluetooth.so"
+  ],
+  "system/lib64/android.hidl.token@1.0-utils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.hidl.token@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/android.system.suspend@1.0.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/ld-android.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so",
+   "system/lib64/libldacBT_abr.so",
+   "system/lib64/libldacBT_enc.so"
+  ],
+  "system/lib64/libEGL.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libETC1.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libGLESv1_CM.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libGLESv2.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libGLESv3.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libandroid_runtime.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libandroidfw.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libappfuse.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libaudioclient.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libaudiomanager.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libaudiopolicy.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libaudioutils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libbacktrace.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libbase.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libbinder.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libbinderthreadstate.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libbpf.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libbpf_android.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libbufferhub.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libbufferhubqueue.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libc++.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so",
+   "system/lib64/libldacBT_abr.so",
+   "system/lib64/libldacBT_enc.so"
+  ],
+  "system/lib64/libcamera_client.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libcamera_metadata.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libcgrouprc.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libchrome.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libcrypto.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libcutils.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libdebuggerd_client.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libdexfile_support.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libdl_android.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libdng_sdk.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libevent.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libexpat.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libfmq.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libft2.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libgraphicsenv.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libgui.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libhardware.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libhardware_legacy.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libharfbuzz_ng.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libheif.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libhidl-gen-utils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libhidlbase.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libhidltransport.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libhwbinder.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libhwui.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libimg_utils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libinput.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libjpeg.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libkeymaster4support.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libkeystore_aidl.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libkeystore_binder.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libkeystore_parcelables.so": [
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/liblog.so": [
+   "system/bin/bt_logger",
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/liblzma.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libmedia.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libmedia_helper.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libmedia_omx.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libmediametrics.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libmediautils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libmeminfo.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libmemtrack.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libmemunreachable.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libminikin.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libnativebridge_lazy.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libnativeloader_lazy.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libnativewindow.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libnblog.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libnetd_client.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libnetdbpf.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libnetdutils.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libpackagelistparser.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libpcre2.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libpdfium.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libpdx_default_transport.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libpiex.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libpng.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libprocessgroup.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libprocinfo.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libprotobuf-cpp-lite.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libselinux.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libsensor.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libsonivox.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libsoundtrigger.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libspeexresampler.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libsqlite.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libstagefright_foundation.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libstatslog.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libstdc++.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libsync.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libtinyxml2.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libui.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libunwindstack.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libusbhost.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libutils.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libvibrator.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libvintf.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libvndksupport.so": [
+   "system/lib64/hw/audio.a2dp.default.so",
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so",
+   "system/lib64/libbtconfigstore.so"
+  ],
+  "system/lib64/libvulkan.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/libz.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth.so",
+   "system/lib64/libbluetooth_jni.so",
+   "system/lib64/libbluetooth_qti.so"
+  ],
+  "system/lib64/libziparchive.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ],
+  "system/lib64/server_configurable_flags.so": [
+   "system/lib64/libbluetooth-binder.so",
+   "system/lib64/libbluetooth_jni.so"
+  ]
+ },
+ "java": {
+  "system/app/Bluetooth/Bluetooth.apk": {
+   "uses_library": [
+    "javax.obex",
+    "org.apache.http.legacy"
+   ],
+   "source_chain_missing_jars": [],
+   "external_references": 7608,
+   "resolved_in_factory": 5119,
+   "unresolved_in_source": [],
+   "aidl_interfaces_checked": 36,
+   "aidl_table_differences": {
+    "Lcom/android/internal/app/IBatteryStats$Stub;": {
+     "factory_methods": 90,
+     "source_methods": 89,
+     "differences": [
+      "getIBatteryStatsOptEx"
+     ]
+    }
+   }
+  },
+  "system/app/BluetoothExt/BluetoothExt.apk": {
+   "uses_library": [
+    "javax.obex"
+   ],
+   "source_chain_missing_jars": [],
+   "external_references": 372,
+   "resolved_in_factory": 260,
+   "unresolved_in_source": [],
+   "aidl_interfaces_checked": 3,
+   "aidl_table_differences": {}
+  }
+ },
+ "permissions": {
+  "system/app/Bluetooth/Bluetooth.apk": {
+   "requested": 62,
+   "factory_framework_declared_missing_in_source": []
+  },
+  "system/app/BluetoothExt/BluetoothExt.apk": {
+   "requested": 9,
+   "factory_framework_declared_missing_in_source": []
+  }
+ },
+ "configuration": {
+  "seapp bluetooth domain": {
+   "factory": true,
+   "source": true
+  },
+  "bt_logger file context": {
+   "factory": true,
+   "source": true
+  },
+  "bluedroid data context": {
+   "factory": true,
+   "source": true
+  },
+  "bt_logger domain": {
+   "factory": true,
+   "source": true
+  },
+  "plat_property_contexts bluetooth entries": {
+   "factory": true,
+   "source": true,
+   "missing": []
+  },
+  "plat_file_contexts bluetooth entries": {
+   "factory": true,
+   "source": true,
+   "missing": []
+  },
+  "hidden-api whitelist com.android.bluetooth": {
+   "factory": true,
+   "source": true
+  },
+  "hidden-api whitelist org.codeaurora.bluetooth": {
+   "factory": true,
+   "source": true
+  },
+  "BLUETOOTH_STACK gid": {
+   "factory": true,
+   "source": true
+  }
+ },
+ "configuration_missing_in_source": [],
+ "source_counterpart_present": {
+  "system/app/Bluetooth/Bluetooth.apk": true,
+  "system/app/BluetoothExt/BluetoothExt.apk": false,
+  "system/lib64/libbluetooth_jni.so": true,
+  "system/lib64/libbluetooth_qti.so": false,
+  "system/lib64/libbluetooth.so": true,
+  "system/lib64/libbluetooth-binder.so": true,
+  "system/lib64/libbtconfigstore.so": false,
+  "system/lib64/libldacBT_abr.so": true,
+  "system/lib64/libldacBT_enc.so": true,
+  "system/lib64/hw/audio.a2dp.default.so": true,
+  "system/lib/libbluetooth_qti.so": false,
+  "system/lib/libbluetooth.so": true,
+  "system/lib/libbtconfigstore.so": false,
+  "system/lib/libldacBT_abr.so": true,
+  "system/lib/libldacBT_enc.so": true,
+  "system/lib/hw/audio.a2dp.default.so": true,
+  "system/bin/bt_logger": false,
+  "system/etc/bluetooth/bt_configstore.conf": false,
+  "system/etc/bluetooth/bt_did.conf": true,
+  "system/etc/bluetooth/bt_profile.conf": false,
+  "system/etc/bluetooth/bt_stack.conf": true
+ },
+ "problems": [
+  "missing factory file system/app/Bluetooth/lib/arm64/libbluetooth_jni.so",
+  "java system/app/Bluetooth/Bluetooth.apk"
+ ],
+ "system_partitions_modified": false
+}

@@ -1,0 +1,57 @@
+{
+  "native_commit": "7c56807cb084789df9218dfe70da535c3beb0f7e",
+  "framework_commit": "dda074e6beafa16657264b8e4c508493dff6e6c5",
+  "patches": [
+    "patches/0029-pico-display-flags-composition.patch",
+    "patches/0030-pico-surface-control-display-flags-jni.patch"
+  ],
+  "package": "outputs/bufferqueue-test-29",
+  "manifest_sha256": "74edc0520c0e33f8cae33cf13649d31d243cba3ef9c38d1905132cad4489c79d",
+  "factory_flags_fixtures_per_abi": {
+    "arm64": 17,
+    "arm": 17
+  },
+  "pico_composition_tests_per_abi": {
+    "arm64": 14,
+    "arm": 14
+  },
+  "composition_and_display_regression_tests_per_abi": {
+    "arm64": 55,
+    "arm": 55
+  },
+  "source_sha256": {
+    "arm64": {
+      "libgui.so": "e0d3fbf40b3e2acbbd291288353df53e0dd6d997b90b7597ca8764fd3a100990",
+      "picomisu_display_flags_probe": "b254fe80a8f7c3bbfd6147b72590f549697d86e9c56229dc542ab729c99585c2",
+      "libsurfaceflinger_unittest": "361eceaa5f48163071bc55384ce9033d282d0e29558d5f2874661136dd08d132"
+    },
+    "arm": {
+      "libgui.so": "360df1d95cea2f41cd0eb64e5340a348ba8dbf494d5984dec6412f5735840fc1",
+      "picomisu_display_flags_probe": "c6fe26facfc0f74587d4fbbf10bfa214cd34ad26cc25ababc4400ce74720e883",
+      "libsurfaceflinger_unittest": "73afa727826a66bf7fcfd4325ea0019959bd6cf5a14a82b0f5d33353b5ddf0d0"
+    }
+  },
+  "implemented": [
+    "DisplayState flags uint32 tail/default/merge/Parcel and Transaction setter",
+    "SurfaceControl static/Transaction Java wrappers and JNI",
+    "full flags propagation through SF state, display creation and live updates",
+    "layer creation bit 20 with guarded producer -2 command",
+    "property/display-bit/usage/multi-layer gating of actual compositor helper",
+    "attach success tracking, repeated-buffer frame skip, NO_INIT and sticky fallback behavior",
+    "dequeue/render/track fallback and virtual two-sink-buffer selection"
+  ],
+  "java_jni_evidence": "validation/framework-boot-image.json",
+  "source_frame_helper_unit_qualified": true,
+  "real_composition_gpu_or_vr_qualified": false,
+  "source_factory_private_abi_complete": false,
+  "system_partitions_modified": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "scope": "17 padded local GUI/Parcel/Transaction comparisons with pinned factory per ABI; actual SF state and integrated production helper with mocks/pipe fence, plus legacy SF composition/display cases; no global replacement or real GPU/VR frame qualification",
+  "pending": [
+    "real compositor/GPU frame and full VR qualification",
+    "private C++ ABI completion and remaining libgui interfaces",
+    "additional OEM framework/JNI/services"
+  ]
+}

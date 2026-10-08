@@ -1,0 +1,135 @@
+{
+  "factory_arm64_sha256": "9e5bdf585d73baddf17bbc646b4daea0e2b15d4fb6d8dc244d08412dd1be86a9",
+  "source": [
+    {
+      "abi": 64,
+      "source_symbols_sha256": "7877f723bff6c334a554a92e303808275a6df3f8b82a84e217dd900e19b9dd4f",
+      "shape": {
+        "bytes": 464,
+        "fields": {
+          "mProcess": 0,
+          "mPendingStrongDerefs": 8,
+          "mPendingWeakDerefs": 48,
+          "mPostWriteStrongDerefs": 88,
+          "mPostWriteWeakDerefs": 128,
+          "mIn": 168,
+          "mOut": 288,
+          "mLastError": 408,
+          "mCallingPid": 412,
+          "mCallingSid": 416,
+          "mCallingUid": 424,
+          "mWorkSource": 428,
+          "mPropagateWorkSource": 432,
+          "mStrictModePolicy": 436,
+          "mLastTransactionBinderFlags": 440,
+          "mIPCThreadStateBase": 448,
+          "mCallRestriction": 456,
+          "mLastFrozenPid": 460
+        }
+      },
+      "getter_bytes": "00cc41b9c0035fd6",
+      "factory_layout_instruction_match_proven": true
+    },
+    {
+      "abi": 32,
+      "source_symbols_sha256": "0e1f261e5fdae86011af8f15d8e882f1abe7612d792664469925f9750b11acb9",
+      "shape": {
+        "bytes": 248,
+        "fields": {
+          "mProcess": 0,
+          "mPendingStrongDerefs": 4,
+          "mPendingWeakDerefs": 24,
+          "mPostWriteStrongDerefs": 44,
+          "mPostWriteWeakDerefs": 64,
+          "mIn": 84,
+          "mOut": 144,
+          "mLastError": 204,
+          "mCallingPid": 208,
+          "mCallingSid": 212,
+          "mCallingUid": 216,
+          "mWorkSource": 220,
+          "mPropagateWorkSource": 224,
+          "mStrictModePolicy": 228,
+          "mLastTransactionBinderFlags": 232,
+          "mIPCThreadStateBase": 236,
+          "mCallRestriction": 240,
+          "mLastFrozenPid": 244
+        }
+      },
+      "getter_bytes": "d0f8f4007047",
+      "factory_layout_instruction_match_proven": false
+    }
+  ],
+  "command": "0x7212",
+  "payload": "legacy int32 PID despite zero ioctl size bits",
+  "status": "0x80000009",
+  "status_signed": -2147483639,
+  "dispatch_table": {
+    "address": "0x41960",
+    "bytes": "13000a0a0a0a0a0a0a0a0a0acec6",
+    "command_base": "0x7205",
+    "dispatch_base": "0x69b8c",
+    "frozen_reply_target": "0x69ea4"
+  },
+  "instructions": [
+    {
+      "address": "0x6a338",
+      "bytes": "7fce01b9",
+      "observation": "constructor initializes PID field at 460 to zero"
+    },
+    {
+      "address": "0x6a7d0",
+      "bytes": "00cc41b9",
+      "observation": "getter reads signed int32 field at 460"
+    },
+    {
+      "address": "0x6a7d4",
+      "bytes": "c0035fd6",
+      "observation": "getter returns"
+    },
+    {
+      "address": "0x69b78",
+      "bytes": "a9000010",
+      "observation": "dispatch base is 0x69b8c"
+    },
+    {
+      "address": "0x69b7c",
+      "bytes": "8a6b6838",
+      "observation": "dispatch loads a byte from the command table"
+    },
+    {
+      "address": "0x69b80",
+      "bytes": "29090a8b",
+      "observation": "dispatch scales table byte by four"
+    },
+    {
+      "address": "0x69ea8",
+      "bytes": "6abf0094",
+      "observation": "frozen reply reads legacy Parcel int32 PID"
+    },
+    {
+      "address": "0x69eac",
+      "bytes": "48008052",
+      "observation": "error construction starts with 2"
+    },
+    {
+      "address": "0x69eb0",
+      "bytes": "0800b072",
+      "observation": "error construction adds high bits 0x80000000"
+    },
+    {
+      "address": "0x69eb4",
+      "bytes": "60ce01b9",
+      "observation": "frozen reply saves PID at 460"
+    },
+    {
+      "address": "0x69eb8",
+      "bytes": "181d0011",
+      "observation": "error construction adds 7: status 0x80000009"
+    }
+  ],
+  "full_private_type_abi_proven": false,
+  "real_kernel_ipc_qualified": false,
+  "runtime_evidence": "validation/native-runtime-current.json",
+  "scope": "ARM64 factory instructions/getter and selected source fields; ARM32 source shape recorded, factory behavior compared separately"
+}

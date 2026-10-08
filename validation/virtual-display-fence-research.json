@@ -1,0 +1,216 @@
+{
+  "factory_sha256": "d23904265c575d67c8818fa5eca24936d78ae137833e1c5383a7a4b09f3bdb51",
+  "abi": 64,
+  "primary_address_point": "0x184fc0",
+  "private_methods": {
+    "72": "0xb07f8",
+    "80": "0xb0c6c",
+    "88": "0xb0c78",
+    "96": "0xb0528",
+    "104": "0xb01c0"
+  },
+  "layer_callbacks": {
+    "552": [
+      "_ZN7android16BufferQueueLayer20releasePendingBufferEl"
+    ],
+    "560": [
+      "_ZN7android16BufferQueueLayer16notifyFenceReadyERKNS_2spINS_5FenceEEERKNS1_INS_13GraphicBufferEEEi"
+    ]
+  },
+  "record_observations": {
+    "allocation_bytes": 32,
+    "slot_offset": 4,
+    "buffer_offset": 8,
+    "layer_offset": 16,
+    "outstanding_count_offset": 24
+  },
+  "registry_observations": {
+    "tree_root_offset": 3504,
+    "size_offset": 3512,
+    "mutex_offset": 3520,
+    "multilayer_offset": 3560
+  },
+  "final_callback_after_registry_mutex_unlock": true,
+  "registration": {
+    "bound_virtual_slot": 96,
+    "this_adjustment": 0,
+    "captures_raw_this": true,
+    "creates_own_producer_listener": true
+  },
+  "disconnect_observations": [
+    "clear producer callback",
+    "snapshot strong record references under registry mutex",
+    "notify captured layers with NO_FENCE after unlocking",
+    "disconnect sink"
+  ],
+  "notification_helper_explicit_registry_erase_observed": false,
+  "factory_code_executed": false,
+  "full_path_ported": false,
+  "pending": [
+    "destructor lifetime and concurrent callback qualification",
+    "complete ARM32 comparison",
+    "source implementation and runtime comparison"
+  ],
+  "instructions": [
+    {
+      "address": "0xadd30",
+      "bytes": "a80600f0",
+      "observation": "constructor loads private vtable page"
+    },
+    {
+      "address": "0xadd34",
+      "bytes": "08a13e91",
+      "observation": "constructor adds vtable base offset"
+    },
+    {
+      "address": "0xadd3c",
+      "bytes": "0a610091",
+      "observation": "primary address point is table+24"
+    },
+    {
+      "address": "0xade70",
+      "bytes": "88a23739",
+      "observation": "constructor initializes multi-layer flag true at +3560"
+    },
+    {
+      "address": "0xb0820",
+      "bytes": "13003791",
+      "observation": "setSingleLayer uses mutex at +3520"
+    },
+    {
+      "address": "0xb08f4",
+      "bytes": "080b41b9",
+      "observation": "record captures composition-layer state int at +264"
+    },
+    {
+      "address": "0xb0900",
+      "bytes": "1f200029",
+      "observation": "record initializes refcount and captured slot"
+    },
+    {
+      "address": "0xb0904",
+      "bytes": "398c00f8",
+      "observation": "record stores GraphicBuffer at +8"
+    },
+    {
+      "address": "0xb091c",
+      "bytes": "280c01f8",
+      "observation": "record stores Layer at +16"
+    },
+    {
+      "address": "0xb0934",
+      "bytes": "bc1a00b9",
+      "observation": "record stores outstanding count at +24"
+    },
+    {
+      "address": "0xb0a04",
+      "bytes": "1c050011",
+      "observation": "repeated ID increments previous outstanding count"
+    },
+    {
+      "address": "0xb0544",
+      "bytes": "5f0400b1",
+      "observation": "release callback rejects buffer ID UINT64_MAX"
+    },
+    {
+      "address": "0xb06ec",
+      "bytes": "2d030054",
+      "observation": "release count reaching zero selects final release"
+    },
+    {
+      "address": "0xb06f0",
+      "bytes": "a51a00b9",
+      "observation": "nonfinal release stores decremented count"
+    },
+    {
+      "address": "0xb0778",
+      "bytes": "081941f9",
+      "observation": "final release invokes Layer virtual slot 560"
+    },
+    {
+      "address": "0xb0780",
+      "bytes": "36010036",
+      "observation": "replacement flag controls pending-buffer release"
+    },
+    {
+      "address": "0xb079c",
+      "bytes": "081541f9",
+      "observation": "replacement invokes Layer virtual slot 552"
+    },
+    {
+      "address": "0xb0c70",
+      "bytes": "08a03739",
+      "observation": "concrete multi-layer setter stores boolean"
+    },
+    {
+      "address": "0xb0c78",
+      "bytes": "00a07739",
+      "observation": "concrete multi-layer getter reads boolean"
+    },
+    {
+      "address": "0x837e8",
+      "bytes": "eedb0394",
+      "observation": "consumer optionally adds release fence for matching pending buffer"
+    },
+    {
+      "address": "0x83820",
+      "bytes": "086140f9",
+      "observation": "consumer forwards to IGraphicBufferConsumer virtual slot 192"
+    },
+    {
+      "address": "0xafba4",
+      "bytes": "f4eb06a9",
+      "observation": "connect captures raw VDS pointer in bound callback storage"
+    },
+    {
+      "address": "0xafcb8",
+      "bytes": "170300f9",
+      "observation": "connect stores newly constructed producer listener"
+    },
+    {
+      "address": "0xb0f3c",
+      "bytes": "0005898b",
+      "observation": "bound callback adjusts this by member-pointer delta shifted right"
+    },
+    {
+      "address": "0xb0f40",
+      "bytes": "69000036",
+      "observation": "member-pointer low bit selects virtual dispatch"
+    },
+    {
+      "address": "0xb0f48",
+      "bytes": "046964f8",
+      "observation": "bound callback loads member from vtable by offset"
+    },
+    {
+      "address": "0xafe18",
+      "bytes": "ff1300f9",
+      "observation": "disconnect constructs empty callback"
+    },
+    {
+      "address": "0xafe20",
+      "bytes": "482d0394",
+      "observation": "disconnect clears producer callback first"
+    },
+    {
+      "address": "0xafe3c",
+      "bytes": "e1000094",
+      "observation": "disconnect invokes registry notification helper"
+    },
+    {
+      "address": "0xb0424",
+      "bytes": "43280394",
+      "observation": "notification helper unlocks registry before Layer callbacks"
+    },
+    {
+      "address": "0xb0458",
+      "bytes": "291941f9",
+      "observation": "notification helper calls Layer notifyFenceReady"
+    },
+    {
+      "address": "0xafe50",
+      "bytes": "084540f9",
+      "observation": "disconnect subsequently forwards to sink disconnect"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "factory_gui_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+  "factory_binder_sha256": "9e5bdf585d73baddf17bbc646b4daea0e2b15d4fb6d8dc244d08412dd1be86a9",
+  "abi": 64,
+  "cache_capacity": 5,
+  "eviction": "least access counter before insertion/update",
+  "lookup_missing_status": -2,
+  "lookup_present_status": -17,
+  "register_key": "actual GraphicBuffer ID; supplied nonzero ID only enables cache path",
+  "zero_id": "retains selected slot buffer even if a different buffer argument is provided",
+  "generation_check_in_cached_attach_observed": false,
+  "producer_cache_offset": 288,
+  "successful_disconnect_clears_cache": true,
+  "factory_code_executed_by_inspector": false,
+  "freeze_provider": "libbinder.so",
+  "freeze_provider_methods": {
+    "_ZN7android13FreezeManager11getInstanceEv": {
+      "address": "0x564e8",
+      "bytes": 96
+    },
+    "_ZN7android13FreezeManager28registerSelfUnFreezeListenerEPvRKNSt3__18functionIFvPKvEEES1_b": {
+      "address": "0x56d3c",
+      "bytes": 492
+    },
+    "_ZN7android13FreezeManager30unRegisterSelfUnFreezeListenerEPv": {
+      "address": "0x56f28",
+      "bytes": 204
+    }
+  },
+  "freeze_behavior_ported": false,
+  "pending": [
+    "FreezeManager Binder contract and callback lifetime port",
+    "producer fields for unfreeze refresh and complete class layout",
+    "concurrent cache eviction during slot wait qualification",
+    "full ARM32 instruction comparison"
+  ],
+  "instructions": [
+    {
+      "address": "0x76b98",
+      "bytes": "942100b4",
+      "observation": "reject null outSlot"
+    },
+    {
+      "address": "0x76b9c",
+      "bytes": "360100b5",
+      "observation": "nonzero ID permits absent buffer"
+    },
+    {
+      "address": "0x76ba4",
+      "bytes": "e80000b5",
+      "observation": "buffer permits zero ID"
+    },
+    {
+      "address": "0x76c20",
+      "bytes": "085440b9",
+      "observation": "require connected producer"
+    },
+    {
+      "address": "0x76c2c",
+      "bytes": "08686838",
+      "observation": "reject shared mode"
+    },
+    {
+      "address": "0x76c78",
+      "bytes": "160300b4",
+      "observation": "zero ID bypasses cached-ID lookup"
+    },
+    {
+      "address": "0x76c80",
+      "bytes": "c80200b5",
+      "observation": "provided buffer bypasses cached-ID lookup"
+    },
+    {
+      "address": "0x76cc8",
+      "bytes": "f77b1f32",
+      "observation": "missing cached ID returns -2"
+    },
+    {
+      "address": "0x76ce4",
+      "bytes": "e1030032",
+      "observation": "use Attach free-slot caller"
+    },
+    {
+      "address": "0x76d48",
+      "bytes": "880200b9",
+      "observation": "write selected slot"
+    },
+    {
+      "address": "0x76d90",
+      "bytes": "f60500b4",
+      "observation": "zero ID bypasses buffer replacement"
+    },
+    {
+      "address": "0x76da4",
+      "bytes": "9f870194",
+      "observation": "provided buffer cached by helper"
+    },
+    {
+      "address": "0x76e48",
+      "bytes": "7a870194",
+      "observation": "absent buffer fetched by helper"
+    },
+    {
+      "address": "0x76e64",
+      "bytes": "29050011",
+      "observation": "attach increments producer dequeue state"
+    },
+    {
+      "address": "0x76eb0",
+      "bytes": "09810039",
+      "observation": "request-buffer flag set true"
+    },
+    {
+      "address": "0x76ec4",
+      "bytes": "1f010139",
+      "observation": "acquire flag cleared"
+    },
+    {
+      "address": "0x76ed8",
+      "bytes": "1f050139",
+      "observation": "reallocation flag cleared"
+    },
+    {
+      "address": "0x77160",
+      "bytes": "0a1900f9",
+      "observation": "fetch refreshes access timestamp"
+    },
+    {
+      "address": "0x77168",
+      "bytes": "141540f9",
+      "observation": "fetch retains cached GraphicBuffer"
+    },
+    {
+      "address": "0x771cc",
+      "bytes": "186d40f9",
+      "observation": "cache key is actual GraphicBuffer ID"
+    },
+    {
+      "address": "0x771d0",
+      "bytes": "3f1500f1",
+      "observation": "evict when existing cache size is at least five"
+    },
+    {
+      "address": "0x77244",
+      "bytes": "bf0109eb",
+      "observation": "LRU compares access timestamps"
+    },
+    {
+      "address": "0x7729c",
+      "bytes": "69860194",
+      "observation": "evict before map lookup/update"
+    },
+    {
+      "address": "0x77464",
+      "bytes": "b61a00f9",
+      "observation": "cache refreshes access timestamp"
+    },
+    {
+      "address": "0x799b8",
+      "bytes": "3e7c0194",
+      "observation": "successful disconnect destroys cache nodes"
+    },
+    {
+      "address": "0x799c0",
+      "bytes": "7ffe12a9",
+      "observation": "disconnect clears cache root and size"
+    },
+    {
+      "address": "0x799c4",
+      "bytes": "749200f9",
+      "observation": "disconnect restores empty-tree begin pointer"
+    },
+    {
+      "address": "0x7aa48",
+      "bytes": "12780194",
+      "observation": "listenFreezeSelf obtains FreezeManager"
+    },
+    {
+      "address": "0x7aa78",
+      "bytes": "b6780194",
+      "observation": "register self-unfreeze listener"
+    },
+    {
+      "address": "0x7b034",
+      "bytes": "686e40f9",
+      "observation": "unfreeze callback reads producer flag pointer at 216"
+    },
+    {
+      "address": "0x7b03c",
+      "bytes": "09010039",
+      "observation": "unfreeze callback sets pointed boolean true"
+    },
+    {
+      "address": "0x736dc",
+      "bytes": "f1940194",
+      "observation": "producer destructor unregisters self-unfreeze listener"
+    }
+  ]
+}

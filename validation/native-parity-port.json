@@ -1,0 +1,329 @@
+{
+ "title": "Stage 3 chunk 6: native parity of libbinder, libbinder_call_stat, libhwui and the 9 needed JNI natives",
+ "component_commits": {
+  "frameworks/native": "611325dad0e3017d966dbe560accf1a2322a59fc",
+  "frameworks/base": "144d2a35fa27e9a06403390f17b594caf21f0287",
+  "prebuilts/abi-dumps/vndk": "f12412c97cf9af30e8145dcd13f12c467ad6870d",
+  "build/make": "d224f24cebae6685c6af9ae7fb22bb4162e29e9b",
+  "frameworks/av": "ffb4075152362ea3ee9f378fe175fa3138527901"
+ },
+ "patches": [
+  "patches/0116-libbinder-factory-pico-smartisan-layer.patch",
+  "patches/0117-omx-sync-vr-type-detect-index.patch",
+  "patches/0118-vndk-abi-libbinder-call-stat.patch",
+  "patches/0119-vndk-sp-libbinder-call-stat.patch",
+  "patches/0120-av-metadata-retriever-vr-type.patch",
+  "patches/0121-av-spatializer-client-libspatialaudio.patch",
+  "patches/0122-media-player-spatial-helper-vr-type.patch",
+  "patches/0123-hwui-surfacetexture-image-manager-ext.patch",
+  "patches/0124-zygote-binder-mmap.patch"
+ ],
+ "symbol_parity": "validation/native-parity.json (tools/check-native-parity.py)",
+ "libbinder": {
+  "factory_only_before": {
+   "lib64": 137,
+   "lib": 136,
+   "lib64/vndk-29": 137,
+   "lib/vndk-29": 136
+  },
+  "factory_only_after": {
+   "lib64": 7,
+   "lib": 6,
+   "lib64/vndk-29": 7,
+   "lib/vndk-29": 6
+  },
+  "factory_only_after_reason": "out-of-line Parcel::readAligned<T> template instances; the Source compiler inlines the identical body",
+  "source_only_after": "2 libc++/Parcel template instantiations per copy",
+  "factory_consumers": {
+   "/system/bin/pxrmediametrics": "SceneInfoManager::getInstance/reportDataInfo, SceneData ctor/copy/dtor/setInt32/setInt64/setString",
+   "factory libandroid_runtime (replaced by Source)": "ProcessState::selfForRuntime/selfForSystemServer, IPCThreadState setPidFreeze/getTargetCalleePid/getBinderClientPids/getBinderServerPids"
+  },
+  "object_sizes_equal_to_factory_operator_new": {
+   "arm64": {
+    "FreezeManager": 144,
+    "FreezeManager::Callback": 48,
+    "RemoteDeathNotifier": 40,
+    "CallBackData": 64,
+    "KeyPair": 16,
+    "SceneInfoManager": 72,
+    "SceneInfoManager::DeathNotifier": 24,
+    "SceneData internal": 80,
+    "BpSceneInfoManager": 56,
+    "ProcessState": 328
+   },
+   "arm": {
+    "FreezeManager": 56,
+    "FreezeManager::Callback": 24,
+    "RemoteDeathNotifier": 20,
+    "CallBackData": 32,
+    "KeyPair": 8,
+    "SceneInfoManager": 20,
+    "SceneData internal": 40,
+    "BpSceneInfoManager": 28,
+    "ProcessState": 120
+   }
+  },
+  "behaviour_changes_in_common_functions": [
+   "ProcessState default transaction buffer 2 MiB - 2 pages; the destructor unmaps that size, also for the 4 MiB system_server mapping",
+   "BpBinder::transact adds TF_REPORT_FROZEN (0x80); a frozen reply gives DEAD_OBJECT unless the caller set 0x80 (then UNKNOWN_ERROR+9); the proxy stays alive",
+   "flatten_binder sets FLAT_BINDER_FLAG_TXN_SECURITY_CTX for local android.gui.IProducerListener binders",
+   "Parcel::readString16Inplace rejects strings without a terminating NUL and logs 172655291",
+   "BBinder::transact/dump feed the libbinder_call_stat observer (dumpsys --enable/--disable/--sample-interval)"
+  ],
+  "freeze_manager": {
+   "factory_failure_modes_reproduced": [
+    "remote registrations go into a local copy of the registry: the remote registries stay empty and remote callbacks are never delivered (only the service registration and linkToDeath happen)",
+    "KeyPair/CallBackData are never freed; a repeated self key keeps the first record",
+    "self callbacks run under the global registry Mutex: a callback that registers or unregisters on the same thread deadlocks"
+   ],
+   "previous_source_deviation_removed": "recursive registry lock, shared_ptr snapshots and record release of the earlier Source port"
+  },
+  "vndk_abi": "header-abi-diff COMPATIBLE on arm64 and arm with the regenerated prebuilts/abi-dumps/vndk/29/64/{arm64_armv8-a,arm_armv7-a-neon} references (additions; the removed symbols are Source-only libc++ shared_ptr instantiations that the factory vndk-29 library does not have)"
+ },
+ "libbinder_call_stat": {
+  "exports_equal_to_factory": [
+   "lib64",
+   "lib",
+   "lib64/vndk-sp-29",
+   "lib/vndk-sp-29"
+  ],
+  "needed": "liblog libutils libc++ libc libm libdl (as factory)",
+  "sizeof_BinderCallsStat": {
+   "arm64": 168,
+   "arm": 76
+  },
+  "extra_import": "__write_chk (FORTIFY in the Source build; the factory calls write)",
+  "factory_failure_modes": [
+   "32-bit processes abort (ubsan mul-overflow in getSysTime) on any timed call",
+   "every dump clears the data, dumpsys without arguments prints nothing, --disable deletes the observer"
+  ]
+ },
+ "libhwui": {
+  "libpxrguiex_imports_resolved": "16/16 (8 per ABI); every UND symbol of the factory libpxrguiex resolves in the Source libraries",
+  "layout": {
+   "arm64": {
+    "sizeof ImageManagerExt": 296,
+    "frame callback/argument": [
+     1672,
+     1680
+    ],
+    "acquired/protected flags": [
+     4872,
+     4873
+    ],
+    "VR compositor flag": 4964
+   },
+   "arm": {
+    "sizeof ImageManagerExt": 76,
+    "frame callback/argument": [
+     1068,
+     1072
+    ],
+    "acquired/protected flags": [
+     2776,
+     2777
+    ],
+    "VR compositor flag": 2868
+   }
+  },
+  "vtables": "SurfaceTexture (31 entries) and EGLConsumer equal to the factory on both ABIs",
+  "on_device": "hwui_pxrguiex_test --link-only: the factory /system libpxrguiex.so links against the packaged Source libhwui/libgui/libandroid_runtime on both ABIs (ImageManagerExt::initThread bound from the Source libhwui); GL rendering is not run in isolation because the EGL loader dlopens its /system wrappers by absolute path",
+  "not_ported": "RenderProxy setSurface(bool)/doAnimation/notifyMonitorStatsChanged (only consumer: the factory libandroid_runtime, replaced); Skia/compiler-rt build artefacts"
+ },
+ "jni_natives": {
+  "MediaMetadataRetriever._getVRType": "libmedia_jni table position as factory (between _getImageAtIndex and getThumbnailImageAtIndex); chain libmedia (IMediaMetadataRetriever code 11) -> libmediaplayerservice -> libstagefright FrameDecoder/ACodec OMX_IndexConfigSyncVRTypeDetect",
+  "PlayerSpatialHelperImpl (7 natives)": "libmedia_jni table equal to factory on both ABIs; libspatialaudio exports/NEEDED equal to factory; libaudioclient ISpatializer/INativeSpatializerCallback client and IAudioPolicyService codes 73-76",
+  "Binder.getLastFrozenPid": "already registered by an earlier chunk",
+  "ZygoteInit.systemServerMmap/runtimeMmap": "registered with nativeZygoteInit in the factory order",
+  "audioserver": "the Source audioserver answers codes 73-76 with UNKNOWN_TRANSACTION; the clients behave as the factory without a spatializer"
+ },
+ "device": {
+  "serial": "192.168.1.230:5555",
+  "temporary_files_only": true,
+  "system_partitions_modified": false,
+  "framework_boot_image_package": "outputs/framework-boot-image-test-28",
+  "java_fixtures_per_abi": {
+   "arm64": 30,
+   "arm": 30
+  },
+  "wire_scenarios_matched_both_abis": {
+   "FactoryClassPathFixture": 218,
+   "FactoryOnlyAidlFixture": 332,
+   "AppendedAidlFixture": 1790,
+   "ShiftedAidlFixture": 1207,
+   "PicoApiFixture": 313,
+   "QcomApiFixture": 1190,
+   "AudioApiFixture": 346
+  },
+  "wire_reports": {
+   "FactoryClassPathFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 218,
+      "matched": 218
+     },
+     "arm": {
+      "scenarios": 218,
+      "matched": 218
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   },
+   "FactoryOnlyAidlFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 332,
+      "matched": 332
+     },
+     "arm": {
+      "scenarios": 332,
+      "matched": 332
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   },
+   "AppendedAidlFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 1790,
+      "matched": 1790
+     },
+     "arm": {
+      "scenarios": 1790,
+      "matched": 1790
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   },
+   "ShiftedAidlFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 1207,
+      "matched": 1207
+     },
+     "arm": {
+      "scenarios": 1207,
+      "matched": 1207
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   },
+   "PicoApiFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 313,
+      "matched": 313
+     },
+     "arm": {
+      "scenarios": 313,
+      "matched": 313
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   },
+   "QcomApiFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 1190,
+      "matched": 1190
+     },
+     "arm": {
+      "scenarios": 1190,
+      "matched": 1190
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   },
+   "AudioApiFixture": {
+    "comparison": {
+     "arm64": {
+      "scenarios": 346,
+      "matched": 346
+     },
+     "arm": {
+      "scenarios": 346,
+      "matched": 346
+     }
+    },
+    "unexpected_differences": [],
+    "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+    "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e"
+   }
+  },
+  "vr_policy": "76/78 + 2 expected on both ABIs",
+  "inspect_vr_canvas": "passed",
+  "record_framework_runtime": "passed",
+  "native_package": "outputs/bufferqueue-test-34",
+  "native_gtests_per_abi": {
+   "bufferqueue": 54,
+   "freeze_registry": 4,
+   "render_surface": 39,
+   "layer_display_fence": 21,
+   "pico_composition": 14,
+   "composition_regression": 55,
+   "monitored_producer": 5
+  },
+  "factory_fixtures": {
+   "arm64": {
+    "factory_bufferitem_wire_fixtures_matched": 102,
+    "factory_producer_fence_fixtures_matched": 12,
+    "factory_consumer_fence_fixtures_matched": 5,
+    "factory_display_config_fixtures_matched": 5,
+    "factory_display_flags_fixtures_matched": 17,
+    "factory_egl_image_tracker_fixtures_matched": 72,
+    "factory_surface_client_fixtures_matched": 22,
+    "factory_calling_tid_fixtures_matched": 8,
+    "surface_client_layout_runtime_matched": true,
+    "factory_dequeue_count_fixtures_matched": 108,
+    "factory_cached_buffer_fixtures_matched": 10,
+    "factory_freeze_wire_fixtures_matched": 12,
+    "factory_freeze_registry_fixtures_matched": 15,
+    "factory_frozen_reply_fixtures_matched": 10,
+    "factory_producer_freeze_fixtures_matched": 9,
+    "factory_freeze_remote_checkpoints_matched": 18,
+    "factory_binder_parity_fixtures_matched": 26,
+    "pxrguiex_checks_passed": 2,
+    "factory_surface_freeze_fixtures_matched": 6
+   },
+   "arm": {
+    "factory_bufferitem_wire_fixtures_matched": 102,
+    "factory_producer_fence_fixtures_matched": 12,
+    "factory_consumer_fence_fixtures_matched": 5,
+    "factory_display_config_fixtures_matched": 5,
+    "factory_display_flags_fixtures_matched": 17,
+    "factory_egl_image_tracker_fixtures_matched": 72,
+    "factory_surface_client_fixtures_matched": 22,
+    "factory_calling_tid_fixtures_matched": 8,
+    "surface_client_layout_runtime_matched": true,
+    "factory_dequeue_count_fixtures_matched": 108,
+    "factory_cached_buffer_fixtures_matched": 10,
+    "factory_freeze_wire_fixtures_matched": 12,
+    "factory_freeze_registry_fixtures_matched": 15,
+    "factory_frozen_reply_fixtures_matched": 10,
+    "factory_producer_freeze_fixtures_matched": 9,
+    "factory_freeze_remote_checkpoints_matched": 9,
+    "factory_binder_parity_fixtures_matched": 26,
+    "pxrguiex_checks_passed": 2,
+    "factory_surface_freeze_fixtures_matched": 6
+   }
+  },
+  "binder_parity_lines_sha256": {
+   "arm64": "84374ebae4b392d28c8000cc27481cd8dc742e3639b3361a2c8bd8c40689c0ff",
+   "arm": "84374ebae4b392d28c8000cc27481cd8dc742e3639b3361a2c8bd8c40689c0ff"
+  },
+  "fingerprint_unchanged": true,
+  "temporary_files_removed": true
+ }
+}

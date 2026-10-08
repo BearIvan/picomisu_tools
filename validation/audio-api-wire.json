@@ -1,0 +1,136 @@
+{
+ "fixture": "AudioApiFixture",
+ "prefix": "audio-api",
+ "component_commits": {
+  "frameworks/native": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+  "frameworks/base": "a5dc0b7100549075cf5561fd7aa2f0e98363245d",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "7f1640dde4a5617ae395bb5eec41eeb856e20707",
+  "packages/apps/Bluetooth": "7901ce4963d41339794367b85f3c607a4f6cff0e",
+  "packages/services/Telecomm": "4f8664b3070ebd80614513893edf48a1cde3ea05",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "ce3541dcdf46e98bfb12e054c9d12d58dd808eb6",
+  "packages/services/Telephony": "4c5250aa8faf66e65c394394b7b0e3a799de465f",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+  "prebuilts/abi-dumps/vndk": "caff0280e109e265570456a540c7390d1f3acbc2",
+  "packages/apps/Settings": "2cce6b7b8351155f485dd9bffacc13f680181b79",
+  "build/make": "cfcc0fa78c797b7eefb339e82bf3e653243671ba"
+ },
+ "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+ "source_framework_sha256": "56882f46d3837f07be454ff67989a26a51e748a07d08d428b6e2691340217c39",
+ "probe_sha256": "8d8ce79c2b32f02143a163c012fe8a639c2522e4109f00e7c139e8a7f9d272dc",
+ "package": "outputs/framework-boot-image-test-23",
+ "interfaces": {
+  "android.media.IAudioService": {
+   "methods": 131,
+   "oneway": [
+    "adjustSuggestedStreamVolume",
+    "avrcpSupportsAbsoluteVolume",
+    "playSoundEffect",
+    "playSoundEffectVolume",
+    "playerAttributes",
+    "playerEvent",
+    "playerHasOpPlayAudio",
+    "recenterHeadTracker",
+    "recorderEvent",
+    "releasePlayer",
+    "releaseRecorder",
+    "reloadAudioSettings",
+    "setFocusRequestResultFromExtPolicy",
+    "setSpatializerGlobalTransform",
+    "unloadSoundEffects",
+    "unregisterAudioPolicyAsync",
+    "unregisterAudioServerStateDispatcher",
+    "unregisterPlaybackCallback",
+    "unregisterRecordingCallback"
+   ]
+  },
+  "android.media.ISpatializer": {
+   "methods": 25,
+   "oneway": [
+    "releasePlayer"
+   ]
+  },
+  "android.media.INativeSpatializerCallback": {
+   "methods": 2,
+   "oneway": [
+    "onLevelChanged",
+    "onOutputChanged"
+   ]
+  },
+  "android.media.ISpatializerCallback": {
+   "methods": 2,
+   "oneway": [
+    "dispatchSpatializerAvailableChanged",
+    "dispatchSpatializerEnabledChanged"
+   ]
+  },
+  "android.media.ISpatializerHeadToSoundStagePoseCallback": {
+   "methods": 1,
+   "oneway": [
+    "dispatchPoseChanged"
+   ]
+  },
+  "android.media.ISpatializerHeadTrackerAvailableCallback": {
+   "methods": 1,
+   "oneway": [
+    "dispatchSpatializerHeadTrackerAvailable"
+   ]
+  },
+  "android.media.ISpatializerHeadTrackingCallback": {
+   "methods": 2,
+   "oneway": [
+    "onHeadToSoundStagePoseUpdated",
+    "onHeadTrackingModeChanged"
+   ]
+  },
+  "android.media.ISpatializerHeadTrackingModeCallback": {
+   "methods": 2,
+   "oneway": [
+    "dispatchSpatializerActualHeadTrackingModeChanged",
+    "dispatchSpatializerDesiredHeadTrackingModeChanged"
+   ]
+  },
+  "android.media.ISpatializerOutputCallback": {
+   "methods": 1,
+   "oneway": [
+    "dispatchSpatializerOutputChanged"
+   ]
+  },
+  "android.media.SpatializationLevel": {
+   "methods": 0,
+   "oneway": []
+  },
+  "android.media.SpatializationMode": {
+   "methods": 0,
+   "oneway": []
+  },
+  "android.media.SpatializerHeadTrackingMode": {
+   "methods": 0,
+   "oneway": []
+  }
+ },
+ "comparison": {
+  "arm64": {
+   "scenarios": 346,
+   "matched": 346,
+   "mismatched": {}
+  },
+  "arm": {
+   "scenarios": 346,
+   "matched": 346,
+   "mismatched": {}
+  }
+ },
+ "unexpected_differences": [],
+ "factory_run": {
+  "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true
+ },
+ "system_partitions_modified": false
+}

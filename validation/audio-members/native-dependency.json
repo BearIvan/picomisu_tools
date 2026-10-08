@@ -1,0 +1,18 @@
+{
+ "summary": "The factory Spatializer and setRecordSilenced are backed by PICO native audio server code that has no counterpart in the Android 10 Source audio stack. The Java side is ported; the three JNI entry points report an audio policy service without these features.",
+ "factory_property": "vendor/build.prop ro.audio.spatializer_enabled=true (vendor stays factory, so AudioService initializes SpatializerHelper with effectExpected=true)",
+ "factory_libandroid_runtime_jni": {
+  "AudioSystem.setRecordSilenced(Ljava/lang/String;Z)I": "android::AudioSystem::setRecordSilenced(char const*, bool)",
+  "AudioSystem.nativeGetSpatializer(Landroid/media/INativeSpatializerCallback;)Landroid/os/IBinder;": "android::AudioSystem::getSpatializer(sp<media::INativeSpatializerCallback> const&, sp<media::ISpatializer>*)",
+  "AudioSystem.canBeSpatialized(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;[Landroid/media/AudioDeviceAttributes;)Z": "android::AudioSystem::canBeSpatialized(audio_attributes_t const*, audio_config const*, std::vector<AudioDeviceTypeAddrForSpatial> const&, bool*)",
+  "AudioSystem.native_register_track_state_callback()V": "PICO track state callback, not part of this port"
+ },
+ "factory_libaudioclient": ["AudioSystem::getSpatializer/canBeSpatialized/setRecordSilenced through IAudioPolicyService vtable slots 0x268/0x270/0x260 (factory IAudioPolicyService is AIDL-generated: getDefaultImpl/setDefaultImpl)", "AIDL cpp media::ISpatializer, INativeSpatializerCallback, ISpatializerHeadTrackingCallback, SpatializationLevel, SpatializationMode, SpatializerHeadTrackingMode", "AudioDeviceTypeAddrForSpatial parcelable"],
+ "factory_audioserver": ["libaudiopolicyservice: Spatializer (effect control, Spatializer-looper, SpatializerPoseController, dynamic per-player spatialization: enableSpatialization/setAudioOrientation/setAudioPose, persist.audio.spatial_pose.*)", "libaudiopolicymanagerdefault: AudioPolicyManager::getSpatializerOutput/releaseSpatializerOutput/getSpatializerOutputProfile/canBeSpatializedInt, setRecordSilencedState, AudioInputDescriptor::setRecordSilencedState", "libaudioflinger, libspatialaudio.so, libvraudio.so (audioserver DT_NEEDED)", "vendor audio_effects.xml spatializer effect and audio_policy_configuration.xml spatializer mix port"],
+ "source_behavior": {
+  "nativeGetSpatializer": "returns null: SpatializerHelper.init logs 'No Spatializer found' and the state becomes STATE_NOT_SUPPORTED, as on a factory audio policy service without a spatializer",
+  "canBeSpatialized": "returns false",
+  "setRecordSilenced": "returns AudioSystem.AUDIO_STATUS_ERROR (INVALID_OPERATION mapped by check_AudioSystem_Command)"
+ },
+ "problems": []
+}

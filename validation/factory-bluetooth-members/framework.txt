@@ -1,0 +1,9 @@
+Landroid/bluetooth/le/IBluetoothLeCallback;
+Landroid/bluetooth/IBluetoothGatt;->registerCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Landroid/bluetooth/IBluetoothGatt;->unregisterCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Landroid/bluetooth/IBluetoothGatt$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+Landroid/bluetooth/IBluetoothGatt$Stub$Proxy;->registerCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Landroid/bluetooth/IBluetoothGatt$Stub$Proxy;->unregisterCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Landroid/bluetooth/IBluetoothGatt$Default;->registerCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Landroid/bluetooth/IBluetoothGatt$Default;->unregisterCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Landroid/bluetooth/IBluetoothGatt$Stub;->getDefaultTransactionName(I)Ljava/lang/String;

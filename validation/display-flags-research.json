@@ -1,0 +1,333 @@
+{
+  "abi": 64,
+  "display_state_flags_offset": 72,
+  "display_state_flags_default": 0,
+  "display_state_changed_mask": 16,
+  "display_device_state_flags_offset": 124,
+  "display_flags_composition_gate_bit": 20,
+  "factory_code_executed": false,
+  "source_port_complete": false,
+  "full_abi_proven": false,
+  "inputs": {
+    "libgui.so": {
+      "sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+      "instruction_checkpoints": [
+        {
+          "address": "0xbbc28",
+          "bytes": "1f4800b9",
+          "observation": "DisplayState constructor initializes flags to zero"
+        },
+        {
+          "address": "0xcea0c",
+          "bytes": "134800b9",
+          "observation": "setter stores uint32 at DisplayState+72"
+        },
+        {
+          "address": "0xcea10",
+          "bytes": "08011c32",
+          "observation": "setter ORs what with 0x10"
+        },
+        {
+          "address": "0xbbd44",
+          "bytes": "814a40b9",
+          "observation": "write loads trailing flags after width and height"
+        },
+        {
+          "address": "0xbbed0",
+          "bytes": "604a00b9",
+          "observation": "read stores trailing flags at DisplayState+72"
+        },
+        {
+          "address": "0xbbf34",
+          "bytes": "c8002036",
+          "observation": "merge tests what bit 4"
+        },
+        {
+          "address": "0xbbf44",
+          "bytes": "684a40b9",
+          "observation": "merge reads source flags"
+        },
+        {
+          "address": "0xbbf48",
+          "bytes": "884a00b9",
+          "observation": "merge stores destination flags"
+        }
+      ]
+    },
+    "libsurfaceflinger.so": {
+      "sha256": "d23904265c575d67c8818fa5eca24936d78ae137833e1c5383a7a4b09f3bdb51",
+      "instruction_checkpoints": [
+        {
+          "address": "0xef7d4",
+          "bytes": "f7002036",
+          "observation": "transaction handling tests what bit 4"
+        },
+        {
+          "address": "0xef7dc",
+          "bytes": "694a40b9",
+          "observation": "transaction reads DisplayState+72"
+        },
+        {
+          "address": "0xef7e8",
+          "bytes": "08011e32",
+          "observation": "changed flags request display transaction bit 0x4"
+        },
+        {
+          "address": "0xef7ec",
+          "bytes": "897e00b9",
+          "observation": "transaction stores DisplayDeviceState+124"
+        },
+        {
+          "address": "0xed270",
+          "bytes": "28511453",
+          "observation": "display update extracts flag bit 20"
+        },
+        {
+          "address": "0xed274",
+          "bytes": "68c60239",
+          "observation": "display update stores boolean at device+177"
+        },
+        {
+          "address": "0xed27c",
+          "bytes": "693a16b9",
+          "observation": "display update stores full flags at device+5688"
+        },
+        {
+          "address": "0xee228",
+          "bytes": "697e40b9",
+          "observation": "display creation reads state+124"
+        },
+        {
+          "address": "0xee22c",
+          "bytes": "093916b9",
+          "observation": "display creation stores full flags at device+5688"
+        },
+        {
+          "address": "0xee234",
+          "bytes": "09c50239",
+          "observation": "display creation stores bit 20 at device+177"
+        },
+        {
+          "address": "0xe99a8",
+          "bytes": "08c54239",
+          "observation": "composition reads device+177 under an additional global gate"
+        },
+        {
+          "address": "0xeabf8",
+          "bytes": "e82f40b9",
+          "observation": "composition reloads saved boolean from stack"
+        },
+        {
+          "address": "0xeac38",
+          "bytes": "ea035eb2",
+          "observation": "gated branch prepares usage value 0x400000000"
+        },
+        {
+          "address": "0xeac3c",
+          "bytes": "ec035db2",
+          "observation": "gated branch prepares usage value 0x800000000"
+        },
+        {
+          "address": "0xeac40",
+          "bytes": "6b0d6092",
+          "observation": "gated branch masks usage with 0xf00000000"
+        },
+        {
+          "address": "0xeac1c",
+          "bytes": "5f8104f1",
+          "observation": "gated branch requires one 288-byte layer-settings entry"
+        },
+        {
+          "address": "0xeac64",
+          "bytes": "aded5c92",
+          "observation": "gated branch clears the usage nibble"
+        },
+        {
+          "address": "0xeac68",
+          "bytes": "8d3d00f9",
+          "observation": "gated branch writes cleared usage back to GraphicBuffer"
+        },
+        {
+          "address": "0xeaee8",
+          "bytes": "085d40f9",
+          "observation": "composition calls RenderSurface vslot 184: getMultiLayerFlag"
+        },
+        {
+          "address": "0xeaf2c",
+          "bytes": "085140f9",
+          "observation": "composition calls RenderSurface vslot 160: attachBuffer"
+        },
+        {
+          "address": "0xeaf78",
+          "bytes": "085940f9",
+          "observation": "composition calls RenderSurface vslot 176: setMultiLayerFlag"
+        },
+        {
+          "address": "0x12c404",
+          "bytes": "29ed5c92",
+          "observation": "RenderSurface attach clears old usage nibble"
+        },
+        {
+          "address": "0x12c408",
+          "bytes": "290160b2",
+          "observation": "RenderSurface attach sets usage nibble 1 before Surface attach"
+        },
+        {
+          "address": "0x12c440",
+          "bytes": "29015fb2",
+          "observation": "RenderSurface attach sets usage nibble 2 after Surface attach"
+        },
+        {
+          "address": "0x12c56c",
+          "bytes": "032540f9",
+          "observation": "setSingleLayer forwards to DisplaySurface vslot 72"
+        },
+        {
+          "address": "0x12c580",
+          "bytes": "022940f9",
+          "observation": "setMultiLayerFlag forwards to DisplaySurface vslot 80"
+        },
+        {
+          "address": "0x12c590",
+          "bytes": "012d40f9",
+          "observation": "getMultiLayerFlag forwards to DisplaySurface vslot 88"
+        },
+        {
+          "address": "0x12bd30",
+          "bytes": "800e40f9",
+          "observation": "constructor loads explicit Surface from creation args+24"
+        },
+        {
+          "address": "0x12bd38",
+          "bytes": "200c02f8",
+          "observation": "constructor stores explicit Surface at RenderSurface+32"
+        },
+        {
+          "address": "0x12bd44",
+          "bytes": "7ffe02a9",
+          "observation": "constructor clears previous/current buffers at +40/+48"
+        },
+        {
+          "address": "0x12bd78",
+          "bytes": "7f920079",
+          "observation": "constructor clears protected and flip flags at +72/+73"
+        },
+        {
+          "address": "0x12ca84",
+          "bytes": "08240139",
+          "observation": "flipClientTarget only writes boolean at RenderSurface+73"
+        },
+        {
+          "address": "0x12c5f8",
+          "bytes": "68264139",
+          "observation": "queueBuffer tests flip flag before ordinary composition checks"
+        },
+        {
+          "address": "0x12c71c",
+          "bytes": "02008012",
+          "observation": "queueBuffer uses fence FD -1 when flip flag is set"
+        },
+        {
+          "address": "0x12c7bc",
+          "bytes": "02008012",
+          "observation": "cancelBuffer error path also uses FD -1 for flip flag"
+        },
+        {
+          "address": "0x12c4d0",
+          "bytes": "10000014",
+          "observation": "failed attach branches to last-attempt buffer assignment"
+        },
+        {
+          "address": "0x12c548",
+          "bytes": "750200f9",
+          "observation": "last-attempt buffer is assigned after success or failure"
+        },
+        {
+          "address": "0x81b3c",
+          "bytes": "e0030032",
+          "observation": "base getMultiLayerFlag returns true"
+        }
+      ]
+    }
+  },
+  "pending": [
+    "ARM32 object and wire layout",
+    "DisplayDeviceState constructor defaults",
+    "complete gated composition branch and concrete DisplaySurface implementations",
+    "additional global gate meaning",
+    "source/factory runtime fixtures"
+  ],
+  "render_surface_extensions": [
+    {
+      "offset_from_address_point": 152,
+      "method": "flipClientTarget",
+      "symbols": [
+        "_ZN7android17compositionengine4impl13RenderSurface16flipClientTargetEb"
+      ],
+      "source_slot_matches": true
+    },
+    {
+      "offset_from_address_point": 160,
+      "method": "attachBuffer",
+      "symbols": [
+        "_ZN7android17compositionengine4impl13RenderSurface12attachBufferERNS_2spINS_13GraphicBufferEEE"
+      ],
+      "source_slot_matches": true
+    },
+    {
+      "offset_from_address_point": 168,
+      "method": "setSingleLayer",
+      "symbols": [
+        "_ZN7android17compositionengine4impl13RenderSurface14setSingleLayerERKNS_2spINS_5LayerEEERKNS3_INS_13GraphicBufferEEE"
+      ],
+      "source_slot_matches": true
+    },
+    {
+      "offset_from_address_point": 176,
+      "method": "setMultiLayerFlag",
+      "symbols": [
+        "_ZN7android17compositionengine4impl13RenderSurface17setMultiLayerFlagEb"
+      ],
+      "source_slot_matches": true
+    },
+    {
+      "offset_from_address_point": 184,
+      "method": "getMultiLayerFlag",
+      "symbols": [
+        "_ZN7android17compositionengine4impl13RenderSurface17getMultiLayerFlagEv"
+      ],
+      "source_slot_matches": true
+    }
+  ],
+  "render_surface_layout_observations": {
+    "creation_args_surface_pointer_offset": 24,
+    "explicit_surface_pointer_offset": 32,
+    "last_attached_buffer_offset": 40,
+    "current_buffer_offset": 48,
+    "display_surface_offset": 56,
+    "protected_flag_offset": 72,
+    "flip_client_target_flag_offset": 73,
+    "page_flip_count_offset": 76,
+    "flip_client_target_function_bytes": 12,
+    "flip_uses_no_fence_fd_for_queue_and_cancel": true,
+    "release_fence_lifecycle_fully_reconstructed": false
+  },
+  "source_compositor_comparison": {
+    "sha256": "11f595445260fdccad2c47cd716e2e8cf676b23a026f364c4fc643560112d237",
+    "tables": {
+      "_ZTVN7android17compositionengine4impl13RenderSurfaceE": {
+        "factory_bytes": 208,
+        "source_bytes": 208
+      },
+      "_ZTVN7android17compositionengine13RenderSurfaceE": {
+        "factory_bytes": 208,
+        "source_bytes": 208
+      },
+      "_ZTVN7android17compositionengine14DisplaySurfaceE": {
+        "factory_bytes": 224,
+        "source_bytes": 224
+      }
+    },
+    "full_method_order_or_object_layout_verified": false
+  }
+}

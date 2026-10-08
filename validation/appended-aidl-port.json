@@ -1,0 +1,329 @@
+{
+ "title": "Factory tables of the 17 appended framework AIDL interfaces (CodeLinaro LA.UM.8.12.c3-64900, PICO and Smartisan)",
+ "patches": [
+  "patches/0097-framework-appended-aidl-tables.patch",
+  "patches/0098-appended-aidl-runtime-fixture.patch",
+  "patches/0099-av-camera-open-close-player-ext-volume.patch",
+  "patches/0100-telephony-subscription-plans-cf-service-class.patch",
+  "patches/0101-ims-query-cf-service-class.patch",
+  "patches/0102-settings-subscription-plans-listener.patch",
+  "patches/0103-boot-jars-smartisanos-util.patch",
+  "patches/0104-ndk-abi-libaaudio-ext-volume.patch",
+  "patches/0105-layoutlib-sensor-control-screen.patch"
+ ],
+ "tables": {
+  "factory": 857,
+  "identical_before": 794,
+  "identical_after": 820,
+  "appended_before": 17,
+  "appended_after": 0,
+  "shifted_after": 0,
+  "factory_only_before": 46,
+  "factory_only_after": 37,
+  "factory_only_remaining": [
+   "Landroid/app/IDataListener$Stub;",
+   "Landroid/app/IFreezeManager$Stub;",
+   "Landroid/app/IPrefetchCallback$Stub;",
+   "Landroid/app/IPrefetchManager$Stub;",
+   "Landroid/app/IPrefetchObserver$Stub;",
+   "Landroid/app/ISceneInfoManager$Stub;",
+   "Landroid/app/IUnFreezeCallback$Stub;",
+   "Landroid/casthal/IBatteryChangeListener$Stub;",
+   "Landroid/casthal/IScreenChangeListener$Stub;",
+   "Landroid/content/IClipboardSmtEx$Stub;",
+   "Landroid/content/pm/IPackageManagerMonitorEx$Stub;",
+   "Landroid/dvr/IVirtualInputService$Stub;",
+   "Landroid/os/IDeviceIdleControllerSmtEx$Stub;",
+   "Landroid/os/IPowerAdvisor$Stub;",
+   "Landroid/os/IPowerManagerMonitorEx$Stub;",
+   "Landroid/os/IPowerManagerSmtEx$Stub;",
+   "Landroid/pc/ISmtPCManager$Stub;",
+   "Lcom/android/internal/app/IDataReportCallback$Stub;",
+   "Lcom/android/internal/app/IDataReportServer$Stub;",
+   "Lcom/android/internal/app/ISysTransServer$Stub;",
+   "Lcom/android/internal/app/ITransferServer$Stub;",
+   "Lcom/android/internal/car/ICarStatsService$Stub;",
+   "Lcom/android/internal/policy/IKeyguardFaceIDVerifyCallback$Stub;",
+   "Lcom/android/internal/policy/IKeyguardFingerprintVerifyCallback$Stub;",
+   "Lcom/android/internal/policy/IKeyguardVerifyCallback$Stub;",
+   "Lcom/android/internal/telephony/ISmsSecurityAgent$Stub;",
+   "Lcom/android/internal/telephony/ISmsSecurityService$Stub;",
+   "Lcom/qualcomm/qti/IPerfManager$Stub;",
+   "Lcom/qualcomm/wfd/service/IHIDEventListener$Stub;",
+   "Lcom/qualcomm/wfd/service/ISessionManagerService$Stub;",
+   "Lcom/qualcomm/wfd/service/IWfdActionListener$Stub;",
+   "Lcom/qualcomm/wfd/service/IWfdSession$Stub;",
+   "Lorg/codeaurora/internal/IDepersoResCallback$Stub;",
+   "Lorg/codeaurora/internal/IDsda$Stub;",
+   "Lorg/codeaurora/internal/IExtTelephony$Stub;",
+   "Lorg/codeaurora/internal/INetworkCallback$Stub;",
+   "Lvendor/qti/hardware/servicetracker/V1_0/IServicetracker$Stub;"
+  ]
+ },
+ "signature_check": {
+  "note": "compare-aidl-tables compares method names and codes only. A full signature/direction/oneway check of every common framework, services and telephony-common table found IBatteryStats.notePhoneDataConnectionState(IZI), ported from CodeLinaro; the remaining differences below are in tables outside this chunk.",
+  "remaining": {
+   "Landroid/app/IBackupAgent$Stub$Proxy;": [
+    [
+     "3",
+     "('doFullBackup', '(Landroid/os/ParcelFileDescriptor;JILandroid/app/backup/IBackupManager;ILjava/util/List;Ljava/util/List;)V', True, ['in', 'in', 'in', 'in', 'in', 'in', 'in'])",
+     "('doFullBackup', '(Landroid/os/ParcelFileDescriptor;JILandroid/app/backup/IBackupManager;I)V', True, ['in', 'in', 'in', 'in', 'in'])"
+    ]
+   ],
+   "Landroid/bluetooth/IBluetoothPan$Stub$Proxy;": [
+    [
+     "2",
+     "('setBluetoothTethering', '(ZLjava/lang/String;)V', False, ['in', 'in'])",
+     "('setBluetoothTethering', '(Z)V', False, ['in'])"
+    ]
+   ],
+   "Landroid/net/INetworkStatsService$Stub$Proxy;": [
+    [
+     "7",
+     "('forceUpdateIfaces', '([Landroid/net/Network;[Landroid/net/NetworkState;Ljava/lang/String;)V', False, ['in', 'in', 'in'])",
+     "('forceUpdateIfaces', '([Landroid/net/Network;[Lcom/android/internal/net/VpnInfo;[Landroid/net/NetworkState;Ljava/lang/String;)V', False, ['in', 'in', 'in', 'in'])"
+    ]
+   ],
+   "Landroid/os/IStatsManager$Stub$Proxy;": [
+    [
+     "24",
+     "('sendWatchdogRollbackOccurredAtom', '(ILjava/lang/String;JILjava/lang/String;)V', True, ['in', 'in', 'in', 'in', 'in'])",
+     "('sendWatchdogRollbackOccurredAtom', '(ILjava/lang/String;J)V', True, ['in', 'in', 'in'])"
+    ]
+   ],
+   "Landroid/os/IVibratorService$Stub$Proxy;": [
+    [
+     "3",
+     "('vibrate', '(ILjava/lang/String;Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;Ljava/lang/String;Landroid/os/IBinder;)V', False, ['in', 'in', 'in', 'in', 'in', 'in'])",
+     "('vibrate', '(ILjava/lang/String;Landroid/os/VibrationEffect;ILjava/lang/String;Landroid/os/IBinder;)V', False, ['in', 'in', 'in', 'in', 'in', 'in'])"
+    ]
+   ],
+   "Landroid/view/ISystemGestureExclusionListener$Stub$Proxy;": [
+    [
+     "1",
+     "('onSystemGestureExclusionChanged', '(ILandroid/graphics/Region;Landroid/graphics/Region;)V', True, ['in', 'in', 'in'])",
+     "('onSystemGestureExclusionChanged', '(ILandroid/graphics/Region;)V', True, ['in', 'in'])"
+    ]
+   ]
+  }
+ },
+ "donors": {
+  "IPackageManager.getSplitPermissions": "CodeLinaro frameworks/base",
+  "INetworkPolicyListener.onSubscriptionPlansChanged": "CodeLinaro frameworks/base, frameworks/opt/telephony, Settings",
+  "IRecentsAnimationController.setDeferCancelUntilNextTransition": "CodeLinaro frameworks/base (wm, SystemUI shared)",
+  "IImsUt.queryCFForServiceClass": "CodeLinaro frameworks/base, frameworks/opt/net/ims, frameworks/opt/telephony",
+  "ICameraServiceListener.onCameraOpened/onCameraClosed": "CodeLinaro frameworks/av and CameraManager",
+  "IBatteryStats.notePhoneDataConnectionState(serviceType)": "CodeLinaro frameworks/base (signature difference inside the IBatteryStats table)",
+  "IBackupManager.backup/restore, IFullBackupRestoreObserver.onBackupRestoreErr": "PICO, factory DEX",
+  "IPackageInstallerSession.getInstallFlags": "PICO, factory DEX",
+  "IInputManager.getVitualInputDevice": "PICO, factory DEX",
+  "IUsbManager.startAccessory": "PICO, factory DEX",
+  "IPlayer.setExtVolume": "PICO, factory DEX and factory libaudioclient/libaaudio disassembly",
+  "IPowerManager.setSensorControlScreenFeatureState": "PICO, factory DEX",
+  "ISchedulingPolicyService.requestThreadCpuset": "PICO, factory DEX and libmediautils",
+  "IApplicationThread.scheduleActivityTimeout": "PICO, factory DEX (ExtActivityStack timeouts)",
+  "IApplicationThread.onPrefetchRealStart/completePrefetchBindApplication/configArtTracer/scheduleMethodTrace": "Smartisan, factory DEX (minimal subset)",
+  "IActivityManager.getMonitorEx/getISmtEx/keepProcessAliveBackground, IPackageManager.getISmtEx, IWindowSession.getISmtEx, IBatteryStats.getIBatteryStatsOptEx": "Smartisan, factory DEX (minimal subset with the factory bridge defaults)"
+ },
+ "static": {
+  "framework.jar": {
+   "changed_classes": 174,
+   "identical_including_unported_factory_members": 158,
+   "identical_on_ported_members": 166,
+   "explained_differences": {
+    "Landroid/app/ActivityThread$H;": "handleMessage default branch: the factory forwards unknown messages to ActivityThreadSmtBase.handleMessage (Smartisan 1011 COMPLETE_PREFETCH_BIND_APPLICATION / 3000 handlers) - Smartisan chunk.",
+    "Landroid/app/ActivityThread;": "<init>: factory ExtImplFactory.getImpl reflection vs the Source convention new ExtActivityThreadImpl(this), plus unported ActivityThreadMonitorEx. handleBindApplication: unported Smartisan/QTI hooks (ApplicationInfoSmtBase flags, density override, sys_hook, HeavyGame, AnrLogger, BinderCallsStats, prefetch bind, BoostFramework).",
+    "Landroid/app/ActivityThreadSmtBase;": "<init>: only the reached fields (mPrefetchData, mActivityThread) are ported; mPrefetchAppContext/mFreezePrefetch/startTime belong to the Smartisan prefetch path.",
+    "Landroid/app/AppOpsManager;": "<clinit>: pre-existing CodeLinaro ACCESS_MEDIA_LOCATION op and the ByteDance bindCallCacheCheckPackage property of the factory; unrelated to these tables (listed through D8 renumbering).",
+    "Landroid/content/pm/ApplicationInfo;": "Constructors/Parcel: the factory also has unported overrideRes/overrideDensity and ApplicationInfoMonitorEx; appInfoJsonConfig/appLastTime (needed by IPackageManagerSmtEx.updateAppInfo) are at the factory parcel position with factory WHITELIST flags; Ext construction by direct new (Source convention).",
+    "Landroid/hardware/input/InputManager;": "<init>: ExtImplFactory reflection vs direct new ExtInputManagerImpl (Source convention).",
+    "Landroid/telephony/CarrierConfigManager;": "<clinit>: other CodeLinaro carrier-config keys (RTT, bandwidth table, 5G icon string, opportunistic data switch) of unrelated features; the 5G unmetered/hysteresis/watchdog keys used by onSubscriptionPlansChanged are identical.",
+    "Lcom/android/internal/os/BatteryStatsImpl;": "Constructors and parcel readers: Source r47 keeps mIsCellularTxPowerHigh which the factory lacks; notePhoneDataConnectionStateLocked(dataType, hasData, serviceType) is identical to CodeLinaro/factory."
+   }
+  },
+  "services.jar": {
+   "changed_classes": 125,
+   "identical_including_unported_factory_members": 51,
+   "identical_on_ported_members": 84,
+   "explained_differences": {
+    "Lcom/android/server/ISysSvsFactory$3;": "Anonymous default-class numbering: only reached getters are ported, so ISysSvsFactory defaults are $1..$10 instead of the factory $6,$10,$19,$23,$33,$34,$42,$49,$53,$54 (factory $3 is PowerAdvisorInternal).",
+    "Lcom/android/server/SysOptBridge;": "<clinit>: the unreached SYSOPT_MULTIPLAT_CLASS_NAME/getMultiPlatFactory are not ported; getFactory is identical.",
+    "Lcom/android/server/am/-$$Lambda$UV1wDVoVlbcxpr8zevj_aMFtUGw;": "D8 lambda class hash differs from the factory -$$Lambda$gfCssnBJI7TKfXb_Jmv7raVYNkY (same lambda of getPrefetchPids).",
+    "Lcom/android/server/am/ActivityManagerService;": "Constructors: unported PICO IExtActivityManagerService and Smartisan setActivityManagerService/IActivityManagerOptEx/initSmartisanOS/ATMS SmtEx setAMS. addErrorToDropBox: only the factory customErrorType \"Type:\" line is ported; the other factory extras (DropBox logs, write-rate limit, IsSilentAnr, is_screen_on, AnrMonitor supplement) belong to the Smartisan chunk.",
+    "Lcom/android/server/am/ActivityManagerServiceSmtBase;": "Constructors reduced to reached fields (mActivityManagerService, mStrictModeFlags, mTransferService, mIActivityManagerSmtEx, mPrefetchApps); getPrefetchPids differs only in the D8 lambda class name.",
+    "Lcom/android/server/am/ActivityManagerServiceSysMoEx;": "Constructors: mPendingLaunchRecords and mSmtOptEx (SysMonitorSvcBridge getActivityManager) are not reached by the 5 AIDL methods, which are identical.",
+    "Lcom/android/server/am/ProcExtraInfoSmtBase$LastWord;": "Synthetic accessor numbering: only the reached accessors exist, so access$N point to other fields (getLastWordOfPid is identical after normalisation).",
+    "Lcom/android/server/am/ProcessRecord;": "<init>: unported Smartisan ProcessRecordMonitorEx.",
+    "Lcom/android/server/am/ProcessRecordSmtBase;": "<init>: only smtExtraInfo/delayFreezing are ported; the other ~40 Smartisan process fields belong to the Smartisan chunk.",
+    "Lcom/android/server/am/UidRecord;": "<init>: unported initSmtUidrecord (Smartisan freezer).",
+    "Lcom/android/server/am/UidRecordSmtBase;": "<init>: only curFrozenStat is ported; freezingMode/setSchedGroup/setFrozenStat belong to the Smartisan freezer.",
+    "Lcom/android/server/backup/ExtUserBackupManagerServiceImpl;": "getWakelock(): the factory has the Android 11 security backport UserBackupManagerService$BackupWakeLock; Source keeps PowerManager.WakeLock (same acquire/release calls).",
+    "Lcom/android/server/backup/Trampoline;": "<init>: ExtImplFactory reflection vs direct new ExtTrampolineImpl (Source convention).",
+    "Lcom/android/server/backup/UserBackupManagerService;": "<init>: Ext construction convention and the BackupWakeLock backport; tearDownAgentAndKill: factory MORE_DEBUG=true logging (Source keeps the if (MORE_DEBUG) guard).",
+    "Lcom/android/server/backup/fullbackup/FullBackupEngine$FullBackupRunner;": "run(): factory MORE_DEBUG logging, and the factory forwards include/exclude paths to the in-place changed IBackupAgent.doFullBackup (7 arguments) - separate IBackupAgent change, not ported.",
+    "Lcom/android/server/backup/fullbackup/FullBackupEngine;": "<init>: Ext construction convention.",
+    "Lcom/android/server/backup/fullbackup/PicoFullBackupTask;": "handleCancel: factory field of the BackupWakeLock/Android 11 backport; run(): BackupWakeLock backport.",
+    "Lcom/android/server/backup/restore/FullRestoreEngine;": "<init>: Ext construction convention; restoreOneFile: factory MORE_DEBUG logging.",
+    "Lcom/android/server/backup/restore/PicoFullRestoreTask;": "run(): BackupWakeLock backport and factory MORE_DEBUG logging.",
+    "Lcom/android/server/input/InputManagerService;": "<init>: Ext construction convention.",
+    "Lcom/android/server/notification/NotificationRecord;": "dump(): pre-existing Source r47 vs factory difference (small-icon dump), unrelated; listed because of D8 renumbering.",
+    "Lcom/android/server/pm/PackageManagerService;": "<init>: unported PICO IExtPackageManagerService and Smartisan SmartisanOSInit/PeroptWhiteListParser; getISmtEx and getSplitPermissions are identical.",
+    "Lcom/android/server/pm/PackageManagerServiceMonitorEx;": "Extends Object instead of IPackageManagerMonitorEx$Stub (IPackageManagerMonitorEx is not returned by any appended method; Smartisan chunk).",
+    "Lcom/android/server/pm/PackageManagerServiceSmtBase;": "<init>: javac/D8 null-check form for the inner Stub instantiation.",
+    "Lcom/android/server/pm/permission/PermissionManagerService;": "restorePermissionState: unported PICO IExtPermissionManagerService.allowAlertWindowAndRevokeInstallPermission hook; the split-permission loop is identical to CodeLinaro.",
+    "Lcom/android/server/power/ExtPowerManagerServiceImpl$1;": "The factory $1 is an LED receiver; the ported DeathRecipient is $1 in Source (unported LED classes shift numbering).",
+    "Lcom/android/server/power/ExtPowerManagerServiceImpl;": "<init>/systemReady: LED/DP (ro.pxr.dpstream.support) state and receivers not ported; systemReady resets pvr.factorytest.never.sleep as the factory but returns false so the Source battery receiver stays registered (the factory returns true because its PICO LED receivers replace it).",
+    "Lcom/android/server/power/PowerManagerService;": "<init>: Ext construction convention; systemReady: Smartisan IPowerManagerOptEx.systemReady not ported.",
+    "Lcom/android/server/usb/UsbDeviceManager$UsbUEventObserver;": "onUEvent: unported PICO uevent logging.",
+    "Lcom/android/server/usb/UsbDeviceManager;": "<init>: Ext construction convention; startAccessoryMode(): the factory delegates to the PICO startAccessoryMode(boolean) (settings-caller/pre-accessory feature, not ported); Source keeps the AOSP body.",
+    "Lcom/android/server/wm/ActivityDisplay;": "<init>: unported QTI BoostFramework fields and PICO IExtActivityDisplay.",
+    "Lcom/android/server/wm/ActivityStack;": "<init>: QTI BoostFramework mPerf and ExtImplFactory reflection vs direct new ExtActivityStackImpl.",
+    "Lcom/android/server/wm/ActivityStackSupervisor$ActivityStackSupervisorHandler;": "handleMessage: Smartisan ATMS SmtEx uiFirstSwitch branch not ported; the scheduleActivityTimeout call is identical.",
+    "Lcom/android/server/wm/ActivityTaskManagerService;": "<init>: unported PICO IExtActivityTaskManagerInternal and Smartisan ActivityTaskManagerInternalSmtBase.",
+    "Lcom/android/server/wm/ActivityTaskManagerServiceSmtBase;": "<init>: only mAtmServices is reached; perf handler/boost white list are Smartisan.",
+    "Lcom/android/server/wm/ConfigurationContainerSmtBaseFactory;": "createSmtEx: only the RootActivityContainer branch (getTopApplication) and the default are ported; DisplayContent/WindowState branches are Smartisan chunk.",
+    "Lcom/android/server/wm/ExtActivityStackImpl;": "<init>: mCallerStackId of the unported PICO caller-stack feature.",
+    "Lcom/android/server/wm/RecentsAnimation;": "Factory RecentsAnimation.DEBUG and WindowManagerDebugConfig.DEBUG_RECENTS_ANIMATIONS are true (compile-time logging); CodeLinaro preload refactor not ported (lambda numbering).",
+    "Lcom/android/server/wm/RecentsAnimationController$2;": "Factory DEBUG_RECENTS_ANIMATIONS=true logging; setDeferCancelUntilNextTransition is identical after accessor normalisation.",
+    "Lcom/android/server/wm/RecentsAnimationController;": "Factory DEBUG_RECENTS_ANIMATIONS=true logging only; the CodeLinaro code is otherwise identical.",
+    "Lcom/android/server/wm/SessionSmtBase;": "<init>: javac/D8 null-check form for the inner Stub instantiation."
+   }
+  },
+  "telephony-common.jar": {
+   "changed_classes": 15,
+   "identical_including_unported_factory_members": 8,
+   "identical_on_ported_members": 8,
+   "explained_differences": {
+    "Lcom/android/internal/telephony/dataconnection/DataConnection$DcActiveState;": "CodeLinaro NR state/frequency and PDP-reject (EVENT_RETRY_CONNECTION) handling of separate features, not ported.",
+    "Lcom/android/internal/telephony/dataconnection/DataConnection$DcDefaultState;": "Same: EVENT_RETRY_CONNECTION/EVENT_NR_* handling of other CodeLinaro features.",
+    "Lcom/android/internal/telephony/dataconnection/DataConnection;": "<clinit>/dump/getNetworkCapabilities: CodeLinaro EVENT_NR_*/handover/disallowed-APN and link-bandwidth features not ported; the unmetered override is identical.",
+    "Lcom/android/internal/telephony/dataconnection/DcTracker$2;": "onReceive: accessor vs direct calls caused by unported CodeLinaro DcTracker members.",
+    "Lcom/android/internal/telephony/dataconnection/DcTracker$4;": "Accessor vs direct field access (factory fields are package-private through unported CodeLinaro features); logic identical.",
+    "Lcom/android/internal/telephony/dataconnection/DcTracker;": "Constructors/handleMessage: other CodeLinaro DcTracker features (essential SIM records, bandwidths, IA APN, handover fallback) not ported.",
+    "Lcom/android/internal/telephony/imsphone/ImsPhoneMmiCode;": "processCode: other CodeLinaro MMI changes (CS fallback, CF SIA/SIB handling) not ported; the serviceClass interrogate path is identical."
+   }
+  }
+ },
+ "faithful_factory_failures": [
+  "Session.getISmtEx casts SessionSmtBase to IWindowSessionSmtEx and throws ClassCastException, as in the factory",
+  "BatteryStatsService.getIBatteryStatsOptEx throws ClassCastException while the sys-services JAR is absent (the default BatteryStatsServiceOptEx does not implement IBatteryStatsOptEx), as in the factory",
+  "PackageManagerServiceMonitorEx.isTaskPersist dereferences the never-written mPermissionManager, as in the factory",
+  "FeatLog.e/SmtSysLog.fatal write log buffer 9 (sysfatal), rejected by stock liblog; getLastword therefore throws while the last-word map is empty",
+  "completePrefetchBindApplication dereferences mPrefetchData before its null check, as in the factory"
+ ],
+ "left_for_smartisan_chunk": {
+  "fields_without_ported_writers": [
+   "ActivityManagerServiceSmtBase.mPrefetchApps",
+   "ProcExtraInfoSmtBase.mLastWordMap",
+   "UidRecordSmtBase.curFrozenStat",
+   "ActivityDisplaySmtBase.mTopFullScreenStack",
+   "SettingsSmtBase.mAllTaskPersistPackages",
+   "ActivityThreadSmtBase.mPrefetchData",
+   "ProcessRecordSmtBase.delayFreezing (no reader)"
+  ],
+  "bridge_default_paths": [
+   "ArtTracer",
+   "MemMonitor",
+   "SmtResourceControl",
+   "SysPrefetchService",
+   "PrefetchManager",
+   "MemoryProcessController (keepProcessAliveBackground)",
+   "HandleMemoryLeak",
+   "TaskDeepClean",
+   "IActivityManagerOptEx observers",
+   "AnrMonitor.addClient",
+   "MemoryStrategy",
+   "TransferController",
+   "SmartService"
+  ],
+  "unported_callers": [
+   "ActivityManagerSmtBase/StrictMode (IActivityManager.getISmtEx)",
+   "ActivityManagerMonitorEx (getMonitorEx)",
+   "PeroptWhiteListParser (IPackageManager.getISmtEx)",
+   "WindowSessionSmtBase (IWindowSession.getISmtEx)",
+   "LightsService.onBootPhase (getIBatteryStatsOptEx)",
+   "ProcessListSmtBase.findPrefetchProcess (completePrefetchBindApplication)",
+   "sys-/sysmonitor- JAR callers of onPrefetchRealStart/configArtTracer/scheduleMethodTrace"
+  ],
+  "not_ported_state": [
+   "AMS SysOptBridge setActivityManagerService",
+   "SysMoEx/SmtBase observers and config files",
+   "PMS SmartisanOSInit",
+   "ActivityThread.H -> ActivityThreadSmtBase.handleMessage (1011/3000)",
+   "PackageManagerServiceMonitorEx as IPackageManagerMonitorEx.Stub"
+  ]
+ },
+ "left_for_other_chunks": [
+  "PICO ExtAudioServiceImpl background muting (server caller of IPlayer.setExtVolume)",
+  "IBackupAgent.doFullBackup include/exclude paths (factory changes that signature in place) and ExtBackupAgentImpl",
+  "ExtPowerManagerServiceImpl LED/DP/wake proxies",
+  "PICO USB startAccessoryMode(boolean)/setCurrentFunctions/uevent",
+  "audioflinger/audio HAL callers of requestThreadCpuset",
+  "IExtInputManager.adjustInjectInputEventIfNeeded",
+  "CodeLinaro DcTracker bandwidth/NR features, CameraService secure-camera and aux-camera filtering"
+ ],
+ "runtime": {
+  "package": "outputs/framework-boot-image-test-25",
+  "fixtures_per_abi": 28,
+  "appended_aidl_wire": {
+   "arm64": {
+    "scenarios": 1790,
+    "matched": 1790
+   },
+   "arm": {
+    "scenarios": 1790,
+    "matched": 1790
+   }
+  },
+  "regression_wire": {
+   "PicoApiFixture": {
+    "arm64": {
+     "scenarios": 313,
+     "matched": 313
+    },
+    "arm": {
+     "scenarios": 313,
+     "matched": 313
+    },
+    "unexpected": []
+   },
+   "QcomApiFixture": {
+    "arm64": {
+     "scenarios": 1190,
+     "matched": 1190
+    },
+    "arm": {
+     "scenarios": 1190,
+     "matched": 1190
+    },
+    "unexpected": []
+   },
+   "AudioApiFixture": {
+    "arm64": {
+     "scenarios": 346,
+     "matched": 346
+    },
+    "arm": {
+     "scenarios": 346,
+     "matched": 346
+    },
+    "unexpected": []
+   },
+   "ShiftedAidlFixture": {
+    "arm64": {
+     "scenarios": 1207,
+     "matched": 1207
+    },
+    "arm": {
+     "scenarios": 1207,
+     "matched": 1207
+    },
+    "unexpected": []
+   }
+  },
+  "vr_policy": "76/78 + 2 expected on both ABIs",
+  "inspect_vr_canvas": "passed",
+  "headset": "adb 192.168.1.230:5555, temporary fixtures in /data/local/tmp as shell UID, removed; system partitions not modified"
+ },
+ "system_partitions_modified": false
+}

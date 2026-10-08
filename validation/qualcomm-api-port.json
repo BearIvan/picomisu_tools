@@ -1,0 +1,145 @@
+{
+ "title": "Stage 1: Qualcomm CodeLinaro LA.UM.8.12.c3-64900 APIs",
+ "static": {
+  "framework.jar": {
+   "classes": 97,
+   "identical": 92,
+   "explained_differences": {
+    "Landroid/bluetooth/BluetoothCodecConfig;": "sameCodecSpecificParameters: the factory uses Qualcomm codec numbering (4 = aptX Adaptive, 5 = LDAC); Source keeps AOSP numbering (LDAC = 4) because the Source Bluetooth stack is AOSP. References are identical, only the codec constants differ.",
+    "Landroid/util/BoostFramework;": "The factory creates Smartisan BoostFrameworkSmtBase (mSmtEx/getSmtEx) in every constructor; that Smartisan class loads DPerformance.jar and is part of stage 3.",
+    "Landroid/view/View;": "onVisibilityAggregated: isAggregatedVisible and gesture-exclusion resend belong to a different upstream change; the content-capture parts are identical.",
+    "Landroid/view/ViewRootImpl;": "<init>/performDraw: PICO ExtImplFactory creation, mHaveMoveEvent, skip-draw logging and resource IDs (stage 2 hooks and resource layout), not the content-capture port.",
+    "Landroid/webkit/WebView;": "<init>: PICO mCallback field unrelated to content capture."
+   }
+  },
+  "services.jar": {
+   "classes": 15,
+   "identical": 12,
+   "explained_differences": {
+    "Lcom/android/server/UiModeManagerService;": "onStart/adjustStatusBarCarModeLocked differ only in inlined framework-res resource IDs.",
+    "Lcom/android/server/biometrics/face/FaceService$FaceServiceWrapper;": "remove/setFeature/getFeature match up to access$N and lambda numbering; enroll lacks the re-enrollment notification cancel and ENROLL_TIMEOUT_SEC=75, which need later upstream BiometricServiceBase/EnrollClient changes.",
+    "Lcom/android/server/locksettings/LockSettingsService;": "checkCredential: the factory passes an int ChallengeType to doVerifyCredential (separate upstream change); the ported password retention is identical."
+   }
+  },
+  "wifi-service.jar": {
+   "classes": 6,
+   "identical": 4,
+   "explained_differences": {
+    "Lcom/android/server/wifi/WifiConfigManager;": "mergeWithInternalWifiConfiguration also merges the PICO needLogin/autoConnect fields (no donor; the fields exist in the Source WifiConfiguration since 0062).",
+    "Lcom/android/server/wifi/WifiServiceImpl;": "setWifiEnabled2 carries the PICO wifi_feature_for_customer_enabled check and savePackageControlWifiSate (no donor); getNumConcurrentStaSupported differs only in a framework-res resource ID. The QTI second STA, DPP, getCapabilities and doDriverCmd are ported with the CodeLinaro service (0063, validation/qti-wifi-port.json)."
+   }
+  },
+  "telephony-common.jar": {
+   "classes": 2,
+   "identical": 2,
+   "explained_differences": {}
+  },
+  "Bluetooth.apk": {
+   "classes": 3,
+   "identical": 2,
+   "explained_differences": {
+    "Lcom/android/bluetooth/btservice/AdapterService;": "getSocketOpt/setSocketOpt/setClockSyncConfig/startClockSync call the QTI vendor stack (libbluetooth_qti) in the factory; the AOSP Source stack returns the donor's failure values (-1/false)."
+   }
+  }
+ },
+ "unexplained": [],
+ "wire": {
+  "fixture": "QcomApiFixture",
+  "package": "outputs/framework-boot-image-test-21",
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "ec648b93dc60b45949e887adaa6c9edb89876fd631128419e0dad2c082fdc3e2",
+  "probe_sha256": "8ceaefd08ba3dc33cdf3776db7f8e281824d0131a3923529aac98cb3ec009408",
+  "interfaces": {
+   "android.net.wifi.IWifiManager": {
+    "methods": 110,
+    "oneway": [
+     "requestActivityInfo"
+    ]
+   },
+   "android.net.wifi.IWifiNotificationCallback": {
+    "methods": 4,
+    "oneway": [
+     "onLinkConfigurationChanged",
+     "onNetworkStateChanged",
+     "onRssiChanged",
+     "onStateChanged"
+    ]
+   },
+   "android.bluetooth.IBluetooth": {
+    "methods": 85,
+    "oneway": [
+     "requestActivityInfo"
+    ]
+   },
+   "android.bluetooth.IBluetoothHeadsetPhone": {
+    "methods": 12,
+    "oneway": []
+   },
+   "android.bluetooth.IBluetoothDun": {
+    "methods": 4,
+    "oneway": []
+   },
+   "com.android.internal.telephony.ITelephony": {
+    "methods": 255,
+    "oneway": [
+     "disableVisualVoicemailSmsFilter",
+     "enqueueSmsPickResult",
+     "requestModemActivityInfo"
+    ]
+   },
+   "com.android.internal.telephony.ISub": {
+    "methods": 47,
+    "oneway": [
+     "requestEmbeddedSubscriptionInfoListRefresh"
+    ]
+   },
+   "com.android.internal.widget.ILockSettings": {
+    "methods": 43,
+    "oneway": []
+   },
+   "android.app.IUiModeManager": {
+    "methods": 8,
+    "oneway": []
+   },
+   "android.hardware.face.IFaceService": {
+    "methods": 22,
+    "oneway": []
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  },
+  "comparison": {
+   "arm64": {
+    "scenarios": 1190,
+    "matched": 1190
+   },
+   "arm": {
+    "scenarios": 1190,
+    "matched": 1190
+   }
+  }
+ },
+ "component_commits": {
+  "frameworks/native": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+  "frameworks/base": "9140a72e91692120645012d9aa0d6a4a632d564b",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "eae0808facaf4f6759e4be0966ff78ca1e554774",
+  "packages/apps/Bluetooth": "12c367b7d6ac9f7af4fd9fbc5d8648ecb5a31aa5",
+  "packages/services/Telecomm": "4f8664b3070ebd80614513893edf48a1cde3ea05",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "ce3541dcdf46e98bfb12e054c9d12d58dd808eb6",
+  "packages/services/Telephony": "4c5250aa8faf66e65c394394b7b0e3a799de465f",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+  "prebuilts/abi-dumps/vndk": "e2e6f927cb78b31ce96885c3ee6c3831adbfcfcc",
+  "packages/apps/Settings": "9e316a9417c866deffa5e8ea26fe9a05c933335c"
+ },
+ "system_partitions_modified": false
+}

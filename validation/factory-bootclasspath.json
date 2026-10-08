@@ -1,0 +1,639 @@
+{
+ "config": "device/pico/PICOA8110/factory-bootclasspath.json",
+ "planned": false,
+ "factory_tree": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root",
+ "source_product": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110",
+ "classpaths": {
+  "BOOTCLASSPATH": {
+   "factory": [
+    "/apex/com.android.runtime/javalib/core-oj.jar",
+    "/apex/com.android.runtime/javalib/core-libart.jar",
+    "/apex/com.android.runtime/javalib/okhttp.jar",
+    "/apex/com.android.runtime/javalib/bouncycastle.jar",
+    "/apex/com.android.runtime/javalib/apache-xml.jar",
+    "/system/framework/sysmonitor-framework.jar",
+    "/system/framework/sys-framework.jar",
+    "/system/framework/devicemiddlewareimpl.jar",
+    "/system/framework/vrex-framework.jar",
+    "/system/framework/framework.jar",
+    "/system/framework/ext.jar",
+    "/system/framework/telephony-common.jar",
+    "/system/framework/voip-common.jar",
+    "/system/framework/ims-common.jar",
+    "/system/framework/android.test.base.jar",
+    "/system/framework/tcmiface.jar",
+    "/system/framework/telephony-ext.jar",
+    "/system/framework/qcom.fmradio.jar",
+    "/system/framework/QPerformance.jar",
+    "/system/framework/UxPerformance.jar",
+    "/system/framework/WfdCommon.jar",
+    "/apex/com.android.conscrypt/javalib/conscrypt.jar",
+    "/apex/com.android.media/javalib/updatable-media.jar"
+   ],
+   "expected_source": [
+    "/apex/com.android.runtime/javalib/core-oj.jar",
+    "/apex/com.android.runtime/javalib/core-libart.jar",
+    "/apex/com.android.runtime/javalib/okhttp.jar",
+    "/apex/com.android.runtime/javalib/bouncycastle.jar",
+    "/apex/com.android.runtime/javalib/apache-xml.jar",
+    "/system/framework/sysmonitor-framework.jar",
+    "/system/framework/sys-framework.jar",
+    "/system/framework/devicemiddlewareimpl.jar",
+    "/system/framework/vrex-framework.jar",
+    "/system/framework/framework.jar",
+    "/system/framework/ext.jar",
+    "/system/framework/telephony-common.jar",
+    "/system/framework/voip-common.jar",
+    "/system/framework/ims-common.jar",
+    "/system/framework/android.test.base.jar",
+    "/system/framework/tcmiface.jar",
+    "/system/framework/telephony-ext.jar",
+    "/system/framework/qcom.fmradio.jar",
+    "/system/framework/QPerformance.jar",
+    "/system/framework/UxPerformance.jar",
+    "/system/framework/WfdCommon.jar",
+    "/apex/com.android.conscrypt/javalib/conscrypt.jar",
+    "/apex/com.android.media/javalib/updatable-media.jar"
+   ],
+   "source": [
+    "/apex/com.android.runtime/javalib/core-oj.jar",
+    "/apex/com.android.runtime/javalib/core-libart.jar",
+    "/apex/com.android.runtime/javalib/okhttp.jar",
+    "/apex/com.android.runtime/javalib/bouncycastle.jar",
+    "/apex/com.android.runtime/javalib/apache-xml.jar",
+    "/system/framework/sysmonitor-framework.jar",
+    "/system/framework/sys-framework.jar",
+    "/system/framework/devicemiddlewareimpl.jar",
+    "/system/framework/vrex-framework.jar",
+    "/system/framework/framework.jar",
+    "/system/framework/ext.jar",
+    "/system/framework/telephony-common.jar",
+    "/system/framework/voip-common.jar",
+    "/system/framework/ims-common.jar",
+    "/system/framework/android.test.base.jar",
+    "/system/framework/tcmiface.jar",
+    "/system/framework/telephony-ext.jar",
+    "/system/framework/qcom.fmradio.jar",
+    "/system/framework/QPerformance.jar",
+    "/system/framework/UxPerformance.jar",
+    "/system/framework/WfdCommon.jar",
+    "/apex/com.android.conscrypt/javalib/conscrypt.jar",
+    "/apex/com.android.media/javalib/updatable-media.jar"
+   ],
+   "matches": true
+  },
+  "DEX2OATBOOTCLASSPATH": {
+   "factory": [
+    "/apex/com.android.runtime/javalib/core-oj.jar",
+    "/apex/com.android.runtime/javalib/core-libart.jar",
+    "/apex/com.android.runtime/javalib/okhttp.jar",
+    "/apex/com.android.runtime/javalib/bouncycastle.jar",
+    "/apex/com.android.runtime/javalib/apache-xml.jar",
+    "/system/framework/sysmonitor-framework.jar",
+    "/system/framework/sys-framework.jar",
+    "/system/framework/devicemiddlewareimpl.jar",
+    "/system/framework/vrex-framework.jar",
+    "/system/framework/framework.jar",
+    "/system/framework/ext.jar",
+    "/system/framework/telephony-common.jar",
+    "/system/framework/voip-common.jar",
+    "/system/framework/ims-common.jar",
+    "/system/framework/android.test.base.jar",
+    "/system/framework/tcmiface.jar",
+    "/system/framework/telephony-ext.jar",
+    "/system/framework/qcom.fmradio.jar",
+    "/system/framework/QPerformance.jar",
+    "/system/framework/UxPerformance.jar",
+    "/system/framework/WfdCommon.jar"
+   ],
+   "expected_source": [
+    "/apex/com.android.runtime/javalib/core-oj.jar",
+    "/apex/com.android.runtime/javalib/core-libart.jar",
+    "/apex/com.android.runtime/javalib/okhttp.jar",
+    "/apex/com.android.runtime/javalib/bouncycastle.jar",
+    "/apex/com.android.runtime/javalib/apache-xml.jar",
+    "/system/framework/sysmonitor-framework.jar",
+    "/system/framework/sys-framework.jar",
+    "/system/framework/devicemiddlewareimpl.jar",
+    "/system/framework/vrex-framework.jar",
+    "/system/framework/framework.jar",
+    "/system/framework/ext.jar",
+    "/system/framework/telephony-common.jar",
+    "/system/framework/voip-common.jar",
+    "/system/framework/ims-common.jar",
+    "/system/framework/android.test.base.jar",
+    "/system/framework/tcmiface.jar",
+    "/system/framework/telephony-ext.jar",
+    "/system/framework/qcom.fmradio.jar",
+    "/system/framework/QPerformance.jar",
+    "/system/framework/UxPerformance.jar",
+    "/system/framework/WfdCommon.jar"
+   ],
+   "source": [
+    "/apex/com.android.runtime/javalib/core-oj.jar",
+    "/apex/com.android.runtime/javalib/core-libart.jar",
+    "/apex/com.android.runtime/javalib/okhttp.jar",
+    "/apex/com.android.runtime/javalib/bouncycastle.jar",
+    "/apex/com.android.runtime/javalib/apache-xml.jar",
+    "/system/framework/sysmonitor-framework.jar",
+    "/system/framework/sys-framework.jar",
+    "/system/framework/devicemiddlewareimpl.jar",
+    "/system/framework/vrex-framework.jar",
+    "/system/framework/framework.jar",
+    "/system/framework/ext.jar",
+    "/system/framework/telephony-common.jar",
+    "/system/framework/voip-common.jar",
+    "/system/framework/ims-common.jar",
+    "/system/framework/android.test.base.jar",
+    "/system/framework/tcmiface.jar",
+    "/system/framework/telephony-ext.jar",
+    "/system/framework/qcom.fmradio.jar",
+    "/system/framework/QPerformance.jar",
+    "/system/framework/UxPerformance.jar",
+    "/system/framework/WfdCommon.jar"
+   ],
+   "matches": true
+  },
+  "SYSTEMSERVERCLASSPATH": {
+   "factory": [
+    "/system/framework/sys-services.jar",
+    "/system/framework/sysmonitor-services.jar",
+    "/system/framework/vrex-services.jar",
+    "/system/framework/services.jar",
+    "/system/framework/ethernet-service.jar",
+    "/system/framework/wifi-service.jar",
+    "/system/framework/com.android.location.provider.jar"
+   ],
+   "expected_source": [
+    "/system/framework/sys-services.jar",
+    "/system/framework/sysmonitor-services.jar",
+    "/system/framework/vrex-services.jar",
+    "/system/framework/services.jar",
+    "/system/framework/ethernet-service.jar",
+    "/system/framework/wifi-service.jar",
+    "/system/framework/com.android.location.provider.jar"
+   ],
+   "source": [
+    "/system/framework/sys-services.jar",
+    "/system/framework/sysmonitor-services.jar",
+    "/system/framework/vrex-services.jar",
+    "/system/framework/services.jar",
+    "/system/framework/ethernet-service.jar",
+    "/system/framework/wifi-service.jar",
+    "/system/framework/com.android.location.provider.jar"
+   ],
+   "matches": true
+  }
+ },
+ "missing_source_files": [
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.runtime/javalib/core-oj.jar",
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.runtime/javalib/core-libart.jar",
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.runtime/javalib/okhttp.jar",
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.runtime/javalib/bouncycastle.jar",
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.runtime/javalib/apache-xml.jar",
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.conscrypt/javalib/conscrypt.jar",
+  "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/caf-10/target/product/PICOA8110/system/apex/com.android.media/javalib/updatable-media.jar"
+ ],
+ "factory_framework_hiddenapi_members": 263156,
+ "jars": {
+  "sysmonitor-framework": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "f5210d68e6d64cf856f1086b1bcdd509f7291822a44c208d2f3f45c40d600500",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "9d9a06b11eb59e60e548e016851709203bc46066d9c352dc6e2c08bc39151fd1"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "9d9a06b11eb59e60e548e016851709203bc46066d9c352dc6e2c08bc39151fd1"
+   },
+   "dex_identical": true,
+   "references": 357,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 1,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "blacklist": 19,
+    "greylist": 13,
+    "greylist-max-o": 33,
+    "not-framework": 2,
+    "whitelist": 71,
+    "whitelist+domain1": 5
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "sys-framework": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "6d2bed55033a8b23be7f4d8ad51720f748d2cfcdb5b1cc3c399fc178f9614ac1",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "d9690eb907e1331e86648d9f4eba5c80ede1dec7da9c715ecc2be0bfe8af7e10"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "d9690eb907e1331e86648d9f4eba5c80ede1dec7da9c715ecc2be0bfe8af7e10"
+   },
+   "dex_identical": true,
+   "references": 479,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 2,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "blacklist": 27,
+    "greylist": 32,
+    "greylist-max-o": 2,
+    "not-framework": 3,
+    "whitelist": 68,
+    "whitelist+domain1": 1
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "devicemiddlewareimpl": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "fd208b7b48dd963373bf4ff45ec2ec60219e7395c8c75f87af1051c6eb9500d4",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "300dc6ea5032bc8df1c433a128c4c331380c4e9c8806d0a6bbe29f5cc3201312"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "300dc6ea5032bc8df1c433a128c4c331380c4e9c8806d0a6bbe29f5cc3201312"
+   },
+   "dex_identical": true,
+   "references": 89,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "blacklist": 5,
+    "greylist": 5,
+    "whitelist": 13
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "vrex-framework": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "8dcc98da32409a588e4b481e4eda0c9549879db5242a96a69ecd61b38c4956fd",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "361908b6c487f934ce91ddd75216c7b4e3455bf62eb4412985dc279fd10b8a1c"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "361908b6c487f934ce91ddd75216c7b4e3455bf62eb4412985dc279fd10b8a1c"
+   },
+   "dex_identical": true,
+   "references": 3,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {},
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "tcmiface": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "202cc0277d614d83b68ffae040c1af570c726c3b14f56fba34ae8a55e8395fc9",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "d8c48d5e881fc01fa348e89bca5fe4c5d1bcceb5441a2cdd119a55afe5bfd929"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "d8c48d5e881fc01fa348e89bca5fe4c5d1bcceb5441a2cdd119a55afe5bfd929"
+   },
+   "dex_identical": true,
+   "references": 1,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {},
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "telephony-ext": {
+   "classpath": "boot",
+   "decision": "codelinaro_source",
+   "factory_sha256": "19737860d2f56e8d754a77422c7b3a17dad598320f9480b760f0312c4be889f4",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "62def3e3ae971656dea63fcf2e3c5769a8f5198ebff7318adf52e74e9dcaa5a7"
+   },
+   "codelinaro_comparison": {
+    "classes": 36,
+    "identical": 36,
+    "differences": {},
+    "hiddenapi_members": 481,
+    "hiddenapi_differences": {}
+   },
+   "references": 227,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "greylist": 1,
+    "not-framework": 4,
+    "whitelist": 83
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "qcom.fmradio": {
+   "classpath": "boot",
+   "decision": "codelinaro_source",
+   "factory_sha256": "4ad890593acc89c3e900f9658bfdfa06780fd1f4c39b821bbd0792b20284a766",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "20417113e98cbbf0aace9e5622961b4c145b8f3dd3b07a29323726a17aec1c42"
+   },
+   "codelinaro_comparison": {
+    "classes": 27,
+    "identical": 27,
+    "differences": {},
+    "hiddenapi_members": 790,
+    "hiddenapi_differences": {}
+   },
+   "references": 221,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "whitelist": 45
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "QPerformance": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "44c1b57b3a0571757837eeefac74c6d0ee0d61a4f740b45fb62af717ec264e90",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "78f920c27307311e70ed388d9789929e679c54f7da09f1d5dff91c432f1cf6f0"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "78f920c27307311e70ed388d9789929e679c54f7da09f1d5dff91c432f1cf6f0"
+   },
+   "dex_identical": true,
+   "references": 84,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "greylist": 4,
+    "whitelist": 40,
+    "whitelist+domain1": 1
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "UxPerformance": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "721bcaacb5a2a66e72f247fdbb14c377d9750f4faf07daedbe2c7ed628624327",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "51c8ab0fb6a994ad1d7a0ee0abe6afc2422425e02c282e7b5922be64a8abb792"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "51c8ab0fb6a994ad1d7a0ee0abe6afc2422425e02c282e7b5922be64a8abb792"
+   },
+   "dex_identical": true,
+   "references": 43,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "greylist": 6,
+    "whitelist": 1
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "WfdCommon": {
+   "classpath": "boot",
+   "decision": "factory_binary",
+   "factory_sha256": "7ce102a3585bf6d5eddc8e8ae502f59daab3e06e91568176f6932f5860ada430",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "40c82d7072736f80f77c0e99f51e3ffbe5c1566f80a436cacb0895349c4953e2"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "40c82d7072736f80f77c0e99f51e3ffbe5c1566f80a436cacb0895349c4953e2"
+   },
+   "dex_identical": true,
+   "references": 353,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "greylist-max-o": 3,
+    "not-framework": 5,
+    "whitelist": 131
+   },
+   "packages_not_whitelisted": [],
+   "boot_image_files": {
+    "arm64.art": true,
+    "arm64.oat": true,
+    "arm.art": true,
+    "arm.oat": true,
+    "vdex": true
+   },
+   "check_passes": true
+  },
+  "sys-services": {
+   "classpath": "systemserver",
+   "decision": "factory_binary",
+   "factory_sha256": "fdac1687b2dc8d4a4a0f2d4d1624b70559cd4d50d87c408750744ac065e78b1f",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "464a89c82d6f6329e2cd22abdc75b1ff38a1a7c0844f0dcf8b1bda5776c9bb6c"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "464a89c82d6f6329e2cd22abdc75b1ff38a1a7c0844f0dcf8b1bda5776c9bb6c"
+   },
+   "dex_identical": true,
+   "references": 9243,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 28,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "blacklist": 472,
+    "greylist": 398,
+    "greylist-max-o": 85,
+    "greylist-max-p": 5,
+    "not-framework": 1316,
+    "whitelist": 1630,
+    "whitelist+domain1": 92
+   },
+   "check_passes": true
+  },
+  "sysmonitor-services": {
+   "classpath": "systemserver",
+   "decision": "factory_binary",
+   "factory_sha256": "51ac945b8d822e7074e47175b36c6a9c20a8b252b425538a040f8896d0b03a79",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "90ed5da406d1f4ff761dd78b15391377ac90c7a2868355c008e821c6e9ba81cf"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "90ed5da406d1f4ff761dd78b15391377ac90c7a2868355c008e821c6e9ba81cf"
+   },
+   "dex_identical": true,
+   "references": 8779,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 10,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {
+    "blacklist": 237,
+    "greylist": 298,
+    "greylist-max-o": 90,
+    "not-framework": 225,
+    "whitelist": 782,
+    "whitelist+domain1": 49
+   },
+   "check_passes": true
+  },
+  "vrex-services": {
+   "classpath": "systemserver",
+   "decision": "factory_binary",
+   "factory_sha256": "8448e7e64a32bb4cd4a03315843a8c85692e59da8ecfe77705e25598118b2ebb",
+   "source_installed": true,
+   "source_dex_sha256": {
+    "classes.dex": "20dac644e808a067e6306540beb8ee935e9fe272a7634640ed8a96211158eedd"
+   },
+   "factory_dex_sha256": {
+    "classes.dex": "20dac644e808a067e6306540beb8ee935e9fe272a7634640ed8a96211158eedd"
+   },
+   "dex_identical": true,
+   "references": 3,
+   "link_gaps": {},
+   "accepted_gaps": [],
+   "unaccepted_gaps": [],
+   "stale_accepted_gaps": [],
+   "class_problems": {},
+   "aidl_interfaces_checked": 0,
+   "aidl_table_differences": {},
+   "source_member_flags_used": {},
+   "check_passes": true
+  }
+ },
+ "problems": [
+  "missing Source class path files"
+ ],
+ "system_partitions_modified": false
+}

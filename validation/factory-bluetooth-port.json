@@ -1,0 +1,112 @@
+{
+ "title": "Factory Bluetooth stack on the Source framework: IBluetoothGatt/IBluetoothLeCallback, javax.obex, GattService callbacks",
+ "static": {
+  "framework.jar": {
+   "classes": 5,
+   "identical": 5,
+   "explained_differences": {}
+  },
+  "javax.obex.jar": {
+   "classes": 25,
+   "identical": 25,
+   "explained_differences": {}
+  },
+  "Bluetooth.apk": {
+   "classes": 2,
+   "identical": 1,
+   "explained_differences": {
+    "Lcom/android/bluetooth/gatt/GattService;": "Source packages/apps/Bluetooth (kept compilable as the fallback stack) matches the factory IBluetoothLeCallback notifications in registerClient/registerServer/unregisterClient/unregisterServer; the only difference is the DBG logging, which is a compile-time false constant in Source and a non-final static in the factory APK. The image ships the factory Bluetooth.apk."
+   }
+  }
+ },
+ "unexplained": [],
+ "wire": {
+  "fixture": "QcomApiFixture",
+  "package": "outputs/framework-boot-image-test-22",
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "bbe6c7b8290aee41a169307a7e110ea176f5f7e8b8b387ce6727a011de20a8ee",
+  "probe_sha256": "8ceaefd08ba3dc33cdf3776db7f8e281824d0131a3923529aac98cb3ec009408",
+  "interfaces": null,
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  },
+  "comparison": {
+   "arm64": {
+    "scenarios": 1190,
+    "matched": 1190
+   },
+   "arm": {
+    "scenarios": 1190,
+    "matched": 1190
+   }
+  }
+ },
+ "pico_api_wire": {
+  "fixture": "PicoApiFixture",
+  "prefix": "pico-api",
+  "component_commits": {
+   "frameworks/native": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+   "frameworks/base": "9140a72e91692120645012d9aa0d6a4a632d564b",
+   "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+   "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+   "system/bt": "eae0808facaf4f6759e4be0966ff78ca1e554774",
+   "packages/apps/Bluetooth": "12c367b7d6ac9f7af4fd9fbc5d8648ecb5a31aa5",
+   "packages/services/Telecomm": "4f8664b3070ebd80614513893edf48a1cde3ea05",
+   "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+   "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+   "frameworks/opt/telephony": "ce3541dcdf46e98bfb12e054c9d12d58dd808eb6",
+   "packages/services/Telephony": "4c5250aa8faf66e65c394394b7b0e3a799de465f",
+   "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+   "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+   "prebuilts/abi-dumps/vndk": "e2e6f927cb78b31ce96885c3ee6c3831adbfcfcc",
+   "packages/apps/Settings": "9e316a9417c866deffa5e8ea26fe9a05c933335c"
+  },
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "bbe6c7b8290aee41a169307a7e110ea176f5f7e8b8b387ce6727a011de20a8ee",
+  "probe_sha256": "8ceaefd08ba3dc33cdf3776db7f8e281824d0131a3923529aac98cb3ec009408",
+  "package": "outputs/framework-boot-image-test-22",
+  "interfaces": null,
+  "comparison": {
+   "arm64": {
+    "scenarios": 313,
+    "matched": 313,
+    "mismatched": {}
+   },
+   "arm": {
+    "scenarios": 313,
+    "matched": 313,
+    "mismatched": {}
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  },
+  "system_partitions_modified": false
+ },
+ "component_commits": {
+  "frameworks/native": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+  "frameworks/base": "c62c0c3fe73f51b2c676570fe4dab060fd0bb15a",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "7f1640dde4a5617ae395bb5eec41eeb856e20707",
+  "packages/apps/Bluetooth": "7901ce4963d41339794367b85f3c607a4f6cff0e",
+  "packages/services/Telecomm": "4f8664b3070ebd80614513893edf48a1cde3ea05",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "ce3541dcdf46e98bfb12e054c9d12d58dd808eb6",
+  "packages/services/Telephony": "4c5250aa8faf66e65c394394b7b0e3a799de465f",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+  "prebuilts/abi-dumps/vndk": "e2e6f927cb78b31ce96885c3ee6c3831adbfcfcc",
+  "packages/apps/Settings": "9e316a9417c866deffa5e8ea26fe9a05c933335c"
+ },
+ "system_partitions_modified": false
+}

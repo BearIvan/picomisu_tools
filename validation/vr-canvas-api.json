@@ -1,0 +1,139 @@
+{
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+  "extension_methods": {
+    "Lcom/pico/util/IExtBase;": [],
+    "Landroid/view/IExtSurface;": [
+      "lockCanvasFor2DVr()Landroid/graphics/Canvas;",
+      "unlockCanvasAndPostFor2DVr(Landroid/graphics/Canvas;)V"
+    ],
+    "Landroid/view/ExtSurfaceImpl;": [
+      "<init>(Landroid/view/Surface;Landroid/graphics/Canvas;)V",
+      "checkNotReleasedLocked()V",
+      "lockCanvasFor2DVr()Landroid/graphics/Canvas;",
+      "nativeLockCanvasFor2DVr(JLandroid/graphics/Canvas;)J",
+      "nativeReleaseSurfaceObject(J)V",
+      "nativeUnlockCanvasAndPostFor2DVr(JLandroid/graphics/Canvas;)V",
+      "unlockCanvasAndPostFor2DVr(Landroid/graphics/Canvas;)V",
+      "unlockSwCanvasAndPostFor2DVr(Landroid/graphics/Canvas;)V"
+    ]
+  },
+  "abis": {
+    "arm64": {
+      "factory_sha256": "1f558c16d89065d6e07e3202431c3ce73ab9ef710eac31117fd152976e71f1cd",
+      "source_sha256": "c1b6c75fe98bbe9e90956f11f63545f7de5b9977754b9954cac1dbbebe1df202",
+      "factory_entries": {
+        "nativeLockCanvasFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)V",
+          "table_address": "0x1fd5b0",
+          "function_address": "0x1c4ac8",
+          "function_bytes": 408,
+          "function_sha256": "ab8ef49e6a78d03a2e2619c11303e26bc1925d82469f2bc7b93d632aaac43d1a"
+        },
+        "nativeUnlockCanvasAndPostFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)V",
+          "table_address": "0x1fd5c8",
+          "function_address": "0x1c4c60",
+          "function_bytes": 240,
+          "function_sha256": "a86b0197e0f703cc529650c16e4aad1a4693a748e345f8df5fef79082514ecca"
+        },
+        "nativeReleaseSurfaceObject": {
+          "descriptor": "(J)V",
+          "table_address": "0x1fd5e0",
+          "function_address": "0x1c4d50",
+          "function_bytes": 116,
+          "function_sha256": "370d8cd3c736a26937cdaf62af05f88dc99a199807b36a5cdbe166a008963b2f"
+        }
+      },
+      "source_entries": {
+        "nativeLockCanvasFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)J",
+          "table_address": "0x1de590",
+          "function_address": "0x117f9c",
+          "function_bytes": 372,
+          "function_sha256": "b3ed99108c790e9dd182c1c867fd6d5a15a4368d129a4136ca214d40eafc12a5"
+        },
+        "nativeUnlockCanvasAndPostFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)V",
+          "table_address": "0x1de5a8",
+          "function_address": "0x118110",
+          "function_bytes": 212,
+          "function_sha256": "c7678a14a66effc7ec388a6b9a7e9d7c1044fa7b6f7e4d1cdb4b1f77ebe59f23"
+        },
+        "nativeReleaseSurfaceObject": {
+          "descriptor": "(J)V",
+          "table_address": "0x1de5c0",
+          "function_address": "0x116da4",
+          "function_bytes": 116,
+          "function_sha256": "b9f42a56cdc3c02be6a670258f83dcb826b318c7d43de0f302c7be2cbc51c4d0"
+        }
+      },
+      "factory_lock_table_matches_dex": false,
+      "factory_registration_flow_proven": false
+    },
+    "arm": {
+      "factory_sha256": "deccb4b074459d2282f0a9cba144dc0934f32a79ee2455b99af2536f2b06bc47",
+      "source_sha256": "66f4270a119bcf4b28176ea20b6788eb8d57fe81f1d63e6eee08c3fe61a571c2",
+      "factory_entries": {
+        "nativeLockCanvasFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)V",
+          "table_address": "0x161af0",
+          "function_address": "0x1392b1",
+          "function_bytes": 332,
+          "function_sha256": "1f18222bea39df903ed18369bac273e369d30f7246a5df4e8279491336efca80"
+        },
+        "nativeUnlockCanvasAndPostFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)V",
+          "table_address": "0x161afc",
+          "function_address": "0x1393fd",
+          "function_bytes": 168,
+          "function_sha256": "d38319062f9ebad54008f79bbaab113d96601b14ec2cacf9a4f2d8bad1e6a547"
+        },
+        "nativeReleaseSurfaceObject": {
+          "descriptor": "(J)V",
+          "table_address": "0x161b08",
+          "function_address": "0x1394a5",
+          "function_bytes": 76,
+          "function_sha256": "00a7cc774253aadb42016de78ac9b9d5dc82ce179bc2f211512ea7551c032b74"
+        }
+      },
+      "source_entries": {
+        "nativeLockCanvasFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)J",
+          "table_address": "0x14bae0",
+          "function_address": "0xbaab1",
+          "function_bytes": 284,
+          "function_sha256": "a6683e8f93dce541c178ab8cf94e27bb1d300a797d71c8872a7becbbdcc688f0"
+        },
+        "nativeUnlockCanvasAndPostFor2DVr": {
+          "descriptor": "(JLandroid/graphics/Canvas;)V",
+          "table_address": "0x14baec",
+          "function_address": "0xbabcd",
+          "function_bytes": 128,
+          "function_sha256": "f787b640bf6df80dc90d2a5d823cca9f556e16618e4328ec14060d356929cf65"
+        },
+        "nativeReleaseSurfaceObject": {
+          "descriptor": "(J)V",
+          "table_address": "0x14baf8",
+          "function_address": "0xb9e65",
+          "function_bytes": 76,
+          "function_sha256": "f484e3d2ab787fcc2312e38a5a0cdb9b7c3fc3fbc48b9468baeb206a8675ddad"
+        }
+      },
+      "factory_lock_table_matches_dex": false,
+      "factory_registration_flow_proven": false
+    }
+  },
+  "factory_arm64_bitmap": {
+    "width": 1,
+    "height": 1,
+    "color_type": 4,
+    "alpha_type": 1,
+    "malloc_bytes": 1,
+    "row_bytes": 4
+  },
+  "source_pixel_storage": "Owned SkBitmap pixels for each canvas; a full RGBA pixel",
+  "factory_pixel_storage_equivalence_proven": false,
+  "vr_activity_skip_draw_policy_ported": false,
+  "scope": "DEX methods/access and compiled JNI entries; factory ARM64 canvas shape/allocation from inspected code; Source ownership/allocation differs; does not qualify ActivityInfo policy, ViewRoot routing or hardware VR"
+}

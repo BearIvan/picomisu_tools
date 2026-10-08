@@ -1,0 +1,34 @@
+{
+ "libbinder.so": {
+  "Parcel::readAligned<": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer.",
+  "Parcel::unsafeReadTypedVector<": "Template instantiation emitted by the Source compiler only; same Parcel code.",
+  "unique_fd_impl": "libc++ vector instantiation emitted by the Source compiler only.",
+  "shared_ptr": "Stale VNDK copy in the product output from before the FreezeManager rewrite; the rebuilt vendor variant has no shared_ptr registry.",
+  "SceneInfoManager|SceneData|ISceneInfoManager|scenemtx|mSceneMutex": "Ported (chunk 6); consumer /system/bin/pxrmediametrics. Listed only while the product VNDK copy is stale.",
+  "FreezeManager|containsKey|android::mtx|android::mMutex": "Ported (chunk 6), factory remote registry reproduced. Listed only while the product VNDK copy is stale.",
+  "ProcessState|IPCThreadState|BBinder::setObserver|mObserver": "Ported (chunk 6). Listed only while the product VNDK copy is stale."
+ },
+ "libhwui.so": {
+  "RenderProxy::(setSurface|doAnimation|notifyMonitorStatsChanged)": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json).",
+  "construction vtable for Gr|GrMock": "Skia GrMock construction vtables emitted by the factory compiler; no consumer.",
+  "construction vtable for (android::Thread|android::uirenderer|std::__1::basic_ostream)": "Construction vtables emitted by the factory compiler; no consumer.",
+  "__addtf3|__multf3|__subtf3|__floatditf|__fe_": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+ },
+ "libbinder_call_stat.so": {},
+ "libmedia_jni.so": {
+  "register_android_media_SpatialCoordConverter": "Factory registration of android.media.SpatialCoordConverter natives; the Java class has no consumer outside framework.jar (validation/api-consumers.json) and is not part of the 9 needed natives."
+ },
+ "libspatialaudio.so": {},
+ "libandroid_runtime.so": {
+  "ExtSurfaceImpl|tempMemFor2DVrBits": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json).",
+  "getBinderClientPids|getBinderServerPids": "Factory JNI for Binder client/server PID queries; the libbinder side is ported (IPCThreadState::getBinder*Pids), the Java natives are only reachable from the preserved sys-/sysmonitor- JARs, which are not on the Source classpath.",
+  "android_os_Process_(useCGroupFreeze|setUIThreadScheduler|setProcessFreezeGroup|getChildProcessViaGroup|setCgroupProcsProcessGroup)|Affinity": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK.",
+  "seemp|Seemp": "CodeLinaro SEEMP logging JNI; no consumer.",
+  "ActivityTrigger": "CodeLinaro ActivityTrigger JNI (services ActivityTriggerService.notifyAction_native, preserved-only).",
+  "AudioDeviceAttributes|AudioDeviceTypeAddr|javaAudioFormatToNativeAudioConfig": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer.",
+  "dmabufinfo": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer.",
+  "NativeDisplayEventReceiver": "Factory NativeDisplayEventReceiver constructor with an extra PICO parameter; internal to libandroid_runtime.",
+  "sensors_timeutil": "Namespace of a static sensors time helper differs (factory global, Source android::); internal.",
+  "javaAttachThread": "Consumer (factory libsensorservice) is replaced by Source."
+ }
+}

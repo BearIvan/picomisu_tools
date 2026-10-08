@@ -1,0 +1,490 @@
+{
+ "title": "Factory transaction tables of 19 shifted framework AIDL interfaces (CodeLinaro LA.UM.8.12.c3-64900 and PICO)",
+ "static": {
+  "framework.jar": {
+   "classes": 96,
+   "identical": 95,
+   "explained_differences": {
+    "Landroid/telecom/Call$Details;": "capabilitiesToString(I): the ported CodeLinaro CAPABILITY_ADD_PARTICIPANT (0x02000000) entry is identical; the factory additionally prints CAPABILITY_SUPPORTS_RTT_REMOTE (0x04000000), a separate CodeLinaro RTT feature that is not part of the IConnectionService table and is not ported."
+   }
+  },
+  "services.jar": {
+   "classes": 83,
+   "identical": 65,
+   "explained_differences": {
+    "Lcom/android/server/ConnectivityService$4;": "Anonymous class numbering: the factory has an extra CodeLinaro PhoneStateListener as ConnectivityService$1, so the NetdEventCallback with the PICO DNS batching is $5 in the factory and $4 in Source. onDnsEvent of Source $4 equals factory $5 instruction by instruction apart from register moves (see onDnsEvent evidence).",
+    "Lcom/android/server/ConnectivityService;": "<init>: the ported PICO DNS-event fields (mLastDnsSuccessTimestamp, 5000 ms interval, 30-entry hostNameList/returnCodeList/timestampList) are initialised identically. Remaining differences are unported code of other features: PICO IExtConnectivityService (ExtImplFactory, setupUniqueDeviceName, init), CodeLinaro preferred-subscription PhoneStateListener, mRedirectUrl/mayNeedUpdateProxy/mNetworkState/mNonDefaultSubscriptionLingerDelayMs, anonymous class numbering, framework-res IDs. addDnsEventInfo/clearDnsEventInfo are identical.",
+    "Lcom/android/server/am/ActivityManagerService$LocalService;": "isActiveInstrumentation(I): identical except the synthetic accessor number (access$1900 in the factory, access$1800 in Source), which depends on unrelated members.",
+    "Lcom/android/server/am/ActivityManagerService;": "finishBooting(): the ported CodeLinaro change (no per-ABI installd markBootComplete / zygote loop) matches the factory. Remaining differences are PICO/Smartisan hooks (SysOptBridge UidCpuRunner.registerBackupModeReceiver, ISmartService.finishBooting, 'About to commit checkpoint' and DEBUG_PROCESSES logging) and mContext vs mInjector.getContext(); outside the AIDL tables.",
+    "Lcom/android/server/am/UserController$7;": "sendResult(Bundle): identical except synthetic accessor numbering (access$N).",
+    "Lcom/android/server/am/UserController;": "Pre-created user checks in startUser/finishUserUnlocked/finishUserUnlockedCompleted are identical. Remaining differences are PICO hooks without donor (IExtUserController.finishUserUnlocked/startPicoFactoryTestService, IBootEventStat boot events, elapsedRealtime/keyguard-secure logging) and framework-res animation IDs passed to startFreezingScreen.",
+    "Lcom/android/server/display/VirtualDisplayAdapter$VirtualDisplayDevice;": "Constructor signature: Source takes (..., uniqueId, uniqueIndex, VirtualDisplayConfig) as Android 11; the factory adds (Context, int captureType) for the PICO capture-display subsystem (CaptureDisplayUtils/CaptureSurfaceAgent), which has no donor and is outside the IDisplayManager table. mDisplayIdToMirror and getDisplayIdToMirrorLocked are identical.",
+    "Lcom/android/server/display/VirtualDisplayAdapter;": "createVirtualDisplayLocked(..., VirtualDisplayConfig): name/uniqueId from VirtualDisplayConfig and the device construction are identical to the factory; the factory additionally computes a PICO capture type/token (CaptureDisplayUtils) and sets the Smartisan PeroptWhiteListParser skip-single-layer flag (0x100000), both PICO subsystems without donor outside this table.",
+    "Lcom/android/server/notification/NotificationManagerService$10;": "silenceNotificationSound() and dump() differ only in synthetic accessor numbering (access$N); pullStats and the rest of the binder stub are identical.",
+    "Lcom/android/server/notification/NotificationRecord;": "dump(): not changed by this port (hasUndecoratedRemoteView is identical). Source android-10.0.0_r47 prints the small-icon resource name via idDebugString; CodeLinaro/factory print the Icon directly. Pre-existing AOSP r47 vs CodeLinaro difference.",
+    "Lcom/android/server/pm/PackageManagerService;": "The ported CodeLinaro mBlockDeleteOnUserRemoveForTest/readPermissionStateForUser/userRemovedForTest members are identical. <init> differs by PICO/Smartisan code (IExtPackageManagerService, PackageManagerServiceMonitorEx/SmtBase, boot event stats, delLPwFile) and a lambda is only numbered differently (lambda$removeUnusedPackagesLPw$33).",
+    "Lcom/android/server/pm/UserManagerService;": "areGuestUsersEphemeral(): only the framework-res ID of config_guestUserEphemeral differs (factory 0x1110088, Source 0x1110085); resource IDs of framework-res are not ported. All pre-created user members are identical.",
+    "Lcom/android/server/policy/PhoneWindowManager;": "interceptKeyBeforeQueueing: the ported volume-key silenceNotificationSound() block is identical. Remaining differences are PICO IExtPhoneWindowManager hooks (HCIT power-key test mode, back key in 2D reposition mode, factorytest log, key repeat count) without donor.",
+    "Lcom/android/server/wm/ActivityStack;": "removeTask/startActivityLocked: the ported TRANSIT_SHOW_SINGLE_TASK_DISPLAY and notifySingleTaskDisplayEmpty code is identical. Remaining differences are PICO debug logging compiled in (DEBUG_STACK/DEBUG_ADD_REMOVE/DEBUG_USER_LEAVING are not constants in the factory), PICO IExtActivityStartController.onTaskRemoved, and the CodeLinaro ActivityOptions.getAvoidMoveToFront check (separate feature).",
+    "Lcom/android/server/wm/AppTransitionController;": "handleAppTransitionReady: the ported notifySingleTaskDisplayDrawn scheduling is identical; the factory keeps DEBUG_APP_TRANSITIONS logging compiled in (PICO debug flags are not constants).",
+    "Lcom/android/server/wm/DisplayContent;": "removeImmediately/reparentDisplayContent/updateLocation/getLocationInParentDisplay/notifyLocationInParentDisplayChanged are identical apart from PICO IExtDisplayContent.removeImmediately and DEBUG_DISPLAY logging in removeImmediately; two gesture-exclusion lambdas only differ in D8 lambda numbering ($27/$28).",
+    "Lcom/android/server/wm/TaskChangeNotificationController;": "<init>: the ported single-task-display consumers are identical; the factory additionally creates PICO IExtTaskChangeNotificationController via ExtImplFactory (no donor).",
+    "Lcom/android/server/wm/WindowState;": "<init>/reportResized: the ported embedded-display members (mEmbeddedDisplayContents, mLastReportedDisplayOffset, updateLocationInParentDisplayIfNeeded, add/removeEmbeddedDisplayContent) are identical. Remaining differences are the CodeLinaro gesture-exclusion logging arrays (mLastRequestedExclusionHeight etc., separate feature), PICO IExtWindowState/IExtActivityStartController.onReportResized hooks and PICO debug logging compiled in."
+   }
+  },
+  "telephony-common.jar": {
+   "classes": 20,
+   "identical": 17,
+   "explained_differences": {
+    "Lcom/android/internal/telephony/uicc/IccRecords;": "Only mSmsCountOnIcc, EVENT_GET_SMS_RECORD_SIZE_DONE (28) and getSmsCapacityOnIcc() belong to ISms.getSmsCapacityOnIccForSubscriber; that case of handleMessage is identical (one D8 const reuse). The rest of <init>/handleMessage in the factory is the CodeLinaro essential-records/APP_DETECTED (event 101, mEssentialRecordsLoadedRegistrants, onDetected) refactor and a Source-only 'Record Load Exception' log, outside the AIDL tables; not ported.",
+    "Lcom/android/internal/telephony/uicc/RuimRecords;": "fetchRuimRecords(): the ported EF_SMS record-size request is present in both; the factory splits the method into CodeLinaro fetchEssentialRuimRecords() (essential-records refactor, outside the AIDL tables, not ported), so the remaining record loads appear moved.",
+    "Lcom/android/internal/telephony/uicc/SIMRecords;": "fetchSimRecords(): the ported EF_SMS record-size request is present in both; the factory moves IMSI/ICCID/MSISDN/SPN loading to CodeLinaro fetchEssentialSimRecords() (essential-records refactor, outside the AIDL tables, not ported)."
+   }
+  },
+  "NetworkStack.apk": {
+   "classes": 20,
+   "identical": 13,
+   "explained_differences": {
+    "Landroid/net/INetworkMonitor$Default;": "The factory InProcessNetworkStack.apk is shrunk by R8 and drops the unused $Default class; Source NetworkStack.apk keeps it. INetworkMonitor and INetworkMonitor$Stub (transaction table and unmarshalling) are identical.",
+    "Landroid/net/INetworkMonitor$Stub$Proxy;": "Removed from the factory InProcessNetworkStack.apk by R8 (the network stack never calls itself); the proxy used by system_server is in services.jar and is identical to the factory.",
+    "Landroid/net/INetworkMonitorCallbacks$Default;": "Removed from the factory InProcessNetworkStack.apk by R8; Stub$Proxy (used by NetworkMonitor) is identical.",
+    "Landroid/net/ip/IIpClient$Default;": "Removed from the factory InProcessNetworkStack.apk by R8; IIpClient$Stub is identical.",
+    "Landroid/net/ip/IIpClient$Stub$Proxy;": "Removed from the factory InProcessNetworkStack.apk by R8; the system_server proxy in services.jar is identical.",
+    "Landroid/net/ip/IIpClientCallbacks$Default;": "Removed from the factory InProcessNetworkStack.apk by R8; IIpClientCallbacks$Stub$Proxy is identical.",
+    "Lcom/android/server/connectivity/NetworkMonitor;": "updateDnsEvent/updateDnsEvents: the factory body only forwards to android.net.networkstatuscollect.NetworkStatusCollect.addDnsEventInfo, a ByteDance Slardar telemetry collector (TcpSocketTracker, SlardarServiceProxy binding com.bytedance.os.slardar.ACTION_SLARDAR_SERVICE) that is deliberately not ported; the Source methods exist with the factory signatures and receive the calls (NetworkStackService$NetworkMonitorImpl is identical)."
+   }
+  }
+ },
+ "unexplained": [],
+ "wire": {
+  "fixture": "ShiftedAidlFixture",
+  "package": "outputs/framework-boot-image-test-24",
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "d3548ef62d6b074a7691b2d6c6b661b90187ef387fc7328fd1541f1ccbafc087",
+  "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+  "interfaces": {
+   "android.accounts.IAccountManager": {
+    "methods": 48,
+    "oneway": []
+   },
+   "android.app.INotificationManager": {
+    "methods": 121,
+    "oneway": [
+     "notifyConditions",
+     "setZenMode"
+    ]
+   },
+   "android.app.ITaskStackListener": {
+    "methods": 23,
+    "oneway": [
+     "onActivityDismissingDockedStack",
+     "onActivityForcedResizable",
+     "onActivityLaunchOnSecondaryDisplayFailed",
+     "onActivityLaunchOnSecondaryDisplayRerouted",
+     "onActivityPinned",
+     "onActivityRequestedOrientationChanged",
+     "onActivityUnpinned",
+     "onBackPressedOnTaskRoot",
+     "onPinnedActivityRestartAttempt",
+     "onPinnedStackAnimationEnded",
+     "onPinnedStackAnimationStarted",
+     "onSingleTaskDisplayDrawn",
+     "onSingleTaskDisplayEmpty",
+     "onSizeCompatModeActivityChanged",
+     "onTaskCreated",
+     "onTaskDescriptionChanged",
+     "onTaskDisplayChanged",
+     "onTaskMovedToFront",
+     "onTaskProfileLocked",
+     "onTaskRemovalStarted",
+     "onTaskRemoved",
+     "onTaskSnapshotChanged",
+     "onTaskStackChanged"
+    ]
+   },
+   "android.bluetooth.IBluetoothManager": {
+    "methods": 20,
+    "oneway": []
+   },
+   "android.hardware.biometrics.IBiometricService": {
+    "methods": 11,
+    "oneway": []
+   },
+   "android.hardware.display.IDisplayManager": {
+    "methods": 30,
+    "oneway": []
+   },
+   "android.net.INetworkMonitor": {
+    "methods": 13,
+    "oneway": [
+     "forceReevaluation",
+     "launchCaptivePortalApp",
+     "notifyCaptivePortalAppFinished",
+     "notifyDnsResponse",
+     "notifyLinkPropertiesChanged",
+     "notifyNetworkCapabilitiesChanged",
+     "notifyNetworkConnected",
+     "notifyNetworkDisconnected",
+     "notifyPrivateDnsChanged",
+     "setAcceptPartialConnectivity",
+     "start",
+     "updateDnsEvent",
+     "updateDnsEvents"
+    ]
+   },
+   "android.net.INetworkMonitorCallbacks": {
+    "methods": 6,
+    "oneway": [
+     "hideProvisioningNotification",
+     "notifyNetworkTested",
+     "notifyPrivateDnsConfigResolved",
+     "notifyProbeStatusChanged",
+     "onNetworkMonitorCreated",
+     "showProvisioningNotification"
+    ]
+   },
+   "android.net.ip.IIpClient": {
+    "methods": 14,
+    "oneway": [
+     "addKeepalivePacketFilter",
+     "addNattKeepalivePacketFilter",
+     "completedPreDhcpAction",
+     "confirmConfiguration",
+     "notifyPreconnectionComplete",
+     "readPacketFilterComplete",
+     "removeKeepalivePacketFilter",
+     "setHttpProxy",
+     "setL2KeyAndGroupHint",
+     "setMulticastFilter",
+     "setTcpBufferSizes",
+     "shutdown",
+     "startProvisioning",
+     "stop"
+    ]
+   },
+   "android.net.ip.IIpClientCallbacks": {
+    "methods": 14,
+    "oneway": [
+     "installPacketFilter",
+     "onIpClientCreated",
+     "onLinkPropertiesChange",
+     "onNewDhcpResults",
+     "onPostDhcpAction",
+     "onPreDhcpAction",
+     "onPreconnectionStart",
+     "onProvisioningFailure",
+     "onProvisioningSuccess",
+     "onQuit",
+     "onReachabilityLost",
+     "setFallbackMulticastFilter",
+     "setNeighborDiscoveryOffload",
+     "startReadPacketFilter"
+    ]
+   },
+   "android.nfc.INfcAdapter": {
+    "methods": 28,
+    "oneway": [
+     "invokeBeam",
+     "invokeBeamInternal"
+    ]
+   },
+   "android.os.IInstalld": {
+    "methods": 43,
+    "oneway": []
+   },
+   "android.os.IUserManager": {
+    "methods": 64,
+    "oneway": []
+   },
+   "android.os.IVold": {
+    "methods": 71,
+    "oneway": []
+   },
+   "android.view.IWindow": {
+    "methods": 18,
+    "oneway": [
+     "closeSystemDialogs",
+     "dispatchAppVisibility",
+     "dispatchDragEvent",
+     "dispatchGetNewSurface",
+     "dispatchPointerCaptureChanged",
+     "dispatchSystemUiVisibilityChanged",
+     "dispatchWallpaperCommand",
+     "dispatchWallpaperOffsets",
+     "dispatchWindowShown",
+     "executeCommand",
+     "insetsChanged",
+     "insetsControlChanged",
+     "locationInParentDisplayChanged",
+     "moved",
+     "requestAppKeyboardShortcuts",
+     "resized",
+     "updatePointerIcon",
+     "windowFocusChanged"
+    ]
+   },
+   "com.android.internal.telecom.IConnectionService": {
+    "methods": 34,
+    "oneway": [
+     "abort",
+     "addConnectionServiceAdapter",
+     "addParticipantWithConference",
+     "answer",
+     "answerVideo",
+     "conference",
+     "connectionServiceFocusGained",
+     "connectionServiceFocusLost",
+     "createConnection",
+     "createConnectionComplete",
+     "createConnectionFailed",
+     "deflect",
+     "disconnect",
+     "handoverComplete",
+     "handoverFailed",
+     "hold",
+     "mergeConference",
+     "onCallAudioStateChanged",
+     "onExtrasChanged",
+     "onPostDialContinue",
+     "playDtmfTone",
+     "pullExternalCall",
+     "reject",
+     "rejectWithMessage",
+     "removeConnectionServiceAdapter",
+     "respondToRttUpgradeRequest",
+     "sendCallEvent",
+     "silence",
+     "splitFromConference",
+     "startRtt",
+     "stopDtmfTone",
+     "stopRtt",
+     "swapConference",
+     "unhold"
+    ]
+   },
+   "com.android.internal.telephony.IIccPhoneBook": {
+    "methods": 11,
+    "oneway": []
+   },
+   "com.android.internal.telephony.ISms": {
+    "methods": 31,
+    "oneway": []
+   },
+   "com.android.internal.telephony.ITelephonyRegistry": {
+    "methods": 40,
+    "oneway": []
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  },
+  "comparison": {
+   "arm64": {
+    "scenarios": 1207,
+    "matched": 1207
+   },
+   "arm": {
+    "scenarios": 1207,
+    "matched": 1207
+   }
+  }
+ },
+ "table_parity": {
+  "tool": "tools/compare-aidl-tables.py",
+  "factory_interfaces": 857,
+  "identical": 794,
+  "identical_before": 774,
+  "ported_interfaces": [
+   "android.accounts.IAccountManager",
+   "android.app.INotificationManager",
+   "android.app.ITaskStackListener",
+   "android.bluetooth.IBluetoothManager",
+   "android.hardware.biometrics.IBiometricService",
+   "android.hardware.display.IDisplayManager",
+   "android.net.INetworkMonitor",
+   "android.net.INetworkMonitorCallbacks",
+   "android.net.ip.IIpClient",
+   "android.net.ip.IIpClientCallbacks",
+   "android.nfc.INfcAdapter",
+   "android.os.IInstalld",
+   "android.os.IUserManager",
+   "android.os.IVold",
+   "android.view.IWindow",
+   "com.android.internal.telecom.IConnectionService",
+   "com.android.internal.telephony.IIccPhoneBook",
+   "com.android.internal.telephony.ISms",
+   "com.android.internal.telephony.ITelephonyRegistry"
+  ],
+  "ported_interfaces_identical": [
+   "android.accounts.IAccountManager",
+   "android.app.INotificationManager",
+   "android.app.ITaskStackListener",
+   "android.bluetooth.IBluetoothManager",
+   "android.hardware.biometrics.IBiometricService",
+   "android.hardware.display.IDisplayManager",
+   "android.net.INetworkMonitor",
+   "android.net.INetworkMonitorCallbacks",
+   "android.net.ip.IIpClient",
+   "android.net.ip.IIpClientCallbacks",
+   "android.nfc.INfcAdapter",
+   "android.os.IInstalld",
+   "android.os.IUserManager",
+   "android.os.IVold",
+   "android.view.IWindow",
+   "com.android.internal.telecom.IConnectionService",
+   "com.android.internal.telephony.IIccPhoneBook",
+   "com.android.internal.telephony.ISms",
+   "com.android.internal.telephony.ITelephonyRegistry"
+  ],
+  "also_identical": [
+   "android.os.storage.IStorageManager (clearUserKeyAuth appended, same CodeLinaro change as IVold)"
+  ],
+  "remaining_shifted": [],
+  "remaining_appended_only": [
+   "Landroid/app/IActivityManager$Stub;",
+   "Landroid/app/IApplicationThread$Stub;",
+   "Landroid/app/backup/IBackupManager$Stub;",
+   "Landroid/app/backup/IFullBackupRestoreObserver$Stub;",
+   "Landroid/content/pm/IPackageInstallerSession$Stub;",
+   "Landroid/content/pm/IPackageManager$Stub;",
+   "Landroid/hardware/ICameraServiceListener$Stub;",
+   "Landroid/hardware/input/IInputManager$Stub;",
+   "Landroid/hardware/usb/IUsbManager$Stub;",
+   "Landroid/media/IPlayer$Stub;",
+   "Landroid/net/INetworkPolicyListener$Stub;",
+   "Landroid/os/IPowerManager$Stub;",
+   "Landroid/os/ISchedulingPolicyService$Stub;",
+   "Landroid/view/IRecentsAnimationController$Stub;",
+   "Landroid/view/IWindowSession$Stub;",
+   "Lcom/android/ims/internal/IImsUt$Stub;",
+   "Lcom/android/internal/app/IBatteryStats$Stub;"
+  ],
+  "factory_only_interfaces": 46,
+  "problems": []
+ },
+ "regression_wire_test_24": {
+  "PicoApiFixture": {
+   "package": "outputs/framework-boot-image-test-24",
+   "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+   "comparison": {
+    "arm64": {
+     "scenarios": 313,
+     "matched": 313
+    },
+    "arm": {
+     "scenarios": 313,
+     "matched": 313
+    }
+   },
+   "unexpected_differences": [],
+   "factory_run": {
+    "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+    "fingerprint_unchanged": true,
+    "boot_completed": true,
+    "temporary_files_removed": true
+   }
+  },
+  "QcomApiFixture": {
+   "package": "outputs/framework-boot-image-test-24",
+   "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+   "comparison": {
+    "arm64": {
+     "scenarios": 1190,
+     "matched": 1190
+    },
+    "arm": {
+     "scenarios": 1190,
+     "matched": 1190
+    }
+   },
+   "unexpected_differences": [],
+   "factory_run": {
+    "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+    "fingerprint_unchanged": true,
+    "boot_completed": true,
+    "temporary_files_removed": true
+   }
+  },
+  "AudioApiFixture": {
+   "package": "outputs/framework-boot-image-test-24",
+   "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+   "comparison": {
+    "arm64": {
+     "scenarios": 346,
+     "matched": 346
+    },
+    "arm": {
+     "scenarios": 346,
+     "matched": 346
+    }
+   },
+   "unexpected_differences": [],
+   "factory_run": {
+    "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+    "fingerprint_unchanged": true,
+    "boot_completed": true,
+    "temporary_files_removed": true
+   }
+  },
+  "problems": []
+ },
+ "decisions": {
+  "donors": {
+   "CodeLinaro LA.UM.8.12.c3-64900-sm8250.0": "IAccountManager, INotificationManager, ITaskStackListener, IBluetoothManager (system/bt 336e28a2 + frameworks/base), IBiometricService, INetworkMonitorCallbacks, IIpClient, IIpClientCallbacks (services/net aidl version 5, packages/modules/NetworkStack 2479fe58), INfcAdapter (packages/apps/Nfc 9d913001), IInstalld (frameworks/native bf08d9a8), IUserManager, IVold (system/vold 020b06ad), IWindow, IConnectionService (+ Telecomm/TeleService), IIccPhoneBook, ISms, ITelephonyRegistry (frameworks/opt/telephony, frameworks/base 4eb3b752); CodeLinaro tables equal the factory tables for these interfaces",
+   "android-11.0.0_r48 + factory DEX": "IDisplayManager.createVirtualDisplayExt: VirtualDisplayConfig (with the AnnotationValidations checks as static members, as in the factory), DisplayManager/DisplayManagerGlobal clients, BinderService/createVirtualDisplayInternal/VirtualDisplayAdapter/DisplayDevice displayIdToMirror; the Android 10 createVirtualDisplay builds a VirtualDisplayConfig and delegates, and both accept the \"android\" package name like the factory",
+   "factory DEX (PICO, no donor)": "INetworkMonitor.updateDnsEvent/updateDnsEvents (codes 8/9, oneway), NetworkMonitorManager.updateDnsEvent(s), ConnectivityService DNS event batching (5 s gate, 30 entries), NetworkStackService$NetworkMonitorImpl forwarding"
+  },
+  "on_dns_event_evidence": "Factory ConnectivityService$5.onDnsEvent equals Source ConnectivityService$4.onDnsEvent after removing register moves (anonymous class numbering differs because the factory has an extra CodeLinaro PhoneStateListener); addDnsEventInfo/clearDnsEventInfo identical.",
+  "not_ported": {
+   "NetworkStatusCollect telemetry": "Factory NetworkMonitor.updateDnsEvent(s) only feed android.net.networkstatuscollect.NetworkStatusCollect (TcpSocketTracker, DNS/data-stall collection) which reports to the ByteDance Slardar service (com.bytedance.os.slardar.ACTION_SLARDAR_SERVICE, OsTeaTracker). Telemetry, deliberately not ported; the Source methods receive the calls with the factory signatures.",
+   "networkstack frozen versions": "The PICO methods are inserted in the middle of the frozen version 5 INetworkMonitor, so the Android 10 aidl_interface checkapi between versions fails; networkstack-aidl-interfaces keeps only version 5 (ipmemorystore keeps 1,2,3,5). The factory ships version 5 with the same table.",
+   "vold wrapped keys": "fscrypt_clear_user_key_auth ports the non-wrapped-key path only. The factory vendor fstab uses fileencryption=ice,wrappedkey for /data and /metadata; wrapped-key (ICE) support is missing in the Source vold/fs_mgr as a whole, independent of this table port - a separate vold port is required before the Source image can mount the existing userdata.",
+   "SystemUI BubbleController": "CodeLinaro BubbleController reacts to onSingleTaskDisplayDrawn/Empty using the Android 10 QPR bubbles rewrite (Bubble.getDisplayId, BubbleData.notifyDisplayEmpty); not ported. The factory image has no SystemUI; the SystemUI shared listener dispatch is ported.",
+   "statsd atoms": "Only the NotificationRemoteViews pulled atom (10066) is added to atoms.proto; the other CodeLinaro atoms (VmsClientStats 10065, BackGesture, ExclusionRectStateChanged, VmsClientConnectionStateChanged) belong to other features.",
+   "PICO capture displays": "Factory VirtualDisplayAdapter additionally computes a capture type/token (CaptureDisplayUtils, CaptureSurfaceAgent) and the Smartisan skip-single-layer flag; PICO subsystems without donor.",
+   "Call.Details RTT remote": "CAPABILITY_SUPPORTS_RTT_REMOTE (CodeLinaro RTT feature) not ported."
+  },
+  "components": {
+   "new": [
+    "system/vold (0082)",
+    "packages/modules/NetworkStack (0083)",
+    "packages/apps/Nfc (0084)"
+   ],
+   "updated": [
+    "frameworks/base (0075-0079)",
+    "system/bt (0080)",
+    "frameworks/native (0081)",
+    "frameworks/opt/telephony (0085)",
+    "packages/services/Telephony (0086)",
+    "packages/services/Telecomm (0087)"
+   ]
+  },
+  "problems": []
+ },
+ "component_commits": {
+  "frameworks/native": "6492c7e475412061aae739f0693b8abbeae1274e",
+  "frameworks/base": "50ddf37c73e99be728e450432d33214efd5761be",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "decd8cbb75dc68be59b9c95581b5d2b456f88979",
+  "packages/apps/Bluetooth": "7901ce4963d41339794367b85f3c607a4f6cff0e",
+  "packages/services/Telecomm": "6f4c3eafcde6b1fcf6d9cbf3e18cf909515a9401",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "91fc2a5a8522b096754e8312d670e5f711d10247",
+  "packages/services/Telephony": "eb80603f8dea569b5c014c415822e05bf189bd9a",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+  "prebuilts/abi-dumps/vndk": "caff0280e109e265570456a540c7390d1f3acbc2",
+  "packages/apps/Settings": "2cce6b7b8351155f485dd9bffacc13f680181b79",
+  "build/make": "cfcc0fa78c797b7eefb339e82bf3e653243671ba",
+  "system/vold": "31356f7fe637fa7eca84ea8f70a38035367face2",
+  "packages/modules/NetworkStack": "d0ce5f35272d80fa895e1184824aa90a2618ce7a",
+  "packages/apps/Nfc": "6b1d334fc3f55a2a3e2138bb3483a9db4e21deb8"
+ },
+ "system_partitions_modified": false
+}

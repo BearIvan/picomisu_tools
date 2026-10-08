@@ -1,0 +1,122 @@
+{
+  "native_commit": "611325dad0e3017d966dbe560accf1a2322a59fc",
+  "package": "outputs/bufferqueue-test-34",
+  "manifest_sha256": "24c12611354da2a87356379cd81d0b17b3bedb030482ede403e2b54234e7ccef",
+  "tests_per_abi": {
+    "arm64": 54,
+    "arm": 54
+  },
+  "render_surface_arm64_passed": 39,
+  "factory_probe_fixtures_per_abi": {
+    "arm64": {
+      "factory_bufferitem_wire_fixtures_matched": 102,
+      "factory_producer_fence_fixtures_matched": 12,
+      "factory_consumer_fence_fixtures_matched": 5,
+      "factory_display_config_fixtures_matched": 5,
+      "factory_display_flags_fixtures_matched": 17,
+      "factory_egl_image_tracker_fixtures_matched": 72,
+      "factory_surface_client_fixtures_matched": 22,
+      "factory_calling_tid_fixtures_matched": 8,
+      "factory_dequeue_count_fixtures_matched": 108,
+      "factory_cached_buffer_fixtures_matched": 10,
+      "factory_freeze_wire_fixtures_matched": 12,
+      "factory_freeze_registry_fixtures_matched": 15,
+      "factory_frozen_reply_fixtures_matched": 10,
+      "factory_producer_freeze_fixtures_matched": 9,
+      "factory_surface_freeze_fixtures_matched": 6,
+      "factory_freeze_remote_checkpoints_matched": 18,
+      "factory_binder_parity_fixtures_matched": 26,
+      "pxrguiex_checks_passed": 2
+    },
+    "arm": {
+      "factory_bufferitem_wire_fixtures_matched": 102,
+      "factory_producer_fence_fixtures_matched": 12,
+      "factory_consumer_fence_fixtures_matched": 5,
+      "factory_display_config_fixtures_matched": 5,
+      "factory_display_flags_fixtures_matched": 17,
+      "factory_egl_image_tracker_fixtures_matched": 72,
+      "factory_surface_client_fixtures_matched": 22,
+      "factory_calling_tid_fixtures_matched": 8,
+      "factory_dequeue_count_fixtures_matched": 108,
+      "factory_cached_buffer_fixtures_matched": 10,
+      "factory_freeze_wire_fixtures_matched": 12,
+      "factory_freeze_registry_fixtures_matched": 15,
+      "factory_frozen_reply_fixtures_matched": 10,
+      "factory_producer_freeze_fixtures_matched": 9,
+      "factory_surface_freeze_fixtures_matched": 6,
+      "factory_freeze_remote_checkpoints_matched": 9,
+      "factory_binder_parity_fixtures_matched": 26,
+      "pxrguiex_checks_passed": 2
+    }
+  },
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "full_graphics_compatibility_proven": false,
+  "scope": "Isolated native graphics comparisons and Source Java/JNI/ART/Bionic with compiled boot images and VR canvas API; VR activity policy and drawSoftware routing fixtures, full private ABI and real GPU/VR remain unqualified on hardware",
+  "render_surface_arm_passed": 39,
+  "layer_fence_tests_per_abi": {
+    "arm64": 5,
+    "arm": 5
+  },
+  "evidence_packages": [
+    "outputs/bufferqueue-test-34",
+    "outputs/framework-boot-image-test-28"
+  ],
+  "virtual_display_fence_tests_per_abi": {
+    "arm64": 16,
+    "arm": 16
+  },
+  "native_tests_total": 378,
+  "freeze_registry_tests_per_abi": {
+    "arm64": 4,
+    "arm": 4
+  },
+  "framework_commit": "144d2a35fa27e9a06403390f17b594caf21f0287",
+  "surface_freeze_probe_evidence": "validation/surface-freeze-port.json",
+  "additional_surface_freeze_fixtures_per_abi": {
+    "arm64": 6,
+    "arm": 6
+  },
+  "framework_runtime_evidence": "validation/framework-boot-image.json",
+  "java_runtime_fixtures_per_abi": {
+    "arm64": 30,
+    "arm": 30
+  },
+  "framework_boot_image_evidence": "validation/framework-boot-image.json",
+  "compiled_framework_commit": "144d2a35fa27e9a06403390f17b594caf21f0287",
+  "art_commit": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "compiled_boot_image_qualified": true,
+  "compiled_boot_image_fixtures_per_abi": {
+    "arm64": 30,
+    "arm": 30
+  },
+  "dequeue_count_evidence": "validation/dequeue-count-port.json",
+  "display_flags_evidence": "validation/display-flags-port.json",
+  "pico_composition_tests_per_abi": {
+    "arm64": 14,
+    "arm": 14
+  },
+  "composition_regression_tests_per_abi": {
+    "arm64": 55,
+    "arm": 55
+  },
+  "frame_diagnostics_evidence": "validation/frame-diagnostics-port.json",
+  "surface_monitor_evidence": "validation/surface-monitor-port.json",
+  "monitored_producer_tests_per_abi": {
+    "arm64": 5,
+    "arm": 5
+  },
+  "remaining_used_arm64_gui_symbols": 0,
+  "source_vr_canvas_fixtures_per_abi": {
+    "arm64": 7,
+    "arm": 7
+  },
+  "vr_canvas_api_evidence": "validation/vr-canvas-api.json",
+  "vr_activity_skip_draw_policy_qualified": false,
+  "native_rerun_reason": "libbinder gains the factory SoundSettings (chunk 0110+); the 378 native gtests and factory fixtures were rerun unchanged on both ABIs with the new libbinder",
+  "native_test_runs_total": 384,
+  "native_tests_total_note": "bufferqueue 54, freeze registry 4, RenderSurface 39, layer/display fence 21, pico_composition 14, composition_regression 55, monitored_producer 5 per ABI (384 runs; the same group earlier counted as 378 unique tests)",
+  "binder_parity_evidence": "validation/native-parity.json"
+}

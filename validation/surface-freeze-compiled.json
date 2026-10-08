@@ -1,0 +1,92 @@
+{
+  "java": [
+    {
+      "kind": "factory",
+      "jar_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+      "wrapper_signature": "()V",
+      "native_signature": "(J)V",
+      "virtual_display_callers": [
+        "<init>",
+        "setSurface"
+      ],
+      "release_synchronization_present": false,
+      "greylist_verified": true
+    },
+    {
+      "kind": "source",
+      "jar_sha256": "9473e8df1e1e7d201b4b2cc58a6ecdd25b55e49f07728ffaf7c24fe703a02e98",
+      "wrapper_signature": "()V",
+      "native_signature": "(J)V",
+      "virtual_display_callers": [
+        "<init>",
+        "setSurface"
+      ],
+      "release_synchronization_present": true,
+      "greylist_verified": true
+    }
+  ],
+  "native": [
+    {
+      "abi": 64,
+      "factory_sha256": "1f558c16d89065d6e07e3202431c3ce73ab9ef710eac31117fd152976e71f1cd",
+      "source_symbols_sha256": "a943144c6ebf47063cbeed5c113b9e60e1637c489d69bf66e2ec463279c5ccef",
+      "factory_entry": {
+        "table_slot": "0x1f1580",
+        "signature": "(J)V",
+        "function": 1174548
+      },
+      "source_entry": {
+        "table_slot": "0x1dd438",
+        "signature": "(J)V",
+        "function": 1146984
+      },
+      "actual_bridge_registered": true
+    },
+    {
+      "abi": 32,
+      "factory_sha256": "deccb4b074459d2282f0a9cba144dc0934f32a79ee2455b99af2536f2b06bc47",
+      "source_symbols_sha256": "32d2682916fba6f1aa080d68aca39de4af1ee62f0006d693d42bf6b6fb2ec62f",
+      "factory_entry": {
+        "table_slot": "0x15bad8",
+        "signature": "(J)V",
+        "function": 779337
+      },
+      "source_entry": {
+        "table_slot": "0x14aa34",
+        "signature": "(J)V",
+        "function": 760637
+      },
+      "actual_bridge_registered": true
+    }
+  ],
+  "factory_arm64_instructions": [
+    {
+      "address": "0x11ec38",
+      "bytes": "820000b4"
+    },
+    {
+      "address": "0x11ec48",
+      "bytes": "600300b4"
+    },
+    {
+      "address": "0x11ec50",
+      "bytes": "fcf50294"
+    },
+    {
+      "address": "0x11ec58",
+      "bytes": "e80200b4"
+    },
+    {
+      "address": "0x11ec84",
+      "bytes": "087d40f9"
+    },
+    {
+      "address": "0x11ec88",
+      "bytes": "00013fd6"
+    }
+  ],
+  "java_execution_with_source_boot_classpath_qualified": false,
+  "runtime_execution_evidence": null,
+  "real_process_freeze_qualified": false,
+  "full_runtime_abi_proven": false
+}

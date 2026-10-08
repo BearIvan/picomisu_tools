@@ -1,0 +1,765 @@
+[
+  {
+    "path": "frameworks/native",
+    "upstream": "013eb744f289c70e6d3fe180500d9a414ac55539",
+    "local_commit": "611325dad0e3017d966dbe560accf1a2322a59fc",
+    "tree": "beadf87909cb7297db0102e8f449ee59086e8894",
+    "patches": [
+      {
+        "path": "patches/0001-pico-query-value-payload.patch",
+        "sha256": "e72882f16560a582ca90c2c99917ebdc6c92425904ad60223943d549c86ce3cb"
+      },
+      {
+        "path": "patches/0003-pico-bufferqueue-status-store.patch",
+        "sha256": "1928d75c207511400bae99d77f7393887d4e675578f20cefe0390f861032595c"
+      },
+      {
+        "path": "patches/0004-pico-consumer-callback-buffer.patch",
+        "sha256": "bfbe136af1c93f78e3d8aab6d91a7d2fe18c6814781c71986c33f4747c435b3e"
+      },
+      {
+        "path": "patches/0005-qpr3-discarded-buffer-notifications.patch",
+        "sha256": "386d762850b7e71baca1bbd653040ae1b1a6da3ce28773677113e89688711309"
+      },
+      {
+        "path": "patches/0006-pico-producer-release-fence.patch",
+        "sha256": "8f9d7cd2e9490b5f0be51348eb1ad0cb9d1f63d62a1b105dc8b8ae614932f69c"
+      },
+      {
+        "path": "patches/0007-pico-consumer-fence-ready.patch",
+        "sha256": "2960dba23e6a951074726b85deae73b529093bef4ec6845f234943aa0105be20"
+      },
+      {
+        "path": "patches/0008-pico-queued-replacement-consumer-base.patch",
+        "sha256": "09e04a506fae7b0a6579d85d15de7c62bee80833c9350520ddb9379e952ba31b"
+      },
+      {
+        "path": "patches/0009-qpr3-display-config-subscription.patch",
+        "sha256": "792108315b1023462524eb9e4887b2d93910badd655e52b8f5facaaf754a6665"
+      },
+      {
+        "path": "patches/0010-display-config-wire-probe.patch",
+        "sha256": "d3b0829730ab6c97bcfc4839839341d7029316a452c7194edc8d94dd6e3b0845"
+      },
+      {
+        "path": "patches/0011-qpr3-surface-dataspace.patch",
+        "sha256": "ca96773922c6457453ec248da428ed58c27a4cc00aed7bfe82c2908ec7dfc0f5"
+      },
+      {
+        "path": "patches/0012-pico-typed-surface-creation.patch",
+        "sha256": "d97f8921b30881952b6ee92cbcaba568e3ea23068630347f4eebb1338e589e95"
+      },
+      {
+        "path": "patches/0013-pico-flip-client-target.patch",
+        "sha256": "28a23cd6a536a94385c5afc3c6086c9c8db693a8927acc01875bbff700a19138"
+      },
+      {
+        "path": "patches/0014-pico-render-surface-attach.patch",
+        "sha256": "27451acd8a08732a682b40194d60f17ae7ff6d3b257ac909dec775be80151be5"
+      },
+      {
+        "path": "patches/0015-pico-display-surface-forwarding.patch",
+        "sha256": "8e070c8451f531eb233c4b1810a13bc7fc6bd585c75f4f32ab41d0607db562e7"
+      },
+      {
+        "path": "patches/0016-pico-layer-fence-bridge.patch",
+        "sha256": "0df4665adb0a432d98eaa18703bab36c9bef73cc23307b6a8ad4214e0b466019"
+      },
+      {
+        "path": "patches/0017-pico-virtual-display-fence-registry.patch",
+        "sha256": "60ddcbf8e5c883149ea09fd0359da5e9780d2679a43fd3814209100aa91935a7"
+      },
+      {
+        "path": "patches/0018-pico-virtual-display-abi-lifetime.patch",
+        "sha256": "9b3b53245255340d1e24591cc4f75650690495aeef6ba69e8544f4c3edc27b7b"
+      },
+      {
+        "path": "patches/0019-pico-cached-buffer-attachment.patch",
+        "sha256": "1e3040183096e89afb14d5162e73935e77749abb0b1e490287334fd770580a94"
+      },
+      {
+        "path": "patches/0020-pico-freeze-binder-interfaces.patch",
+        "sha256": "b31e488839e97a9bcd25a44f2dd660ed15efb33c69ec05bbe2f23bb6086e4007"
+      },
+      {
+        "path": "patches/0021-pico-freeze-self-registry.patch",
+        "sha256": "f2eecd34d6944c7f8de8817cae6c9cce7d544f3d4ce43a8e538589039088e5dc"
+      },
+      {
+        "path": "patches/0022-pico-frozen-reply-pid.patch",
+        "sha256": "1be0e8fbcf655332cb481161adf8a68496d8aa3b12b2262d820f267606bac8b1"
+      },
+      {
+        "path": "patches/0023-pico-producer-self-unfreeze.patch",
+        "sha256": "09391bc624fc002051da722317bc8d1959be3ae2c946de00ec5dde240c1ab163"
+      },
+      {
+        "path": "patches/0028-pico-dequeue-count-allowances.patch",
+        "sha256": "86ee4576a9a8fdaec4fb8bc00d0f9e17a8d61e0e3313bfbc2e00873716eadaad"
+      },
+      {
+        "path": "patches/0029-pico-display-flags-composition.patch",
+        "sha256": "3d6ab6975b2ecc8529a1e91d90cd4c7d65301274f12e0289936dd902e8c1e308"
+      },
+      {
+        "path": "patches/0031-pico-frame-diagnostics.patch",
+        "sha256": "3aecc15df9d28ec3589a84aabba83b64c7e9042b346211c9022c6dbe979b1861"
+      },
+      {
+        "path": "patches/0032-pico-surface-monitor.patch",
+        "sha256": "eeffea17824502ef9e750f1e7ca4ea862d694861b4ee006db2fdf9e6b106a5c8"
+      },
+      {
+        "path": "patches/0081-installd-remove-mark-boot-complete.patch",
+        "sha256": "e2111ff00f407b38747023d7c6f4009ea7f45afd5fe5f54c2fb77d716414df49"
+      },
+      {
+        "path": "patches/0111-libbinder-sound-settings.patch",
+        "sha256": "27344bd137659b54d6d3b0523c21df0eeee3614be427a94b3a0ed0bf2db9dbbe"
+      },
+      {
+        "path": "patches/0116-libbinder-factory-pico-smartisan-layer.patch",
+        "sha256": "0b18760d1b082ccc7b42ea764fc01939d2b3ed640c2b010db02bef1648890d45"
+      },
+      {
+        "path": "patches/0117-omx-sync-vr-type-detect-index.patch",
+        "sha256": "da46d0dc561f7259f9d0c4a5636fa44728afbba45bb4b4daf4ff43ec79998a25"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "frameworks/base",
+    "upstream": "dff3deab5d25f8bbfd49abfb423043c9be47b7db",
+    "local_commit": "144d2a35fa27e9a06403390f17b594caf21f0287",
+    "tree": "7a06f7a27c3886dc4344cdd6dd62616c4d96953c",
+    "patches": [
+      {
+        "path": "patches/0002-pico-surface-vr-status-jni.patch",
+        "sha256": "2896c754b423dcfdeb44b04aaa835a25ddfb063ca5c78afc9f40dc8f1de56691"
+      },
+      {
+        "path": "patches/0024-pico-surface-freeze-jni.patch",
+        "sha256": "1644f5f08e7d1c7561c6b3bf057440299fd689f98432efcd16c864b43245987d"
+      },
+      {
+        "path": "patches/0025-source-framework-runtime-probe.patch",
+        "sha256": "22be3d4a39d9b81438da9bf34ff1bd6c7f5c0f251213f16c616e5e1960100c9a"
+      },
+      {
+        "path": "patches/0026-source-runtime-mapping-probe.patch",
+        "sha256": "b9099448f3ef6ac2b96335b57d2e143115bcdec69833b8a9152298805c2f0994"
+      },
+      {
+        "path": "patches/0030-pico-surface-control-display-flags-jni.patch",
+        "sha256": "2581ca12d8fffbb74ed9046df0cb152303d00bc668e4e055604ed5ddd098beff"
+      },
+      {
+        "path": "patches/0033-pico-surface-vr-canvas.patch",
+        "sha256": "9653ee8c7aee70eb4c56d462dc5e93d76e22056cbbff76012c95729b337c2e0a"
+      },
+      {
+        "path": "patches/0034-pico-package-info-vr-extensions.patch",
+        "sha256": "d208f933d94c27f878f5fe47f54c71d85792b5de445f1aba3095966cf7b70282"
+      },
+      {
+        "path": "patches/0035-pico-package-parser-vr-metadata.patch",
+        "sha256": "6bd434bcbb4a33fc5ce4760cd8e3997f9f7d9c5cd340e0aebf61e9b20bbd4dea"
+      },
+      {
+        "path": "patches/0036-pico-activity-thread-force-render.patch",
+        "sha256": "6189fae3d9dcdc013967398a495e19618d655de8965f644668e60b0b4e41fb0c"
+      },
+      {
+        "path": "patches/0037-pico-view-root-vr-skip-draw.patch",
+        "sha256": "2087f32909af2926eeed9cb517a3f3687d3d7f19229187b12a7d169d504aafbf"
+      },
+      {
+        "path": "patches/0038-vr-policy-runtime-fixtures.patch",
+        "sha256": "befae8fcb5577d8dd870c028aa07766f0c969928c75d28b4a2272a37af10475e"
+      },
+      {
+        "path": "patches/0040-pico-permissions.patch",
+        "sha256": "55fc44ce5c32aa3c9e474fecac8c21d4034450c2b34b80b8b1641fab817926e7"
+      },
+      {
+        "path": "patches/0041-qcom-wifiinfo-generation.patch",
+        "sha256": "ee1a06e2f80154f031c63ed3c5eef9124cb8f40b3330c3d4e511c45022a60216"
+      },
+      {
+        "path": "patches/0042-smartisan-applicationinfo-smtbase.patch",
+        "sha256": "79b6864662dc7f6cd922a917354bdd18b09e94d9ea3be42386b18093c2dc8765"
+      },
+      {
+        "path": "patches/0043-pico-aidl-interfaces-clients.patch",
+        "sha256": "6339506b546937e72e298cdd1e453ce9e0b65dfa91524b4306664cba4c4c4d8e"
+      },
+      {
+        "path": "patches/0044-pico-features-utils-whitelist.patch",
+        "sha256": "49345e29df76e60ab17a58111b48433bb9d63bf383964ebe374a52c8d812fee7"
+      },
+      {
+        "path": "patches/0045-pico-api-runtime-fixture.patch",
+        "sha256": "2e4f3cbe9246fc0f85cd5f6f681766d79ddf56eb6d64481b7e046fac986ccffd"
+      },
+      {
+        "path": "patches/0046-qcom-framework-misc.patch",
+        "sha256": "114595d43b2616546186053ea78e5554756e46157c0c3c7d7a2e2e27721b6b0c"
+      },
+      {
+        "path": "patches/0047-qcom-bluetooth-framework.patch",
+        "sha256": "13f3335b1552f58aeecd4d86bdff15afd15d38210f4d32e39f184d458618cf63"
+      },
+      {
+        "path": "patches/0051-qcom-wifi-framework.patch",
+        "sha256": "87f24bac2fa1d70f0981319d5e2c6da7f1e6845e9086cedc8b8cb2e60dba3c8e"
+      },
+      {
+        "path": "patches/0054-qcom-telephony-framework.patch",
+        "sha256": "193699090d9a7dbf8dd2f3c0cbed30ebf6934c3af537b38dfaa618e057ad0e7b"
+      },
+      {
+        "path": "patches/0057-qcom-api-runtime-fixture.patch",
+        "sha256": "7d1a309e9fe09d1872f03575399079ecc86938d1b6bfe69a6ec403d50a21726f"
+      },
+      {
+        "path": "patches/0058-pico-vr-chain-hooks.patch",
+        "sha256": "748c5afd77be1464a3625917b0edbac03f67a8a8c15854521eaa2e8d2d12399f"
+      },
+      {
+        "path": "patches/0062-qti-wifi-framework.patch",
+        "sha256": "3ff1be80869d0f83e2644a933ef415af3b60116f4ff88ef36bd9b128c1ff8f83"
+      },
+      {
+        "path": "patches/0068-codelinaro-obex-mtu.patch",
+        "sha256": "239b4495c1e046e87c5ff921b65c3e224cac42216bea6fe59225894233cbfb1d"
+      },
+      {
+        "path": "patches/0073-audio-service-spatializer-factory-table.patch",
+        "sha256": "86cf9ca735aa12fd802242535d11f1383dde545699864cf7d2a72448a6d99e71"
+      },
+      {
+        "path": "patches/0074-audio-api-runtime-fixture.patch",
+        "sha256": "2d798a1aa686e9027c6c6b3a683b090038a463f1b698cf24776d48aab49acaa4"
+      },
+      {
+        "path": "patches/0075-framework-account-notification-task-window-display-tables.patch",
+        "sha256": "3797dae5940c09d976de8e5cf41298cf5861ab88004b64c9b98900d9fade764d"
+      },
+      {
+        "path": "patches/0076-framework-user-biometric-storage-installd-tables.patch",
+        "sha256": "098341e68e1164678a12fc6aa24ea7c763cd00a19472853c024a7bde1f2ded65"
+      },
+      {
+        "path": "patches/0077-framework-bluetooth-nfc-networkstack-tables.patch",
+        "sha256": "786a0ea6352e628a3b0afab5971930046c9855c08e97c2f6ccc93024327f6ace"
+      },
+      {
+        "path": "patches/0078-framework-telephony-telecom-tables.patch",
+        "sha256": "5b16bcd0a8df38e239fc4369a133039a1c0550eb72d28d06a7e73b70302b1d1e"
+      },
+      {
+        "path": "patches/0079-shifted-aidl-runtime-fixture.patch",
+        "sha256": "65723e0536a75327608ded512666815a0d0ca3c444a8a767f5c5de730a8ccb6a"
+      },
+      {
+        "path": "patches/0097-framework-appended-aidl-tables.patch",
+        "sha256": "9a17a212b3f8d510c901a275acbaf3abf131ae5365f217bd775ad3e3d40aaadd"
+      },
+      {
+        "path": "patches/0098-appended-aidl-runtime-fixture.patch",
+        "sha256": "2e4853fe899abb981271edfc08e6317f1fc1c931a9e75fad740bc372c641a787"
+      },
+      {
+        "path": "patches/0106-framework-factory-aidl-signatures-and-interfaces.patch",
+        "sha256": "b74a8050ca829ba62e7a2bd98efe7867a53a84bcbf22a9b77d64a58cf68447a4"
+      },
+      {
+        "path": "patches/0107-factory-only-aidl-runtime-fixture.patch",
+        "sha256": "f0d63283b2566a862f40958e011f27a85259c65b7fc0a6030856398c18fca105"
+      },
+      {
+        "path": "patches/0113-framework-smartisan-bootclasspath-layer.patch",
+        "sha256": "6861b0416244a757ce83e242fef5af4caeb9ad2deabd97d7689dd337ce5f7d7f"
+      },
+      {
+        "path": "patches/0114-factory-classpath-runtime-fixture.patch",
+        "sha256": "1526e2319e47484fe6ff205a98b996e95f04c00b00750d7c5dea7cf7db2e2426"
+      },
+      {
+        "path": "patches/0122-media-player-spatial-helper-vr-type.patch",
+        "sha256": "107adf4a2526f518c1a1ebdd6a46079c44bbeea1d38d1163cf659314f6fccb59"
+      },
+      {
+        "path": "patches/0123-hwui-surfacetexture-image-manager-ext.patch",
+        "sha256": "7ebcc6f5b5d7fa8ab12245a76bf98d6cbefe0795df3997f143802197fc4bcf4e"
+      },
+      {
+        "path": "patches/0124-zygote-binder-mmap.patch",
+        "sha256": "fbaafe53f39e17e9df3a55f0c2411d5d8e14cdb960b254ca64fbd5f73b80909e"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "art",
+    "upstream": "0f2487027ebaeb42abaa7e86a267f1d6992696be",
+    "local_commit": "fe5349b2731357313891c9e0ced8340edb4887a8",
+    "tree": "3bb94c8c0624fc3fc11c2008c6aedc41b36a5978",
+    "patches": [
+      {
+        "path": "patches/0027-art-relocated-bootclasspath-kryo300.patch",
+        "sha256": "9dbe59fd10cadf20caa28e4f35e1081b2e2496d6c0d9a1fdf967d60ac5b5dfd6"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "build/soong",
+    "upstream": "8fa121dc8905d109dc9461c7810c8d70449132f8",
+    "local_commit": "519f8544b04ca8b6415793881e426a457215bef1",
+    "tree": "b7030b58f73f1d0449c9907d4bf12ce12fd5907d",
+    "patches": [
+      {
+        "path": "patches/0039-soong-pico-hiddenapi-whitelist.patch",
+        "sha256": "663bf1c9292bd7168eabba6597aa0217c3a58bb73406966b52550a5db0fb1811"
+      },
+      {
+        "path": "patches/0095-soong-device-support-hwfde.patch",
+        "sha256": "59ad909043eeb8c02b0b4e639d8622d38026c79949796c48688fe66f0578347b"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "system/bt",
+    "upstream": "3fd0365a822ca165ad6cd1cba57966c94c7c8a91",
+    "local_commit": "b4d6e87a425154a332234ddad6ab03b0656f8af2",
+    "tree": "c90fa937a72060d692cad3e768c90e8dc563c1f3",
+    "patches": [
+      {
+        "path": "patches/0048-qcom-bluetooth-binder-aidl.patch",
+        "sha256": "f4b4e88e2f7c9ebcb7546dd84a69d68486424e41f3a651d165cfe901c18c4435"
+      },
+      {
+        "path": "patches/0067-factory-bluetooth-le-callback-aidl.patch",
+        "sha256": "56fcf353a3fff1503c0d4d77da7720b7d1b6e3b4ddd5958f7c1f98dac1a866be"
+      },
+      {
+        "path": "patches/0080-bluetooth-manager-factory-reset-aidl.patch",
+        "sha256": "f99091452ceab68a8ce6bc51286931292aa270d9028129aace0f7fbad011d0ae"
+      },
+      {
+        "path": "patches/0108-bluetooth-pan-tethering-package.patch",
+        "sha256": "ee4bcf8df9a5dd4ba604598fa83026c06247d88ab004731fed67c03ee0ab8af5"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "packages/apps/Bluetooth",
+    "upstream": "c8d0decf0946bcdfe2edaa18235e4c5e7b6062f8",
+    "local_commit": "a65c7b27e6e6931603bac2e33dcaa78de027c280",
+    "tree": "0eb80911fa2adc1255a6ff6e145678662574538c",
+    "patches": [
+      {
+        "path": "patches/0049-qcom-bluetooth-adapter-service.patch",
+        "sha256": "2b0a63dcb898754182343df83960e6d681963c32b7d0d1b718f8feb1a6e0c27d"
+      },
+      {
+        "path": "patches/0069-bluetooth-le-callback-notifications.patch",
+        "sha256": "d9722446344fe34b12731b4d5622c31491276de93af1dd654c093f551eb45c26"
+      },
+      {
+        "path": "patches/0109-bluetooth-pan-tethering-package-check.patch",
+        "sha256": "e11ccd558fe649f995f48d91dc2cd4cee6eb9e0ad780c355cea1f86661ec2969"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "packages/services/Telecomm",
+    "upstream": "631f5a31066c9716d52324467271c9a7ee1e726f",
+    "local_commit": "6f4c3eafcde6b1fcf6d9cbf3e18cf909515a9401",
+    "tree": "cb76ae7621370acf4ee395cfe79e45edd93d4e41",
+    "patches": [
+      {
+        "path": "patches/0050-qcom-telecomm-hd-call.patch",
+        "sha256": "447893167aa45d637f8b23020a8c358b1ce9946df393ddbb68c8a7d0aad25673"
+      },
+      {
+        "path": "patches/0087-telecomm-add-participant.patch",
+        "sha256": "fa2db8aeb4431bfb011f1112056eb3d99fa2a69e5ff1f7b38d82a1d82f7e6bcd"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "frameworks/opt/net/wifi",
+    "upstream": "e62cc46c6af92bd90dcf85a6ef1a46819f4797ef",
+    "local_commit": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+    "tree": "bb0bd731493c9f88c6dab6be585eb02f75dea902",
+    "patches": [
+      {
+        "path": "patches/0052-qcom-wifi-service.patch",
+        "sha256": "47b783abbd96e78e5bc132fba0a6fd5914996902f08ec62659adafdd882ace60"
+      },
+      {
+        "path": "patches/0063-qti-wifi-service-sync.patch",
+        "sha256": "4349fa570d039f083d1ed2bb0a3697cdf0be8edb910465d4d85e7303e7544c82"
+      },
+      {
+        "path": "patches/0064-pico-wifi-link-layer-contention.patch",
+        "sha256": "27f3ec9167cd1f1c2679873399609a2c5d3b81698b216666528473ec7b06ed12"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "system/connectivity/wificond",
+    "upstream": "421cc2e5f70e617e342b4f911233697dfac40eba",
+    "local_commit": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+    "tree": "79f9cf9faa9fe9d88c77a862da26384576efef50",
+    "patches": [
+      {
+        "path": "patches/0053-qcom-wificond-6ghz.patch",
+        "sha256": "c635d04e59bf4a21003927f64f49354f2ab6f4d9470fb5bb33f80837a2c45465"
+      },
+      {
+        "path": "patches/0065-qti-wificond-sync.patch",
+        "sha256": "fd478a43dd1b1f79b64c1f343ed077a3e5eb4acfe3599fdef607617837e5eaa5"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "frameworks/opt/telephony",
+    "upstream": "a8cb6ac15222fb9d48890a4545c1737d2e3de463",
+    "local_commit": "ad8c52cc0ae89303fa13e1f9351ea61d1322974e",
+    "tree": "13be41e889a5b6517e77b67fbb6e86f6bae04fb7",
+    "patches": [
+      {
+        "path": "patches/0055-qcom-telephony-subscription.patch",
+        "sha256": "3e6069ee280857e0dd1e2bf6668aacdfe87c60cd1fcd92a9e8a40cacfadc6bdb"
+      },
+      {
+        "path": "patches/0085-telephony-iccphonebook-sms-capacity.patch",
+        "sha256": "375a831a5c93c8a406961ff7bdd7b1e7f9611e473fbdf0fc0156fe7577f04370"
+      },
+      {
+        "path": "patches/0100-telephony-subscription-plans-cf-service-class.patch",
+        "sha256": "6d4f1ab7682edd89a744ae0e97e07c88772c6a7e35dc2f1e1a05e93ec4ced46f"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "packages/services/Telephony",
+    "upstream": "2ad23573307e031176be1eacc22e616e4f4a503d",
+    "local_commit": "eb80603f8dea569b5c014c415822e05bf189bd9a",
+    "tree": "9e097620aff8b60684574534a8cc1658a70a048e",
+    "patches": [
+      {
+        "path": "patches/0056-qcom-telephony-service.patch",
+        "sha256": "fda194fcc820c002d98ce9abcf9f52c07393135c84ec6c2119e8004e28038426"
+      },
+      {
+        "path": "patches/0086-teleservice-add-participant.patch",
+        "sha256": "8243d33dfc829409753f202f0dee4d5bad4ef82a43aba65ac0e626a55f95d904"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "vendor/qcom/opensource/interfaces",
+    "upstream": "a13dc01734df56ea47d3e806ed82e6fa1fa7941a",
+    "local_commit": "f93d150520021878a53ab03748a136e38f359af3",
+    "tree": "71d159422886da64e11e258dbbcde3014a5f9c1c",
+    "patches": [
+      {
+        "path": "patches/0059-qti-wifi-hidl-interfaces.patch",
+        "sha256": "b0ce5490ba53ac3a2bf0af861098b8b27ee2e24ea0a8dd65f0511cff33947d4f"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "hardware/interfaces",
+    "upstream": "2083ef1548be73bb8f002a98de8e1105fae85831",
+    "local_commit": "bdd5ff1520f054ca7624194592651c698715c313",
+    "tree": "c6be385844ba8fcda49e6e31c559a8284ae9ffd4",
+    "patches": [
+      {
+        "path": "patches/0060-pico-wifi-link-layer-contention-hal.patch",
+        "sha256": "8c77fab0e16fa73ff08a459567751cb757f1883c14ef29b5b8fc718ac51fb1ed"
+      },
+      {
+        "path": "patches/0094-keymaster-qti-fbe-ice-tags.patch",
+        "sha256": "6810bb43e1ea3e1b9152a9be05280464de0e19f93e348e402704fb4ea5a51082"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "prebuilts/abi-dumps/vndk",
+    "upstream": "50dd28ed1da69787d5a795199f9d47a079a8c833",
+    "local_commit": "44f589a4d08435e2dbab33409c63b42e6671e1b1",
+    "tree": "ad9ab46a9873b32f6e7734910e052f2da71f6150",
+    "patches": [
+      {
+        "path": "patches/0061-pico-wifi-vndk-abi-reference.patch",
+        "sha256": "ec5f62244ef7d0b869f3657f081e3d4ebdf83fdf3a65aebca2dca18ce92b73cc"
+      },
+      {
+        "path": "patches/0072-vndk-abi-libbinder-bqhelper.patch",
+        "sha256": "8ba7ba53ab3ad61d5f390c8ec471c2937280c0ef2ce16d681d124caf0f3094e5"
+      },
+      {
+        "path": "patches/0112-vndk-abi-libbinder-sound-settings.patch",
+        "sha256": "2d850ecb7ac28543d9e05ddf18936a1e1342f53e4577b756d7a4ef956bff5ec6"
+      },
+      {
+        "path": "patches/0118-vndk-abi-libbinder-call-stat.patch",
+        "sha256": "f7e5e84e7d5549bc8da600c9912d627e93dcee37fd681e90e9b6eca352218d60"
+      },
+      {
+        "path": "patches/0126-vndk-abi-stagefright-foundation-thread-id.patch",
+        "sha256": "816465eb86ef3ba5f48cc63f1b207db97484a03ce00b0a243b833cf6f6e958fe"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "packages/apps/Settings",
+    "upstream": "7e2147bc3f397f194bcf66e5ce1a8a3b245b2ddf",
+    "local_commit": "8f55e58798961b8e279383c50bc4922ca7c13ce2",
+    "tree": "549024c5bfe95e8fe2225909e45ff604c7cf972f",
+    "patches": [
+      {
+        "path": "patches/0066-qti-settings-softap-callback.patch",
+        "sha256": "332dd46ae4e68d3360027408c945b16efb36835becaaa2c73e1ab03aef8da315"
+      },
+      {
+        "path": "patches/0070-settings-factory-facemanager-user-id.patch",
+        "sha256": "32a443a260b86c10528257b28a1f1cb0fcdeef7ba9275d076c317de93d8aec17"
+      },
+      {
+        "path": "patches/0102-settings-subscription-plans-listener.patch",
+        "sha256": "b3dfe38d6f95cb18d54cb139c6964467a7821236037b912d00969f45847eda93"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "build/make",
+    "upstream": "475fb5e5aa709812a799c2c411568b3cd12bf50e",
+    "local_commit": "d224f24cebae6685c6af9ae7fb22bb4162e29e9b",
+    "tree": "18d021c6ca40147bfd7f1bbed74f8ff4359ea80f",
+    "patches": [
+      {
+        "path": "patches/0071-boot-jars-pico-packages.patch",
+        "sha256": "f3bc79475dd68bc7cd98919254b9883d6eb0b24b95f83e4a339929af8e38a5a5"
+      },
+      {
+        "path": "patches/0096-soong-config-hw-disk-encryption.patch",
+        "sha256": "1787e8a99b77d58c8144f615e78f471364544d2889096aad4199950a19a3f9bd"
+      },
+      {
+        "path": "patches/0103-boot-jars-smartisanos-util.patch",
+        "sha256": "1a8f9d40968c91309d02b36815986d8967e4b0870809b56e040474367761c565"
+      },
+      {
+        "path": "patches/0110-boot-jars-before-framework.patch",
+        "sha256": "6c116d468ff37b21c44cf52381934e066c49c0727123e70cbc9b83a9b1867aef"
+      },
+      {
+        "path": "patches/0119-vndk-sp-libbinder-call-stat.patch",
+        "sha256": "2c92a1d7fe1dc113a6590dfb49232639451b934db170b6a49eac0ab035a3f2bd"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "system/vold",
+    "upstream": "e37a2acb459d9a0a1ce25c4c0abf33ba824ea978",
+    "local_commit": "06a50b10bd9f9e398450e4f3ab1ea56fcc6be884",
+    "tree": "0faf0e505e795ce4774b91e827c62ef63ac05899",
+    "patches": [
+      {
+        "path": "patches/0082-vold-clear-user-key-auth.patch",
+        "sha256": "98290bf72fe0422989c099877c2354099f82de11d86f2070028fac60572caecf"
+      },
+      {
+        "path": "patches/0091-vold-codelinaro-wrapped-ice-keys.patch",
+        "sha256": "628a97cfd644761e33a4ea17435a4b25d0b0806d6b435133e777902cb54acf2e"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "system/core",
+    "upstream": "1dea9a052b7f214c10a77d5ed6ffd3602722a817",
+    "local_commit": "e50e65e1f3878c0816e671407ee81d3d51fc2d88",
+    "tree": "863d4a0098cc906cfb2a6f2ee8cb33058ed018fe",
+    "patches": [
+      {
+        "path": "patches/0092-fs-mgr-wrappedkey-data-mount.patch",
+        "sha256": "75022851d4cff09117636a3a3800f486f092534078cb8678e0555fb494fefc9e"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "system/extras",
+    "upstream": "1be00e563e8d4e65f94dc85ed68b893010d2070d",
+    "local_commit": "72fdb7cfdc0a3a84191e9ebdc48cd8a18b682565",
+    "tree": "0101085744d0167cbd98a449a384c691c6c5fc9d",
+    "patches": [
+      {
+        "path": "patches/0093-libfscrypt-per-boot-key-wrapped-ice.patch",
+        "sha256": "836c570ad9f9e31a928882644d14e4af7a155d12677487ae3f03c9e6b11d4b7e"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "packages/modules/NetworkStack",
+    "upstream": "ca4b67c00030846d3b56744ba03cdb53ecb581c7",
+    "local_commit": "d0ce5f35272d80fa895e1184824aa90a2618ce7a",
+    "tree": "f99484c8ab18b9b7f445dcbf8dfb519d69f5e988",
+    "patches": [
+      {
+        "path": "patches/0083-networkstack-codelinaro-pico-dns-events.patch",
+        "sha256": "c83542678e31ed36bd803ddb465eaab12ff623ed4a251ba5373f368e502ef4e1"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "packages/apps/Nfc",
+    "upstream": "7cb128086229984d2f131031a7bf379976b0562a",
+    "local_commit": "6b1d334fc3f55a2a3e2138bb3483a9db4e21deb8",
+    "tree": "014155de00270841917c70dac245edd0978e33d9",
+    "patches": [
+      {
+        "path": "patches/0084-nfc-vendor-interface.patch",
+        "sha256": "66c41b737b20a397800f66ec33628f7913e253ebef1ca33f7cbe7affb1da7412"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "system/sepolicy",
+    "upstream": "6ec9b2e9e20213a19f8a05d0c20e903399cfd581",
+    "local_commit": "b70dcb852d79b48b8698d71b0199482b85910d3a",
+    "tree": "75cafb5d0edc6afc6a37b21aaac20962b4e2bec1",
+    "patches": [
+      {
+        "path": "patches/0088-sepolicy-factory-perf-event-class-hal-defaults.patch",
+        "sha256": "512c6aa346b00b0e61c9d5dc7cb1def0fded4a4822a9ad4fd063fd2fe7309d39"
+      },
+      {
+        "path": "patches/0089-sepolicy-factory-pico-platform-types.patch",
+        "sha256": "55972a067ba00bae96f3c486c4ab60e89e02c348f2fec375b6833a5bedb947f4"
+      },
+      {
+        "path": "patches/0090-sepolicy-factory-neverallow-exceptions.patch",
+        "sha256": "04f12b2bc91ccaaaf01b2629abca0d56f9cb8a5a4fea2905ca0a404598c8a3e1"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "device/qcom/sepolicy",
+    "upstream": "830b6eb97a27468a23fe5e91ef912d4df0d22066",
+    "local_commit": "830b6eb97a27468a23fe5e91ef912d4df0d22066",
+    "tree": "3170cb57cfa5eae71e55eee9eeb1c98567783ff1",
+    "patches": [],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "frameworks/av",
+    "upstream": "7f6494d1ce3acf18991b7187630bfd225ad23393",
+    "local_commit": "1accb032cdd99fb1d4712c0ddd4710ca0425dc9b",
+    "tree": "534f294363cf425ae2a1ccae7d42cf1d693310dc",
+    "patches": [
+      {
+        "path": "patches/0099-av-camera-open-close-player-ext-volume.patch",
+        "sha256": "adc80b7fa12f2e4025f4023365e4f3cada7cdb6592e3f8eeed538566c9fd2a3b"
+      },
+      {
+        "path": "patches/0120-av-metadata-retriever-vr-type.patch",
+        "sha256": "3762422f17eb8472bebcb809046882916928addc3b82ec0a71c5a9f3037ff6e0"
+      },
+      {
+        "path": "patches/0121-av-spatializer-client-libspatialaudio.patch",
+        "sha256": "7327651ebf6c9cbde59ece4e12e9e74669d24755704ccbdda2476a5f835a3c14"
+      },
+      {
+        "path": "patches/0125-ndk-image-reader-rt-mode.patch",
+        "sha256": "e10afd8bc3c6d18346a2cd18b6bdd30d9522f01996e1184cffad4c4902e2608a"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "frameworks/opt/net/ims",
+    "upstream": "b00428b7e9f6cfa49afb16b89063ffc5254fd639",
+    "local_commit": "c71c952e1f1e67ad981a78791b4ff3f33d5f92cf",
+    "tree": "ba0493fab8a608d5c52b5a2db89c3699f43adb81",
+    "patches": [
+      {
+        "path": "patches/0101-ims-query-cf-service-class.patch",
+        "sha256": "d87bfa8a86109fd6c0ffb6da5b4e5ba0b4d22c40fd5042e1dcdebdeab92b78d1"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "prebuilts/abi-dumps/ndk",
+    "upstream": "38d2de349ffcf38e2ab2c7243d41b4e60be1b130",
+    "local_commit": "db302bf0671beae1dc362a87409bd9b75af37292",
+    "tree": "35aa54c38221bff24b4ec2b2c5b290ff38c2e18b",
+    "patches": [
+      {
+        "path": "patches/0104-ndk-abi-libaaudio-ext-volume.patch",
+        "sha256": "8a64b0be1d9466663fb59eee914f1039a85efffcc46f7742c6a0bd4873c77529"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "frameworks/layoutlib",
+    "upstream": "ae2275abf39f8eea243ca2535f98dde3efaf670a",
+    "local_commit": "3719f7d7fed0f5668284d8bf1e0f303320783247",
+    "tree": "42b9c3d141092f097a4e5003774e23ef10760a2b",
+    "patches": [
+      {
+        "path": "patches/0105-layoutlib-sensor-control-screen.patch",
+        "sha256": "1d1a9889a507c801eed02d27d4fd3ccb813c99dc7a0576ff19d77c707cc07c39"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "vendor/codeaurora/telephony",
+    "upstream": "27d0001003086c8e8889b69fbfa260bb7804740e",
+    "local_commit": "27d0001003086c8e8889b69fbfa260bb7804740e",
+    "tree": "0333554e9f4c77ed66a3dd242e0025031b511522",
+    "patches": [],
+    "patched_tree_matches_commit": true
+  },
+  {
+    "path": "vendor/qcom/opensource/fm-commonsys",
+    "upstream": "0d397db45c79034fdefc1c78e2fd8fee6c724368",
+    "local_commit": "2259abfa6048b73341e5dce9a17a88ac3a30a19a",
+    "tree": "7c36c264094c0e14c1b2e409dba8e0ca57ddd6c7",
+    "patches": [
+      {
+        "path": "patches/0115-fm-commonsys-guard-hal-clients.patch",
+        "sha256": "1aff273ebe779526ea4d46f55727663c790d1e8d0186a80eee1664cedbe2131a"
+      }
+    ],
+    "patched_tree_matches_commit": true
+  }
+]

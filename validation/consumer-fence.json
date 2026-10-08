@@ -1,0 +1,47 @@
+{
+  "verified_at_utc": "2026-09-28T20:59:12.003396+00:00",
+  "native_commit": "1c2bc382093b39a6e81aaff9e2d1366c3b2748b8",
+  "build_exit_code": 0,
+  "tests_passed": {
+    "arm64": 42,
+    "arm": 42
+  },
+  "factory_consumer_fence_fixtures_matched": {
+    "arm64": 3,
+    "arm": 3
+  },
+  "factory_producer_fence_fixtures_matched": {
+    "arm64": 12,
+    "arm": 12
+  },
+  "source_libgui_sha256": {
+    "64": "ac02c0a3f3909ba590a011eb9315e7778d3a6b0f7c574d543226826b52488394",
+    "32": "86cdb87f55ebff50e5b66bb4ea2b587a2f6efcf3a9d557383fe47554fc9f518c"
+  },
+  "used_missing_symbols_before": 15,
+  "used_missing_symbols_after": 14,
+  "resolved_used_symbol": "_ZN7android12ConsumerBase25getLatchAcquireSlotLockedEv",
+  "changed_vtable_size_count": {
+    "64": 12,
+    "32": 12
+  },
+  "new_binder_transaction_defined": false,
+  "local_consumer_fence_ready_path_ported": true,
+  "type_1_release_detach_path_ported": true,
+  "type_1_queue_replacement_callback_ported": false,
+  "consumer_on_disconnect_ported": false,
+  "wait_relative_timeout_nanoseconds": 13880000,
+  "wait_uses_normalized_relative_deadline": true,
+  "factory_invalid_argument_error_behavior_identical": false,
+  "factory_probe_object_storage_padded": true,
+  "gpu_buffer_allocation_enabled_in_probe": false,
+  "actual_rendered_frames_tested": false,
+  "actual_gpu_sync_fences_tested": false,
+  "descriptor_fixture": "pipe (transport/ownership only)",
+  "full_libgui_abi_compatibility_proven": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "factory_vr_services_replaced": false
+}

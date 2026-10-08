@@ -1,0 +1,3025 @@
+{
+ "factory_elf_files": 4311,
+ "libraries": {
+  "lib64/libbinder.so": {
+   "scope": "chunk6",
+   "factory_exports": 1866,
+   "source_exports": 1861,
+   "factory_only": 7,
+   "source_only": 2,
+   "factory_only_by_class": {
+    "compiler_or_template_instantiation": 7
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIdEEiPT_",
+     "demangled": "int android::Parcel::readAligned<double>(double*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIfEEiPT_",
+     "demangled": "int android::Parcel::readAligned<float>(float*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIiEEiPT_",
+     "demangled": "int android::Parcel::readAligned<int>(int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIjEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned int>(unsigned int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIlEEiPT_",
+     "demangled": "int android::Parcel::readAligned<long>(long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedImEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned long>(unsigned long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIyEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned long long>(unsigned long long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel21unsafeReadTypedVectorINSt3__110unique_ptrINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS2_14default_deleteIS9_EEEESC_EEiPNS2_6vectorIT_NS7_ISE_EEEEMS0_KFiPT0_E",
+     "demangled": "int android::Parcel::unsafeReadTypedVector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >(std::__1::vector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::allocator<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > > >*, int (android::Parcel::*)(std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const) const",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android4base14unique_fd_implINS2_13DefaultCloserEEENS_9allocatorIS5_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS5_RS7_EE",
+     "demangled": "std::__1::vector<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> > >::__swap_out_circular_buffer(std::__1::__split_buffer<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> >&>&)",
+     "classification": "compiler_or_template_instantiation"
+    }
+   ]
+  },
+  "lib/libbinder.so": {
+   "scope": "chunk6",
+   "factory_exports": 1884,
+   "source_exports": 1880,
+   "factory_only": 6,
+   "source_only": 2,
+   "factory_only_by_class": {
+    "compiler_or_template_instantiation": 6
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIdEEiPT_",
+     "demangled": "int android::Parcel::readAligned<double>(double*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIfEEiPT_",
+     "demangled": "int android::Parcel::readAligned<float>(float*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIiEEiPT_",
+     "demangled": "int android::Parcel::readAligned<int>(int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIjEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned int>(unsigned int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIxEEiPT_",
+     "demangled": "int android::Parcel::readAligned<long long>(long long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIyEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned long long>(unsigned long long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel21unsafeReadTypedVectorINSt3__110unique_ptrINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS2_14default_deleteIS9_EEEESC_EEiPNS2_6vectorIT_NS7_ISE_EEEEMS0_KFiPT0_E",
+     "demangled": "int android::Parcel::unsafeReadTypedVector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >(std::__1::vector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::allocator<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > > >*, int (android::Parcel::*)(std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const) const",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android4base14unique_fd_implINS2_13DefaultCloserEEENS_9allocatorIS5_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS5_RS7_EE",
+     "demangled": "std::__1::vector<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> > >::__swap_out_circular_buffer(std::__1::__split_buffer<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> >&>&)",
+     "classification": "compiler_or_template_instantiation"
+    }
+   ]
+  },
+  "lib64/vndk-29/libbinder.so": {
+   "scope": "chunk6",
+   "factory_exports": 1491,
+   "source_exports": 1486,
+   "factory_only": 7,
+   "source_only": 2,
+   "factory_only_by_class": {
+    "compiler_or_template_instantiation": 7
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIdEEiPT_",
+     "demangled": "int android::Parcel::readAligned<double>(double*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIfEEiPT_",
+     "demangled": "int android::Parcel::readAligned<float>(float*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIiEEiPT_",
+     "demangled": "int android::Parcel::readAligned<int>(int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIjEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned int>(unsigned int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIlEEiPT_",
+     "demangled": "int android::Parcel::readAligned<long>(long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedImEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned long>(unsigned long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIyEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned long long>(unsigned long long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel21unsafeReadTypedVectorINSt3__110unique_ptrINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS2_14default_deleteIS9_EEEESC_EEiPNS2_6vectorIT_NS7_ISE_EEEEMS0_KFiPT0_E",
+     "demangled": "int android::Parcel::unsafeReadTypedVector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >(std::__1::vector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::allocator<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > > >*, int (android::Parcel::*)(std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const) const",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android4base14unique_fd_implINS2_13DefaultCloserEEENS_9allocatorIS5_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS5_RS7_EE",
+     "demangled": "std::__1::vector<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> > >::__swap_out_circular_buffer(std::__1::__split_buffer<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> >&>&)",
+     "classification": "compiler_or_template_instantiation"
+    }
+   ]
+  },
+  "lib/vndk-29/libbinder.so": {
+   "scope": "chunk6",
+   "factory_exports": 1503,
+   "source_exports": 1499,
+   "factory_only": 6,
+   "source_only": 2,
+   "factory_only_by_class": {
+    "compiler_or_template_instantiation": 6
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIdEEiPT_",
+     "demangled": "int android::Parcel::readAligned<double>(double*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIfEEiPT_",
+     "demangled": "int android::Parcel::readAligned<float>(float*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIiEEiPT_",
+     "demangled": "int android::Parcel::readAligned<int>(int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIjEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned int>(unsigned int*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIxEEiPT_",
+     "demangled": "int android::Parcel::readAligned<long long>(long long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    },
+    {
+     "symbol": "_ZNK7android6Parcel11readAlignedIyEEiPT_",
+     "demangled": "int android::Parcel::readAligned<unsigned long long>(unsigned long long*) const",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "The factory build emits Parcel::readAligned<T> out of line; the Source compiler inlines the identical template body (same validateReadData / NOT_ENOUGH_DATA logic). Inlining difference, no consumer."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZNK7android6Parcel21unsafeReadTypedVectorINSt3__110unique_ptrINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS2_14default_deleteIS9_EEEESC_EEiPNS2_6vectorIT_NS7_ISE_EEEEMS0_KFiPT0_E",
+     "demangled": "int android::Parcel::unsafeReadTypedVector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >(std::__1::vector<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, std::__1::allocator<std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > > >*, int (android::Parcel::*)(std::__1::unique_ptr<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::default_delete<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const) const",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android4base14unique_fd_implINS2_13DefaultCloserEEENS_9allocatorIS5_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS5_RS7_EE",
+     "demangled": "std::__1::vector<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> > >::__swap_out_circular_buffer(std::__1::__split_buffer<android::base::unique_fd_impl<android::base::DefaultCloser>, std::__1::allocator<android::base::unique_fd_impl<android::base::DefaultCloser> >&>&)",
+     "classification": "compiler_or_template_instantiation"
+    }
+   ]
+  },
+  "lib64/libbinder_call_stat.so": {
+   "scope": "chunk6",
+   "factory_exports": 81,
+   "source_exports": 81,
+   "factory_only": 0,
+   "source_only": 0,
+   "factory_only_by_class": {},
+   "factory_only_symbols": [],
+   "source_only_symbols": []
+  },
+  "lib/libbinder_call_stat.so": {
+   "scope": "chunk6",
+   "factory_exports": 103,
+   "source_exports": 103,
+   "factory_only": 0,
+   "source_only": 0,
+   "factory_only_by_class": {},
+   "factory_only_symbols": [],
+   "source_only_symbols": []
+  },
+  "lib64/vndk-sp-29/libbinder_call_stat.so": {
+   "scope": "chunk6",
+   "factory_exports": 81,
+   "source_exports": 81,
+   "factory_only": 0,
+   "source_only": 0,
+   "factory_only_by_class": {},
+   "factory_only_symbols": [],
+   "source_only_symbols": []
+  },
+  "lib/vndk-sp-29/libbinder_call_stat.so": {
+   "scope": "chunk6",
+   "factory_exports": 103,
+   "source_exports": 103,
+   "factory_only": 0,
+   "source_only": 0,
+   "factory_only_by_class": {},
+   "factory_only_symbols": [],
+   "source_only_symbols": []
+  },
+  "lib64/libhwui.so": {
+   "scope": "chunk6",
+   "factory_exports": 3615,
+   "source_exports": 3597,
+   "factory_only": 19,
+   "source_only": 1,
+   "factory_only_by_class": {
+    "consumer_replaced_by_source": 3,
+    "compiler_or_template_instantiation": 16
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy10setSurfaceERKNS_2spINS_7SurfaceEEEb",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::setSurface(android::sp<android::Surface> const&, bool)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libandroid_runtime.so"
+     ],
+     "explanation": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json)."
+    },
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy11doAnimationEl",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::doAnimation(long)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libandroid_runtime.so"
+     ],
+     "explanation": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json)."
+    },
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy25notifyMonitorStatsChangedEb",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::notifyMonitorStatsChanged(bool)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libandroid_runtime.so"
+     ],
+     "explanation": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json)."
+    },
+    {
+     "symbol": "_ZTC13GrMockTexture0_9GrTexture",
+     "demangled": "construction vtable for GrTexture-in-GrMockTexture",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC18GrMockRenderTarget0_14GrRenderTarget",
+     "demangled": "construction vtable for GrRenderTarget-in-GrMockRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget0_13GrMockTexture",
+     "demangled": "construction vtable for GrMockTexture-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget0_9GrTexture",
+     "demangled": "construction vtable for GrTexture-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget40_14GrRenderTarget",
+     "demangled": "construction vtable for GrRenderTarget-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget40_18GrMockRenderTarget",
+     "demangled": "construction vtable for GrMockRenderTarget-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer10ThreadBaseE0_NS_6ThreadE",
+     "demangled": "construction vtable for android::Thread-in-android::uirenderer::ThreadBase",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer12LogcatStreamE0_NSt3__113basic_ostreamIcNS1_11char_traitsIcEEEE",
+     "demangled": "construction vtable for std::__1::basic_ostream<char, android::uirenderer::LogcatStream::char_traits<char> >-in-android::uirenderer::LogcatStream",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer19AnimatedImageThreadE0_NS0_10ThreadBaseE",
+     "demangled": "construction vtable for android::uirenderer::ThreadBase-in-android::uirenderer::AnimatedImageThread",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer19AnimatedImageThreadE0_NS_6ThreadE",
+     "demangled": "construction vtable for android::Thread-in-android::uirenderer::AnimatedImageThread",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "__addtf3",
+     "demangled": "__addtf3",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+    },
+    {
+     "symbol": "__fe_getround",
+     "demangled": "__fe_getround",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+    },
+    {
+     "symbol": "__fe_raise_inexact",
+     "demangled": "__fe_raise_inexact",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+    },
+    {
+     "symbol": "__floatditf",
+     "demangled": "__floatditf",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+    },
+    {
+     "symbol": "__multf3",
+     "demangled": "__multf3",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+    },
+    {
+     "symbol": "__subtf3",
+     "demangled": "__subtf3",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "compiler-rt long double builtins linked into the factory arm64 libhwui; no consumer."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy10setSurfaceERKNS_2spINS_7SurfaceEEE",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::setSurface(android::sp<android::Surface> const&)",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib/libhwui.so": {
+   "scope": "chunk6",
+   "factory_exports": 3581,
+   "source_exports": 3569,
+   "factory_only": 13,
+   "source_only": 1,
+   "factory_only_by_class": {
+    "consumer_replaced_by_source": 3,
+    "compiler_or_template_instantiation": 10
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy10setSurfaceERKNS_2spINS_7SurfaceEEEb",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::setSurface(android::sp<android::Surface> const&, bool)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libandroid_runtime.so"
+     ],
+     "explanation": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json)."
+    },
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy11doAnimationEx",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::doAnimation(long long)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libandroid_runtime.so"
+     ],
+     "explanation": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json)."
+    },
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy25notifyMonitorStatsChangedEb",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::notifyMonitorStatsChanged(bool)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libandroid_runtime.so"
+     ],
+     "explanation": "Only consumer is the factory libandroid_runtime (HardwareRenderer nDoAnimation/nNotifyMonitorStatsChanged, setSurface with a flag), which the Source libandroid_runtime replaces; the Java natives have no consumers (validation/api-consumers.json)."
+    },
+    {
+     "symbol": "_ZTC13GrMockTexture0_9GrTexture",
+     "demangled": "construction vtable for GrTexture-in-GrMockTexture",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC18GrMockRenderTarget0_14GrRenderTarget",
+     "demangled": "construction vtable for GrRenderTarget-in-GrMockRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget0_13GrMockTexture",
+     "demangled": "construction vtable for GrMockTexture-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget0_9GrTexture",
+     "demangled": "construction vtable for GrTexture-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget28_14GrRenderTarget",
+     "demangled": "construction vtable for GrRenderTarget-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTC25GrMockTextureRenderTarget28_18GrMockRenderTarget",
+     "demangled": "construction vtable for GrMockRenderTarget-in-GrMockTextureRenderTarget",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Skia GrMock construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer10ThreadBaseE0_NS_6ThreadE",
+     "demangled": "construction vtable for android::Thread-in-android::uirenderer::ThreadBase",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer12LogcatStreamE0_NSt3__113basic_ostreamIcNS1_11char_traitsIcEEEE",
+     "demangled": "construction vtable for std::__1::basic_ostream<char, android::uirenderer::LogcatStream::char_traits<char> >-in-android::uirenderer::LogcatStream",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer19AnimatedImageThreadE0_NS0_10ThreadBaseE",
+     "demangled": "construction vtable for android::uirenderer::ThreadBase-in-android::uirenderer::AnimatedImageThread",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    },
+    {
+     "symbol": "_ZTCN7android10uirenderer19AnimatedImageThreadE0_NS_6ThreadE",
+     "demangled": "construction vtable for android::Thread-in-android::uirenderer::AnimatedImageThread",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "Construction vtables emitted by the factory compiler; no consumer."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android10uirenderer12renderthread11RenderProxy10setSurfaceERKNS_2spINS_7SurfaceEEE",
+     "demangled": "android::uirenderer::renderthread::RenderProxy::setSurface(android::sp<android::Surface> const&)",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib64/libmedia_jni.so": {
+   "scope": "chunk6",
+   "factory_exports": 484,
+   "source_exports": 483,
+   "factory_only": 1,
+   "source_only": 0,
+   "factory_only_by_class": {
+    "no_factory_consumer": 1
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_Z44register_android_media_SpatialCoordConverterP7_JNIEnv",
+     "demangled": "register_android_media_SpatialCoordConverter(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory registration of android.media.SpatialCoordConverter natives; the Java class has no consumer outside framework.jar (validation/api-consumers.json) and is not part of the 9 needed natives."
+    }
+   ],
+   "source_only_symbols": []
+  },
+  "lib/libmedia_jni.so": {
+   "scope": "chunk6",
+   "factory_exports": 506,
+   "source_exports": 505,
+   "factory_only": 1,
+   "source_only": 0,
+   "factory_only_by_class": {
+    "no_factory_consumer": 1
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_Z44register_android_media_SpatialCoordConverterP7_JNIEnv",
+     "demangled": "register_android_media_SpatialCoordConverter(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory registration of android.media.SpatialCoordConverter natives; the Java class has no consumer outside framework.jar (validation/api-consumers.json) and is not part of the 9 needed natives."
+    }
+   ],
+   "source_only_symbols": []
+  },
+  "lib64/libspatialaudio.so": {
+   "scope": "chunk6",
+   "factory_exports": 46,
+   "source_exports": 46,
+   "factory_only": 0,
+   "source_only": 0,
+   "factory_only_by_class": {},
+   "factory_only_symbols": [],
+   "source_only_symbols": []
+  },
+  "lib/libspatialaudio.so": {
+   "scope": "chunk6",
+   "factory_exports": 51,
+   "source_exports": 51,
+   "factory_only": 0,
+   "source_only": 0,
+   "factory_only_by_class": {},
+   "factory_only_symbols": [],
+   "source_only_symbols": []
+  },
+  "lib64/libandroid_runtime.so": {
+   "scope": "chunk6",
+   "factory_exports": 1523,
+   "source_exports": 1491,
+   "factory_only": 38,
+   "source_only": 6,
+   "factory_only_by_class": {
+    "no_factory_consumer": 28,
+    "consumer_replaced_by_source": 1,
+    "compiler_or_template_instantiation": 9
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "Java_android_view_ExtSurfaceImpl_nativeLockCanvasFor2DVr",
+     "demangled": "Java_android_view_ExtSurfaceImpl_nativeLockCanvasFor2DVr",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "Java_android_view_ExtSurfaceImpl_nativeReleaseSurfaceObject",
+     "demangled": "Java_android_view_ExtSurfaceImpl_nativeReleaseSurfaceObject",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "Java_android_view_ExtSurfaceImpl_nativeUnlockCanvasAndPostFor2DVr",
+     "demangled": "Java_android_view_ExtSurfaceImpl_nativeUnlockCanvasAndPostFor2DVr",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "_Z19getBinderClientPidsP7_JNIEnvP8_jobjecti",
+     "demangled": "getBinderClientPids(_JNIEnv*, _jobject*, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI for Binder client/server PID queries; the libbinder side is ported (IPCThreadState::getBinder*Pids), the Java natives are only reachable from the preserved sys-/sysmonitor- JARs, which are not on the Source classpath."
+    },
+    {
+     "symbol": "_Z19getBinderServerPidsP7_JNIEnvP8_jobjecti",
+     "demangled": "getBinderServerPids(_JNIEnv*, _jobject*, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI for Binder client/server PID queries; the libbinder side is ported (IPCThreadState::getBinder*Pids), the Java natives are only reachable from the preserved sys-/sysmonitor- JARs, which are not on the Source classpath."
+    },
+    {
+     "symbol": "_Z28__android_seemp_socket_writeiPKc",
+     "demangled": "__android_seemp_socket_write(int, char const*)",
+     "classification": "no_factory_consumer",
+     "explanation": "CodeLinaro SEEMP logging JNI; no consumer."
+    },
+    {
+     "symbol": "_Z34android_os_Process_useCGroupFreezeP7_JNIEnvP8_jobjecth",
+     "demangled": "android_os_Process_useCGroupFreeze(_JNIEnv*, _jobject*, unsigned char)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z34javaAudioFormatToNativeAudioConfigP7_JNIEnvP12audio_configP8_jobjectb",
+     "demangled": "javaAudioFormatToNativeAudioConfig(_JNIEnv*, audio_config*, _jobject*, bool)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_Z39android_os_Process_setUIThreadSchedulerP7_JNIEnvP7_jclassii",
+     "demangled": "android_os_Process_setUIThreadScheduler(_JNIEnv*, _jclass*, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z40android_os_Process_setProcessFreezeGroupP7_JNIEnvP8_jobjectiih",
+     "demangled": "android_os_Process_setProcessFreezeGroup(_JNIEnv*, _jobject*, int, int, unsigned char)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z42android_os_Process_getChildProcessViaGroupP7_JNIEnvP8_jobjectii",
+     "demangled": "android_os_Process_getChildProcessViaGroup(_JNIEnv*, _jobject*, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z44register_android_media_AudioDeviceAttributesP7_JNIEnv",
+     "demangled": "register_android_media_AudioDeviceAttributes(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_Z45android_os_Process_setCgroupProcsProcessGroupP7_JNIEnvP8_jobjectiiih",
+     "demangled": "android_os_Process_setCgroupProcsProcessGroup(_JNIEnv*, _jobject*, int, int, int, unsigned char)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_ZGVZN16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "guard variable for sensors_timeutil::get_instance()::inst",
+     "classification": "no_factory_consumer",
+     "explanation": "Namespace of a static sensors time helper differs (factory global, Source android::); internal."
+    },
+    {
+     "symbol": "_ZN7android10dmabufinfo14ReadDmaBufInfoEPNSt3__16vectorINS0_9DmaBufferENS1_9allocatorIS3_EEEERKNS1_12basic_stringIcNS1_11char_traitsIcEENS4_IcEEEE",
+     "demangled": "android::dmabufinfo::ReadDmaBufInfo(std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)",
+     "classification": "no_factory_consumer",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZN7android10dmabufinfo14ReadDmaBufInfoEiPNSt3__16vectorINS0_9DmaBufferENS1_9allocatorIS3_EEEEb",
+     "demangled": "android::dmabufinfo::ReadDmaBufInfo(int, std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >*, bool)",
+     "classification": "no_factory_consumer",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZN7android10dmabufinfo16AppendDmaBufInfoEiPNSt3__16vectorINS0_9DmaBufferENS1_9allocatorIS3_EEEEb",
+     "demangled": "android::dmabufinfo::AppendDmaBufInfo(int, std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >*, bool)",
+     "classification": "no_factory_consumer",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZN7android14AndroidRuntime16javaAttachThreadEPKcPP7_JNIEnv",
+     "demangled": "android::AndroidRuntime::javaAttachThread(char const*, _JNIEnv**)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libsensorservice.so"
+     ],
+     "explanation": "Consumer (factory libsensorservice) is replaced by Source."
+    },
+    {
+     "symbol": "_ZN7android18tempMemFor2DVrBitsE",
+     "demangled": "android::tempMemFor2DVrBits",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC1EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEii",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory NativeDisplayEventReceiver constructor with an extra PICO parameter; internal to libandroid_runtime."
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC2EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEii",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory NativeDisplayEventReceiver constructor with an extra PICO parameter; internal to libandroid_runtime."
+    },
+    {
+     "symbol": "_ZN7android30register_android_util_AffinityEP7_JNIEnv",
+     "demangled": "android::register_android_util_Affinity(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_ZN7android30register_android_util_SeempLogEP7_JNIEnv",
+     "demangled": "android::register_android_util_SeempLog(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "CodeLinaro SEEMP logging JNI; no consumer."
+    },
+    {
+     "symbol": "_ZN7android31android_util_Affinity_bindToCpuEP7_JNIEnvP7_jclassi",
+     "demangled": "android::android_util_Affinity_bindToCpu(_JNIEnv*, _jclass*, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_ZN7android33createAudioDeviceTypeAddrFromJavaEP7_JNIEnvPNS_29AudioDeviceTypeAddrForSpatialEP8_jobject",
+     "demangled": "android::createAudioDeviceTypeAddrFromJava(_JNIEnv*, android::AudioDeviceTypeAddrForSpatial*, _jobject*)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_ZN7android36register_android_view_ExtSurfaceImplEP7_JNIEnv",
+     "demangled": "android::register_android_view_ExtSurfaceImpl(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "_ZN7android37createAudioDeviceAttributesFromNativeEP7_JNIEnvPP8_jobjectPKNS_29AudioDeviceTypeAddrForSpatialE",
+     "demangled": "android::createAudioDeviceAttributesFromNative(_JNIEnv*, _jobject**, android::AudioDeviceTypeAddrForSpatial const*)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_ZN7android49register_com_android_internal_app_ActivityTriggerEP7_JNIEnv",
+     "demangled": "android::register_com_android_internal_app_ActivityTrigger(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "CodeLinaro ActivityTrigger JNI (services ActivityTriggerService.notifyAction_native, preserved-only)."
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE25__emplace_unique_key_argsIiJNS_4pairIiiEEEEENSF_INS_15__hash_iteratorIPNS_11__hash_nodeIS2_PvEEEEbEERKT_DpOT0_",
+     "demangled": "std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, int>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::__emplace_unique_key_args<int, std::__1::pair<int, int> >(int const&, std::__1::pair<int, int>&&)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE25__emplace_unique_key_argsIiJRKNS_4pairIKiiEEEEENSF_INS_15__hash_iteratorIPNS_11__hash_nodeIS2_PvEEEEbEERKT_DpOT0_",
+     "demangled": "std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, int>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::__emplace_unique_key_args<int, std::__1::pair<int const, int> const&>(int const&, std::__1::pair<int const, int> const&)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE6rehashEm",
+     "demangled": "std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::rehash(unsigned long)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE8__rehashEm",
+     "demangled": "std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::__rehash(unsigned long)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16__treeIiNS_4lessIiEENS_9allocatorIiEEE12__find_equalIiEERPNS_16__tree_node_baseIPvEENS_21__tree_const_iteratorIiPNS_11__tree_nodeIiS8_EElEERPNS_15__tree_end_nodeISA_EESB_RKT_",
+     "demangled": "std::__1::__tree_node_base<void*>*& std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__find_equal<int>(std::__1::__tree_const_iterator<int, std::__1::__tree_node<int, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, int const&)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android10dmabufinfo9DmaBufferENS_9allocatorIS3_EEE24__emplace_back_slow_pathIJRmS8_S8_RPcPKcEEEvDpOT_",
+     "demangled": "void std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >::__emplace_back_slow_path<unsigned long&, unsigned long&, unsigned long&, char*&, char const*>(unsigned long&, unsigned long&, unsigned long&, char*&, char const*&&)",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android10dmabufinfo9DmaBufferENS_9allocatorIS3_EEE24__emplace_back_slow_pathIJRmlS8_RNS_12basic_stringIcNS_11char_traitsIcEENS4_IcEEEESE_EEEvDpOT_",
+     "demangled": "void std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >::__emplace_back_slow_path<unsigned long&, long, unsigned long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(unsigned long&, long&&, unsigned long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android10dmabufinfo9DmaBufferENS_9allocatorIS3_EEE24__emplace_back_slow_pathIJRmmiRA10_KcSB_EEEvDpOT_",
+     "demangled": "void std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >::__emplace_back_slow_path<unsigned long&, unsigned long, int, char const (&) [10], char const (&) [10]>(unsigned long&, unsigned long&&, int&&, char const (&) [10], char const (&) [10])",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android29AudioDeviceTypeAddrForSpatialENS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEvOT_",
+     "demangled": "void std::__1::vector<android::AudioDeviceTypeAddrForSpatial, std::__1::allocator<android::AudioDeviceTypeAddrForSpatial> >::__push_back_slow_path<android::AudioDeviceTypeAddrForSpatial const&>(android::AudioDeviceTypeAddrForSpatial const&)",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_ZZN16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "sensors_timeutil::get_instance()::inst",
+     "classification": "no_factory_consumer",
+     "explanation": "Namespace of a static sensors time helper differs (factory global, Source android::); internal."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZGVZN7android16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "guard variable for android::sensors_timeutil::get_instance()::inst",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC1EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEi",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC2EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEi",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android8picomisu26surfaceFreezeSelfListeningEP7_JNIEnvP7_jclassl",
+     "demangled": "android::picomisu::surfaceFreezeSelfListening(_JNIEnv*, _jclass*, long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorImNS_9allocatorImEEE8__appendEm",
+     "demangled": "std::__1::vector<unsigned long, std::__1::allocator<unsigned long> >::__append(unsigned long)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZZN7android16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "android::sensors_timeutil::get_instance()::inst",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib/libandroid_runtime.so": {
+   "scope": "chunk6",
+   "factory_exports": 1563,
+   "source_exports": 1531,
+   "factory_only": 38,
+   "source_only": 6,
+   "factory_only_by_class": {
+    "no_factory_consumer": 28,
+    "consumer_replaced_by_source": 1,
+    "compiler_or_template_instantiation": 9
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "Java_android_view_ExtSurfaceImpl_nativeLockCanvasFor2DVr",
+     "demangled": "Java_android_view_ExtSurfaceImpl_nativeLockCanvasFor2DVr",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "Java_android_view_ExtSurfaceImpl_nativeReleaseSurfaceObject",
+     "demangled": "Java_android_view_ExtSurfaceImpl_nativeReleaseSurfaceObject",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "Java_android_view_ExtSurfaceImpl_nativeUnlockCanvasAndPostFor2DVr",
+     "demangled": "Java_android_view_ExtSurfaceImpl_nativeUnlockCanvasAndPostFor2DVr",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "_Z19getBinderClientPidsP7_JNIEnvP8_jobjecti",
+     "demangled": "getBinderClientPids(_JNIEnv*, _jobject*, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI for Binder client/server PID queries; the libbinder side is ported (IPCThreadState::getBinder*Pids), the Java natives are only reachable from the preserved sys-/sysmonitor- JARs, which are not on the Source classpath."
+    },
+    {
+     "symbol": "_Z19getBinderServerPidsP7_JNIEnvP8_jobjecti",
+     "demangled": "getBinderServerPids(_JNIEnv*, _jobject*, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI for Binder client/server PID queries; the libbinder side is ported (IPCThreadState::getBinder*Pids), the Java natives are only reachable from the preserved sys-/sysmonitor- JARs, which are not on the Source classpath."
+    },
+    {
+     "symbol": "_Z28__android_seemp_socket_writeiPKc",
+     "demangled": "__android_seemp_socket_write(int, char const*)",
+     "classification": "no_factory_consumer",
+     "explanation": "CodeLinaro SEEMP logging JNI; no consumer."
+    },
+    {
+     "symbol": "_Z34android_os_Process_useCGroupFreezeP7_JNIEnvP8_jobjecth",
+     "demangled": "android_os_Process_useCGroupFreeze(_JNIEnv*, _jobject*, unsigned char)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z34javaAudioFormatToNativeAudioConfigP7_JNIEnvP12audio_configP8_jobjectb",
+     "demangled": "javaAudioFormatToNativeAudioConfig(_JNIEnv*, audio_config*, _jobject*, bool)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_Z39android_os_Process_setUIThreadSchedulerP7_JNIEnvP7_jclassii",
+     "demangled": "android_os_Process_setUIThreadScheduler(_JNIEnv*, _jclass*, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z40android_os_Process_setProcessFreezeGroupP7_JNIEnvP8_jobjectiih",
+     "demangled": "android_os_Process_setProcessFreezeGroup(_JNIEnv*, _jobject*, int, int, unsigned char)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z42android_os_Process_getChildProcessViaGroupP7_JNIEnvP8_jobjectii",
+     "demangled": "android_os_Process_getChildProcessViaGroup(_JNIEnv*, _jobject*, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_Z44register_android_media_AudioDeviceAttributesP7_JNIEnv",
+     "demangled": "register_android_media_AudioDeviceAttributes(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_Z45android_os_Process_setCgroupProcsProcessGroupP7_JNIEnvP8_jobjectiiih",
+     "demangled": "android_os_Process_setCgroupProcsProcessGroup(_JNIEnv*, _jobject*, int, int, int, unsigned char)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_ZGVZN16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "guard variable for sensors_timeutil::get_instance()::inst",
+     "classification": "no_factory_consumer",
+     "explanation": "Namespace of a static sensors time helper differs (factory global, Source android::); internal."
+    },
+    {
+     "symbol": "_ZN7android10dmabufinfo14ReadDmaBufInfoEPNSt3__16vectorINS0_9DmaBufferENS1_9allocatorIS3_EEEERKNS1_12basic_stringIcNS1_11char_traitsIcEENS4_IcEEEE",
+     "demangled": "android::dmabufinfo::ReadDmaBufInfo(std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)",
+     "classification": "no_factory_consumer",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZN7android10dmabufinfo14ReadDmaBufInfoEiPNSt3__16vectorINS0_9DmaBufferENS1_9allocatorIS3_EEEEb",
+     "demangled": "android::dmabufinfo::ReadDmaBufInfo(int, std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >*, bool)",
+     "classification": "no_factory_consumer",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZN7android10dmabufinfo16AppendDmaBufInfoEiPNSt3__16vectorINS0_9DmaBufferENS1_9allocatorIS3_EEEEb",
+     "demangled": "android::dmabufinfo::AppendDmaBufInfo(int, std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >*, bool)",
+     "classification": "no_factory_consumer",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZN7android14AndroidRuntime16javaAttachThreadEPKcPP7_JNIEnv",
+     "demangled": "android::AndroidRuntime::javaAttachThread(char const*, _JNIEnv**)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libsensorservice.so"
+     ],
+     "explanation": "Consumer (factory libsensorservice) is replaced by Source."
+    },
+    {
+     "symbol": "_ZN7android18tempMemFor2DVrBitsE",
+     "demangled": "android::tempMemFor2DVrBits",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC1EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEii",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory NativeDisplayEventReceiver constructor with an extra PICO parameter; internal to libandroid_runtime."
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC2EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEii",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory NativeDisplayEventReceiver constructor with an extra PICO parameter; internal to libandroid_runtime."
+    },
+    {
+     "symbol": "_ZN7android30register_android_util_AffinityEP7_JNIEnv",
+     "demangled": "android::register_android_util_Affinity(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_ZN7android30register_android_util_SeempLogEP7_JNIEnv",
+     "demangled": "android::register_android_util_SeempLog(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "CodeLinaro SEEMP logging JNI; no consumer."
+    },
+    {
+     "symbol": "_ZN7android31android_util_Affinity_bindToCpuEP7_JNIEnvP7_jclassi",
+     "demangled": "android::android_util_Affinity_bindToCpu(_JNIEnv*, _jclass*, int)",
+     "classification": "no_factory_consumer",
+     "explanation": "Smartisan process freeze/scheduling JNI used only by the preserved sys-/sysmonitor- JARs (needed_by_preserved_factory_component); not on the Source SYSTEMSERVERCLASSPATH, see REMAINING-WORK."
+    },
+    {
+     "symbol": "_ZN7android33createAudioDeviceTypeAddrFromJavaEP7_JNIEnvPNS_29AudioDeviceTypeAddrForSpatialEP8_jobject",
+     "demangled": "android::createAudioDeviceTypeAddrFromJava(_JNIEnv*, android::AudioDeviceTypeAddrForSpatial*, _jobject*)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_ZN7android36register_android_view_ExtSurfaceImplEP7_JNIEnv",
+     "demangled": "android::register_android_view_ExtSurfaceImpl(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "Factory JNI of android.view.ExtSurfaceImpl 2D-VR canvas (lock/unlock for 2D VR, release); the Java natives have no consumer (not_needed in validation/api-consumers.json). The Source VR canvas path goes through Surface (validation/vr-canvas-api.json)."
+    },
+    {
+     "symbol": "_ZN7android37createAudioDeviceAttributesFromNativeEP7_JNIEnvPP8_jobjectPKNS_29AudioDeviceTypeAddrForSpatialE",
+     "demangled": "android::createAudioDeviceAttributesFromNative(_JNIEnv*, _jobject**, android::AudioDeviceTypeAddrForSpatial const*)",
+     "classification": "no_factory_consumer",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_ZN7android49register_com_android_internal_app_ActivityTriggerEP7_JNIEnv",
+     "demangled": "android::register_com_android_internal_app_ActivityTrigger(_JNIEnv*)",
+     "classification": "no_factory_consumer",
+     "explanation": "CodeLinaro ActivityTrigger JNI (services ActivityTriggerService.notifyAction_native, preserved-only)."
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE25__emplace_unique_key_argsIiJNS_4pairIiiEEEEENSF_INS_15__hash_iteratorIPNS_11__hash_nodeIS2_PvEEEEbEERKT_DpOT0_",
+     "demangled": "std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, int>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::__emplace_unique_key_args<int, std::__1::pair<int, int> >(int const&, std::__1::pair<int, int>&&)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE25__emplace_unique_key_argsIiJRKNS_4pairIKiiEEEEENSF_INS_15__hash_iteratorIPNS_11__hash_nodeIS2_PvEEEEbEERKT_DpOT0_",
+     "demangled": "std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, int>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::__emplace_unique_key_args<int, std::__1::pair<int const, int> const&>(int const&, std::__1::pair<int const, int> const&)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE6rehashEj",
+     "demangled": "std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::rehash(unsigned int)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEELb1EEENS_21__unordered_map_equalIiS2_NS_8equal_toIiEELb1EEENS_9allocatorIS2_EEE8__rehashEj",
+     "demangled": "std::__1::__hash_table<std::__1::__hash_value_type<int, int>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, int>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, int>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, int> > >::__rehash(unsigned int)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16__treeIiNS_4lessIiEENS_9allocatorIiEEE12__find_equalIiEERPNS_16__tree_node_baseIPvEENS_21__tree_const_iteratorIiPNS_11__tree_nodeIiS8_EEiEERPNS_15__tree_end_nodeISA_EESB_RKT_",
+     "demangled": "std::__1::__tree_node_base<void*>*& std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__find_equal<int>(std::__1::__tree_const_iterator<int, std::__1::__tree_node<int, void*>*, int>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, int const&)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android10dmabufinfo9DmaBufferENS_9allocatorIS3_EEE24__emplace_back_slow_pathIJRmRyS9_RPcPKcEEEvDpOT_",
+     "demangled": "void std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >::__emplace_back_slow_path<unsigned long&, unsigned long long&, unsigned long long&, char*&, char const*>(unsigned long&, unsigned long long&, unsigned long long&, char*&, char const*&&)",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android10dmabufinfo9DmaBufferENS_9allocatorIS3_EEE24__emplace_back_slow_pathIJRmyiRA10_KcSB_EEEvDpOT_",
+     "demangled": "void std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >::__emplace_back_slow_path<unsigned long&, unsigned long long, int, char const (&) [10], char const (&) [10]>(unsigned long&, unsigned long long&&, int&&, char const (&) [10], char const (&) [10])",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android10dmabufinfo9DmaBufferENS_9allocatorIS3_EEE24__emplace_back_slow_pathIJRyyS8_RNS_12basic_stringIcNS_11char_traitsIcEENS4_IcEEEESE_EEEvDpOT_",
+     "demangled": "void std::__1::vector<android::dmabufinfo::DmaBuffer, std::__1::allocator<android::dmabufinfo::DmaBuffer> >::__emplace_back_slow_path<unsigned long long&, unsigned long long, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(unsigned long long&, unsigned long long&&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "libmeminfo dmabuf helpers statically linked into the factory android_os_Debug; the Debug natives using them have no consumer."
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIN7android29AudioDeviceTypeAddrForSpatialENS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEvOT_",
+     "demangled": "void std::__1::vector<android::AudioDeviceTypeAddrForSpatial, std::__1::allocator<android::AudioDeviceTypeAddrForSpatial> >::__push_back_slow_path<android::AudioDeviceTypeAddrForSpatial const&>(android::AudioDeviceTypeAddrForSpatial const&)",
+     "classification": "compiler_or_template_instantiation",
+     "explanation": "JNI helpers of the backported AudioSystem spatializer natives (canBeSpatialized/getSpatializer); the Java natives have no consumer."
+    },
+    {
+     "symbol": "_ZZN16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "sensors_timeutil::get_instance()::inst",
+     "classification": "no_factory_consumer",
+     "explanation": "Namespace of a static sensors time helper differs (factory global, Source android::); internal."
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZGVZN7android16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "guard variable for android::sensors_timeutil::get_instance()::inst",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC1EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEi",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android26NativeDisplayEventReceiverC2EP7_JNIEnvP8_jobjectRKNS_2spINS_12MessageQueueEEEi",
+     "demangled": "android::NativeDisplayEventReceiver::NativeDisplayEventReceiver(_JNIEnv*, _jobject*, android::sp<android::MessageQueue> const&, int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android8picomisu26surfaceFreezeSelfListeningEP7_JNIEnvP7_jclassx",
+     "demangled": "android::picomisu::surfaceFreezeSelfListening(_JNIEnv*, _jclass*, long long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZNSt3__16vectorIyNS_9allocatorIyEEE8__appendEj",
+     "demangled": "std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::__append(unsigned int)",
+     "classification": "compiler_or_template_instantiation"
+    },
+    {
+     "symbol": "_ZZN7android16sensors_timeutil12get_instanceEvE4inst",
+     "demangled": "android::sensors_timeutil::get_instance()::inst",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib64/libaudioclient.so": {
+   "scope": "informative",
+   "factory_exports": 1515,
+   "source_exports": 1211,
+   "factory_only": 310,
+   "source_only": 6,
+   "factory_only_by_class": {
+    "no_factory_consumer": 79,
+    "consumer_replaced_by_source": 4,
+    "needed_by_preserved_factory_consumer": 3,
+    "compiler_or_template_instantiation": 224
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android10AudioTrack16setVCMotorParamsEiif",
+     "demangled": "android::AudioTrack::setVCMotorParams(int, int, float)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android10AudioTrack22setVCMotorTrackEnabledEb",
+     "demangled": "android::AudioTrack::setVCMotorTrackEnabled(bool)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android11AudioSystem16getOutputForAttrEP18audio_attributes_tPi15audio_session_tP19audio_stream_type_tijPK12audio_config20audio_output_flags_tS3_S3_PbPNSt3__16vectorIiNSC_9allocatorIiEEEE",
+     "demangled": "android::AudioSystem::getOutputForAttr(audio_attributes_t*, int*, audio_session_t, audio_stream_type_t*, int, unsigned int, audio_config const*, audio_output_flags_t, int*, int*, bool*, std::__1::vector<int, std::__1::allocator<int> >*)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libaudioflinger.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android11AudioSystem21setParametersToPolicyERKNS_7String8E",
+     "demangled": "android::AudioSystem::setParametersToPolicy(android::String8 const&)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libaudioflinger.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtils24getCustomProfileLocationEPci",
+     "demangled": "android::AVMediaUtils::getCustomProfileLocation(char*, int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsC2Ev",
+     "demangled": "android::AVMediaUtils::AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsD2Ev",
+     "demangled": "android::AVMediaUtils::~AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android11AudioSystem16getOutputForAttrEP18audio_attributes_tPi15audio_session_tP19audio_stream_type_tijPK12audio_config20audio_output_flags_tS3_S3_PNSt3__16vectorIiNSB_9allocatorIiEEEE",
+     "demangled": "android::AudioSystem::getOutputForAttr(audio_attributes_t*, int*, audio_session_t, audio_stream_type_t*, int, unsigned int, audio_config const*, audio_output_flags_t, int*, int*, std::__1::vector<int, std::__1::allocator<int> >*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService14getSpatializerERKNS_2spINS_5media26INativeSpatializerCallbackEEEPNS1_INS2_12ISpatializerEEE",
+     "demangled": "android::BnAudioPolicyService::getSpatializer(android::sp<android::media::INativeSpatializerCallback> const&, android::sp<android::media::ISpatializer>*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService14getSpatializerEv",
+     "demangled": "android::BnAudioPolicyService::getSpatializer()",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService16canBeSpatializedEPK18audio_attributes_tPK12audio_configRKNSt3__16vectorINS_29AudioDeviceTypeAddrForSpatialENS7_9allocatorIS9_EEEEPb",
+     "demangled": "android::BnAudioPolicyService::canBeSpatialized(audio_attributes_t const*, audio_config const*, std::__1::vector<android::AudioDeviceTypeAddrForSpatial, std::__1::allocator<android::AudioDeviceTypeAddrForSpatial> > const&, bool*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService23setRecordSilencedByNameEPKcb",
+     "demangled": "android::BnAudioPolicyService::setRecordSilencedByName(char const*, bool)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "__cfi_check",
+     "demangled": "__cfi_check",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib/libaudioclient.so": {
+   "scope": "informative",
+   "factory_exports": 1546,
+   "source_exports": 1494,
+   "factory_only": 57,
+   "source_only": 5,
+   "factory_only_by_class": {
+    "no_factory_consumer": 31,
+    "consumer_replaced_by_source": 2,
+    "needed_by_preserved_factory_consumer": 3,
+    "compiler_or_template_instantiation": 21
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android10AudioTrack16setVCMotorParamsEiif",
+     "demangled": "android::AudioTrack::setVCMotorParams(int, int, float)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android10AudioTrack22setVCMotorTrackEnabledEb",
+     "demangled": "android::AudioTrack::setVCMotorTrackEnabled(bool)",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtils24getCustomProfileLocationEPci",
+     "demangled": "android::AVMediaUtils::getCustomProfileLocation(char*, int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsC2Ev",
+     "demangled": "android::AVMediaUtils::AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsD2Ev",
+     "demangled": "android::AVMediaUtils::~AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android11AudioSystem16getOutputForAttrEP18audio_attributes_tPi15audio_session_tP19audio_stream_type_tijPK12audio_config20audio_output_flags_tS3_S3_PNSt3__16vectorIiNSB_9allocatorIiEEEE",
+     "demangled": "android::AudioSystem::getOutputForAttr(audio_attributes_t*, int*, audio_session_t, audio_stream_type_t*, int, unsigned int, audio_config const*, audio_output_flags_t, int*, int*, std::__1::vector<int, std::__1::allocator<int> >*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService14getSpatializerERKNS_2spINS_5media26INativeSpatializerCallbackEEEPNS1_INS2_12ISpatializerEEE",
+     "demangled": "android::BnAudioPolicyService::getSpatializer(android::sp<android::media::INativeSpatializerCallback> const&, android::sp<android::media::ISpatializer>*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService14getSpatializerEv",
+     "demangled": "android::BnAudioPolicyService::getSpatializer()",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService16canBeSpatializedEPK18audio_attributes_tPK12audio_configRKNSt3__16vectorINS_29AudioDeviceTypeAddrForSpatialENS7_9allocatorIS9_EEEEPb",
+     "demangled": "android::BnAudioPolicyService::canBeSpatialized(audio_attributes_t const*, audio_config const*, std::__1::vector<android::AudioDeviceTypeAddrForSpatial, std::__1::allocator<android::AudioDeviceTypeAddrForSpatial> > const&, bool*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android20BnAudioPolicyService23setRecordSilencedByNameEPKcb",
+     "demangled": "android::BnAudioPolicyService::setRecordSilencedByName(char const*, bool)",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib64/libmedia.so": {
+   "scope": "informative",
+   "factory_exports": 1286,
+   "source_exports": 859,
+   "factory_only": 429,
+   "source_only": 1,
+   "factory_only_by_class": {
+    "no_factory_consumer": 79,
+    "needed_by_preserved_factory_consumer": 13,
+    "compiler_or_template_instantiation": 337
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android12AVMediaUtils24getCustomProfileLocationEPci",
+     "demangled": "android::AVMediaUtils::getCustomProfileLocation(char*, int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsC2Ev",
+     "demangled": "android::AVMediaUtils::AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsD2Ev",
+     "demangled": "android::AVMediaUtils::~AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserver10descriptorE",
+     "demangled": "android::IHDCPObserver::descriptor",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverC2Ev",
+     "demangled": "android::IHDCPObserver::IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverD0Ev",
+     "demangled": "android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverD1Ev",
+     "demangled": "android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverD2Ev",
+     "demangled": "android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android14BnHDCPObserver10onTransactEjRKNS_6ParcelEPS1_j",
+     "demangled": "android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZNK7android13IHDCPObserver22getInterfaceDescriptorEv",
+     "demangled": "android::IHDCPObserver::getInterfaceDescriptor() const",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZThn8_N7android14BnHDCPObserver10onTransactEjRKNS_6ParcelEPS1_j",
+     "demangled": "non-virtual thunk to android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZTv0_n24_N7android13IHDCPObserverD0Ev",
+     "demangled": "virtual thunk to android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZTv0_n24_N7android13IHDCPObserverD1Ev",
+     "demangled": "virtual thunk to android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "__cfi_check",
+     "demangled": "__cfi_check",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib/libmedia.so": {
+   "scope": "informative",
+   "factory_exports": 1304,
+   "source_exports": 1227,
+   "factory_only": 78,
+   "source_only": 0,
+   "factory_only_by_class": {
+    "no_factory_consumer": 35,
+    "needed_by_preserved_factory_consumer": 13,
+    "compiler_or_template_instantiation": 30
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android12AVMediaUtils24getCustomProfileLocationEPci",
+     "demangled": "android::AVMediaUtils::getCustomProfileLocation(char*, int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsC2Ev",
+     "demangled": "android::AVMediaUtils::AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android12AVMediaUtilsD2Ev",
+     "demangled": "android::AVMediaUtils::~AVMediaUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserver10descriptorE",
+     "demangled": "android::IHDCPObserver::descriptor",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverC2Ev",
+     "demangled": "android::IHDCPObserver::IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverD0Ev",
+     "demangled": "android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverD1Ev",
+     "demangled": "android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android13IHDCPObserverD2Ev",
+     "demangled": "android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android14BnHDCPObserver10onTransactEjRKNS_6ParcelEPS1_j",
+     "demangled": "android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZNK7android13IHDCPObserver22getInterfaceDescriptorEv",
+     "demangled": "android::IHDCPObserver::getInterfaceDescriptor() const",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZThn4_N7android14BnHDCPObserver10onTransactEjRKNS_6ParcelEPS1_j",
+     "demangled": "non-virtual thunk to android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZTv0_n12_N7android13IHDCPObserverD0Ev",
+     "demangled": "virtual thunk to android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZTv0_n12_N7android13IHDCPObserverD1Ev",
+     "demangled": "virtual thunk to android::IHDCPObserver::~IHDCPObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    }
+   ],
+   "source_only_symbols": []
+  },
+  "lib64/libmediaplayerservice.so": {
+   "scope": "informative",
+   "factory_exports": 1485,
+   "source_exports": 1120,
+   "factory_only": 367,
+   "source_only": 2,
+   "factory_only_by_class": {
+    "no_factory_consumer": 265,
+    "needed_by_preserved_factory_consumer": 11,
+    "compiler_or_template_instantiation": 91
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android11AVNuFactoryC2Ev",
+     "demangled": "android::AVNuFactory::AVNuFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android11AVNuFactoryD2Ev",
+     "demangled": "android::AVNuFactory::~AVNuFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android19AVMediaServiceUtils5sInstE",
+     "demangled": "android::AVMediaServiceUtils::sInst",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android21AVMediaServiceFactoryC2Ev",
+     "demangled": "android::AVMediaServiceFactory::AVMediaServiceFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android21AVMediaServiceFactoryD2Ev",
+     "demangled": "android::AVMediaServiceFactory::~AVMediaServiceFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android8NuPlayer13IsHTTPLiveURLEPKc",
+     "demangled": "android::NuPlayer::IsHTTPLiveURL(char const*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android8NuPlayer7Decoder8getStatsEv",
+     "demangled": "android::NuPlayer::Decoder::getStats()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtils17checkFormatChangeEPbRKNS_2spINS_7ABufferEEE",
+     "demangled": "android::AVNuUtils::checkFormatChange(bool*, android::sp<android::ABuffer> const&)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtils5sInstE",
+     "demangled": "android::AVNuUtils::sInst",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtilsC2Ev",
+     "demangled": "android::AVNuUtils::AVNuUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtilsD2Ev",
+     "demangled": "android::AVNuUtils::~AVNuUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android14ARTPConnection9addStreamEiiRKNS_2spINS_19ASessionDescriptionEEEmRKNS1_INS_8AMessageEEEb",
+     "demangled": "android::ARTPConnection::addStream(int, int, android::sp<android::ASessionDescription> const&, unsigned long, android::sp<android::AMessage> const&, bool)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZNK7android8NuPlayer7Decoder8getStatsEv",
+     "demangled": "android::NuPlayer::Decoder::getStats() const",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib/libmediaplayerservice.so": {
+   "scope": "informative",
+   "factory_exports": 1503,
+   "source_exports": 1414,
+   "factory_only": 91,
+   "source_only": 2,
+   "factory_only_by_class": {
+    "no_factory_consumer": 69,
+    "needed_by_preserved_factory_consumer": 11,
+    "compiler_or_template_instantiation": 11
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android11AVNuFactoryC2Ev",
+     "demangled": "android::AVNuFactory::AVNuFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android11AVNuFactoryD2Ev",
+     "demangled": "android::AVNuFactory::~AVNuFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android19AVMediaServiceUtils5sInstE",
+     "demangled": "android::AVMediaServiceUtils::sInst",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android21AVMediaServiceFactoryC2Ev",
+     "demangled": "android::AVMediaServiceFactory::AVMediaServiceFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android21AVMediaServiceFactoryD2Ev",
+     "demangled": "android::AVMediaServiceFactory::~AVMediaServiceFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android8NuPlayer13IsHTTPLiveURLEPKc",
+     "demangled": "android::NuPlayer::IsHTTPLiveURL(char const*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android8NuPlayer7Decoder8getStatsEv",
+     "demangled": "android::NuPlayer::Decoder::getStats()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtils17checkFormatChangeEPbRKNS_2spINS_7ABufferEEE",
+     "demangled": "android::AVNuUtils::checkFormatChange(bool*, android::sp<android::ABuffer> const&)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtils5sInstE",
+     "demangled": "android::AVNuUtils::sInst",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtilsC2Ev",
+     "demangled": "android::AVNuUtils::AVNuUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVNuUtilsD2Ev",
+     "demangled": "android::AVNuUtils::~AVNuUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android14ARTPConnection9addStreamEiiRKNS_2spINS_19ASessionDescriptionEEEjRKNS1_INS_8AMessageEEEb",
+     "demangled": "android::ARTPConnection::addStream(int, int, android::sp<android::ASessionDescription> const&, unsigned int, android::sp<android::AMessage> const&, bool)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZNK7android8NuPlayer7Decoder8getStatsEv",
+     "demangled": "android::NuPlayer::Decoder::getStats() const",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib64/libstagefright.so": {
+   "scope": "informative",
+   "factory_exports": 2403,
+   "source_exports": 1885,
+   "factory_only": 535,
+   "source_only": 17,
+   "factory_only_by_class": {
+    "no_factory_consumer": 178,
+    "needed_by_preserved_factory_consumer": 40,
+    "compiler_or_template_instantiation": 316,
+    "consumer_replaced_by_source": 1
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android18SurfaceMediaSource24setUseAbsoluteTimestampsEv",
+     "demangled": "android::SurfaceMediaSource::setUseAbsoluteTimestamps()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android18SurfaceMediaSource25setMaxAcquiredBufferCountEm",
+     "demangled": "android::SurfaceMediaSource::setMaxAcquiredBufferCount(unsigned long)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android18SurfaceMediaSourceC1Ejj",
+     "demangled": "android::SurfaceMediaSource::SurfaceMediaSource(unsigned int, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_APEE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_APE",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_DSDE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_DSD",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_DTSE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_DTS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_WMAE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_WMA",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_VIDEO_TMEE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_TME",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_VIDEO_VPXE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_VPX",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_VIDEO_WMVE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_WMV",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_AUDIO_AIFFE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_AIFF",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_AUDIO_EVRCE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_EVRC",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_AUDIO_MHASE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_MHAS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_VIDEO_DIVXE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_DIVX",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android26MEDIA_MIMETYPE_VIDEO_DIVX4E",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_DIVX4",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_AUDIO_WMA_PROE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_WMA_PRO",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_CONTAINER_DFFE",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_DFF",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_CONTAINER_DSFE",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_DSF",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_VIDEO_DIVX311E",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_DIVX311",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_VIDEO_WMV_VC1E",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_WMV_VC1",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android29MEDIA_MIMETYPE_VIDEO_MPEG4_DPE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_MPEG4_DP",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android30MEDIA_MIMETYPE_CONTAINER_MPEG2E",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_MPEG2",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android32MEDIA_MIMETYPE_AUDIO_AMR_WB_PLUSE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_AMR_WB_PLUS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/extractors/libmmparserextractor.so",
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android32MEDIA_MIMETYPE_CONTAINER_QTIFLACE",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_QTIFLAC",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android33MEDIA_MIMETYPE_AUDIO_WMA_LOSSLESSE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_WMA_LOSSLESS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android6ACodec14createObserverEv",
+     "demangled": "android::ACodec::createObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android6ACodec26GetVideoCodingTypeFromMimeEPKcP20OMX_VIDEO_CODINGTYPE",
+     "demangled": "android::ACodec::GetVideoCodingTypeFromMime(char const*, OMX_VIDEO_CODINGTYPE*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils14setIntraPeriodEiiNS_2spINS_8IOMXNodeEEE",
+     "demangled": "android::AVUtils::setIntraPeriod(int, int, android::sp<android::IOMXNode>)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils16getComponentRoleEbPKc",
+     "demangled": "android::AVUtils::getComponentRole(bool, char const*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils19wrapTraceDataSourceERKNS_2spINS_10DataSourceEEE",
+     "demangled": "android::AVUtils::wrapTraceDataSource(android::sp<android::DataSource> const&)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils23getCustomCodecsLocationEPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE",
+     "demangled": "android::AVUtils::getCustomCodecsLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils23wrapTraceMediaExtractorERKNS_2spINS_15IMediaExtractorEEE",
+     "demangled": "android::AVUtils::wrapTraceMediaExtractor(android::sp<android::IMediaExtractor> const&)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils34getCustomCodecsPerformanceLocationEPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE",
+     "demangled": "android::AVUtils::getCustomCodecsPerformanceLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils5sInstE",
+     "demangled": "android::AVUtils::sInst",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ],
+     "replaced_consumers": [
+      "/system/lib64/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtilsC2Ev",
+     "demangled": "android::AVUtils::AVUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtilsD2Ev",
+     "demangled": "android::AVUtils::~AVUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactory13createESQueueENS_21ElementaryStreamQueue4ModeEj",
+     "demangled": "android::AVFactory::createESQueue(android::ElementaryStreamQueue::Mode, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactory17CreateMPEG4WriterEi",
+     "demangled": "android::AVFactory::CreateMPEG4Writer(int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactory5sInstE",
+     "demangled": "android::AVFactory::sInst",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib64/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactoryC2Ev",
+     "demangled": "android::AVFactory::AVFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactoryD2Ev",
+     "demangled": "android::AVFactory::~AVFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib64/libavenhancements.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android10MediaCodec17updateBatteryStatEv",
+     "demangled": "android::MediaCodec::updateBatteryStat()",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec27ResourceManagerServiceProxy14removeResourceEl",
+     "demangled": "android::MediaCodec::ResourceManagerServiceProxy::removeResource(long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec27ResourceManagerServiceProxyC1Ei",
+     "demangled": "android::MediaCodec::ResourceManagerServiceProxy::ResourceManagerServiceProxy(int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec27ResourceManagerServiceProxyC2Ei",
+     "demangled": "android::MediaCodec::ResourceManagerServiceProxy::ResourceManagerServiceProxy(int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec4initERKNS_7AStringE",
+     "demangled": "android::MediaCodec::init(android::AString const&)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android11MPEG4Writer19setStartTimestampUsEl",
+     "demangled": "android::MPEG4Writer::setStartTimestampUs(long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase12getUInt16VarElPtm",
+     "demangled": "android::DataSourceBase::getUInt16Var(long, unsigned short*, unsigned long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase12getUInt32VarElPjm",
+     "demangled": "android::DataSourceBase::getUInt32Var(long, unsigned int*, unsigned long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase12getUInt64VarElPmm",
+     "demangled": "android::DataSourceBase::getUInt64Var(long, unsigned long*, unsigned long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase6getUriEPcm",
+     "demangled": "android::DataSourceBase::getUri(char*, unsigned long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase7getSizeEPl",
+     "demangled": "android::DataSourceBase::getSize(long*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt16ElPt",
+     "demangled": "android::DataSourceBase::getUInt16(long, unsigned short*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt24ElPj",
+     "demangled": "android::DataSourceBase::getUInt24(long, unsigned int*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt32ElPj",
+     "demangled": "android::DataSourceBase::getUInt32(long, unsigned int*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt64ElPm",
+     "demangled": "android::DataSourceBase::getUInt64(long, unsigned long*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZNK7android11MPEG4Writer5Track24getStartTimeOffsetTimeUsEv",
+     "demangled": "android::MPEG4Writer::Track::getStartTimeOffsetTimeUs() const",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "__cfi_check",
+     "demangled": "__cfi_check",
+     "classification": "source_only_api"
+    }
+   ]
+  },
+  "lib/libstagefright.so": {
+   "scope": "informative",
+   "factory_exports": 2435,
+   "source_exports": 2279,
+   "factory_only": 174,
+   "source_only": 17,
+   "factory_only_by_class": {
+    "no_factory_consumer": 106,
+    "needed_by_preserved_factory_consumer": 40,
+    "consumer_replaced_by_source": 1,
+    "compiler_or_template_instantiation": 27
+   },
+   "factory_only_symbols": [
+    {
+     "symbol": "_ZN7android18SurfaceMediaSource24setUseAbsoluteTimestampsEv",
+     "demangled": "android::SurfaceMediaSource::setUseAbsoluteTimestamps()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android18SurfaceMediaSource25setMaxAcquiredBufferCountEj",
+     "demangled": "android::SurfaceMediaSource::setMaxAcquiredBufferCount(unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android18SurfaceMediaSourceC1Ejj",
+     "demangled": "android::SurfaceMediaSource::SurfaceMediaSource(unsigned int, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libstagefright_wfd.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_APEE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_APE",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_DSDE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_DSD",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_DTSE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_DTS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_AUDIO_WMAE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_WMA",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_VIDEO_TMEE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_TME",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_VIDEO_VPXE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_VPX",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android24MEDIA_MIMETYPE_VIDEO_WMVE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_WMV",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_AUDIO_AIFFE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_AIFF",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_AUDIO_EVRCE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_EVRC",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_AUDIO_MHASE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_MHAS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android25MEDIA_MIMETYPE_VIDEO_DIVXE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_DIVX",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android26MEDIA_MIMETYPE_VIDEO_DIVX4E",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_DIVX4",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_AUDIO_WMA_PROE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_WMA_PRO",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_CONTAINER_DFFE",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_DFF",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_CONTAINER_DSFE",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_DSF",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_VIDEO_DIVX311E",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_DIVX311",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android28MEDIA_MIMETYPE_VIDEO_WMV_VC1E",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_WMV_VC1",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android29MEDIA_MIMETYPE_VIDEO_MPEG4_DPE",
+     "demangled": "android::MEDIA_MIMETYPE_VIDEO_MPEG4_DP",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android30MEDIA_MIMETYPE_CONTAINER_MPEG2E",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_MPEG2",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android32MEDIA_MIMETYPE_AUDIO_AMR_WB_PLUSE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_AMR_WB_PLUS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/extractors/libmmparserextractor.so",
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android32MEDIA_MIMETYPE_CONTAINER_QTIFLACE",
+     "demangled": "android::MEDIA_MIMETYPE_CONTAINER_QTIFLAC",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android33MEDIA_MIMETYPE_AUDIO_WMA_LOSSLESSE",
+     "demangled": "android::MEDIA_MIMETYPE_AUDIO_WMA_LOSSLESS",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android6ACodec14createObserverEv",
+     "demangled": "android::ACodec::createObserver()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android6ACodec26GetVideoCodingTypeFromMimeEPKcP20OMX_VIDEO_CODINGTYPE",
+     "demangled": "android::ACodec::GetVideoCodingTypeFromMime(char const*, OMX_VIDEO_CODINGTYPE*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils14setIntraPeriodEiiNS_2spINS_8IOMXNodeEEE",
+     "demangled": "android::AVUtils::setIntraPeriod(int, int, android::sp<android::IOMXNode>)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils16getComponentRoleEbPKc",
+     "demangled": "android::AVUtils::getComponentRole(bool, char const*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils19wrapTraceDataSourceERKNS_2spINS_10DataSourceEEE",
+     "demangled": "android::AVUtils::wrapTraceDataSource(android::sp<android::DataSource> const&)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils23getCustomCodecsLocationEPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE",
+     "demangled": "android::AVUtils::getCustomCodecsLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils23wrapTraceMediaExtractorERKNS_2spINS_15IMediaExtractorEEE",
+     "demangled": "android::AVUtils::wrapTraceMediaExtractor(android::sp<android::IMediaExtractor> const&)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils34getCustomCodecsPerformanceLocationEPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE",
+     "demangled": "android::AVUtils::getCustomCodecsPerformanceLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtils5sInstE",
+     "demangled": "android::AVUtils::sInst",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ],
+     "replaced_consumers": [
+      "/system/lib/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtilsC2Ev",
+     "demangled": "android::AVUtils::AVUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android7AVUtilsD2Ev",
+     "demangled": "android::AVUtils::~AVUtils()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactory13createESQueueENS_21ElementaryStreamQueue4ModeEj",
+     "demangled": "android::AVFactory::createESQueue(android::ElementaryStreamQueue::Mode, unsigned int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactory17CreateMPEG4WriterEi",
+     "demangled": "android::AVFactory::CreateMPEG4Writer(int)",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactory5sInstE",
+     "demangled": "android::AVFactory::sInst",
+     "classification": "consumer_replaced_by_source",
+     "replaced_consumers": [
+      "/system/lib/libmediaplayerservice.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactoryC2Ev",
+     "demangled": "android::AVFactory::AVFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    },
+    {
+     "symbol": "_ZN7android9AVFactoryD2Ev",
+     "demangled": "android::AVFactory::~AVFactory()",
+     "classification": "needed_by_preserved_factory_consumer",
+     "preserved_consumers": [
+      "/system/lib/libavenhancements.so"
+     ]
+    }
+   ],
+   "source_only_symbols": [
+    {
+     "symbol": "_ZN7android10MediaCodec17updateBatteryStatEv",
+     "demangled": "android::MediaCodec::updateBatteryStat()",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec27ResourceManagerServiceProxy14removeResourceEx",
+     "demangled": "android::MediaCodec::ResourceManagerServiceProxy::removeResource(long long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec27ResourceManagerServiceProxyC1Ei",
+     "demangled": "android::MediaCodec::ResourceManagerServiceProxy::ResourceManagerServiceProxy(int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec27ResourceManagerServiceProxyC2Ei",
+     "demangled": "android::MediaCodec::ResourceManagerServiceProxy::ResourceManagerServiceProxy(int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android10MediaCodec4initERKNS_7AStringE",
+     "demangled": "android::MediaCodec::init(android::AString const&)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android11MPEG4Writer19setStartTimestampUsEx",
+     "demangled": "android::MPEG4Writer::setStartTimestampUs(long long)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase12getUInt16VarExPtj",
+     "demangled": "android::DataSourceBase::getUInt16Var(long long, unsigned short*, unsigned int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase12getUInt32VarExPjj",
+     "demangled": "android::DataSourceBase::getUInt32Var(long long, unsigned int*, unsigned int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase12getUInt64VarExPyj",
+     "demangled": "android::DataSourceBase::getUInt64Var(long long, unsigned long long*, unsigned int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase6getUriEPcj",
+     "demangled": "android::DataSourceBase::getUri(char*, unsigned int)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase7getSizeEPx",
+     "demangled": "android::DataSourceBase::getSize(long long*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt16ExPt",
+     "demangled": "android::DataSourceBase::getUInt16(long long, unsigned short*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt24ExPj",
+     "demangled": "android::DataSourceBase::getUInt24(long long, unsigned int*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt32ExPj",
+     "demangled": "android::DataSourceBase::getUInt32(long long, unsigned int*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android14DataSourceBase9getUInt64ExPy",
+     "demangled": "android::DataSourceBase::getUInt64(long long, unsigned long long*)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZN7android4ListIPNS_11MediaBufferEEaSERKS3_",
+     "demangled": "android::List<android::MediaBuffer*>::operator=(android::List<android::MediaBuffer*> const&)",
+     "classification": "source_only_api"
+    },
+    {
+     "symbol": "_ZNK7android11MPEG4Writer5Track24getStartTimeOffsetTimeUsEv",
+     "demangled": "android::MPEG4Writer::Track::getStartTimeOffsetTimeUs() const",
+     "classification": "source_only_api"
+    }
+   ]
+  }
+ },
+ "resolution": {
+  "preserved_factory_consumers_checked": 262,
+  "consumers_with_unresolved_symbols": 11,
+  "unresolved_from_chunk_libraries": {},
+  "unresolved_by_factory_provider": {
+   "/system/lib/libmediandk.so": {
+    "/system/lib/libpvrtrackingcamera.so": [
+     "AImageReader_setRtMode"
+    ]
+   },
+   "/system/lib/libmedia.so": {
+    "/system/lib/libstagefright_wfd.so": [
+     "android::IHDCPObserver::descriptor",
+     "android::IHDCPObserver::IHDCPObserver()",
+     "android::IHDCPObserver::~IHDCPObserver()",
+     "android::IHDCPObserver::~IHDCPObserver()",
+     "android::IHDCPObserver::~IHDCPObserver()",
+     "android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "android::IHDCPObserver::getInterfaceDescriptor() const",
+     "non-virtual thunk to android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "virtual thunk to android::IHDCPObserver::~IHDCPObserver()",
+     "virtual thunk to android::IHDCPObserver::~IHDCPObserver()"
+    ]
+   },
+   "/system/lib/libstagefright_foundation.so": {
+    "/system/lib/libstagefright_wfd.so": [
+     "android::ParsedMessage::GetAttribute(char const*, char const*, android::AString*)",
+     "android::ParsedMessage::GetInt32Attribute(char const*, char const*, int*)",
+     "android::ANetworkSession::sendRequest(int, void const*, int, bool, long long)",
+     "android::ANetworkSession::destroySession(int)",
+     "android::ANetworkSession::createRTSPServer(in_addr const&, unsigned int, android::sp<android::AMessage> const&, int*)",
+     "android::ANetworkSession::createUDPSession(unsigned int, char const*, unsigned int, android::sp<android::AMessage> const&, int*)",
+     "android::ANetworkSession::createTCPDatagramSession(unsigned int, char const*, unsigned int, android::sp<android::AMessage> const&, int*)",
+     "android::ParsedMessage::findString(char const*, android::AString*) const",
+     "android::ParsedMessage::getContent() const",
+     "android::ParsedMessage::debugString() const",
+     "android::ParsedMessage::getStatusCode(int*) const",
+     "android::ParsedMessage::getRequestField(unsigned int, android::AString*) const",
+     "android::ParsedMessage::findInt32(char const*, int*) const"
+    ]
+   },
+   "/system/lib/libstagefright.so": {
+    "/system/lib/libstagefright_wfd.so": [
+     "android::SurfaceMediaSource::setUseAbsoluteTimestamps()",
+     "android::SurfaceMediaSource::setMaxAcquiredBufferCount(unsigned int)",
+     "android::SurfaceMediaSource::SurfaceMediaSource(unsigned int, unsigned int)"
+    ],
+    "/system/lib/libavenhancements.so": [
+     "android::MEDIA_MIMETYPE_AUDIO_APE",
+     "android::MEDIA_MIMETYPE_AUDIO_DSD",
+     "android::MEDIA_MIMETYPE_VIDEO_TME",
+     "android::MEDIA_MIMETYPE_VIDEO_WMV",
+     "android::MEDIA_MIMETYPE_AUDIO_EVRC",
+     "android::MEDIA_MIMETYPE_AUDIO_MHAS",
+     "android::MEDIA_MIMETYPE_VIDEO_DIVX4",
+     "android::MEDIA_MIMETYPE_AUDIO_WMA_PRO",
+     "android::MEDIA_MIMETYPE_CONTAINER_DFF",
+     "android::MEDIA_MIMETYPE_CONTAINER_DSF",
+     "android::MEDIA_MIMETYPE_VIDEO_DIVX311",
+     "android::MEDIA_MIMETYPE_VIDEO_WMV_VC1",
+     "android::MEDIA_MIMETYPE_VIDEO_MPEG4_DP",
+     "android::MEDIA_MIMETYPE_CONTAINER_MPEG2",
+     "android::MEDIA_MIMETYPE_AUDIO_AMR_WB_PLUS",
+     "android::MEDIA_MIMETYPE_CONTAINER_QTIFLAC",
+     "android::MEDIA_MIMETYPE_AUDIO_WMA_LOSSLESS",
+     "android::ACodec::createObserver()",
+     "android::ACodec::GetVideoCodingTypeFromMime(char const*, OMX_VIDEO_CODINGTYPE*)",
+     "android::AVUtils::setIntraPeriod(int, int, android::sp<android::IOMXNode>)",
+     "android::AVUtils::getComponentRole(bool, char const*)",
+     "android::AVUtils::wrapTraceDataSource(android::sp<android::DataSource> const&)",
+     "android::AVUtils::getCustomCodecsLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "android::AVUtils::wrapTraceMediaExtractor(android::sp<android::IMediaExtractor> const&)",
+     "android::AVUtils::getCustomCodecsPerformanceLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "android::AVUtils::sInst",
+     "android::AVUtils::AVUtils()",
+     "android::AVUtils::~AVUtils()",
+     "android::AVFactory::createESQueue(android::ElementaryStreamQueue::Mode, unsigned int)",
+     "android::AVFactory::CreateMPEG4Writer(int)",
+     "android::AVFactory::AVFactory()",
+     "android::AVFactory::~AVFactory()"
+    ]
+   },
+   "/system/lib/libmediaplayerservice.so": {
+    "/system/lib/libavenhancements.so": [
+     "android::AVNuFactory::AVNuFactory()",
+     "android::AVNuFactory::~AVNuFactory()",
+     "android::AVMediaServiceUtils::sInst",
+     "android::AVMediaServiceFactory::AVMediaServiceFactory()",
+     "android::AVMediaServiceFactory::~AVMediaServiceFactory()",
+     "android::NuPlayer::IsHTTPLiveURL(char const*)",
+     "android::NuPlayer::Decoder::getStats()",
+     "android::AVNuUtils::checkFormatChange(bool*, android::sp<android::ABuffer> const&)",
+     "android::AVNuUtils::sInst",
+     "android::AVNuUtils::AVNuUtils()",
+     "android::AVNuUtils::~AVNuUtils()"
+    ]
+   },
+   "/system/lib/libaudioclient.so": {
+    "/system/lib/libavenhancements.so": [
+     "android::AVMediaUtils::getCustomProfileLocation(char*, int)",
+     "android::AVMediaUtils::AVMediaUtils()",
+     "android::AVMediaUtils::~AVMediaUtils()"
+    ]
+   },
+   "/system/lib64/libmediandk.so": {
+    "/system/lib64/libpvrtrackingcamera.so": [
+     "AImageReader_setRtMode"
+    ]
+   },
+   "/system/lib64/libbpf_android.so": {
+    "/system/lib64/libbpfserver.so": [
+     "android::bpf::loadProgWithUnlink(char const*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&)"
+    ],
+    "/system/bin/nettools": [
+     "android::bpf::loadProgWithUnlink(char const*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&)"
+    ]
+   },
+   "/system/lib64/libmedia.so": {
+    "/system/lib64/libstagefright_wfd.so": [
+     "android::IHDCPObserver::descriptor",
+     "android::IHDCPObserver::IHDCPObserver()",
+     "android::IHDCPObserver::~IHDCPObserver()",
+     "android::IHDCPObserver::~IHDCPObserver()",
+     "android::IHDCPObserver::~IHDCPObserver()",
+     "android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "android::IHDCPObserver::getInterfaceDescriptor() const",
+     "non-virtual thunk to android::BnHDCPObserver::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)",
+     "virtual thunk to android::IHDCPObserver::~IHDCPObserver()",
+     "virtual thunk to android::IHDCPObserver::~IHDCPObserver()"
+    ]
+   },
+   "/system/lib64/libstagefright_foundation.so": {
+    "/system/lib64/libstagefright_wfd.so": [
+     "android::ParsedMessage::GetAttribute(char const*, char const*, android::AString*)",
+     "android::ParsedMessage::GetInt32Attribute(char const*, char const*, int*)",
+     "android::ANetworkSession::sendRequest(int, void const*, long, bool, long)",
+     "android::ANetworkSession::destroySession(int)",
+     "android::ANetworkSession::createRTSPServer(in_addr const&, unsigned int, android::sp<android::AMessage> const&, int*)",
+     "android::ANetworkSession::createUDPSession(unsigned int, char const*, unsigned int, android::sp<android::AMessage> const&, int*)",
+     "android::ANetworkSession::createTCPDatagramSession(unsigned int, char const*, unsigned int, android::sp<android::AMessage> const&, int*)",
+     "android::ParsedMessage::findString(char const*, android::AString*) const",
+     "android::ParsedMessage::getContent() const",
+     "android::ParsedMessage::debugString() const",
+     "android::ParsedMessage::getStatusCode(int*) const",
+     "android::ParsedMessage::getRequestField(unsigned long, android::AString*) const",
+     "android::ParsedMessage::findInt32(char const*, int*) const"
+    ]
+   },
+   "/system/lib64/libstagefright.so": {
+    "/system/lib64/libstagefright_wfd.so": [
+     "android::SurfaceMediaSource::setUseAbsoluteTimestamps()",
+     "android::SurfaceMediaSource::setMaxAcquiredBufferCount(unsigned long)",
+     "android::SurfaceMediaSource::SurfaceMediaSource(unsigned int, unsigned int)"
+    ],
+    "/system/lib64/libavenhancements.so": [
+     "android::MEDIA_MIMETYPE_AUDIO_APE",
+     "android::MEDIA_MIMETYPE_AUDIO_DSD",
+     "android::MEDIA_MIMETYPE_VIDEO_TME",
+     "android::MEDIA_MIMETYPE_VIDEO_WMV",
+     "android::MEDIA_MIMETYPE_AUDIO_EVRC",
+     "android::MEDIA_MIMETYPE_AUDIO_MHAS",
+     "android::MEDIA_MIMETYPE_VIDEO_DIVX4",
+     "android::MEDIA_MIMETYPE_AUDIO_WMA_PRO",
+     "android::MEDIA_MIMETYPE_CONTAINER_DFF",
+     "android::MEDIA_MIMETYPE_CONTAINER_DSF",
+     "android::MEDIA_MIMETYPE_VIDEO_DIVX311",
+     "android::MEDIA_MIMETYPE_VIDEO_WMV_VC1",
+     "android::MEDIA_MIMETYPE_VIDEO_MPEG4_DP",
+     "android::MEDIA_MIMETYPE_CONTAINER_MPEG2",
+     "android::MEDIA_MIMETYPE_AUDIO_AMR_WB_PLUS",
+     "android::MEDIA_MIMETYPE_CONTAINER_QTIFLAC",
+     "android::MEDIA_MIMETYPE_AUDIO_WMA_LOSSLESS",
+     "android::ACodec::createObserver()",
+     "android::ACodec::GetVideoCodingTypeFromMime(char const*, OMX_VIDEO_CODINGTYPE*)",
+     "android::AVUtils::setIntraPeriod(int, int, android::sp<android::IOMXNode>)",
+     "android::AVUtils::getComponentRole(bool, char const*)",
+     "android::AVUtils::wrapTraceDataSource(android::sp<android::DataSource> const&)",
+     "android::AVUtils::getCustomCodecsLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "android::AVUtils::wrapTraceMediaExtractor(android::sp<android::IMediaExtractor> const&)",
+     "android::AVUtils::getCustomCodecsPerformanceLocation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)",
+     "android::AVUtils::sInst",
+     "android::AVUtils::AVUtils()",
+     "android::AVUtils::~AVUtils()",
+     "android::AVFactory::createESQueue(android::ElementaryStreamQueue::Mode, unsigned int)",
+     "android::AVFactory::CreateMPEG4Writer(int)",
+     "android::AVFactory::AVFactory()",
+     "android::AVFactory::~AVFactory()"
+    ]
+   },
+   "/system/lib64/libmediaplayerservice.so": {
+    "/system/lib64/libavenhancements.so": [
+     "android::AVNuFactory::AVNuFactory()",
+     "android::AVNuFactory::~AVNuFactory()",
+     "android::AVMediaServiceUtils::sInst",
+     "android::AVMediaServiceFactory::AVMediaServiceFactory()",
+     "android::AVMediaServiceFactory::~AVMediaServiceFactory()",
+     "android::NuPlayer::IsHTTPLiveURL(char const*)",
+     "android::NuPlayer::Decoder::getStats()",
+     "android::AVNuUtils::checkFormatChange(bool*, android::sp<android::ABuffer> const&)",
+     "android::AVNuUtils::sInst",
+     "android::AVNuUtils::AVNuUtils()",
+     "android::AVNuUtils::~AVNuUtils()"
+    ]
+   },
+   "/system/lib64/libaudioclient.so": {
+    "/system/lib64/libavenhancements.so": [
+     "android::AVMediaUtils::getCustomProfileLocation(char*, int)",
+     "android::AVMediaUtils::AVMediaUtils()",
+     "android::AVMediaUtils::~AVMediaUtils()"
+    ]
+   },
+   "not-found-offline": {
+    "/vendor/lib/libTrustedUI.so": [
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEvent::getService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemResource::getService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long long)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32u> > const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::notifySyspropsChanged()",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::setHALInstrumentation()",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::ping()",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long long)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32u> > const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::notifySyspropsChanged()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::setHALInstrumentation()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::ping()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long long)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32u> > const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::notifySyspropsChanged()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::setHALInstrumentation()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::ping()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)"
+    ],
+    "/vendor/lib/libface3d_dev.so": [
+     "ACameraCaptureSession_setRepeatingRequest",
+     "ACameraDevice_close",
+     "ACameraDevice_createCaptureRequest",
+     "ACameraDevice_createCaptureSession",
+     "ACameraDevice_getId",
+     "ACameraManager_create",
+     "ACameraManager_delete",
+     "ACameraManager_deleteCameraIdList",
+     "ACameraManager_getCameraCharacteristics",
+     "ACameraManager_getCameraIdList",
+     "ACameraManager_openCamera",
+     "ACameraMetadata_free",
+     "ACameraMetadata_getConstEntry",
+     "ACameraOutputTarget_create",
+     "ACameraOutputTarget_free",
+     "ACaptureRequest_addTarget",
+     "ACaptureRequest_free",
+     "ACaptureRequest_getConstEntry",
+     "ACaptureSessionOutputContainer_add",
+     "ACaptureSessionOutputContainer_create",
+     "ACaptureSessionOutputContainer_free",
+     "ACaptureSessionOutput_create",
+     "ACaptureSessionOutput_free"
+    ],
+    "/vendor/lib64/libTrustedUI.so": [
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEvent::getService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemResource::getService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32ul> > const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::notifySyspropsChanged()",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::setHALInstrumentation()",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::ping()",
+     "vendor::qti::hardware::systemhelper::V1_0::ISystemEventCallback::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32ul> > const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::notifySyspropsChanged()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::setHALInstrumentation()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::ping()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedUI::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32ul> > const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::notifySyspropsChanged()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::setHALInstrumentation()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::ping()",
+     "vendor::qti::hardware::trustedui::V1_0::ITrustedInputCallback::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)"
+    ]
+   }
+  },
+  "libraries_not_found_offline": {
+   "/system/lib/libSecureUILib.so": [
+    "vendor.qti.hardware.tui_comm@1.0.so"
+   ],
+   "/system/lib64/libSecureUILib.so": [
+    "vendor.qti.hardware.tui_comm@1.0.so"
+   ],
+   "/vendor/lib/libSecureUILib.so": [
+    "vendor.qti.hardware.tui_comm@1.0.so"
+   ],
+   "/vendor/lib/libTrustedUI.so": [
+    "vendor.qti.hardware.systemhelper@1.0.so",
+    "vendor.qti.hardware.trustedui@1.0.so"
+   ],
+   "/vendor/lib/libface3d_dev.so": [
+    "libcamera2ndk_vendor.so"
+   ],
+   "/vendor/lib/libsecureui.so": [
+    "vendor.qti.hardware.tui_comm@1.0.so"
+   ],
+   "/vendor/lib64/libSecureUILib.so": [
+    "vendor.qti.hardware.tui_comm@1.0.so"
+   ],
+   "/vendor/lib64/libTrustedUI.so": [
+    "vendor.qti.hardware.systemhelper@1.0.so",
+    "vendor.qti.hardware.trustedui@1.0.so"
+   ],
+   "/vendor/lib64/libsecureui.so": [
+    "vendor.qti.hardware.tui_comm@1.0.so"
+   ]
+  }
+ }
+}

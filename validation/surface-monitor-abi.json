@@ -1,0 +1,247 @@
+{
+  "scope": "SurfaceMonitor authenticated method group",
+  "monitor_item_bytes": 48,
+  "frame_capacity": 120,
+  "average_fps_capacity": 10,
+  "duration_capacity": 60,
+  "operation_gap_ns": 300000000,
+  "unresolved_prefix_bytes": [
+    8,
+    48
+  ],
+  "unresolved_prefix_meaning_recovered": false,
+  "full_cpp_abi_proven": false,
+  "real_display_frequency_qualified": false,
+  "abis": {
+    "arm64": {
+      "factory_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+      "source_sha256": "be057d7a4f4a6210f25f282807e0256d9c3d719a76e414b425148ae1f5788f5b",
+      "observed_source_class_bytes": 6680,
+      "methods": {
+        "_ZN7android14SurfaceMonitor9reportFpsEdRKNS_7String8El": {
+          "factory_address": "0xd79d0",
+          "factory_function_bytes": 284,
+          "factory_function_sha256": "d7df5f05c54e4cff299ce1660ed949c351707c09c96548541b85d796d0ee6176",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorD1Ev": {
+          "factory_address": "0xd6d1c",
+          "factory_function_bytes": 104,
+          "factory_function_sha256": "b346fb434308dcee97c78376387f6e66e84db2cabc4e0df1377dce56d0a0bb86",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor10loadConfigEv": {
+          "factory_address": "0xd68dc",
+          "factory_function_bytes": 388,
+          "factory_function_sha256": "03115305087004cfb5b8882245a420a6072c6d7b5eea7948a71780e002c30c37",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor10doAnalysisEmmRKNS_7String8E": {
+          "factory_address": "0xd7200",
+          "factory_function_bytes": 1504,
+          "factory_function_sha256": "1467b6e7c2fdf67916528ca2e90882c0f9561c3233fd6abcae2166e0fc1167fd",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor17confirmCurrentFpsEv": {
+          "factory_address": "0xd7c14",
+          "factory_function_bytes": 560,
+          "factory_function_sha256": "b24b36eaf76129d47f21c5df7ec8c14022c21c4b15fc9dedce11f00682025aad",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor5clearEv": {
+          "factory_address": "0xd77e0",
+          "factory_function_bytes": 20,
+          "factory_function_sha256": "de724e7469e4992701a9c38803260a354a5bc811e1af4431702104f8a75406ce",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorC1Ev": {
+          "factory_address": "0xd6380",
+          "factory_function_bytes": 876,
+          "factory_function_sha256": "3bced9ad604e619ce5943813d1512e39734ebec5386ddf439d2b071b5a1de5f1",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor8addFrameENS_7String8E": {
+          "factory_address": "0xd7120",
+          "factory_function_bytes": 224,
+          "factory_function_sha256": "af7f142bddd7ece720299074df459f2c2748a810e2945314c00483cd4857dedf",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorD2Ev": {
+          "factory_address": "0xd6d1c",
+          "factory_function_bytes": 104,
+          "factory_function_sha256": "b346fb434308dcee97c78376387f6e66e84db2cabc4e0df1377dce56d0a0bb86",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor13initParameterEv": {
+          "factory_address": "0xd6b9c",
+          "factory_function_bytes": 384,
+          "factory_function_sha256": "b574c299f9e73b315be4f8966717ca4731e8b805da5cb0cb1ddf12e81dc4a8f5",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor23updateCurrentDisplayFpsEiNS_7String8E": {
+          "factory_address": "0xd6a60",
+          "factory_function_bytes": 316,
+          "factory_function_sha256": "c517af02dc8168eeb921fab0560c4ace23baa1cca988e169abd66b2ad58e19fe",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor11getProcCommEiPc": {
+          "factory_address": "0xd708c",
+          "factory_function_bytes": 148,
+          "factory_function_sha256": "e8b84e25902a48cbed2d6e3d015414a0795f4ca364c7f7c32ef1d8991ef609d7",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor15quickConfirmFpsEPddi": {
+          "factory_address": "0xd7aec",
+          "factory_function_bytes": 296,
+          "factory_function_sha256": "ba2926e4350561b375050eed1c6abfa9efa73be388d359bd099884edb4ec16b8",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor11reportAlarmEmmllRKNS_7String8Ei": {
+          "factory_address": "0xd77f4",
+          "factory_function_bytes": 476,
+          "factory_function_sha256": "1a4fb48c017d913c3db15577f947b76c28a854323845709b95b614d5e4f65501",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor12setFrameItemENS_12MonitorIndexE": {
+          "factory_address": "0xd6e94",
+          "factory_function_bytes": 504,
+          "factory_function_sha256": "3ba2a46501b886af23be72ea75461722cf0cad62702d817b00862da45c98643b",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor23requestChangeDisplayFpsEi": {
+          "factory_address": "0xd7e44",
+          "factory_function_bytes": 224,
+          "factory_function_sha256": "99bf2291c7554d34f8342ea3be60a8d59fddc657262a0e8d618ec7e2a5346ac5",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorC2Ev": {
+          "factory_address": "0xd6380",
+          "factory_function_bytes": 876,
+          "factory_function_sha256": "3bced9ad604e619ce5943813d1512e39734ebec5386ddf439d2b071b5a1de5f1",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor17scanOperationAreaERKNS_7String8E": {
+          "factory_address": "0xd6d84",
+          "factory_function_bytes": 272,
+          "factory_function_sha256": "2b820a0a2cf335bd67faabce1112e374b505beed4036424945d67f1cc62e20a7",
+          "source_export_present": true
+        }
+      }
+    },
+    "arm": {
+      "factory_sha256": "09e91a368003bf8112abaf4adc98f1a78df9ac88ada3f9c81f1eb12f51e68db0",
+      "source_sha256": "10223df945ae2af595449993927765aa9eed51ed02fc69e7d137fecb0563d203",
+      "observed_source_class_bytes": 6640,
+      "methods": {
+        "_ZN7android14SurfaceMonitor23updateCurrentDisplayFpsEiNS_7String8E": {
+          "factory_address": "0x96278",
+          "factory_function_bytes": 308,
+          "factory_function_sha256": "0652859e7edd40dd74712528db9d52ab464134336a29fb0fbe01687a37c2d446",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor8addFrameENS_7String8E": {
+          "factory_address": "0x96834",
+          "factory_function_bytes": 212,
+          "factory_function_sha256": "27934273141343083429b922ddd11db8227623e782315244be9c3cd41190a959",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorD1Ev": {
+          "factory_address": "0x9653c",
+          "factory_function_bytes": 58,
+          "factory_function_sha256": "a5031e01437c79bb04ebb0383e60be7a737fdb6d842c51c814573753f8d6a22d",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorC2Ev": {
+          "factory_address": "0x95d34",
+          "factory_function_bytes": 684,
+          "factory_function_sha256": "6ab3d2dda84257bef597abea31941191d7268f0e9196a17b790b8cd4f45fb34e",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor23requestChangeDisplayFpsEi": {
+          "factory_address": "0x973d0",
+          "factory_function_bytes": 156,
+          "factory_function_sha256": "5d464353ed234c8b5f7cdb28d482e1e17a334d2f0b309c92f0f8ea50d848abf6",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor17scanOperationAreaERKNS_7String8E": {
+          "factory_address": "0x96576",
+          "factory_function_bytes": 226,
+          "factory_function_sha256": "325158ed0922939c3c22e4148cb5691595bb90d8f6ebeb5c945f488926ce4e67",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorD2Ev": {
+          "factory_address": "0x9653c",
+          "factory_function_bytes": 58,
+          "factory_function_sha256": "a5031e01437c79bb04ebb0383e60be7a737fdb6d842c51c814573753f8d6a22d",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor13initParameterEv": {
+          "factory_address": "0x963b0",
+          "factory_function_bytes": 396,
+          "factory_function_sha256": "95630716d1d40f12d68489caa4e82c40ef23c1ae07fecd4521d63d27220a3a15",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor10doAnalysisEjjRKNS_7String8E": {
+          "factory_address": "0x96908",
+          "factory_function_bytes": 1336,
+          "factory_function_sha256": "87ce98ab2a7bac5d65fe97b3325096e95e4249e7b7588097323b165ce0d20085",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor11reportAlarmEjjixRKNS_7String8Ei": {
+          "factory_address": "0x96e5c",
+          "factory_function_bytes": 388,
+          "factory_function_sha256": "887c5bf95d8ea352d01e770d33fb045f72106192a9bafbb062c2be2ed8fd3d97",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor12setFrameItemENS_12MonitorIndexE": {
+          "factory_address": "0x96658",
+          "factory_function_bytes": 384,
+          "factory_function_sha256": "dad17ad10cb1f8c1a91cdbda6f7768483d0416b042358377306c5c4d7f7fef32",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor9reportFpsEdRKNS_7String8Ex": {
+          "factory_address": "0x96fe0",
+          "factory_function_bytes": 204,
+          "factory_function_sha256": "d7303092a364a7f777800c571bff620524ae80173d79c3c49fc715f4595ceebc",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor5clearEv": {
+          "factory_address": "0x96e40",
+          "factory_function_bytes": 26,
+          "factory_function_sha256": "5377170909db0594737de50fe58f3d7873738eabecd708bfb06560068fe6ddd6",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor15quickConfirmFpsEPddi": {
+          "factory_address": "0x970ac",
+          "factory_function_bytes": 256,
+          "factory_function_sha256": "c21e7e375d4d6cb85df7687b6963ac6250ed1f319c9e06d67afa2c80c27a6c71",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor11getProcCommEiPc": {
+          "factory_address": "0x967d8",
+          "factory_function_bytes": 92,
+          "factory_function_sha256": "6162095a74cf22d2657ef88b164ef0ee7b7b229b71c23bc81264699e1d3d2c6e",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitorC1Ev": {
+          "factory_address": "0x95d34",
+          "factory_function_bytes": 684,
+          "factory_function_sha256": "6ab3d2dda84257bef597abea31941191d7268f0e9196a17b790b8cd4f45fb34e",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor10loadConfigEv": {
+          "factory_address": "0x95fe0",
+          "factory_function_bytes": 664,
+          "factory_function_sha256": "e767ae8a52f24efd884f3c3fef751366331ee6d066cc46334c5d5be12263b245",
+          "source_export_present": true
+        },
+        "_ZN7android14SurfaceMonitor17confirmCurrentFpsEv": {
+          "factory_address": "0x971ac",
+          "factory_function_bytes": 548,
+          "factory_function_sha256": "4a773720a06668622e877857f277aba24ebc5686c869614c3cb32882612243ba",
+          "source_export_present": true
+        }
+      }
+    }
+  }
+}

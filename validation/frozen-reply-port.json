@@ -1,0 +1,42 @@
+{
+  "native_commit": "27999319e0f27c8c3a391c73094cbbdcc7a31db4",
+  "patch": "patches/0022-pico-frozen-reply-pid.patch",
+  "build_exit_code": 0,
+  "runtime_evidence": "validation/native-runtime-current.json",
+  "abi_evidence": "validation/frozen-reply-abi.json",
+  "package": "outputs/bufferqueue-test-23",
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 10,
+    "arm": 10
+  },
+  "fixtures": [
+    "initial-pid-zero",
+    "frozen-pid-and-error",
+    "reply-acquire-and-signed-pid",
+    "pid-overwrite",
+    "success-retains-last-pid",
+    "dead-reply-retains-last-pid",
+    "failed-reply-retains-last-pid",
+    "legacy-short-pid-is-zero",
+    "non-identity-pid",
+    "identity-change-retains-frozen-pid"
+  ],
+  "implemented": [
+    "constructor initializes last frozen PID to zero",
+    "PICO command 0x7212 reads legacy int32 PID and returns status 0x80000009",
+    "error reaches reply Parcel and acquireResult",
+    "last PID persists across subsequent responses and calling identity changes"
+  ],
+  "all_probe_binder_write_read_exchanges_intercepted": true,
+  "other_initialization_ioctls_may_reach_driver": true,
+  "real_process_freeze_performed": false,
+  "real_kernel_ipc_qualified": false,
+  "full_private_type_abi_proven": false,
+  "pending": [
+    "remote FreezeManager registration, Binder death and callbacks",
+    "producer self-listener caller integration and real freeze/GPU fence qualification",
+    "complete IPCThreadState/producer ABI and live VR qualification"
+  ],
+  "system_partitions_modified": false,
+  "scope": "synthetic replies through the exported waitForResponse in selected source/factory Binder libraries; ARM64 instruction/getter/field checkpoints, not real kernel frozen IPC"
+}

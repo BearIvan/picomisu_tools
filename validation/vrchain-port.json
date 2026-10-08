@@ -1,0 +1,32 @@
+{
+ "title": "Stage 2: PICO VR chain hooks, ExtPackageParserUtils, android.pico.ns, PicoSystemConfig",
+ "static": {
+  "framework.jar": {
+   "classes": 30,
+   "identical": 24,
+   "explained_differences": {
+    "Landroid/app/ActivityThread;": "<init>: the factory creates the extension through com.pico.util.ExtImplFactory reflection and also initialises Smartisan mMonitorEx/mSmtEx; Source creates ExtActivityThreadImpl directly.",
+    "Landroid/app/ExtActivityThreadImpl;": "isActivityForceRender keeps the Source null check for ActivityClientRecord.activity (one extra field read); the factory throws NullPointerException there.",
+    "Landroid/content/pm/ExtPackageParserImpl;": "parseVrFlags: all references match; D8 allocates one extra const/4 1 differently.",
+    "Landroid/content/pm/PackageParser;": "<init>: ExtImplFactory reflection instead of direct creation; parseBaseApkCommon: the factory uses the later Android 10 getSplitPermissions()/SplitPermissionInfoParcelable revision; parsePackage: Smartisan PackageParserSmtBase.verifyLibraryFiles.",
+    "Landroid/view/Display;": "<init>: ExtImplFactory reflection instead of direct creation of ExtDisplayImpl.",
+    "Landroid/view/ViewRootImpl;": "<init>: ExtImplFactory reflection, mHaveMoveEvent and resource IDs; setView: AOSP revision differences around mWindowAttributes.inputFeatures and InputChannel.isValid(). All PICO hooks match the factory."
+   }
+  }
+ },
+ "unexplained": [],
+ "component_commits": {
+  "frameworks/native": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+  "frameworks/base": "c159aa2685b652d22687158057843a30682b342b",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "eae0808facaf4f6759e4be0966ff78ca1e554774",
+  "packages/apps/Bluetooth": "12c367b7d6ac9f7af4fd9fbc5d8648ecb5a31aa5",
+  "packages/services/Telecomm": "4f8664b3070ebd80614513893edf48a1cde3ea05",
+  "frameworks/opt/net/wifi": "59c59fc059c44767bd77fae6ba97838500b72533",
+  "system/connectivity/wificond": "cc69ac4c2516192e9b3ae1036a459301404e20c6",
+  "frameworks/opt/telephony": "ce3541dcdf46e98bfb12e054c9d12d58dd808eb6",
+  "packages/services/Telephony": "4c5250aa8faf66e65c394394b7b0e3a799de465f"
+ },
+ "system_partitions_modified": false
+}

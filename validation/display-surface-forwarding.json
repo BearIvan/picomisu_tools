@@ -1,0 +1,13 @@
+{
+  "native_commit": "1c237612acd7fae6d86cdf944afae78db8c33419",
+  "build_exit_code": 0,
+  "render_surface_tests_per_abi": 39,
+  "new_tests_per_abi": 4,
+  "five_factory_render_surface_extension_slots_match": true,
+  "three_interface_vtable_sizes_match": true,
+  "factory_default_multilayer": true,
+  "full_compositor_abi_proven": false,
+  "concrete_virtual_display_surface_behavior_ported": false,
+  "production_direct_path_enabled": false,
+  "runtime_evidence": "validation/native-runtime-current.json"
+}

@@ -1,0 +1,1063 @@
+[
+  {
+    "abi": 64,
+    "factory_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+    "source_sha256": "93a6fa3ebd7d7a6f4f4fcef6ef5260dc6849df40e638748752f2d36a938b107c",
+    "tables": {
+      "_ZTVN7android16ConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 192,
+          "primary_prefix": [
+            8,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 192,
+          "primary_prefix": [
+            8,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android17IConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 248,
+          "primary_prefix": [
+            16,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 248,
+          "primary_prefix": [
+            16,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android18BnConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 432,
+          "primary_prefix": [
+            48,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 432,
+          "primary_prefix": [
+            48,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android18BpConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 320,
+          "primary_prefix": [
+            56,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 320,
+          "primary_prefix": [
+            56,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android11BufferQueue21ProxyConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 432,
+          "primary_prefix": [
+            64,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 432,
+          "primary_prefix": [
+            64,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android12ConsumerBaseE": {
+        "factory": {
+          "vtable_bytes": 248,
+          "primary_prefix": [
+            1688,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ],
+          "latch_getter_offsets_from_vtable_start": [
+            128
+          ]
+        },
+        "source": {
+          "vtable_bytes": 248,
+          "primary_prefix": [
+            1688,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ],
+          "latch_getter_offsets_from_vtable_start": [
+            128
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true,
+        "latch_getter_slots_match": true
+      }
+    },
+    "on_disconnect_already_present_in_pinned_aosp": true,
+    "full_libgui_abi_proven": false,
+    "factory_binder_commands": {
+      "onDisconnect": 1,
+      "onFrameAvailable": 2,
+      "onFrameReplaced": 3,
+      "onBuffersReleased": 4,
+      "onSidebandStreamChanged": 5
+    },
+    "layout_differences": []
+  },
+  {
+    "abi": 32,
+    "factory_sha256": "09e91a368003bf8112abaf4adc98f1a78df9ac88ada3f9c81f1eb12f51e68db0",
+    "source_sha256": "0c5d59938d06eba8162dc43ac821436d1d9b1ba035651a656f7c0bedb856bf55",
+    "tables": {
+      "_ZTVN7android16ConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 96,
+          "primary_prefix": [
+            4,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 96,
+          "primary_prefix": [
+            4,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android17IConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 124,
+          "primary_prefix": [
+            8,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 124,
+          "primary_prefix": [
+            8,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android18BnConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 216,
+          "primary_prefix": [
+            24,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 216,
+          "primary_prefix": [
+            24,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": false,
+              "pure_virtual": true
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android18BpConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 160,
+          "primary_prefix": [
+            28,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 160,
+          "primary_prefix": [
+            28,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android11BufferQueue21ProxyConsumerListenerE": {
+        "factory": {
+          "vtable_bytes": 216,
+          "primary_prefix": [
+            32,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "source": {
+          "vtable_bytes": 216,
+          "primary_prefix": [
+            32,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true
+      },
+      "_ZTVN7android12ConsumerBaseE": {
+        "factory": {
+          "vtable_bytes": 124,
+          "primary_prefix": [
+            1076,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ],
+          "latch_getter_offsets_from_vtable_start": [
+            64
+          ]
+        },
+        "source": {
+          "vtable_bytes": 124,
+          "primary_prefix": [
+            1076,
+            0,
+            0
+          ],
+          "callback_order": [
+            {
+              "expected_method": "onDisconnect",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameAvailable",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onFrameReplaced",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onBuffersReleased",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "onSidebandStreamChanged",
+              "method_name_verified": true,
+              "pure_virtual": false
+            },
+            {
+              "expected_method": "addAndGetFrameTimestamps",
+              "method_name_verified": true,
+              "pure_virtual": false
+            }
+          ],
+          "latch_getter_offsets_from_vtable_start": [
+            64
+          ]
+        },
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "callback_order_matches": true,
+        "latch_getter_slots_match": true
+      }
+    },
+    "on_disconnect_already_present_in_pinned_aosp": true,
+    "full_libgui_abi_proven": false,
+    "layout_differences": []
+  }
+]

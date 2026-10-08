@@ -1,0 +1,28 @@
+{
+  "native_commit": "ad8673f63e812416f9a70d4f437254ba65aa0c7e",
+  "scope": [
+    "NativeWindowSurface typed getter",
+    "SurfaceFlinger creation args",
+    "DisplayDevice forwarding",
+    "RenderSurfaceCreationArgs field and builder",
+    "RenderSurface retained Surface reference"
+  ],
+  "mock_native_window_supported": true,
+  "construction_tests_added": 2,
+  "build_verified": true,
+  "runtime_verified": true,
+  "direct_buffer_path_enabled": false,
+  "factory_full_layout_proven": false,
+  "installed_on_device": false,
+  "build_exit_code": 0,
+  "built_targets": [
+    "libsurfaceflinger",
+    "libsurfaceflinger_unittest",
+    "libcompositionengine_test"
+  ],
+  "render_surface_arm64_suite_tests": 28,
+  "package": "outputs/bufferqueue-test-11",
+  "package_files": 129,
+  "runtime_status": "passed in isolated package 12; see native-runtime-current.json",
+  "latest_runtime_evidence": "validation/native-runtime-current.json"
+}

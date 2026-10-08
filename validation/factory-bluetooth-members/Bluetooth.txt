@@ -1,0 +1,9 @@
+Lcom/android/bluetooth/gatt/GattService;->mCallbacks:Landroid/bluetooth/le/IBluetoothLeCallback;
+Lcom/android/bluetooth/gatt/GattService;->registerCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Lcom/android/bluetooth/gatt/GattService;->unregisterCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Lcom/android/bluetooth/gatt/GattService;->registerClient(Ljava/util/UUID;Landroid/bluetooth/IBluetoothGattCallback;)V
+Lcom/android/bluetooth/gatt/GattService;->unregisterClient(I)V
+Lcom/android/bluetooth/gatt/GattService;->registerServer(Ljava/util/UUID;Landroid/bluetooth/IBluetoothGattServerCallback;)V
+Lcom/android/bluetooth/gatt/GattService;->unregisterServer(I)V
+Lcom/android/bluetooth/gatt/GattService$BluetoothGattBinder;->registerCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V
+Lcom/android/bluetooth/gatt/GattService$BluetoothGattBinder;->unregisterCallback(Landroid/bluetooth/le/IBluetoothLeCallback;)V

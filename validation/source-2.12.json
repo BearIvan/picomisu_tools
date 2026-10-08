@@ -1,0 +1,2159 @@
+{
+ "created_at": "2026-10-01T20:53:40.923057+00:00",
+ "name": "source-2.12",
+ "image": {
+  "system.img": {
+   "bytes": 5704732672,
+   "sha256": "dc12a474fec3eb0dee7be45e2f895b7995e4d176e61e8e87756a94ebd7bad344"
+  },
+  "vbmeta.img": {
+   "bytes": 65536,
+   "sha256": "19800775d5601cf8af8f13df34c4bb7737c8b75400b1ae518a96c679514b4044"
+  },
+  "vbmeta_system.img": {
+   "bytes": 65536,
+   "sha256": "b401a57da2c052170809561296be5d154b51188156579817ea641a608f1ab8bf"
+  }
+ },
+ "config_sha256": "76672242f96749feebfb31f0c33799bf59f5e9b2faaca76389f1158a87c312e8",
+ "origins": {
+  "source": 2969,
+  "generated": 7,
+  "factory": 2641,
+  "factory-resigned": 80,
+  "product-shadow": 3,
+  "product-shadow-resigned": 3,
+  "trial-extra": 2
+ },
+ "headset_accessed": false,
+ "readback": {
+  "entries": 5705,
+  "problems": []
+ },
+ "selinux": {
+  "factory_files_label_differences": {
+   "/system/etc/pvr/psmvrapi_config_ext.ini": {
+    "factory": "u:object_r:system_etc_pvr_file:s0",
+    "image": "u:object_r:system_psmvrapi_file:s0"
+   }
+  },
+  "source_files_label_differences": {},
+  "unlabeled": [],
+  "shadow_labels": {
+   "/system/app/PowerOffAlarm": "u:object_r:system_file:s0",
+   "/system/app/PowerOffAlarm/PowerOffAlarm.apk": "u:object_r:system_file:s0",
+   "/system/app/QdcmFF": "u:object_r:system_file:s0",
+   "/system/app/QdcmFF/QdcmFF.apk": "u:object_r:system_file:s0",
+   "/system/priv-app/Settings": "u:object_r:system_file:s0",
+   "/system/priv-app/Settings/Settings.apk": "u:object_r:system_file:s0",
+   "/system/priv-app/SettingsProvider": "u:object_r:system_file:s0",
+   "/system/priv-app/SettingsProvider/SettingsProvider.apk": "u:object_r:system_file:s0"
+  }
+ },
+ "init": {
+  "rc_files_checked": 94,
+  "host_init_verifier_failures": {},
+  "services_total": 298,
+  "system_services": 152,
+  "problems": [
+   {
+    "service": "flash_recovery",
+    "rc": "/init.rc",
+    "path": "/system/bin/install-recovery.sh",
+    "problem": "executable missing",
+    "regression": true
+   },
+   {
+    "service": "dump_sched",
+    "rc": "/system/etc/init/perfetto.rc",
+    "path": "/system/bin/dump_sched",
+    "problem": "no init domain transition for system_file",
+    "factory_label": "u:object_r:system_file:s0",
+    "regression": false
+   },
+   {
+    "service": "vendor.move_data_sh",
+    "rc": "/vendor/etc/init/android.hardware.drm@1.2-service-lazy.widevine.rc",
+    "path": "/system/bin/move_widevine_data.sh",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "fastmmi",
+    "rc": "/vendor/etc/init/hw/init.qcom.factory.rc",
+    "path": "/system/bin/mmi",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "mmi_diag",
+    "rc": "/vendor/etc/init/hw/init.qcom.factory.rc",
+    "path": "/system/bin/mmi_diag",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "nqnfcinfo",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/nqnfcinfo",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "iop",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/iop",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "qcomsysd",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/qcom-system-daemon",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "qmiproxy",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/qmiproxy",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "vendor.move_wifi_data",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/move_wifi_data.sh",
+    "problem": "no init domain transition for system_file",
+    "factory_label": "u:object_r:system_file:s0",
+    "regression": false
+   },
+   {
+    "service": "dhcpcd_wlan0",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "dhcpcd_bond0",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "dhcpcd_p2p",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "dhcpcd_wigig0",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "iprenew_wlan0",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "iprenew_bond0",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "iprenew_p2p",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "iprenew_wigig0",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "ptt_socket_app",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/ptt_socket_app",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "ptt_ffbm",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/ptt_socket_app",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "wifi_ftmd",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/wifi_ftmd",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "dhcpcd_bt-pan",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "iprenew_bt-pan",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/dhcpcd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "loc_launcher",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/loc_launcher",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "drmdiag",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/drmdiagapp",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "ims_regmanager",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/exe-ims-regmanagerprocessnative",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "battery_monitor",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/battery_monitor",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "profiler_daemon",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/profiler_daemon",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "hvdcp",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/hvdcp",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "charger_monitor",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/charger_monitor",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "qlogd",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/xbin/qlogd",
+    "problem": "executable missing (also on factory)",
+    "regression": false
+   },
+   {
+    "service": "qseeproxydaemon",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/qseeproxydaemon",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "esepmdaemon",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/esepmdaemon",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "poweroffhandler",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/vendor/bin/poweroffhandler",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "vendor.move_time_data",
+    "rc": "/vendor/etc/init/hw/init.qcom.rc",
+    "path": "/system/bin/move_time_data.sh",
+    "problem": "no init domain transition for system_file",
+    "factory_label": "u:object_r:system_file:s0",
+    "regression": false
+   },
+   {
+    "service": "vendor.cnss_diag",
+    "rc": "/vendor/etc/init/hw/init.target.rc",
+    "path": "/vendor/bin/cnss_diag",
+    "problem": "vendor executable missing (also on factory)"
+   },
+   {
+    "service": "vendor.qdmastatsd",
+    "rc": "/vendor/etc/init/init.qdmastats.rc",
+    "path": "/vendor/bin/qdmastatsd",
+    "problem": "vendor executable missing (also on factory)"
+   }
+  ]
+ },
+ "dexpreopt": {
+  "factory_compiled_files_in_image": [],
+  "dex2oat_boot_jars": 21,
+  "boot_image_missing": [],
+  "apks": {
+   "compiled_on_device_first_boot": 87,
+   "preopted_source_boot_image": 38
+  },
+  "first_boot_compile": [
+   "/system/PicoAppCheckPrebuild/PicoAppCheckPrebuild.apk",
+   "/system/app/AntHalService/AntHalService.apk",
+   "/system/app/AvatarEditor/AvatarEditor.apk",
+   "/system/app/BStreamingAssistant/BStreamingAssistant.apk",
+   "/system/app/Bluetooth/Bluetooth.apk",
+   "/system/app/BluetoothExt/BluetoothExt.apk",
+   "/system/app/BluetoothPeripheralService/BluetoothPeripheralService.apk",
+   "/system/app/CarrierDefaultApp/CarrierDefaultApp.apk",
+   "/system/app/ControllerTest_Phoenix_v2/ControllerTest_Phoenix_v2.apk",
+   "/system/app/DeveloperHubService/DeveloperHubService.apk",
+   "/system/app/EtTest/EtTest.apk",
+   "/system/app/FtTest/FtTest.apk",
+   "/system/app/Matrix/Matrix.apk",
+   "/system/app/PUIMessenger/PUIMessenger.apk",
+   "/system/app/PicoFactoryTest3/PicoFactoryTest3.apk",
+   "/system/app/PicoFeedback/PicoFeedback.apk",
+   "/system/app/PowerOffAlarm/PowerOffAlarm.apk",
+   "/system/app/PvrManager/PvrManager.apk",
+   "/system/app/PxrInitSceneOverlay/PxrInitSceneOverlay.apk",
+   "/system/app/QColor/QColor.apk",
+   "/system/app/QdcmFF/QdcmFF.apk",
+   "/system/app/SimContact/SimContact.apk",
+   "/system/app/SlardarOsClient/SlardarOsClient.apk",
+   "/system/app/StreamingAssistant/StreamingAssistant.apk",
+   "/system/app/TobUserService/TobUserService.apk",
+   "/system/app/iFlyIME/iFlyIME.apk",
+   "/system/priv-app/AppManager/AppManager.apk",
+   "/system/priv-app/BrowserChrome/BrowserChrome.apk",
+   "/system/priv-app/ControllerUpgrade/ControllerUpgrade.apk",
+   "/system/priv-app/EnterpriseAssistant-HMD/EnterpriseAssistant-HMD.apk",
+   "/system/priv-app/FileManager/FileManager.apk",
+   "/system/priv-app/FirmwareUpdate/FirmwareUpdate.apk",
+   "/system/priv-app/InProcessNetworkStack/InProcessNetworkStack.apk",
+   "/system/priv-app/InitServer/InitServer.apk",
+   "/system/priv-app/LANServer/LANServer.apk",
+   "/system/priv-app/LSpace/LSpace.apk",
+   "/system/priv-app/LightSeethrough/LightSeethrough.apk",
+   "/system/priv-app/MRService/MRService.apk",
+   "/system/priv-app/OsTeaTracker/OsTeaTracker.apk",
+   "/system/priv-app/PVRHome/PVRHome.apk",
+   "/system/priv-app/PVRVerify/PVRVerify.apk",
+   "/system/priv-app/PanoramaPlayer/PanoramaPlayer.apk",
+   "/system/priv-app/PermissionController/PermissionController.apk",
+   "/system/priv-app/PicoCast/PicoCast.apk",
+   "/system/priv-app/PicoKeyguard/PicoKeyguard.apk",
+   "/system/priv-app/PicoLogcatchSettings/PicoLogcatchSettings.apk",
+   "/system/priv-app/PicoPackageInstaller/PicoPackageInstaller.apk",
+   "/system/priv-app/PicoScreenRecorder/PicoScreenRecorder.apk",
+   "/system/priv-app/PicoSettingsProvider/PicoSettingsProvider.apk",
+   "/system/priv-app/PicoSyshub/PicoSyshub.apk",
+   "/system/priv-app/PvrDevelopmentSettings/PvrDevelopmentSettings.apk",
+   "/system/priv-app/PvrGuide/PvrGuide.apk",
+   "/system/priv-app/PvrMdm/PvrMdm.apk",
+   "/system/priv-app/PvrPreview/PvrPreview.apk",
+   "/system/priv-app/PvrSwift/PvrSwift.apk",
+   "/system/priv-app/PxrNetworkService/PxrNetworkService.apk",
+   "/system/priv-app/PxrNotification/PxrNotification.apk",
+   "/system/priv-app/RoomCapture/RoomCapture.apk",
+   "/system/priv-app/SceneManager/SceneManager.apk",
+   "/system/priv-app/Settings/Settings.apk",
+   "/system/priv-app/SettingsProvider/SettingsProvider.apk",
+   "/system/priv-app/ShortcutMenu2/ShortcutMenu2.apk",
+   "/system/priv-app/SystemExt/SystemExt.apk",
+   "/system/priv-app/SystemUpdate2/SystemUpdate2.apk",
+   "/system/priv-app/VRETCalib/VRETCalib.apk",
+   "/system/priv-app/VRShell2/VRShell2.apk",
+   "/system/priv-app/VRUserCenter2/VRUserCenter2.apk",
+   "/system/priv-app/VersionManager/VersionManager.apk",
+   "/system/priv-app/VideoPlayer2/VideoPlayer2.apk",
+   "/system/priv-app/WfdService/WfdService.apk",
+   "/system/priv-app/WifiAuthorize/WifiAuthorize.apk",
+   "/system/priv-app/XRGuardianService/XRGuardianService.apk",
+   "/system/priv-app/XRRuntime/XRRuntime.apk",
+   "/system/priv-app/XRShell/XRShell.apk",
+   "/system/priv-app/configserverservice/configserverservice.apk",
+   "/system/priv-app/provision2d/provision2d.apk",
+   "/system/priv-app/pvr_adapter/pvr_adapter.apk",
+   "/system/priv-app/pvrfit/pvrfit.apk",
+   "/system/priv-app/seethroughsetting/seethroughsetting.apk",
+   "/system/priv-app/settings/settings.apk",
+   "/system/priv-app/store2d/store2d.apk",
+   "/system/priv-app/tobActivate/tobActivate.apk",
+   "/system/priv-app/tobMDM/tobMDM.apk",
+   "/system/priv-app/tobPVRHome/tobPVRHome.apk",
+   "/system/priv-app/tobSettings/tobSettings.apk",
+   "/system/priv-app/tobStore/tobStore.apk",
+   "/system/priv-app/tobUserCenter/tobUserCenter.apk"
+  ],
+  "unchanged_partition_oat_dirs_compiled_against_factory_boot_image": [
+   "product/app/DynamicDDSService/oat",
+   "product/app/LatinIME/oat",
+   "product/app/PerformanceMode/oat",
+   "product/app/PowerOffAlarm/oat",
+   "product/app/embms/oat",
+   "product/app/remotesimlockservice/oat",
+   "product/app/uimgbaservice/oat",
+   "product/app/uimlpaservice/oat",
+   "product/app/webview/oat",
+   "product/framework/oat",
+   "product/priv-app/OneTimeInitializer/oat",
+   "product/priv-app/QAS_DVC_MSP/oat",
+   "product/priv-app/Settings/oat",
+   "product/priv-app/SettingsIntelligence/oat",
+   "product/priv-app/StorageManager/oat",
+   "product/priv-app/WallpaperCropper/oat",
+   "product/priv-app/seccamservice/oat",
+   "vendor/app/IWlanService/oat",
+   "vendor/app/TimeService/oat"
+  ],
+  "first_boot_filters": {}
+ },
+ "vintf": {
+  "trial_exit_code": 0,
+  "trial_output": [
+   "Debug: List '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.2-service.widevine.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/android.hardware.cas@1.1-service.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/android.hardware.usb@1.1-service.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml': SUCCESS",
+   "Debug: Sysprop ro.boot.product.hardware.sku=",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//odm/etc/vintf/manifest.xml': No such file or directory",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//odm/etc/manifest.xml': No such file or directory",
+   "Debug: List '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//odm/etc/vintf/manifest/': No such file or directory",
+   "Debug: List '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/compatibility_matrix.3.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/compatibility_matrix.2.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/manifest.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/compatibility_matrix.legacy.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/compatibility_matrix.device.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/compatibility_matrix.1.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//system/etc/vintf/compatibility_matrix.4.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//product/etc/vintf/compatibility_matrix.xml': No such file or directory",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root//vendor/etc/vintf/compatibility_matrix.xml': SUCCESS",
+   "Debug: files under /mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-root is compatible"
+  ],
+  "factory_control_exit_code": 0,
+  "factory_control_output": [
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/compatibility_matrix.3.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/compatibility_matrix.2.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/manifest.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/compatibility_matrix.legacy.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/compatibility_matrix.device.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/compatibility_matrix.1.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//system/etc/vintf/compatibility_matrix.4.xml': SUCCESS",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//product/etc/vintf/compatibility_matrix.xml': No such file or directory",
+   "Debug: Fetch '/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root//vendor/etc/vintf/compatibility_matrix.xml': SUCCESS",
+   "Debug: files under /mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/check/vintf-factory-root is compatible"
+  ]
+ },
+ "bootclasspath": {
+  "classpaths_match": {
+   "BOOTCLASSPATH": true,
+   "DEX2OATBOOTCLASSPATH": true,
+   "SYSTEMSERVERCLASSPATH": true
+  },
+  "problems": [],
+  "jars": {
+   "sysmonitor-framework": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "sys-framework": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "devicemiddlewareimpl": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "vrex-framework": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "tcmiface": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "telephony-ext": {
+    "decision": "codelinaro_source",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": null,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "qcom.fmradio": {
+    "decision": "codelinaro_source",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": null,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "QPerformance": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "UxPerformance": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "WfdCommon": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": {
+     "arm64.art": true,
+     "arm64.oat": true,
+     "arm.art": true,
+     "arm.oat": true,
+     "vdex": true
+    }
+   },
+   "sys-services": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": null
+   },
+   "sysmonitor-services": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": null
+   },
+   "vrex-services": {
+    "decision": "factory_binary",
+    "passes": true,
+    "unaccepted_gaps": 0,
+    "accepted_gaps": 0,
+    "dex_identical": true,
+    "boot_image_files": null
+   }
+  }
+ },
+ "packages": {
+  "trial": {
+   "installed": 186,
+   "duplicates": [
+    {
+     "package": "com.android.settings",
+     "skipped": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/priv-app/Settings/Settings.apk",
+     "installed": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/root/system/priv-app/Settings/Settings.apk"
+    },
+    {
+     "package": "com.qualcomm.qti.poweroffalarm",
+     "skipped": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/app/PowerOffAlarm/PowerOffAlarm.apk",
+     "installed": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/root/system/app/PowerOffAlarm/PowerOffAlarm.apk"
+    },
+    {
+     "package": "com.qti.snapdragon.qdcm_ff",
+     "skipped": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/app/QdcmFF/QdcmFF.apk",
+     "installed": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/staging/source-2.12/root/system/app/QdcmFF/QdcmFF.apk"
+    }
+   ],
+   "failures": [],
+   "shared_users": {
+    "android.uid.system": [
+     "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+    ],
+    "android.uid.shared": [
+     "28bbfe4a7b97e74681dc55c2fbb6ccb8d6c74963733f6af6ae74d8c3a6e879fd"
+    ],
+    "android.media": [
+     "465983f7791f2abeb43ea2cbdc7f21a8260b72bc08a55c839fc1a43bc741a81e"
+    ],
+    "android.uid.networkstack": [
+     "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+    ],
+    "android.uid.shell": [
+     "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+    ],
+    "android.uid.bluetooth": [
+     "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+    ],
+    "android.uid.phone": [
+     "dc30289e0a61447d03c95d15e5acf63e18d109d545a766b1208f6b53cbdcd482"
+    ]
+   },
+   "platform_cert": [
+    "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+   ]
+  },
+  "factory": {
+   "installed": 186,
+   "failures": [],
+   "platform_cert": [
+    "dc30289e0a61447d03c95d15e5acf63e18d109d545a766b1208f6b53cbdcd482"
+   ]
+  },
+  "missing_vs_factory": [],
+  "extra_vs_factory": [],
+  "lost_platform_signature": [
+   "com.android.wallpapercropper",
+   "com.pico.gpudrivers.a650",
+   "com.qti.ltebc",
+   "com.qti.service.colorservice",
+   "com.qualcomm.embms",
+   "com.qualcomm.qti.dynamicddsservice",
+   "com.qualcomm.qti.lpa",
+   "com.qualcomm.qti.performancemode",
+   "com.qualcomm.qti.seccamservice",
+   "com.qualcomm.qti.uim",
+   "com.qualcomm.qti.uimGbaApp",
+   "com.qualcomm.timeservice",
+   "vendor.qti.iwlan"
+  ],
+  "seinfo_changes": {},
+  "not_platform_signed_pico_role": [
+   "android.overlay.common",
+   "android.overlay.target",
+   "android.qvaoverlay.common",
+   "com.android.bluetooth.overlay.common",
+   "com.android.carrierconfig.overlay.common",
+   "com.android.inputmethod.latin",
+   "com.android.phone.overlay.common",
+   "com.android.server.telecom.overlay.common",
+   "com.android.systemui.overlay.common",
+   "com.android.theme.icon_pack.circular.themepicker",
+   "com.android.theme.icon_pack.filled.themepicker",
+   "com.android.wallpapercropper",
+   "com.pico.gpudrivers.a650",
+   "com.qti.ltebc",
+   "com.qti.service.colorservice",
+   "com.qualcomm.embms",
+   "com.qualcomm.qti.dynamicddsservice",
+   "com.qualcomm.qti.lpa",
+   "com.qualcomm.qti.performancemode",
+   "com.qualcomm.qti.seccamservice",
+   "com.qualcomm.qti.uim",
+   "com.qualcomm.qti.uimGbaApp",
+   "com.qualcomm.timeservice",
+   "vendor.qti.iwlan"
+  ]
+ },
+ "java": {
+  "/system/PicoAppCheckPrebuild/PicoAppCheckPrebuild.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6462,
+   "resolved_on_factory": 6329,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/AntHalService/AntHalService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 93,
+   "resolved_on_factory": 93,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/AvatarEditor/AvatarEditor.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10822,
+   "resolved_on_factory": 10525,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/BStreamingAssistant/BStreamingAssistant.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8394,
+   "resolved_on_factory": 8302,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/Bluetooth/Bluetooth.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "javax.obex",
+    "org.apache.http.legacy"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7608,
+   "resolved_on_factory": 7564,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 36,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/BluetoothExt/BluetoothExt.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "javax.obex"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 372,
+   "resolved_on_factory": 372,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 3,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/BluetoothPeripheralService/BluetoothPeripheralService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 4417,
+   "resolved_on_factory": 4411,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 2,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/CarrierDefaultApp/CarrierDefaultApp.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 300,
+   "resolved_on_factory": 300,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/ControllerTest_Phoenix_v2/ControllerTest_Phoenix_v2.apk": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1377,
+   "resolved_on_factory": 1342,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/DeveloperHubService/DeveloperHubService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6599,
+   "resolved_on_factory": 6451,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/EtTest/EtTest.apk": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1380,
+   "resolved_on_factory": 1345,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/FtTest/FtTest.apk": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5836,
+   "resolved_on_factory": 5671,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/Matrix/Matrix.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9474,
+   "resolved_on_factory": 9263,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/PUIMessenger/PUIMessenger.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9400,
+   "resolved_on_factory": 9225,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/PicoFactoryTest3/PicoFactoryTest3.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 4895,
+   "resolved_on_factory": 4887,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 2,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/PicoFeedback/PicoFeedback.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "org.apache.http.legacy"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10348,
+   "resolved_on_factory": 10075,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/PowerOffAlarm/PowerOffAlarm.apk": {
+   "origin": "product-shadow-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 212,
+   "resolved_on_factory": 212,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/PvrManager/PvrManager.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "com.qti.snapdragon.sdk.display"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1928,
+   "resolved_on_factory": 1893,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 3,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/PxrInitSceneOverlay/PxrInitSceneOverlay.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 193,
+   "resolved_on_factory": 193,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 1,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/QColor/QColor.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 183,
+   "resolved_on_factory": 183,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/QdcmFF/QdcmFF.apk": {
+   "origin": "product-shadow-resigned",
+   "dex": true,
+   "uses_library": [
+    "vendor.display.color.V1_0.IDisplayColor"
+   ],
+   "missing_libraries": [
+    "vendor.display.color.V1_0.IDisplayColor"
+   ],
+   "missing_libraries_on_factory_too": [
+    "vendor.display.color.V1_0.IDisplayColor"
+   ],
+   "external_references": 46,
+   "resolved_on_factory": 46,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/SimContact/SimContact.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 4702,
+   "resolved_on_factory": 4699,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 1,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/SlardarOsClient/SlardarOsClient.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 3159,
+   "resolved_on_factory": 3101,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/StreamingAssistant/StreamingAssistant.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8321,
+   "resolved_on_factory": 8229,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/TobUserService/TobUserService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8171,
+   "resolved_on_factory": 8050,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/app/iFlyIME/iFlyIME.apk": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [
+    "org.apache.http.legacy"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5887,
+   "resolved_on_factory": 5780,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/framework/ActivityExt.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 49,
+   "resolved_on_factory": 49,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/ConnectivityExt.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 82,
+   "resolved_on_factory": 82,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 2,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/VendorPropExt.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 113,
+   "resolved_on_factory": 113,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/audiosphere.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 20,
+   "resolved_on_factory": 20,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/com.qti.location.sdk.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 190,
+   "resolved_on_factory": 190,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/com.qti.snapdragon.sdk.display.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 116,
+   "resolved_on_factory": 116,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/izat.xt.srv.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 77,
+   "resolved_on_factory": 77,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/oem-services.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8,
+   "resolved_on_factory": 8,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/qmapbridge.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 77,
+   "resolved_on_factory": 77,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/sys-sharememory.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 157,
+   "resolved_on_factory": 155,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/sys-verifytool.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 88,
+   "resolved_on_factory": 86,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/tcmclient.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 61,
+   "resolved_on_factory": 61,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {}
+  },
+  "/system/framework/wigig-service.jar": {
+   "origin": "factory",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 934,
+   "resolved_on_factory": 864,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 3,
+   "aidl_table_differences": {}
+  },
+  "/system/priv-app/AppManager/AppManager.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8616,
+   "resolved_on_factory": 8530,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/BrowserChrome/BrowserChrome.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "missing_libraries": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "missing_libraries_on_factory_too": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "external_references": 10270,
+   "resolved_on_factory": 10087,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/ControllerUpgrade/ControllerUpgrade.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6216,
+   "resolved_on_factory": 6181,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/EnterpriseAssistant-HMD/EnterpriseAssistant-HMD.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10644,
+   "resolved_on_factory": 10408,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/FileManager/FileManager.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10665,
+   "resolved_on_factory": 10448,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/FirmwareUpdate/FirmwareUpdate.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1424,
+   "resolved_on_factory": 1420,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/InProcessNetworkStack/InProcessNetworkStack.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1162,
+   "resolved_on_factory": 1162,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/InitServer/InitServer.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5321,
+   "resolved_on_factory": 5241,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/LANServer/LANServer.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5990,
+   "resolved_on_factory": 5938,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/LSpace/LSpace.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1598,
+   "resolved_on_factory": 1565,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/LightSeethrough/LightSeethrough.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1389,
+   "resolved_on_factory": 1354,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/MRService/MRService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6224,
+   "resolved_on_factory": 6214,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/OsTeaTracker/OsTeaTracker.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 4133,
+   "resolved_on_factory": 4053,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PVRHome/PVRHome.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9145,
+   "resolved_on_factory": 9007,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PVRVerify/PVRVerify.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5692,
+   "resolved_on_factory": 5573,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PanoramaPlayer/PanoramaPlayer.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1474,
+   "resolved_on_factory": 1438,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PermissionController/PermissionController.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5252,
+   "resolved_on_factory": 5232,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoCast/PicoCast.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7683,
+   "resolved_on_factory": 7580,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoKeyguard/PicoKeyguard.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 865,
+   "resolved_on_factory": 865,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 14,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoLogcatchSettings/PicoLogcatchSettings.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 50,
+   "resolved_on_factory": 50,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoPackageInstaller/PicoPackageInstaller.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6471,
+   "resolved_on_factory": 6467,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 5,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoScreenRecorder/PicoScreenRecorder.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9352,
+   "resolved_on_factory": 9178,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoSettingsProvider/PicoSettingsProvider.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 162,
+   "resolved_on_factory": 162,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PicoSyshub/PicoSyshub.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 524,
+   "resolved_on_factory": 474,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 2,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PvrDevelopmentSettings/PvrDevelopmentSettings.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 3410,
+   "resolved_on_factory": 3407,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 1,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PvrGuide/PvrGuide.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9104,
+   "resolved_on_factory": 8906,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PvrMdm/PvrMdm.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7838,
+   "resolved_on_factory": 7748,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PvrPreview/PvrPreview.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8619,
+   "resolved_on_factory": 8523,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PvrSwift/PvrSwift.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7481,
+   "resolved_on_factory": 7299,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PxrNetworkService/PxrNetworkService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 374,
+   "resolved_on_factory": 374,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 3,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/PxrNotification/PxrNotification.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 151,
+   "resolved_on_factory": 151,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/RoomCapture/RoomCapture.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1455,
+   "resolved_on_factory": 1416,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/SceneManager/SceneManager.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9836,
+   "resolved_on_factory": 9560,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/Settings/Settings.apk": {
+   "origin": "product-shadow-resigned",
+   "dex": true,
+   "uses_library": [
+    "org.apache.http.legacy"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10932,
+   "resolved_on_factory": 10914,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 37,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/SettingsProvider/SettingsProvider.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 835,
+   "resolved_on_factory": 835,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 4,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/ShortcutMenu2/ShortcutMenu2.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7554,
+   "resolved_on_factory": 7523,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/SystemExt/SystemExt.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "com.qti.snapdragon.sdk.display"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7876,
+   "resolved_on_factory": 7758,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 7,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/SystemUpdate2/SystemUpdate2.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5546,
+   "resolved_on_factory": 5481,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/VRETCalib/VRETCalib.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 1428,
+   "resolved_on_factory": 1393,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/VRShell2/VRShell2.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 4928,
+   "resolved_on_factory": 4889,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/VRUserCenter2/VRUserCenter2.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7858,
+   "resolved_on_factory": 7764,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/VersionManager/VersionManager.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8603,
+   "resolved_on_factory": 8557,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/VideoPlayer2/VideoPlayer2.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9159,
+   "resolved_on_factory": 8916,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/WfdService/WfdService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 308,
+   "resolved_on_factory": 308,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/WifiAuthorize/WifiAuthorize.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "org.apache.http.legacy"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 466,
+   "resolved_on_factory": 466,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/XRGuardianService/XRGuardianService.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6220,
+   "resolved_on_factory": 6210,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/XRRuntime/XRRuntime.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 4389,
+   "resolved_on_factory": 4374,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/XRShell/XRShell.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6372,
+   "resolved_on_factory": 6368,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/configserverservice/configserverservice.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 3894,
+   "resolved_on_factory": 3857,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/provision2d/provision2d.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "com.qti.snapdragon.sdk.display"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7548,
+   "resolved_on_factory": 7530,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/pvr_adapter/pvr_adapter.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5352,
+   "resolved_on_factory": 5348,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/pvrfit/pvrfit.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 7751,
+   "resolved_on_factory": 7647,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/seethroughsetting/seethroughsetting.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 2235,
+   "resolved_on_factory": 2200,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/settings/settings.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "com.qti.snapdragon.sdk.display"
+   ],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10030,
+   "resolved_on_factory": 9911,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 2,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/store2d/store2d.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "android.test.runner",
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "missing_libraries": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "missing_libraries_on_factory_too": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "external_references": 10288,
+   "resolved_on_factory": 9950,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 1,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/tobActivate/tobActivate.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 5037,
+   "resolved_on_factory": 4923,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/tobMDM/tobMDM.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 9793,
+   "resolved_on_factory": 9569,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/tobPVRHome/tobPVRHome.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 8695,
+   "resolved_on_factory": 8621,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/tobSettings/tobSettings.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [
+    "com.qti.snapdragon.sdk.display",
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "missing_libraries": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "missing_libraries_on_factory_too": [
+    "androidx.window.extensions",
+    "androidx.window.sidecar"
+   ],
+   "external_references": 6537,
+   "resolved_on_factory": 6491,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 2,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/tobStore/tobStore.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 10045,
+   "resolved_on_factory": 9668,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 1,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  },
+  "/system/priv-app/tobUserCenter/tobUserCenter.apk": {
+   "origin": "factory-resigned",
+   "dex": true,
+   "uses_library": [],
+   "missing_libraries": [],
+   "missing_libraries_on_factory_too": [],
+   "external_references": 6823,
+   "resolved_on_factory": 6724,
+   "unresolved_on_source": [],
+   "aidl_interfaces": 0,
+   "aidl_table_differences": {},
+   "permissions_missing_in_source": []
+  }
+ },
+ "native": {
+  "elf_files": 2182,
+  "with_new_gaps": {
+   "/system/lib64/pppol2tp-android.so": {
+    "origin": "source",
+    "abi": "arm64",
+    "missing": [],
+    "unresolved": [
+     "add_options",
+     "generic_disestablish_ppp",
+     "generic_establish_ppp",
+     "ifunit",
+     "info",
+     "int_option",
+     "lcp_allowoptions",
+     "lcp_wantoptions",
+     "netif_set_mtu",
+     "the_channel"
+    ],
+    "new_missing": [],
+    "new_unresolved": [
+     "add_options",
+     "generic_disestablish_ppp",
+     "generic_establish_ppp",
+     "ifunit",
+     "info",
+     "int_option",
+     "lcp_allowoptions",
+     "lcp_wantoptions",
+     "netif_set_mtu",
+     "the_channel"
+    ]
+   },
+   "/system/lib64/pppopptp-android.so": {
+    "origin": "source",
+    "abi": "arm64",
+    "missing": [],
+    "unresolved": [
+     "add_options",
+     "generic_disestablish_ppp",
+     "generic_establish_ppp",
+     "info",
+     "the_channel"
+    ],
+    "new_missing": [],
+    "new_unresolved": [
+     "add_options",
+     "generic_disestablish_ppp",
+     "generic_establish_ppp",
+     "info",
+     "the_channel"
+    ]
+   }
+  }
+ },
+ "image_checks": {
+  "partition_size": 5704732672,
+  "filesystem_size": 5659738112,
+  "e2fsck_exit_code": 0,
+  "e2fsck_summary": "/: 5715/6880 files (22.6% non-contiguous), 1302796/1381772 blocks",
+  "avb_chain_verified": true,
+  "avb_root_flags": 0,
+  "avb_root_rollback_index": 0,
+  "avb_system_rollback_index": 1617580800,
+  "system_security_patch_property": "2021-04-05",
+  "current_boot_sha256": "475ec054343494e65d7392ded65a5815bc29acc1d797fa17de683bc7e9019dbd",
+  "super_lp_metadata_rebuilt": false
+ }
+}

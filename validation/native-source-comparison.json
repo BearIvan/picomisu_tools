@@ -1,0 +1,497 @@
+{
+  "sources": [
+    {
+      "name": "aosp_10_r47",
+      "repository": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "013eb744f289c70e6d3fe180500d9a414ac55539",
+      "commit_date": "2020-06-30T16:13:07-07:00",
+      "features": {
+        "discarded_buffers": {
+          "label": "BnProducerListener::onBuffersDiscarded",
+          "found": false,
+          "evidence": []
+        },
+        "release_with_fence": {
+          "label": "BnProducerListener::onBufferReleasedWithFence",
+          "found": false,
+          "evidence": []
+        },
+        "display_config_events": {
+          "label": "DisplayEventReceiver(VsyncSource, ConfigChanged)",
+          "found": false,
+          "evidence": []
+        },
+        "surface_listener_connect": {
+          "label": "Surface::connect with SurfaceListener",
+          "found": false,
+          "evidence": []
+        },
+        "attach_with_dataspace": {
+          "label": "Surface::attachAndQueueBufferWithDataspace",
+          "found": false,
+          "evidence": []
+        },
+        "display_flags": {
+          "label": "Transaction::setDisplayFlags",
+          "found": false,
+          "evidence": []
+        },
+        "latch_acquire_slot": {
+          "label": "ConsumerBase::getLatchAcquireSlotLocked",
+          "found": false,
+          "evidence": []
+        },
+        "egl_image_tracker": {
+          "label": "DebugEGLImageTracker::getInstance",
+          "found": false,
+          "evidence": []
+        },
+        "vps_extension": {
+          "label": "SurfaceControl::VpsExtension",
+          "found": false,
+          "evidence": []
+        },
+        "surface_monitor": {
+          "label": "SurfaceMonitor",
+          "found": false,
+          "evidence": []
+        },
+        "surface_client": {
+          "label": "SurfaceClient",
+          "found": false,
+          "evidence": []
+        },
+        "virtual_display_listener": {
+          "label": "VirtualDisplayProducerListener",
+          "found": false,
+          "evidence": []
+        },
+        "producer_vr_query": {
+          "label": "Producer QUERY 10000",
+          "found": false,
+          "evidence": []
+        },
+        "consumer_private_config": {
+          "label": "Consumer transaction 10000",
+          "found": false,
+          "evidence": []
+        }
+      },
+      "matched_api_markers": 0,
+      "marker_count": 14,
+      "full_abi_compatibility_proven": false
+    },
+    {
+      "name": "aosp_10_qpr3",
+      "repository": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "71e1890b755f126274e8225875050c7b785006e4",
+      "commit_date": "2020-05-17T21:10:35+00:00",
+      "features": {
+        "discarded_buffers": {
+          "label": "BnProducerListener::onBuffersDiscarded",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/IProducerListener.cpp",
+              "line": 130,
+              "source_file_sha256": "8672dfe0beea5986a43da2bf03880fad261abc9a3daef6aa5855ac727da97ebc"
+            }
+          ]
+        },
+        "release_with_fence": {
+          "label": "BnProducerListener::onBufferReleasedWithFence",
+          "found": false,
+          "evidence": []
+        },
+        "display_config_events": {
+          "label": "DisplayEventReceiver(VsyncSource, ConfigChanged)",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/DisplayEventReceiver.cpp",
+              "line": 35,
+              "source_file_sha256": "b08438ad71f4e4ecc809ae63c780a665aac6c57911fac2752feda660b06f7de3"
+            }
+          ]
+        },
+        "surface_listener_connect": {
+          "label": "Surface::connect with SurfaceListener",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/Surface.cpp",
+              "line": 1290,
+              "source_file_sha256": "2870ca9ffa7ae182eabe21e07537a2610e018c1249f382b3a4eaea232d59eddc"
+            }
+          ]
+        },
+        "attach_with_dataspace": {
+          "label": "Surface::attachAndQueueBufferWithDataspace",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/Surface.cpp",
+              "line": 1954,
+              "source_file_sha256": "2870ca9ffa7ae182eabe21e07537a2610e018c1249f382b3a4eaea232d59eddc"
+            }
+          ]
+        },
+        "display_flags": {
+          "label": "Transaction::setDisplayFlags",
+          "found": false,
+          "evidence": []
+        },
+        "latch_acquire_slot": {
+          "label": "ConsumerBase::getLatchAcquireSlotLocked",
+          "found": false,
+          "evidence": []
+        },
+        "egl_image_tracker": {
+          "label": "DebugEGLImageTracker::getInstance",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/DebugEGLImageTracker.cpp",
+              "line": 57,
+              "source_file_sha256": "59ef09b182e23b5f484f9ac4caabbf278abdedaf123147aca4c2782af4ea3aa1"
+            }
+          ]
+        },
+        "vps_extension": {
+          "label": "SurfaceControl::VpsExtension",
+          "found": false,
+          "evidence": []
+        },
+        "surface_monitor": {
+          "label": "SurfaceMonitor",
+          "found": false,
+          "evidence": []
+        },
+        "surface_client": {
+          "label": "SurfaceClient",
+          "found": false,
+          "evidence": []
+        },
+        "virtual_display_listener": {
+          "label": "VirtualDisplayProducerListener",
+          "found": false,
+          "evidence": []
+        },
+        "producer_vr_query": {
+          "label": "Producer QUERY 10000",
+          "found": false,
+          "evidence": []
+        },
+        "consumer_private_config": {
+          "label": "Consumer transaction 10000",
+          "found": false,
+          "evidence": []
+        }
+      },
+      "matched_api_markers": 5,
+      "marker_count": 14,
+      "full_abi_compatibility_proven": false
+    },
+    {
+      "name": "qualcomm_q",
+      "repository": "https://git.codelinaro.org/clo/la/platform/frameworks/native.git",
+      "commit": "bf08d9a8a251099a2735b6f69fdae315d44015da",
+      "commit_date": "2020-08-26T22:03:30+00:00",
+      "features": {
+        "discarded_buffers": {
+          "label": "BnProducerListener::onBuffersDiscarded",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/IProducerListener.cpp",
+              "line": 130,
+              "source_file_sha256": "8672dfe0beea5986a43da2bf03880fad261abc9a3daef6aa5855ac727da97ebc"
+            }
+          ]
+        },
+        "release_with_fence": {
+          "label": "BnProducerListener::onBufferReleasedWithFence",
+          "found": false,
+          "evidence": []
+        },
+        "display_config_events": {
+          "label": "DisplayEventReceiver(VsyncSource, ConfigChanged)",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/DisplayEventReceiver.cpp",
+              "line": 35,
+              "source_file_sha256": "b08438ad71f4e4ecc809ae63c780a665aac6c57911fac2752feda660b06f7de3"
+            }
+          ]
+        },
+        "surface_listener_connect": {
+          "label": "Surface::connect with SurfaceListener",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/Surface.cpp",
+              "line": 1290,
+              "source_file_sha256": "2870ca9ffa7ae182eabe21e07537a2610e018c1249f382b3a4eaea232d59eddc"
+            }
+          ]
+        },
+        "attach_with_dataspace": {
+          "label": "Surface::attachAndQueueBufferWithDataspace",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/Surface.cpp",
+              "line": 1954,
+              "source_file_sha256": "2870ca9ffa7ae182eabe21e07537a2610e018c1249f382b3a4eaea232d59eddc"
+            }
+          ]
+        },
+        "display_flags": {
+          "label": "Transaction::setDisplayFlags",
+          "found": false,
+          "evidence": []
+        },
+        "latch_acquire_slot": {
+          "label": "ConsumerBase::getLatchAcquireSlotLocked",
+          "found": false,
+          "evidence": []
+        },
+        "egl_image_tracker": {
+          "label": "DebugEGLImageTracker::getInstance",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/DebugEGLImageTracker.cpp",
+              "line": 57,
+              "source_file_sha256": "59ef09b182e23b5f484f9ac4caabbf278abdedaf123147aca4c2782af4ea3aa1"
+            }
+          ]
+        },
+        "vps_extension": {
+          "label": "SurfaceControl::VpsExtension",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/SurfaceControl.cpp",
+              "line": 213,
+              "source_file_sha256": "fdad12ef7c56ab7a02375d49293791e13cdf316315449637ba27fdd29112b045"
+            }
+          ]
+        },
+        "surface_monitor": {
+          "label": "SurfaceMonitor",
+          "found": false,
+          "evidence": []
+        },
+        "surface_client": {
+          "label": "SurfaceClient",
+          "found": false,
+          "evidence": []
+        },
+        "virtual_display_listener": {
+          "label": "VirtualDisplayProducerListener",
+          "found": false,
+          "evidence": []
+        },
+        "producer_vr_query": {
+          "label": "Producer QUERY 10000",
+          "found": false,
+          "evidence": []
+        },
+        "consumer_private_config": {
+          "label": "Consumer transaction 10000",
+          "found": false,
+          "evidence": []
+        }
+      },
+      "matched_api_markers": 6,
+      "marker_count": 14,
+      "full_abi_compatibility_proven": false
+    },
+    {
+      "name": "aosp_11_r1",
+      "repository": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "b8293fd0e0fdf278b0adc7315bf04fafd48b9ca7",
+      "commit_date": "2020-07-18T01:00:48+00:00",
+      "features": {
+        "discarded_buffers": {
+          "label": "BnProducerListener::onBuffersDiscarded",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/IProducerListener.cpp",
+              "line": 128,
+              "source_file_sha256": "42c82f6468eb6178f2a8de7b29359a6354db66a0808d0d78dfe4415330cd560e"
+            }
+          ]
+        },
+        "release_with_fence": {
+          "label": "BnProducerListener::onBufferReleasedWithFence",
+          "found": false,
+          "evidence": []
+        },
+        "display_config_events": {
+          "label": "DisplayEventReceiver(VsyncSource, ConfigChanged)",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/DisplayEventReceiver.cpp",
+              "line": 35,
+              "source_file_sha256": "5b3424407f1f8d9c7db3386a71c63bbe600079880bf309fda3fbe0fedb4fecfb"
+            }
+          ]
+        },
+        "surface_listener_connect": {
+          "label": "Surface::connect with SurfaceListener",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/Surface.cpp",
+              "line": 1524,
+              "source_file_sha256": "03c2e06c8b67d18a8516881b8c5c2e592b5744d58df12c67aeb1989df5c625bd"
+            }
+          ]
+        },
+        "attach_with_dataspace": {
+          "label": "Surface::attachAndQueueBufferWithDataspace",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/Surface.cpp",
+              "line": 2187,
+              "source_file_sha256": "03c2e06c8b67d18a8516881b8c5c2e592b5744d58df12c67aeb1989df5c625bd"
+            }
+          ]
+        },
+        "display_flags": {
+          "label": "Transaction::setDisplayFlags",
+          "found": false,
+          "evidence": []
+        },
+        "latch_acquire_slot": {
+          "label": "ConsumerBase::getLatchAcquireSlotLocked",
+          "found": false,
+          "evidence": []
+        },
+        "egl_image_tracker": {
+          "label": "DebugEGLImageTracker::getInstance",
+          "found": true,
+          "evidence": [
+            {
+              "path": "libs/gui/DebugEGLImageTracker.cpp",
+              "line": 58,
+              "source_file_sha256": "a027e7e6d154dd02588934f8b88e08ebcecad10df66145a8a76bd262d05add53"
+            }
+          ]
+        },
+        "vps_extension": {
+          "label": "SurfaceControl::VpsExtension",
+          "found": false,
+          "evidence": []
+        },
+        "surface_monitor": {
+          "label": "SurfaceMonitor",
+          "found": false,
+          "evidence": []
+        },
+        "surface_client": {
+          "label": "SurfaceClient",
+          "found": false,
+          "evidence": []
+        },
+        "virtual_display_listener": {
+          "label": "VirtualDisplayProducerListener",
+          "found": false,
+          "evidence": []
+        },
+        "producer_vr_query": {
+          "label": "Producer QUERY 10000",
+          "found": false,
+          "evidence": []
+        },
+        "consumer_private_config": {
+          "label": "Consumer transaction 10000",
+          "found": false,
+          "evidence": []
+        }
+      },
+      "matched_api_markers": 5,
+      "marker_count": 14,
+      "full_abi_compatibility_proven": false
+    }
+  ],
+  "differences": {
+    "aosp_10_r47..qualcomm_q": {
+      "libgui_numstat": [
+        "18\t6\tlibs/gui/Android.bp",
+        "7\t3\tlibs/gui/BufferQueueConsumer.cpp",
+        "7\t0\tlibs/gui/BufferQueueCore.cpp",
+        "11\t3\tlibs/gui/BufferQueueProducer.cpp",
+        "98\t0\tlibs/gui/DebugEGLImageTracker.cpp",
+        "3\t2\tlibs/gui/DisplayEventReceiver.cpp",
+        "4\t0\tlibs/gui/FrameTimestamps.cpp",
+        "6\t0\tlibs/gui/GLConsumer.cpp",
+        "26\t0\tlibs/gui/IProducerListener.cpp",
+        "9\t5\tlibs/gui/ISurfaceComposer.cpp",
+        "60\t1\tlibs/gui/Surface.cpp",
+        "54\t1\tlibs/gui/SurfaceControl.cpp",
+        "5\t1\tlibs/gui/include/gui/BufferQueueCore.h",
+        "44\t0\tlibs/gui/include/gui/DebugEGLImageTracker.h",
+        "4\t1\tlibs/gui/include/gui/DisplayEventReceiver.h",
+        "6\t0\tlibs/gui/include/gui/IProducerListener.h",
+        "5\t2\tlibs/gui/include/gui/ISurfaceComposer.h",
+        "46\t1\tlibs/gui/include/gui/Surface.h",
+        "18\t0\tlibs/gui/include/gui/SurfaceControl.h",
+        "27\t1\tlibs/gui/tests/BufferQueue_test.cpp",
+        "15\t59\tlibs/gui/tests/EndToEndNativeInputTest.cpp",
+        "129\t3\tlibs/gui/tests/Surface_test.cpp"
+      ],
+      "bufferitem_cpp_identical": true
+    },
+    "aosp_10_qpr3..qualcomm_q": {
+      "libgui_numstat": [
+        "17\t6\tlibs/gui/Android.bp",
+        "4\t0\tlibs/gui/FrameTimestamps.cpp",
+        "54\t1\tlibs/gui/SurfaceControl.cpp",
+        "18\t0\tlibs/gui/include/gui/SurfaceControl.h",
+        "5\t1\tlibs/gui/tests/EndToEndNativeInputTest.cpp"
+      ],
+      "bufferitem_cpp_identical": true
+    }
+  },
+  "qualcomm_same_commit_tag_refs": [
+    "refs/tags/LA.UM.8.12.c3-52600-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-54500-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-55500-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-57800-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-59300-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-60700-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-62300-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-63000-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-64200-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-64900-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-66000-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-66800-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-67500-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-68300-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-69200-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-70100-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-70800-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-71800-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-72900-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-73900-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-75100-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-75900-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-76600-sm8250.0^{}",
+    "refs/tags/LA.UM.8.12.c3-77400-sm8250.0^{}"
+  ],
+  "scope": "Selected source API definitions and signature shapes; no candidate ABI rebuild",
+  "pico_evidence": [
+    "validation/libgui-abi.json",
+    "reports/framework-bridge/producer-protocol.json",
+    "reports/framework-bridge/bufferqueue-status-references.json"
+  ],
+  "build_tree_modified": false,
+  "headset_modified": false
+}

@@ -1,0 +1,3 @@
+{
+ "Lcom/android/bluetooth/gatt/GattService;": "Source packages/apps/Bluetooth (kept compilable as the fallback stack) matches the factory IBluetoothLeCallback notifications in registerClient/registerServer/unregisterClient/unregisterServer; the only difference is the DBG logging, which is a compile-time false constant in Source and a non-final static in the factory APK. The image ships the factory Bluetooth.apk."
+}

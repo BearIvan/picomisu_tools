@@ -1,0 +1,604 @@
+{
+ "android.app.IDataListener": {
+  "jar": "framework.jar",
+  "methods": 2,
+  "transactions": {
+   "onInfoChange": 1,
+   "onServerDied": 2
+  },
+  "signatures": {
+   "1": "onInfoChange(IILandroid/app/SceneData;)V",
+   "2": "onServerDied()V"
+  },
+  "oneway": [
+   "onInfoChange",
+   "onServerDied"
+  ]
+ },
+ "android.app.IFreezeManager": {
+  "jar": "framework.jar",
+  "methods": 3,
+  "transactions": {
+   "freezeUid": 3,
+   "registerUnFreezeListener": 1,
+   "unRegisterUnFreezeListener": 2
+  },
+  "signatures": {
+   "3": "freezeUid(I)V",
+   "1": "registerUnFreezeListener(ILandroid/app/IUnFreezeCallback;Z)V",
+   "2": "unRegisterUnFreezeListener(ILandroid/app/IUnFreezeCallback;)V"
+  },
+  "oneway": []
+ },
+ "android.app.IPrefetchCallback": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "onRealStart": 1
+  },
+  "signatures": {
+   "1": "onRealStart(I)V"
+  },
+  "oneway": [
+   "onRealStart"
+  ]
+ },
+ "android.app.IPrefetchManager": {
+  "jar": "framework.jar",
+  "methods": 4,
+  "transactions": {
+   "isPrefetch": 4,
+   "registerPrefetchObserver": 2,
+   "registerStartPrefetchListener": 1,
+   "unregisterPrefetchObserver": 3
+  },
+  "signatures": {
+   "4": "isPrefetch(Ljava/lang/String;)Z",
+   "2": "registerPrefetchObserver(Landroid/app/IPrefetchObserver;)V",
+   "1": "registerStartPrefetchListener(Landroid/app/IPrefetchCallback;)V",
+   "3": "unregisterPrefetchObserver(Landroid/app/IPrefetchObserver;)V"
+  },
+  "oneway": []
+ },
+ "android.app.IPrefetchObserver": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "onPrefetchKilled": 1
+  },
+  "signatures": {
+   "1": "onPrefetchKilled(Landroid/app/PrefetchInfo;)V"
+  },
+  "oneway": [
+   "onPrefetchKilled"
+  ]
+ },
+ "android.app.ISceneInfoManager": {
+  "jar": "framework.jar",
+  "methods": 6,
+  "transactions": {
+   "getTypeLastReport": 6,
+   "registerListener": 3,
+   "reportData": 1,
+   "reportDataInfo": 2,
+   "unRegisterListener": 5,
+   "unRegisterListenerType": 4
+  },
+  "signatures": {
+   "6": "getTypeLastReport(I)Landroid/app/SceneData;",
+   "3": "registerListener(ILandroid/app/IDataListener;Ljava/lang/String;)Z",
+   "1": "reportData(II)Z",
+   "2": "reportDataInfo(IILandroid/app/SceneData;)Z",
+   "5": "unRegisterListener(Landroid/app/IDataListener;)Z",
+   "4": "unRegisterListenerType(ILandroid/app/IDataListener;)Z"
+  },
+  "oneway": []
+ },
+ "android.app.IUnFreezeCallback": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "onUnFreeze": 1
+  },
+  "signatures": {
+   "1": "onUnFreeze(I)V"
+  },
+  "oneway": [
+   "onUnFreeze"
+  ]
+ },
+ "android.os.IPowerAdvisor": {
+  "jar": "framework.jar",
+  "methods": 15,
+  "transactions": {
+   "disableWifi": 14,
+   "enableWifi": 13,
+   "enterEnduranceMode": 11,
+   "getDefaultWhitelist": 3,
+   "getLongTimeNoResumeDay": 5,
+   "inPowerCheckBlacklist": 7,
+   "isSleepModeSupport": 9,
+   "notePowerSceneState": 12,
+   "noteSystemState": 15,
+   "notifyLockFreqState": 10,
+   "notifyLongTimeNoResumeApp": 6,
+   "updateAppLaunchPrediction": 1,
+   "updateDefaultWhitelist": 2,
+   "updateSleepPrediction": 8,
+   "userSelectedWhitelistApp": 4
+  },
+  "signatures": {
+   "14": "disableWifi(Ljava/lang/String;)V",
+   "13": "enableWifi(Ljava/lang/String;I)Z",
+   "11": "enterEnduranceMode(Ljava/util/Map;)V",
+   "3": "getDefaultWhitelist()[Ljava/lang/String;",
+   "5": "getLongTimeNoResumeDay()I",
+   "7": "inPowerCheckBlacklist(Ljava/lang/String;I)Z",
+   "9": "isSleepModeSupport()Z",
+   "12": "notePowerSceneState(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V",
+   "15": "noteSystemState(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+   "10": "notifyLockFreqState(Z)V",
+   "6": "notifyLongTimeNoResumeApp([Ljava/lang/String;)V",
+   "1": "updateAppLaunchPrediction([Ljava/lang/String;[I[F)V",
+   "2": "updateDefaultWhitelist([Ljava/lang/String;)V",
+   "8": "updateSleepPrediction(IF)V",
+   "4": "userSelectedWhitelistApp(Ljava/lang/String;)V"
+  },
+  "oneway": [
+   "notePowerSceneState",
+   "noteSystemState"
+  ]
+ },
+ "com.android.internal.app.ITransferServer": {
+  "jar": "framework.jar",
+  "methods": 31,
+  "transactions": {
+   "chmodSyslogDir": 22,
+   "dumpPerfetto": 13,
+   "dumpPerfettoFromMTP": 16,
+   "dumpSchedInfoFromMTP": 28,
+   "dumpSystemInfo": 17,
+   "getGPUInfo": 27,
+   "getGPULoad": 29,
+   "getGPUPeak": 25,
+   "getGPUUtilization": 24,
+   "getMuduleEventInfo": 21,
+   "reportAlarm": 1,
+   "reportAlgCostBad": 11,
+   "reportAppMainTerribleMsg": 8,
+   "reportEvent": 20,
+   "reportFirstFrameCompleted": 10,
+   "reportFocusAppChanged": 19,
+   "reportFps": 5,
+   "reportGameBalanceConfig": 2,
+   "reportGameBalanceFps": 3,
+   "reportInputHang": 6,
+   "reportJunk": 4,
+   "reportThreadTID": 23,
+   "reportUnityFpsList": 9,
+   "reportVSTStatus": 31,
+   "requestGameAtrace": 7,
+   "setPerfettoStatusForLab": 26,
+   "startPerfetto": 12,
+   "startPerfettoForce": 14,
+   "startPerfettoFromMTP": 15,
+   "startPerfettoFromUserReport": 18,
+   "updateAppDisplayRefresh": 30
+  },
+  "signatures": {
+   "22": "chmodSyslogDir()V",
+   "13": "dumpPerfetto(Ljava/lang/String;)V",
+   "16": "dumpPerfettoFromMTP(Ljava/lang/String;IIIIZZJ)I",
+   "28": "dumpSchedInfoFromMTP(IIII)I",
+   "17": "dumpSystemInfo(Ljava/lang/String;IIII)I",
+   "27": "getGPUInfo()[I",
+   "29": "getGPULoad()I",
+   "25": "getGPUPeak()F",
+   "24": "getGPUUtilization(II)F",
+   "21": "getMuduleEventInfo(I)[F",
+   "1": "reportAlarm(IIIIIJJJLjava/lang/String;I)V",
+   "11": "reportAlgCostBad(II)V",
+   "8": "reportAppMainTerribleMsg(Ljava/util/List;IJ)V",
+   "20": "reportEvent(IIFILjava/lang/String;I[J)V",
+   "10": "reportFirstFrameCompleted(IJ)V",
+   "19": "reportFocusAppChanged(Ljava/lang/String;)V",
+   "5": "reportFps(IDLjava/lang/String;IJI)V",
+   "2": "reportGameBalanceConfig(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DD)V",
+   "3": "reportGameBalanceFps(Ljava/lang/String;Ljava/lang/String;)V",
+   "6": "reportInputHang(Ljava/util/List;[FJ)V",
+   "4": "reportJunk(IIIJJJLjava/lang/String;)V",
+   "23": "reportThreadTID(IILjava/lang/String;)V",
+   "9": "reportUnityFpsList(I[II)V",
+   "31": "reportVSTStatus(II)V",
+   "7": "requestGameAtrace(Ljava/lang/String;)V",
+   "26": "setPerfettoStatusForLab(Ljava/lang/String;IIII)I",
+   "12": "startPerfetto(I)V",
+   "14": "startPerfettoForce(I)V",
+   "15": "startPerfettoFromMTP(Ljava/lang/String;IIIIZ)I",
+   "18": "startPerfettoFromUserReport(Ljava/lang/String;)V",
+   "30": "updateAppDisplayRefresh(Ljava/lang/String;IFFZ)V"
+  },
+  "oneway": [
+   "chmodSyslogDir",
+   "dumpPerfetto",
+   "reportAlarm",
+   "reportAlgCostBad",
+   "reportAppMainTerribleMsg",
+   "reportEvent",
+   "reportFirstFrameCompleted",
+   "reportFocusAppChanged",
+   "reportFps",
+   "reportGameBalanceConfig",
+   "reportGameBalanceFps",
+   "reportInputHang",
+   "reportJunk",
+   "reportThreadTID",
+   "reportUnityFpsList",
+   "reportVSTStatus",
+   "requestGameAtrace",
+   "startPerfetto",
+   "startPerfettoForce",
+   "startPerfettoFromUserReport",
+   "updateAppDisplayRefresh"
+  ]
+ },
+ "com.android.internal.policy.IKeyguardFaceIDVerifyCallback": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "onFaceAuthenticationSucceeded": 1
+  },
+  "signatures": {
+   "1": "onFaceAuthenticationSucceeded()V"
+  },
+  "oneway": [
+   "onFaceAuthenticationSucceeded"
+  ]
+ },
+ "com.android.internal.policy.IKeyguardFingerprintVerifyCallback": {
+  "jar": "framework.jar",
+  "methods": 5,
+  "transactions": {
+   "onAuthenticationAcquired": 5,
+   "onAuthenticationError": 4,
+   "onAuthenticationFailed": 1,
+   "onAuthenticationHelp": 3,
+   "onAuthenticationSucceeded": 2
+  },
+  "signatures": {
+   "5": "onAuthenticationAcquired(I)V",
+   "4": "onAuthenticationError(ILjava/lang/CharSequence;)V",
+   "1": "onAuthenticationFailed()V",
+   "3": "onAuthenticationHelp(ILjava/lang/CharSequence;)V",
+   "2": "onAuthenticationSucceeded()V"
+  },
+  "oneway": [
+   "onAuthenticationAcquired",
+   "onAuthenticationError",
+   "onAuthenticationFailed",
+   "onAuthenticationHelp",
+   "onAuthenticationSucceeded"
+  ]
+ },
+ "com.android.internal.policy.IKeyguardVerifyCallback": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "onKeyguardVerifyResult": 1
+  },
+  "signatures": {
+   "1": "onKeyguardVerifyResult(ZI)V"
+  },
+  "oneway": [
+   "onKeyguardVerifyResult"
+  ]
+ },
+ "android.content.pm.IPackageManagerMonitorEx": {
+  "jar": "framework.jar",
+  "methods": 0,
+  "transactions": {},
+  "signatures": {},
+  "oneway": []
+ },
+ "android.os.IDeviceIdleControllerSmtEx": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "setDozeMode": 1
+  },
+  "signatures": {
+   "1": "setDozeMode(ZZ)V"
+  },
+  "oneway": []
+ },
+ "android.dvr.IVirtualInputService": {
+  "jar": "framework.jar",
+  "methods": 14,
+  "transactions": {
+   "attachDevice": 2,
+   "attachInitDevice": 16,
+   "axis": 18,
+   "buttonState": 8,
+   "createDevice": 3,
+   "destoryDevice": 5,
+   "key": 10,
+   "mouse": 11,
+   "mouseClick": 12,
+   "mouseMove": 13,
+   "scale": 14,
+   "scroll": 9,
+   "singleTouch": 7,
+   "touch": 6
+  },
+  "signatures": {
+   "2": "attachDevice(Landroid/os/IBinder;II)V",
+   "16": "attachInitDevice(Landroid/os/IBinder;IIII)V",
+   "18": "axis(IIF)V",
+   "8": "buttonState(II)V",
+   "3": "createDevice(Landroid/os/IBinder;I)I",
+   "5": "destoryDevice(I)V",
+   "10": "key(III)V",
+   "11": "mouse(IIIFF)V",
+   "12": "mouseClick(III)V",
+   "13": "mouseMove(IFF)V",
+   "14": "scale(IF)V",
+   "9": "scroll(IFF)V",
+   "7": "singleTouch(IFFI)V",
+   "6": "touch(IFFFI)V"
+  },
+  "oneway": [
+   "attachDevice",
+   "attachInitDevice",
+   "axis",
+   "buttonState",
+   "destoryDevice",
+   "key",
+   "mouse",
+   "mouseClick",
+   "mouseMove",
+   "scale",
+   "scroll",
+   "singleTouch",
+   "touch"
+  ]
+ },
+ "android.pc.ISmtPCManager": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "getCurrentExtDisplayId": 1
+  },
+  "signatures": {
+   "1": "getCurrentExtDisplayId()I"
+  },
+  "oneway": []
+ },
+ "com.android.internal.app.ISysTransServer": {
+  "jar": "framework.jar",
+  "methods": 6,
+  "transactions": {
+   "getCalculationConfig": 4,
+   "notifyDisplayFpsResult": 2,
+   "notifyDisplayTpResult": 3,
+   "notifyVirtualDisplaySurfaceChanged": 6,
+   "requestChangeDisplayFps": 1,
+   "setProcessRunningCpuset": 5
+  },
+  "signatures": {
+   "4": "getCalculationConfig()[I",
+   "2": "notifyDisplayFpsResult(III)V",
+   "3": "notifyDisplayTpResult(III)V",
+   "6": "notifyVirtualDisplaySurfaceChanged(ILjava/lang/String;)V",
+   "1": "requestChangeDisplayFps(III)V",
+   "5": "setProcessRunningCpuset(IIJZ)V"
+  },
+  "oneway": [
+   "notifyDisplayFpsResult",
+   "notifyDisplayTpResult",
+   "notifyVirtualDisplaySurfaceChanged",
+   "requestChangeDisplayFps",
+   "setProcessRunningCpuset"
+  ]
+ },
+ "com.android.internal.car.ICarStatsService": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "pullData": 1
+  },
+  "signatures": {
+   "1": "pullData(I)[Landroid/os/StatsLogEventWrapper;"
+  },
+  "oneway": []
+ },
+ "android.app.IBackupAgent": {
+  "jar": "framework.jar",
+  "methods": 8,
+  "transactions": {
+   "doBackup": 1,
+   "doFullBackup": 3,
+   "doMeasureFullBackup": 4,
+   "doQuotaExceeded": 5,
+   "doRestore": 2,
+   "doRestoreFile": 6,
+   "doRestoreFinished": 7,
+   "fail": 8
+  },
+  "signatures": {
+   "1": "doBackup(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;JLandroid/app/backup/IBackupCallback;I)V",
+   "3": "doFullBackup(Landroid/os/ParcelFileDescriptor;JILandroid/app/backup/IBackupManager;ILjava/util/List;Ljava/util/List;)V",
+   "4": "doMeasureFullBackup(JILandroid/app/backup/IBackupManager;I)V",
+   "5": "doQuotaExceeded(JJLandroid/app/backup/IBackupCallback;)V",
+   "2": "doRestore(Landroid/os/ParcelFileDescriptor;JLandroid/os/ParcelFileDescriptor;ILandroid/app/backup/IBackupManager;)V",
+   "6": "doRestoreFile(Landroid/os/ParcelFileDescriptor;JILjava/lang/String;Ljava/lang/String;JJILandroid/app/backup/IBackupManager;)V",
+   "7": "doRestoreFinished(ILandroid/app/backup/IBackupManager;)V",
+   "8": "fail(Ljava/lang/String;)V"
+  },
+  "oneway": [
+   "doBackup",
+   "doFullBackup",
+   "doMeasureFullBackup",
+   "doQuotaExceeded",
+   "doRestore",
+   "doRestoreFile",
+   "doRestoreFinished",
+   "fail"
+  ]
+ },
+ "android.bluetooth.IBluetoothPan": {
+  "jar": "framework.jar",
+  "methods": 7,
+  "transactions": {
+   "connect": 3,
+   "disconnect": 4,
+   "getConnectedDevices": 5,
+   "getConnectionState": 7,
+   "getDevicesMatchingConnectionStates": 6,
+   "isTetheringOn": 1,
+   "setBluetoothTethering": 2
+  },
+  "signatures": {
+   "3": "connect(Landroid/bluetooth/BluetoothDevice;)Z",
+   "4": "disconnect(Landroid/bluetooth/BluetoothDevice;)Z",
+   "5": "getConnectedDevices()Ljava/util/List;",
+   "7": "getConnectionState(Landroid/bluetooth/BluetoothDevice;)I",
+   "6": "getDevicesMatchingConnectionStates([I)Ljava/util/List;",
+   "1": "isTetheringOn()Z",
+   "2": "setBluetoothTethering(ZLjava/lang/String;)V"
+  },
+  "oneway": []
+ },
+ "android.net.INetworkStatsService": {
+  "jar": "framework.jar",
+  "methods": 13,
+  "transactions": {
+   "forceUpdate": 8,
+   "forceUpdateIfaces": 7,
+   "getDataLayerSnapshotForUid": 3,
+   "getDetailedUidStats": 4,
+   "getIfaceStats": 12,
+   "getMobileIfaces": 5,
+   "getTotalStats": 13,
+   "getUidStats": 11,
+   "incrementOperationCount": 6,
+   "openSession": 1,
+   "openSessionForUsageStats": 2,
+   "registerUsageCallback": 9,
+   "unregisterUsageRequest": 10
+  },
+  "signatures": {
+   "8": "forceUpdate()V",
+   "7": "forceUpdateIfaces([Landroid/net/Network;[Landroid/net/NetworkState;Ljava/lang/String;)V",
+   "3": "getDataLayerSnapshotForUid(I)Landroid/net/NetworkStats;",
+   "4": "getDetailedUidStats([Ljava/lang/String;)Landroid/net/NetworkStats;",
+   "12": "getIfaceStats(Ljava/lang/String;I)J",
+   "5": "getMobileIfaces()[Ljava/lang/String;",
+   "13": "getTotalStats(I)J",
+   "11": "getUidStats(II)J",
+   "6": "incrementOperationCount(III)V",
+   "1": "openSession()Landroid/net/INetworkStatsSession;",
+   "2": "openSessionForUsageStats(ILjava/lang/String;)Landroid/net/INetworkStatsSession;",
+   "9": "registerUsageCallback(Ljava/lang/String;Landroid/net/DataUsageRequest;Landroid/os/Messenger;Landroid/os/IBinder;)Landroid/net/DataUsageRequest;",
+   "10": "unregisterUsageRequest(Landroid/net/DataUsageRequest;)V"
+  },
+  "oneway": []
+ },
+ "android.os.IStatsManager": {
+  "jar": "framework.jar",
+  "methods": 25,
+  "transactions": {
+   "addConfiguration": 12,
+   "getData": 10,
+   "getMetadata": 11,
+   "getRegisteredExperimentIds": 25,
+   "informAlarmForSubscriberTriggeringFired": 5,
+   "informAllUidData": 7,
+   "informAnomalyAlarmFired": 3,
+   "informDeviceShutdown": 6,
+   "informOnePackage": 8,
+   "informOnePackageRemoved": 9,
+   "informPollAlarmFired": 4,
+   "registerPullerCallback": 21,
+   "removeActiveConfigsChangedOperation": 16,
+   "removeConfiguration": 17,
+   "removeDataFetchOperation": 14,
+   "sendAppBreadcrumbAtom": 20,
+   "sendBinaryPushStateChangedAtom": 23,
+   "sendWatchdogRollbackOccurredAtom": 24,
+   "setActiveConfigsChangedOperation": 15,
+   "setBroadcastSubscriber": 18,
+   "setDataFetchOperation": 13,
+   "statsCompanionReady": 2,
+   "systemRunning": 1,
+   "unregisterPullerCallback": 22,
+   "unsetBroadcastSubscriber": 19
+  },
+  "signatures": {
+   "12": "addConfiguration(J[BLjava/lang/String;)V",
+   "10": "getData(JLjava/lang/String;)[B",
+   "11": "getMetadata(Ljava/lang/String;)[B",
+   "25": "getRegisteredExperimentIds()[J",
+   "5": "informAlarmForSubscriberTriggeringFired()V",
+   "7": "informAllUidData(Landroid/os/ParcelFileDescriptor;)V",
+   "3": "informAnomalyAlarmFired()V",
+   "6": "informDeviceShutdown()V",
+   "8": "informOnePackage(Ljava/lang/String;IJLjava/lang/String;Ljava/lang/String;)V",
+   "9": "informOnePackageRemoved(Ljava/lang/String;I)V",
+   "4": "informPollAlarmFired()V",
+   "21": "registerPullerCallback(ILandroid/os/IStatsPullerCallback;Ljava/lang/String;)V",
+   "16": "removeActiveConfigsChangedOperation(Ljava/lang/String;)V",
+   "17": "removeConfiguration(JLjava/lang/String;)V",
+   "14": "removeDataFetchOperation(JLjava/lang/String;)V",
+   "20": "sendAppBreadcrumbAtom(II)V",
+   "23": "sendBinaryPushStateChangedAtom(Ljava/lang/String;JII[J)V",
+   "24": "sendWatchdogRollbackOccurredAtom(ILjava/lang/String;JILjava/lang/String;)V",
+   "15": "setActiveConfigsChangedOperation(Landroid/os/IBinder;Ljava/lang/String;)[J",
+   "18": "setBroadcastSubscriber(JJLandroid/os/IBinder;Ljava/lang/String;)V",
+   "13": "setDataFetchOperation(JLandroid/os/IBinder;Ljava/lang/String;)V",
+   "2": "statsCompanionReady()V",
+   "1": "systemRunning()V",
+   "22": "unregisterPullerCallback(ILjava/lang/String;)V",
+   "19": "unsetBroadcastSubscriber(JJLjava/lang/String;)V"
+  },
+  "oneway": [
+   "informAllUidData",
+   "informOnePackage",
+   "informOnePackageRemoved",
+   "registerPullerCallback",
+   "sendBinaryPushStateChangedAtom",
+   "sendWatchdogRollbackOccurredAtom",
+   "systemRunning",
+   "unregisterPullerCallback"
+  ]
+ },
+ "android.os.IVibratorService": {
+  "jar": "framework.jar",
+  "methods": 4,
+  "transactions": {
+   "cancelVibrate": 4,
+   "hasAmplitudeControl": 2,
+   "hasVibrator": 1,
+   "vibrate": 3
+  },
+  "signatures": {
+   "4": "cancelVibrate(Landroid/os/IBinder;)V",
+   "2": "hasAmplitudeControl()Z",
+   "1": "hasVibrator()Z",
+   "3": "vibrate(ILjava/lang/String;Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;Ljava/lang/String;Landroid/os/IBinder;)V"
+  },
+  "oneway": []
+ },
+ "android.view.ISystemGestureExclusionListener": {
+  "jar": "framework.jar",
+  "methods": 1,
+  "transactions": {
+   "onSystemGestureExclusionChanged": 1
+  },
+  "signatures": {
+   "1": "onSystemGestureExclusionChanged(ILandroid/graphics/Region;Landroid/graphics/Region;)V"
+  },
+  "oneway": [
+   "onSystemGestureExclusionChanged"
+  ]
+ }
+}

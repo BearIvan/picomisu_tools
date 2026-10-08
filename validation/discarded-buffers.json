@@ -1,0 +1,26 @@
+{
+  "native_commit": "1f5565e7530f6055613a04d4a46996132ca5ddf2",
+  "donor_commit": "71e1890b755f126274e8225875050c7b785006e4",
+  "build_exit_code": 0,
+  "tests_passed": {
+    "arm": 22,
+    "arm64": 22
+  },
+  "factory_transaction_verified": 3,
+  "used_missing_symbols_before": 21,
+  "used_missing_symbols_after": 19,
+  "surface_vtable_size_matches_factory": true,
+  "libgui_sha256": {
+    "arm": "0a7d25655cadbb5ee726a6b261e7443a8324481e35e4d45e14f55c45a923d39f",
+    "arm64": "7e989010c6894142a200b04a3ab138e2af73b298f092be32ecce4af968e79734"
+  },
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "factory_vr_services_replaced": false,
+  "actual_rendered_frames_tested": false,
+  "legacy_hidl_discarded_event_defined": false,
+  "full_abi_compatibility_proven": false,
+  "factory_protocol_abi": 64
+}

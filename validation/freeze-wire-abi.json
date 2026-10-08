@@ -1,0 +1,177 @@
+{
+  "interfaces": [
+    {
+      "abi": 64,
+      "factory_sha256": "9e5bdf585d73baddf17bbc646b4daea0e2b15d4fb6d8dc244d08412dd1be86a9",
+      "source_sha256": "09006f847458112519de684f3b1b717089b4f6cf3063e9c2138b04fd44971a87",
+      "tables": {
+        "_ZTVN7android14IFreezeManagerE": {
+          "bytes": 176,
+          "slots_matched": 22
+        },
+        "_ZTVN7android15BpFreezeManagerE": {
+          "bytes": 240,
+          "slots_matched": 30
+        },
+        "_ZTVN7android17IUnFreezeCallbackE": {
+          "bytes": 168,
+          "slots_matched": 21
+        },
+        "_ZTVN7android18BpUnFreezeCallbackE": {
+          "bytes": 232,
+          "slots_matched": 29
+        },
+        "_ZTVN7android18BnUnFreezeCallbackE": {
+          "bytes": 344,
+          "slots_matched": 43
+        }
+      },
+      "all_examined_slots_matched": true
+    },
+    {
+      "abi": 32,
+      "factory_sha256": "0d0459e40cde072ade682b87ff45da9333a30f2efdf908b92255ecd8924e6823",
+      "source_sha256": "37ae32f75ec55513ac5b992a7bb87a55b10f207268b770dc50e6b50e4993a212",
+      "tables": {
+        "_ZTVN7android14IFreezeManagerE": {
+          "bytes": 88,
+          "slots_matched": 22
+        },
+        "_ZTVN7android15BpFreezeManagerE": {
+          "bytes": 120,
+          "slots_matched": 30
+        },
+        "_ZTVN7android17IUnFreezeCallbackE": {
+          "bytes": 84,
+          "slots_matched": 21
+        },
+        "_ZTVN7android18BpUnFreezeCallbackE": {
+          "bytes": 116,
+          "slots_matched": 29
+        },
+        "_ZTVN7android18BnUnFreezeCallbackE": {
+          "bytes": 172,
+          "slots_matched": 43
+        }
+      },
+      "all_examined_slots_matched": true
+    }
+  ],
+  "service_name": "freeze",
+  "manager_descriptor": "android.app.IFreezeManager",
+  "callback_descriptor": "android.app.IUnFreezeCallback",
+  "register": {
+    "code": 1,
+    "flags": 0,
+    "fields": [
+      "int32 PID",
+      "strong callback Binder",
+      "bool"
+    ]
+  },
+  "unregister": {
+    "code": 2,
+    "flags": 0,
+    "fields": [
+      "int32 PID",
+      "strong callback Binder"
+    ]
+  },
+  "callback": {
+    "code": 1,
+    "flags": 1,
+    "fields": [
+      "int32 PID"
+    ],
+    "reply_payload_bytes": 0
+  },
+  "manager_methods_return_void_and_ignore_transport_status": true,
+  "scope": "interface identities/metadata and ARM64 instruction checkpoints; no real-service or complete FreezeManager behavior qualification",
+  "instructions": [
+    {
+      "address": "0x61848",
+      "bytes": "b6e00094",
+      "observation": "register writes PID int32 first"
+    },
+    {
+      "address": "0x61880",
+      "bytes": "ace00094",
+      "observation": "register writes strong callback Binder second"
+    },
+    {
+      "address": "0x618c4",
+      "bytes": "e7e10094",
+      "observation": "register writes bool third"
+    },
+    {
+      "address": "0x618cc",
+      "bytes": "e1030032",
+      "observation": "register transaction 1"
+    },
+    {
+      "address": "0x618dc",
+      "bytes": "e4031f2a",
+      "observation": "register flags 0"
+    },
+    {
+      "address": "0x6197c",
+      "bytes": "69e00094",
+      "observation": "unregister writes PID int32 first"
+    },
+    {
+      "address": "0x619b4",
+      "bytes": "5fe00094",
+      "observation": "unregister writes callback Binder second"
+    },
+    {
+      "address": "0x619f4",
+      "bytes": "e1031f32",
+      "observation": "unregister transaction 2"
+    },
+    {
+      "address": "0x61a04",
+      "bytes": "e4031f2a",
+      "observation": "unregister flags 0"
+    },
+    {
+      "address": "0x700dc",
+      "bytes": "91a60094",
+      "observation": "callback writes int32 PID"
+    },
+    {
+      "address": "0x700e4",
+      "bytes": "e1030032",
+      "observation": "callback transaction 1"
+    },
+    {
+      "address": "0x700f4",
+      "bytes": "e4030032",
+      "observation": "callback flags 1 (oneway)"
+    },
+    {
+      "address": "0x6ff24",
+      "bytes": "3f040071",
+      "observation": "callback server recognizes transaction 1"
+    },
+    {
+      "address": "0x6ff3c",
+      "bytes": "51a80094",
+      "observation": "callback checks interface token"
+    },
+    {
+      "address": "0x6ff48",
+      "bytes": "42a70094",
+      "observation": "callback reads legacy int32 PID"
+    },
+    {
+      "address": "0x6ff58",
+      "bytes": "081140f9",
+      "observation": "callback dispatches virtual slot 32"
+    },
+    {
+      "address": "0x6ff60",
+      "bytes": "e0031f2a",
+      "observation": "callback returns status 0 without writing reply"
+    }
+  ]
+}

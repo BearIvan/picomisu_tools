@@ -1,0 +1,41 @@
+{
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "factory_methods_inspected": [
+    "android.view.ViewRootImpl.drawSoftware",
+    "android.view.ExtViewRootImplImpl.isSkipDrawVrActivity",
+    "android.view.ExtViewRootImplImpl.canSkipDraw",
+    "android.app.ExtActivityThreadImpl.isActivityForceRender",
+    "android.content.pm.ExtActivityInfoImpl.isVrActivity",
+    "android.content.pm.ExtActivityInfoImpl.isVrActivityForceRender"
+  ],
+  "permission_controller_title_exempt": "com.android.permissioncontroller",
+  "enabled_global_setting": "vr_activity_skip_render_enabled",
+  "setting_default": 1,
+  "enabled_setting_value": 1,
+  "policy_cached_per_view_root": true,
+  "skip_draw_display_id": 0,
+  "activity_selection": "ActivityClientRecord.activity.mDecor.getViewRootImpl() equals the current root",
+  "no_matching_vr_activity_force_render_default": true,
+  "vr_activity_flag_owner": "android.content.pm.ExtActivityInfoImpl.vrActivityFlag",
+  "vr_activity_bit": 1,
+  "vr_activity_force_render_bit": 2,
+  "factory_policy": "Exempt permission-controller titles; otherwise skip only when the cached setting is 1, the matching VR Activity does not force rendering, and display ID is 0",
+  "source_surface_canvas_api_ported": true,
+  "source_activity_info_policy_ported": true,
+  "source_view_root_routing_ported": true,
+  "remaining_dependencies": [
+    "ExtPackageParserUtils 2D virtual-display configuration applied by parseVrFlags",
+    "Other IExtActivityThread/IExtViewRootImpl hooks (NS client, input, lifecycle, display) and parseBaseApkCommon",
+    "Shared Source image boot and hardware VR/2D-panel rendering qualification"
+  ],
+  "hardware_vr_qualified": false,
+  "source_commit": "7cb6259f025580ee90f5f4f7c85a571fe3c12a34",
+  "source_patches": [
+    "patches/0034-pico-package-info-vr-extensions.patch",
+    "patches/0035-pico-package-parser-vr-metadata.patch",
+    "patches/0036-pico-activity-thread-force-render.patch",
+    "patches/0037-pico-view-root-vr-skip-draw.patch",
+    "patches/0038-vr-policy-runtime-fixtures.patch"
+  ],
+  "comparison_evidence": "validation/vr-policy-port.json"
+}

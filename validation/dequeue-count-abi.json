@@ -1,0 +1,145 @@
+{
+  "factory_code_executed": false,
+  "full_private_object_abi_proven": false,
+  "special_command": -2,
+  "single_layer_extra_slots": 1,
+  "private_consumer_extra_slots": 2,
+  "private_consumer_minimum_count": 1,
+  "special_command_precedes_abandoned_queue_check": true,
+  "inputs": {
+    "arm64": {
+      "sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+      "sf_field_offset": 68,
+      "mode_field_offset": 313,
+      "private_consumer_field_offset": 5785,
+      "instruction_checkpoints": [
+        {
+          "address": "0x73bd8",
+          "bytes": "9f0a0031",
+          "observation": "test request -2"
+        },
+        {
+          "address": "0x73be0",
+          "bytes": "68124139",
+          "observation": "load consumer-is-SurfaceFlinger flag"
+        },
+        {
+          "address": "0x73bf0",
+          "bytes": "68e60439",
+          "observation": "arm single-layer allowance"
+        },
+        {
+          "address": "0x73c54",
+          "bytes": "68e64439",
+          "observation": "load single-layer allowance"
+        },
+        {
+          "address": "0x73c58",
+          "bytes": "2ad38252",
+          "observation": "private consumer flag offset"
+        },
+        {
+          "address": "0x73c5c",
+          "bytes": "2a696a38",
+          "observation": "load private consumer marker"
+        },
+        {
+          "address": "0x73c60",
+          "bytes": "0801140b",
+          "observation": "add single-layer allowance to request"
+        },
+        {
+          "address": "0x73c64",
+          "bytes": "0b090011",
+          "observation": "add private consumer allowance of two"
+        },
+        {
+          "address": "0x73c68",
+          "bytes": "7f050071",
+          "observation": "compare extended count with one"
+        },
+        {
+          "address": "0x73c6c",
+          "bytes": "6bc59f1a",
+          "observation": "clamp private consumer count to at least one"
+        },
+        {
+          "address": "0x73c7c",
+          "bytes": "14018b1a",
+          "observation": "select ordinary or private consumer count"
+        }
+      ]
+    },
+    "arm": {
+      "sha256": "09e91a368003bf8112abaf4adc98f1a78df9ac88ada3f9c81f1eb12f51e68db0",
+      "sf_field_offset": 36,
+      "mode_field_offset": 125,
+      "private_consumer_field_offset": 3929,
+      "instruction_checkpoints": [
+        {
+          "address": "0x50d74",
+          "bytes": "a81c",
+          "observation": "test request -2"
+        },
+        {
+          "address": "0x50d78",
+          "bytes": "99f82400",
+          "observation": "load consumer-is-SurfaceFlinger flag"
+        },
+        {
+          "address": "0x50d80",
+          "bytes": "89f87d00",
+          "observation": "arm single-layer allowance"
+        },
+        {
+          "address": "0x50d9a",
+          "bytes": "99f87d60",
+          "observation": "load single-layer allowance"
+        },
+        {
+          "address": "0x50d9e",
+          "bytes": "90f8597f",
+          "observation": "load private consumer marker"
+        },
+        {
+          "address": "0x50db4",
+          "bytes": "7119",
+          "observation": "add single-layer allowance to request"
+        },
+        {
+          "address": "0x50dba",
+          "bytes": "01f10208",
+          "observation": "add private consumer allowance of two"
+        },
+        {
+          "address": "0x50dbe",
+          "bytes": "b8f1010f",
+          "observation": "compare extended count with one"
+        },
+        {
+          "address": "0x50dc4",
+          "bytes": "4ff00108",
+          "observation": "clamp private consumer count to at least one"
+        },
+        {
+          "address": "0x50dce",
+          "bytes": "8846",
+          "observation": "select ordinary count when no private marker is present"
+        }
+      ]
+    }
+  },
+  "factory_composition_gate": {
+    "sha256": "d23904265c575d67c8818fa5eca24936d78ae137833e1c5383a7a4b09f3bdb51",
+    "property": "persist.sys.skip_single_layer",
+    "property_string_address": "0x4c156",
+    "global_boolean_address": "0x1981d8",
+    "property_default": true,
+    "property_get_bool_call": "0x109be0",
+    "global_store": "0x109bf8",
+    "composition_global_read": "0xe9984",
+    "display_flag_bit": 20,
+    "buffer_queue_layer_command_call": "0x86c5c",
+    "source_composition_caller_qualified": false
+  }
+}

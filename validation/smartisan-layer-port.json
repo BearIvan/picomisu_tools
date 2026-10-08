@@ -1,0 +1,113 @@
+{
+ "patches": [
+  "patches/0110-boot-jars-before-framework.patch",
+  "patches/0111-libbinder-sound-settings.patch",
+  "patches/0112-vndk-abi-libbinder-sound-settings.patch",
+  "patches/0113-framework-smartisan-bootclasspath-layer.patch",
+  "patches/0114-factory-classpath-runtime-fixture.patch",
+  "patches/0115-fm-commonsys-guard-hal-clients.patch"
+ ],
+ "component_commits": {
+  "build/make": "46cb685283889773ef99afb01420309729a07345",
+  "frameworks/native": "a58b15af561dee86af7dc49c958179761de8d3b5",
+  "prebuilts/abi-dumps/vndk": "b16e149e9d1bdbfafc7f6bf159419ac960f77f31",
+  "frameworks/base": "bcc8cbf1cbad386c0aede87e444b5437e21ee0d1",
+  "vendor/codeaurora/telephony": "27d0001003086c8e8889b69fbfa260bb7804740e",
+  "vendor/qcom/opensource/fm-commonsys": "2259abfa6048b73341e5dce9a17a88ac3a30a19a"
+ },
+ "decision_config": "device/pico/PICOA8110/factory-bootclasspath.json",
+ "component_check": "validation/factory-bootclasspath.json",
+ "donor": "no source donor (analysis/framework-reference/smartisan-base.git is SmartisanTech Android 6 frameworks/base without these classes); reconstruction from the factory 5.13.7 DEX and libandroid_runtime/libbinder/libswitchstate disassembly",
+ "new_classes_compared_with_factory": {
+  "framework.jar": {
+   "classes": 52,
+   "identical": 47,
+   "different": [
+    "Landroid/net/ConnectivityManagerSmtEx$1;",
+    "Landroid/net/ConnectivityManagerSmtEx;",
+    "Landroid/os/ProcessSmtEx;",
+    "Landroid/util/ReflectUtil;",
+    "Lsmartisanos/os/PeroptWhiteListParser;"
+   ]
+  },
+  "services.jar": {
+   "classes": 20,
+   "identical": 18,
+   "different": [
+    "Lcom/android/server/ISysPerfMonitorService;",
+    "Lcom/android/server/am/ProcessRecordMonitorEx;"
+   ]
+  }
+ },
+ "explained_differences": {
+  "PeroptWhiteListParser": "5 XML parser bodies: constant placement, dead stores and an empty END_TAG case removed by D8; invoke/field/string sequences equal",
+  "ConnectivityManagerSmtEx": "subset: only sNetworkInfoCache/clearActiveNetworkInfoCache (network binder cache hooks not ported)",
+  "ProcessSmtEx": "setProcessGroupAll needs Process.getChildProcessViaGroup native (not in Source)",
+  "ReflectUtil": "only invokeStaticMethod(Class,...) reached by ITntBase",
+  "ISysPerfMonitorService": "only removePid (reached member)",
+  "ProcessRecordMonitorEx": "getSmtUid needs android.util.SmtUidUtil/SmtUidStatus"
+ },
+ "natives": {
+  "Debug.getTimeByQtimer": "android_os_Debug.cpp, CNTVCT/CNTFRQ as factory lib64 0x12fa64 and lib 0xcb011",
+  "Debug.getMemInfoFast": "android_os_Debug.cpp from factory 0x12e8b8 (18 /proc/meminfo tags)",
+  "ActivityThread.nSetSwitchState": "libswitchstate (reconstructed factory library)",
+  "ActivityThread.nSysHookInit": "empty as in factory",
+  "ActivityThreadSmtBase.initPrefetch/onPrefetchRealStart": "libbinder SoundSettings",
+  "LightsService pxrHmdService*_native": "dlopen libhmdserviceclient.pxr.so as factory"
+ },
+ "left_for_services_smartisan_port": [
+  "sys-services 531 and sysmonitor-services 129 unresolved references (ProcessRecordSmtBase, ActivityManagerServiceSmtBase, WindowProcessControllerSmtBase, ISysSvsFactory, IApplicationFreezer ...)",
+  "factory services call sites of ISysSvsFactory/ISysMonitorSvcFactory objects (about 724 methods)",
+  "checkApplicationPrefetchStatus, trimSystemMemoryIfNeeded, ActivityStack/ActivityStackSmtBase PowerAdvisor hooks, SysMonitorSvcBridge SystemServer hooks, LightImpl.setLightsState",
+  "handleSpecialIntentSmt (Intent.getSmtEx/IntentSmtBase parcel extension)",
+  "FrozenObjectException from android_util_Binder signalExceptionForError",
+  "WindowState.applyGravityAndUpdateFrame (needs PICO WindowState ext), ActivityDisplay.acquireAppLaunchPerfLock and AMS.appDiedLocked (CodeLinaro perf boost not in Source)",
+  "Debug.dumpHprofDataCrop/dumpSysMonitorInfo and VMDebug.setDumpFlag (Smartisan libcore/ART)",
+  "system/core libmeminfo GFX_cached/MemAvailable tags (MEMINFO_GFX_CACHED/AVAILABLE read 0)",
+  "SysDataSync Ext callers (ExtActivityManagerServiceImpl, IExtShutdownThread, ExtActivityTaskManagerServiceImpl not in Source)"
+ ],
+ "device": {
+  "package": "outputs/framework-boot-image-test-27",
+  "java_fixtures_per_abi": 30,
+  "factory_classpath_fixture": {
+   "arm64": {
+    "scenarios": 218,
+    "matched": 218,
+    "mismatched": {}
+   },
+   "arm": {
+    "scenarios": 218,
+    "matched": 218,
+    "mismatched": {}
+   }
+  },
+  "wire_fixtures": {
+   "factory-only-aidl": {
+    "arm64": 332,
+    "arm": 332
+   },
+   "appended-aidl": {
+    "arm64": 1790,
+    "arm": 1790
+   },
+   "shifted-aidl": {
+    "arm64": 1207,
+    "arm": 1207
+   },
+   "pico-api": {
+    "arm64": 313,
+    "arm": 313
+   },
+   "qcom-api": {
+    "arm64": 1190,
+    "arm": 1190
+   },
+   "audio-api": {
+    "arm64": 346,
+    "arm": 346
+   }
+  },
+  "native_package": "outputs/bufferqueue-test-33 (378 native gtests and factory fixtures rerun with the new libbinder)"
+ },
+ "system_partitions_modified": false
+}

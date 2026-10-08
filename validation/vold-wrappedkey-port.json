@@ -1,0 +1,544 @@
+{
+  "scope": "Blocker 0 of REMAINING-WORK: Source vold/fs_mgr/libfscrypt must unlock userdata encrypted with fileencryption=ice,wrappedkey. Static port and comparison only; nothing was flashed, mounted or decrypted.",
+  "factory_fstab": {
+    "vendor/etc/fstab.qcom_sha256": "69e4945e5abf9ad9e65386b72e7504c6dd075461b55151125fbf7f1943ae2958",
+    "boot_ramdisk_fstab.qcom_identical": true,
+    "data": [
+      {
+        "mount_point": "/metadata",
+        "type": "ext4",
+        "mount_options": "noatime,nosuid,nodev,discard",
+        "fs_mgr_flags": "wait,formattable,wrappedkey,first_stage_mount"
+      },
+      {
+        "mount_point": "/data",
+        "type": "f2fs",
+        "mount_options": "noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier",
+        "fs_mgr_flags": "latemount,wait,check,formattable,fileencryption=ice,wrappedkey,quota,reservedsize=128M,checkpoint=fs"
+      }
+    ],
+    "data_mount_options_passed_to_kernel": [
+      "reserve_root=32768",
+      "resgid=1065",
+      "fsync_mode=nobarrier"
+    ],
+    "metadata_encryption": "not configured: /metadata has wrappedkey but no keydirectory=, so MetadataCrypt/dm-default-key is not used for /data"
+  },
+  "fs_mgr_flags": {
+    "avb": {
+      "entries": [
+        "/odm",
+        "/product",
+        "/system",
+        "/vendor"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "first stage (factory init)"
+    },
+    "avb_keys": {
+      "entries": [
+        "/system"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "first stage (factory init)"
+    },
+    "check": {
+      "entries": [
+        "/data",
+        "/mnt/vendor/persist"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "fsck before mount; CodeLinaro adds f2fs -f when the fs needs a forced check (ported)"
+    },
+    "checkpoint": {
+      "entries": [
+        "/data"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "checkpoint=fs: f2fs checkpoint=disable mount + vold Checkpoint (IBootControl); r47 supports it; CodeLinaro cp_needsCheckpoint called-once fix ported with vold"
+    },
+    "defaults": {
+      "entries": [
+        "/boot",
+        "/misc",
+        "/recovery"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "r47"
+    },
+    "encryptable": {
+      "entries": [
+        "/storage/sdcard1"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "encryptable=footer on removable vfat entries; r47"
+    },
+    "fileencryption": {
+      "entries": [
+        "/data"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "fileencryption=ice: contents mode ice -> libfscrypt FS_ENCRYPTION_MODE_PRIVATE (127, Qualcomm ICE/PFK), filenames default aes-256-cts; supported by r47 fs_mgr/libfscrypt"
+    },
+    "first_stage_mount": {
+      "entries": [
+        "/metadata",
+        "/odm",
+        "/product",
+        "/system",
+        "/vendor"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "mounted by the factory first-stage init in the kept boot ramdisk"
+    },
+    "formattable": {
+      "entries": [
+        "/data",
+        "/metadata",
+        "/mnt/vendor/pvr"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "r47"
+    },
+    "latemount": {
+      "entries": [
+        "/data"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "/data is mounted by mount_all --late; r47"
+    },
+    "logical": {
+      "entries": [
+        "/odm",
+        "/product",
+        "/system",
+        "/vendor"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "first stage (factory init)"
+    },
+    "quota": {
+      "entries": [
+        "/data"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "mount-time quota for f2fs; r47"
+    },
+    "reservedsize": {
+      "entries": [
+        "/data"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "reservedsize=128M -> reserved_blocks for ext4 / f2fs; r47"
+    },
+    "voldmanaged": {
+      "entries": [
+        "/storage/sdcard1",
+        "/storage/usbotg"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "r47"
+    },
+    "wait": {
+      "entries": [
+        "/cache",
+        "/data",
+        "/metadata",
+        "/mnt/vendor/logfs",
+        "/mnt/vendor/persist",
+        "/mnt/vendor/pvr",
+        "/mnt/vendor/spunvm",
+        "/odm",
+        "/product",
+        "/storage/sdcard1",
+        "/storage/usbotg",
+        "/system",
+        "/vendor",
+        "/vendor/bt_firmware",
+        "/vendor/dsp",
+        "/vendor/firmware_mnt"
+      ],
+      "r47_fs_mgr_parses": true,
+      "after_port_parses": true,
+      "use": "r47"
+    },
+    "wrappedkey": {
+      "entries": [
+        "/data",
+        "/metadata"
+      ],
+      "r47_fs_mgr_parses": false,
+      "after_port_parses": true,
+      "use": "vold: is_wrapped_key_supported() (/data) selects keymaster-generated keys, exportKey ephemeral wrapped keys and 32-byte key references; is_metadata_wrapped_key_supported() (/metadata) is only used by metadata encryption (keydirectory) and UFS-card volumes, neither configured on this device"
+    }
+  },
+  "before": "r47 fs_mgr logs \"Warning: unknown flag wrappedkey\" and ignores it; r47 vold installs raw random keys and never calls keymaster exportKey, so the keymaster-wrapped key blobs on the existing userdata could not be turned into ICE keys and /data could not be unlocked",
+  "donor": {
+    "codelinaro_tag": "LA.UM.8.12.c3-64900-sm8250.0",
+    "system/vold": {
+      "codelinaro_commit": "020b06a",
+      "patch": "patches/0091-vold-codelinaro-wrapped-ice-keys.patch",
+      "tree": {
+        "files": 95,
+        "different": [
+          "Android.bp"
+        ],
+        "missing": []
+      },
+      "deviation": "Android.bp libvold device_support_hwfde has no shared_libs libcryptfs_hw (headers only): the factory library exists only for arm64 and the static library needs no link; the vold binary links libcryptfs_hw exactly as in CodeLinaro (factory DT_NEEDED order identical)"
+    },
+    "system/core": {
+      "codelinaro_commit": "3b3d931",
+      "patch": "patches/0092-fs-mgr-wrappedkey-data-mount.patch",
+      "ported": [
+        "fs_mgr_fstab.cpp wrappedkey flag",
+        "include_fstab/fstab/fstab.h wrapped_key bitfield",
+        "fs_mgr.cpp (ffbm /data skip, metadata failure -> NEEDS_RECOVERY_WIPE_PROMPT, forced f2fs fsck)",
+        "include/fs_mgr.h FS_MGR_MNTALL_DEV_NEEDS_RECOVERY_WIPE_PROMPT",
+        "init/builtins.cpp --prompt_and_wipe_data",
+        "rootdir/init.rc /data/per_boot"
+      ],
+      "files_identical_to_codelinaro": {
+        "fs_mgr/fs_mgr.cpp": true,
+        "fs_mgr/include/fs_mgr.h": true,
+        "fs_mgr/include_fstab/fstab/fstab.h": true
+      }
+    },
+    "system/extras": {
+      "codelinaro_commit": "cc3a9ff",
+      "patch": "patches/0093-libfscrypt-per-boot-key-wrapped-ice.patch",
+      "files_identical_to_codelinaro": {
+        "system/extras/libfscrypt/fscrypt.cpp": true,
+        "system/extras/libfscrypt/fscrypt_init_extensions.cpp": true,
+        "system/extras/libfscrypt/include/fscrypt/fscrypt.h": true,
+        "system/extras/checkpoint_gc/checkpoint_gc.sh": true
+      }
+    },
+    "hardware/interfaces": {
+      "patch": "patches/0094-keymaster-qti-fbe-ice-tags.patch",
+      "KM_TAG_FBE_ICE": "BOOL|16201 (0x70003f49)",
+      "KM_TAG_KEY_TYPE": "UINT|16202 (0x30003f4a)",
+      "identical_to_codelinaro": true
+    },
+    "build/soong": {
+      "patch": "patches/0095-soong-device-support-hwfde.patch"
+    },
+    "build/make": {
+      "patch": "patches/0096-soong-config-hw-disk-encryption.patch"
+    },
+    "device_tree": "BoardConfig TARGET_HW_DISK_ENCRYPTION(_PERF)=true; cryptfs_hw/: CodeLinaro cryptfs_hw.h (fef14665, unchanged) and the factory product/lib64/libcryptfs_hw.so as prebuilt (sha256 e695b935...4d66df, extracted by tools/install-device-tree.py from product.img)"
+  },
+  "factory_binaries": {
+    "first_stage_init": "boot ramdisk /init (static, factory boot kept: TARGET_NO_KERNEL, BoardConfig); contains \"wrappedkey\"; mounts system/vendor/product/odm/metadata",
+    "second_stage_init": "/system/bin/init is dynamic and uses libfs_mgr.so and libfscrypt.so: on the Source image these are the Source builds compared below",
+    "vold": "Source /system/bin/vold (links libfs_mgr statically, libfscrypt.so, libkeymaster4support, factory libcryptfs_hw from product)",
+    "comparison": {
+      "vold": {
+        "factory_sha256": "5ab9ad8cf2ca1ce37024f7a0eccdc5e16c9bae8da5804ad99dc9515534cdd222",
+        "needed_equal_as_set": true,
+        "needed_factory_only": [],
+        "needed_source_only": [],
+        "needed_order_equal": true,
+        "libcryptfs_hw_imports": {
+          "factory": [
+            "clear_hw_device_encryption_key",
+            "is_hw_disk_encryption",
+            "is_ice_enabled",
+            "set_hw_device_encryption_key",
+            "set_ice_param",
+            "update_hw_device_encryption_key"
+          ],
+          "source": [
+            "clear_hw_device_encryption_key",
+            "is_hw_disk_encryption",
+            "is_ice_enabled",
+            "set_hw_device_encryption_key",
+            "set_ice_param",
+            "update_hw_device_encryption_key"
+          ]
+        },
+        "imports_factory_only": [
+          "__vsprintf_chk",
+          "strtok",
+          "wait"
+        ],
+        "imports_source_only": [],
+        "markers": {
+          "type_hwkm": {
+            "factory": true,
+            "source": true
+          },
+          "Inserting using hkm mechanism ": {
+            "factory": true,
+            "source": true
+          },
+          "Inserting using old mechanism ": {
+            "factory": true,
+            "source": true
+          },
+          "Failed to export ce key": {
+            "factory": true,
+            "source": true
+          },
+          "Failed to export key in retrieveAndInstallKey": {
+            "factory": true,
+            "source": true
+          },
+          "export_key failed, code ": {
+            "factory": true,
+            "source": true
+          },
+          "fscrypt_initialize_systemwide_keys": {
+            "factory": true,
+            "source": true
+          },
+          "/unencrypted/per_boot_ref": {
+            "factory": true,
+            "source": true
+          },
+          "Wrote per boot key reference to:": {
+            "factory": true,
+            "source": true
+          },
+          "req-crypt": {
+            "factory": true,
+            "source": true
+          },
+          "Hex password verified...will try to update with Ascii value": {
+            "factory": true,
+            "source": true
+          },
+          "wrappedkey": {
+            "factory": true,
+            "source": true
+          },
+          "cp_prepareCheckpoint called": {
+            "factory": true,
+            "source": true
+          },
+          "Failed to find ": {
+            "factory": true,
+            "source": true
+          },
+          " for private volume. err=": {
+            "factory": true,
+            "source": true
+          },
+          "Upgrading key": {
+            "factory": true,
+            "source": true
+          },
+          "fscrypt_clear_user_key_auth ": {
+            "factory": true,
+            "source": true
+          },
+          "aes-256-heh": {
+            "factory": true,
+            "source": true
+          },
+          "ice": {
+            "factory": true,
+            "source": true
+          }
+        },
+        "markers_mismatch": [],
+        "keymaster_calls": "HIDL calls go through the IKeymasterDevice proxy vtable (no direct imports); both binaries contain the exportKey/upgradeKey/deleteKey paths (markers export_key failed, Upgrading key)"
+      },
+      "libfscrypt": {
+        "markers": {
+          "ice_wrapped_key_supported": {
+            "factory": true,
+            "source": true
+          },
+          "/unencrypted/per_boot_ref": {
+            "factory": true,
+            "source": true
+          },
+          "Setting per_boot key on ": {
+            "factory": true,
+            "source": true
+          },
+          "per_boot": {
+            "factory": true,
+            "source": true
+          },
+          "/unencrypted/ref": {
+            "factory": true,
+            "source": true
+          }
+        },
+        "mismatch": [],
+        "needed_factory_only": [],
+        "needed_source_only": []
+      },
+      "libfs_mgr": {
+        "markers": {
+          "wrappedkey": {
+            "factory": true,
+            "source": true
+          },
+          "fileencryption=": {
+            "factory": true,
+            "source": true
+          },
+          "checkpoint=fs": {
+            "factory": true,
+            "source": true
+          },
+          "reservedsize=": {
+            "factory": true,
+            "source": true
+          },
+          "quota": {
+            "factory": true,
+            "source": true
+          },
+          "first_stage_mount": {
+            "factory": true,
+            "source": true
+          },
+          "formattable": {
+            "factory": true,
+            "source": true
+          },
+          "latemount": {
+            "factory": true,
+            "source": true
+          },
+          "keydirectory=": {
+            "factory": true,
+            "source": true
+          },
+          "Failure while mounting metadata, setting flag to needing recovery partition on %s at %s options: %s": {
+            "factory": true,
+            "source": true
+          },
+          "ro.bootmode": {
+            "factory": true,
+            "source": true
+          },
+          "ffbm-00": {
+            "factory": true,
+            "source": true
+          },
+          " -f ": {
+            "factory": true,
+            "source": true
+          },
+          " -a ": {
+            "factory": true,
+            "source": true
+          }
+        },
+        "mismatch": [],
+        "needed_factory_only": [],
+        "needed_source_only": []
+      },
+      "init_second_stage": {
+        "markers": {
+          "--prompt_and_wipe_data": {
+            "factory": true,
+            "source": true
+          },
+          "fs_mgr_mount_all suggested recovery, so wiping data via recovery with prompt.": {
+            "factory": true,
+            "source": true
+          },
+          "--wipe_data": {
+            "factory": true,
+            "source": true
+          }
+        },
+        "mismatch": [],
+        "needed_factory_only": [],
+        "needed_source_only": []
+      },
+      "checkpoint_gc": {
+        "factory_present": false,
+        "source_present": false,
+        "identical": true
+      },
+      "init_rc_per_boot": {
+        "factory": true,
+        "source": true
+      },
+      "vold_tree_vs_codelinaro": {
+        "files": 95,
+        "different": [
+          "Android.bp"
+        ],
+        "missing": []
+      },
+      "files_identical_to_codelinaro": {
+        "fs_mgr/fs_mgr.cpp": true,
+        "fs_mgr/include/fs_mgr.h": true,
+        "fs_mgr/include_fstab/fstab/fstab.h": true,
+        "system/extras/libfscrypt/fscrypt.cpp": true,
+        "system/extras/libfscrypt/fscrypt_init_extensions.cpp": true,
+        "system/extras/libfscrypt/include/fscrypt/fscrypt.h": true,
+        "system/extras/checkpoint_gc/checkpoint_gc.sh": true,
+        "keymaster_tags.h": true
+      }
+    }
+  },
+  "keymaster_hal": {
+    "vendor_manifest": "android.hardware.keymaster@4.0::IKeymasterDevice/default (vendor/etc/vintf/manifest.xml)",
+    "service": "/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti (class early_hal) -> libqtikeymaster4.so",
+    "exportKey": "Keymaster4Device::exportKey -> KeymasterHalDevice::export_key present",
+    "upgradeKey": "present",
+    "deleteKey": "present",
+    "tags": "FBE_ICE/KEY_TYPE are passed opaquely to the QSEE keymaster TA (no literal in the HAL library); libqtikeymaster4 has \"Couldn't clear FBE key\"",
+    "kernel": "factory kernel has fscrypt_ice / PFK and no type_hwkm key type: installKey takes the \"old mechanism\" (logon fscrypt_key, mode AES-256-XTS, policy contents mode 127)"
+  },
+  "remaining_differences": [
+    {
+      "what": "factory vold PICO additions: NTFS/exFAT tools (/system/bin/ntfs-3g, mkntfs, mount.exfat), PublicVolume debug logs, /mnt/vendor/persist/picoconfig/countryCode",
+      "reason": "PICO/Smartisan external storage changes without an open donor; unrelated to userdata keys"
+    },
+    {
+      "what": "factory vold imports __vsprintf_chk, strtok, wait",
+      "reason": "used by the PICO external-storage code above"
+    },
+    {
+      "what": "factory libfs_mgr: stabd notification (/dev/stabd), /mnt/vendor/persist/kernellog, mountinfo parser, GSI developer AVB keys",
+      "reason": "PICO additions / later AOSP backports and a CodeLinaro GSI hunk not related to /data encryption; first-stage mounts use the factory init anyway"
+    },
+    {
+      "what": "factory init: UFS FFU firmware update, memcg, thermal warm reset, deferred overlayfs, dumpUmountDebugInfo, init.rc audio-app cpuset, factory-fs/mmi triggers",
+      "reason": "CodeLinaro/PICO init changes outside the wrapped-key path; separate task"
+    },
+    {
+      "what": "libcryptfs_hw built from factory binary, not source",
+      "reason": "its CodeLinaro source needs the proprietary vendor.qti.hardware.cryptfshw@1.0 HAL; the Source image loads this same factory file from the prebuilt product partition"
+    }
+  ],
+  "runtime_only_risks": [
+    "keymaster TA must accept the existing key blobs and export ephemeral wrapped keys for Source vold (same calls/params as factory; key blobs may need upgradeKey after a Source security patch level change)",
+    "kernel PFK must accept the logon keys installed by Source vold (same struct/mode as factory)",
+    "user CE unlock via Source LockSettings/Gatekeeper/synthetic password with the factory keystore/gatekeeper HALs",
+    "checkpoint=fs rollback with factory IBootControl",
+    "SELinux denials for vold/init in enforcing mode"
+  ],
+  "build": {
+    "targets": "vold vdc init_second_stage init_first_stage libfs_mgr libfscrypt fs_mgr_unit_test checkpoint_gc libkeymaster4support",
+    "targets_log": "logs/build-wk-032331.log",
+    "droid_log": "logs/build-fullk-032617.log (m -j8 droid -k, taskset 0-7)",
+    "result": "success, 0 FAILED",
+    "system_img_sha256": "d44dc4b82e86db4bf5e747733c3b5fe3ca12dbf64ea49973a04271dea0b7b495"
+  },
+  "device_modified": false
+}

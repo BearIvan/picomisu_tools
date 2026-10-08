@@ -1,0 +1,181 @@
+{
+ "title": "IAudioService factory table, Android 13 Spatializer backport and CodeLinaro audio service",
+ "static": {
+  "framework.jar": {
+   "classes": 103,
+   "identical": 102,
+   "explained_differences": {
+    "Landroid/media/AudioManager;": "isBluetoothScoAvailableOffCall() (CodeLinaro logging hunk): the only difference is the framework-res ID of config_bluetooth_sco_off_call (factory 0x01110036, Source 0x01110034); the body is otherwise identical. Resource IDs of framework-res are not ported."
+   }
+  },
+  "services.jar": {
+   "classes": 38,
+   "identical": 36,
+   "explained_differences": {
+    "Lcom/android/server/audio/AudioService;": "getDeviceForStream(I): the ported CodeLinaro change only makes the method public/@VisibleForTesting (access matches). The factory body additionally masks DEVICE_OUT_REMOTE_SUBMIX (0x8000) and 0x2000000 out of the multi-device selection; this is a PICO device-selection change without a donor, outside IAudioService, not ported. All other ported AudioService members (IAudioService implementation, Spatializer wiring, capture-policy restore in onAudioServerDied, A2DP active device change) are identical.",
+    "Lcom/android/server/audio/BtHelper;": "mapBluetoothCodecToAudioFormat(I): the factory maps the QTI codecs CELT, APTX_ADAPTIVE and APTX_TWSP (BluetoothCodecConfig SOURCE_CODEC_TYPE_* 5..7 and AudioSystem AUDIO_FORMAT_* 0x26/0x27/0x2A000000). The Qualcomm codec numbering belongs to the QTI Bluetooth stack and is not present in the Source BluetoothCodecConfig (decision of stages 0047/0067-0069, factory Bluetooth.apk keeps its own copy), so the CodeLinaro codec hunks of BtHelper and AudioSystem are not applied. Everything else in BtHelper (TWS+ SCO handling) is identical."
+   }
+  }
+ },
+ "unexplained": [],
+ "wire": {
+  "fixture": "AudioApiFixture",
+  "package": "outputs/framework-boot-image-test-23",
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "56882f46d3837f07be454ff67989a26a51e748a07d08d428b6e2691340217c39",
+  "probe_sha256": "8d8ce79c2b32f02143a163c012fe8a639c2522e4109f00e7c139e8a7f9d272dc",
+  "interfaces": {
+   "android.media.IAudioService": {
+    "methods": 131,
+    "oneway": [
+     "adjustSuggestedStreamVolume",
+     "avrcpSupportsAbsoluteVolume",
+     "playSoundEffect",
+     "playSoundEffectVolume",
+     "playerAttributes",
+     "playerEvent",
+     "playerHasOpPlayAudio",
+     "recenterHeadTracker",
+     "recorderEvent",
+     "releasePlayer",
+     "releaseRecorder",
+     "reloadAudioSettings",
+     "setFocusRequestResultFromExtPolicy",
+     "setSpatializerGlobalTransform",
+     "unloadSoundEffects",
+     "unregisterAudioPolicyAsync",
+     "unregisterAudioServerStateDispatcher",
+     "unregisterPlaybackCallback",
+     "unregisterRecordingCallback"
+    ]
+   },
+   "android.media.ISpatializer": {
+    "methods": 25,
+    "oneway": [
+     "releasePlayer"
+    ]
+   },
+   "android.media.INativeSpatializerCallback": {
+    "methods": 2,
+    "oneway": [
+     "onLevelChanged",
+     "onOutputChanged"
+    ]
+   },
+   "android.media.ISpatializerCallback": {
+    "methods": 2,
+    "oneway": [
+     "dispatchSpatializerAvailableChanged",
+     "dispatchSpatializerEnabledChanged"
+    ]
+   },
+   "android.media.ISpatializerHeadToSoundStagePoseCallback": {
+    "methods": 1,
+    "oneway": [
+     "dispatchPoseChanged"
+    ]
+   },
+   "android.media.ISpatializerHeadTrackerAvailableCallback": {
+    "methods": 1,
+    "oneway": [
+     "dispatchSpatializerHeadTrackerAvailable"
+    ]
+   },
+   "android.media.ISpatializerHeadTrackingCallback": {
+    "methods": 2,
+    "oneway": [
+     "onHeadToSoundStagePoseUpdated",
+     "onHeadTrackingModeChanged"
+    ]
+   },
+   "android.media.ISpatializerHeadTrackingModeCallback": {
+    "methods": 2,
+    "oneway": [
+     "dispatchSpatializerActualHeadTrackingModeChanged",
+     "dispatchSpatializerDesiredHeadTrackingModeChanged"
+    ]
+   },
+   "android.media.ISpatializerOutputCallback": {
+    "methods": 1,
+    "oneway": [
+     "dispatchSpatializerOutputChanged"
+    ]
+   },
+   "android.media.SpatializationLevel": {
+    "methods": 0,
+    "oneway": []
+   },
+   "android.media.SpatializationMode": {
+    "methods": 0,
+    "oneway": []
+   },
+   "android.media.SpatializerHeadTrackingMode": {
+    "methods": 0,
+    "oneway": []
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  },
+  "comparison": {
+   "arm64": {
+    "scenarios": 346,
+    "matched": 346
+   },
+   "arm": {
+    "scenarios": 346,
+    "matched": 346
+   }
+  }
+ },
+ "native_dependency": {
+  "summary": "The factory Spatializer and setRecordSilenced are backed by PICO native audio server code that has no counterpart in the Android 10 Source audio stack. The Java side is ported; the three JNI entry points report an audio policy service without these features.",
+  "factory_property": "vendor/build.prop ro.audio.spatializer_enabled=true (vendor stays factory, so AudioService initializes SpatializerHelper with effectExpected=true)",
+  "factory_libandroid_runtime_jni": {
+   "AudioSystem.setRecordSilenced(Ljava/lang/String;Z)I": "android::AudioSystem::setRecordSilenced(char const*, bool)",
+   "AudioSystem.nativeGetSpatializer(Landroid/media/INativeSpatializerCallback;)Landroid/os/IBinder;": "android::AudioSystem::getSpatializer(sp<media::INativeSpatializerCallback> const&, sp<media::ISpatializer>*)",
+   "AudioSystem.canBeSpatialized(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;[Landroid/media/AudioDeviceAttributes;)Z": "android::AudioSystem::canBeSpatialized(audio_attributes_t const*, audio_config const*, std::vector<AudioDeviceTypeAddrForSpatial> const&, bool*)",
+   "AudioSystem.native_register_track_state_callback()V": "PICO track state callback, not part of this port"
+  },
+  "factory_libaudioclient": [
+   "AudioSystem::getSpatializer/canBeSpatialized/setRecordSilenced through IAudioPolicyService vtable slots 0x268/0x270/0x260 (factory IAudioPolicyService is AIDL-generated: getDefaultImpl/setDefaultImpl)",
+   "AIDL cpp media::ISpatializer, INativeSpatializerCallback, ISpatializerHeadTrackingCallback, SpatializationLevel, SpatializationMode, SpatializerHeadTrackingMode",
+   "AudioDeviceTypeAddrForSpatial parcelable"
+  ],
+  "factory_audioserver": [
+   "libaudiopolicyservice: Spatializer (effect control, Spatializer-looper, SpatializerPoseController, dynamic per-player spatialization: enableSpatialization/setAudioOrientation/setAudioPose, persist.audio.spatial_pose.*)",
+   "libaudiopolicymanagerdefault: AudioPolicyManager::getSpatializerOutput/releaseSpatializerOutput/getSpatializerOutputProfile/canBeSpatializedInt, setRecordSilencedState, AudioInputDescriptor::setRecordSilencedState",
+   "libaudioflinger, libspatialaudio.so, libvraudio.so (audioserver DT_NEEDED)",
+   "vendor audio_effects.xml spatializer effect and audio_policy_configuration.xml spatializer mix port"
+  ],
+  "source_behavior": {
+   "nativeGetSpatializer": "returns null: SpatializerHelper.init logs 'No Spatializer found' and the state becomes STATE_NOT_SUPPORTED, as on a factory audio policy service without a spatializer",
+   "canBeSpatialized": "returns false",
+   "setRecordSilenced": "returns AudioSystem.AUDIO_STATUS_ERROR (INVALID_OPERATION mapped by check_AudioSystem_Command)"
+  },
+  "problems": []
+ },
+ "component_commits": {
+  "frameworks/native": "1f40e20f880516fdb4926d26cd8dd69f7f972b67",
+  "frameworks/base": "a5dc0b7100549075cf5561fd7aa2f0e98363245d",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+  "system/bt": "7f1640dde4a5617ae395bb5eec41eeb856e20707",
+  "packages/apps/Bluetooth": "7901ce4963d41339794367b85f3c607a4f6cff0e",
+  "packages/services/Telecomm": "4f8664b3070ebd80614513893edf48a1cde3ea05",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "ce3541dcdf46e98bfb12e054c9d12d58dd808eb6",
+  "packages/services/Telephony": "4c5250aa8faf66e65c394394b7b0e3a799de465f",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "ee7173fb2957af02327565ba73ebfa5af4d25e62",
+  "prebuilts/abi-dumps/vndk": "caff0280e109e265570456a540c7390d1f3acbc2",
+  "packages/apps/Settings": "2cce6b7b8351155f485dd9bffacc13f680181b79",
+  "build/make": "cfcc0fa78c797b7eefb339e82bf3e653243671ba"
+ },
+ "system_partitions_modified": false
+}

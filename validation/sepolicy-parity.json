@@ -1,0 +1,602 @@
+{
+ "inputs": {
+  "source_selinux_dir": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/aosp-10/target/product/PICOA8110/system/etc/selinux",
+  "factory_selinux_dir": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root/system/etc/selinux",
+  "factory_vendor_dir": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/vendor/etc/selinux",
+  "factory_product_dir": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/etc/selinux",
+  "secilc": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/aosp-10/host/linux-x86/bin/secilc",
+  "source_plat_sepolicy_sha256": "14779675d22395bea7acda3eda7d6c664363d3d1106902d3ed49ce1fd881a9ed",
+  "source_mapping_sha256": "c6d2d728f624fe858770cc5201180961160e1fa8890494942e1ab77af5021f30",
+  "factory_plat_sepolicy_sha256": "592c6a9bf9c6f184bb599bce22cca0483722e12c1123e4a241d9637282390903"
+ },
+ "boot_policy": {
+  "source_plat": {
+   "returncode": 0,
+   "output": "",
+   "binary_policy_bytes": 944423,
+   "mapping_version": "29.0",
+   "inputs": [
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/aosp-10/target/product/PICOA8110/system/etc/selinux/plat_sepolicy.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/out/aosp-10/target/product/PICOA8110/system/etc/selinux/mapping/29.0.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/etc/selinux/product_sepolicy.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/etc/selinux/mapping/29.0.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/vendor/etc/selinux/plat_pub_versioned.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/vendor/etc/selinux/vendor_sepolicy.cil"
+   ]
+  },
+  "factory_plat_control": {
+   "returncode": 0,
+   "output": "",
+   "binary_policy_bytes": 858553,
+   "mapping_version": "29.0",
+   "inputs": [
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root/system/etc/selinux/plat_sepolicy.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root/system/etc/selinux/mapping/29.0.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/etc/selinux/product_sepolicy.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/product/etc/selinux/mapping/29.0.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/vendor/etc/selinux/plat_pub_versioned.cil",
+    "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/vendor/etc/selinux/vendor_sepolicy.cil"
+   ]
+  },
+  "versioned_attributes": {
+   "vendor_declared_versioned_attributes": 1254,
+   "unmapped_in_source": [],
+   "mapped_differently": {},
+   "factory_mapping_entries": 1254,
+   "source_mapping_entries": 1257,
+   "factory_only_mapping_entries": [],
+   "source_only_mapping_entries": [
+    "qti-testscripts_29_0",
+    "vendor_qcc_app_29_0",
+    "vendor_qccsyshal_hwservice_29_0"
+   ]
+  },
+  "precompiled_policy_used": false
+ },
+ "parity": {
+  "types": {
+   "factory": 1440,
+   "source": 1449,
+   "common": 1440,
+   "factory_only": [],
+   "source_only": {
+    "apex_test_prepostinstall_devpts": "AOSP android-10.0.0_r47 revision differs from the factory AOSP 10 base",
+    "qti-testscripts": "userdebug-only policy (the factory image is a user build)",
+    "qtrservice": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qcc_app": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qcc_app_socket": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qcc_data_file": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qccsyshal_hwservice": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qccsyshal_qti": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qccsyshal_qti_exec": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy"
+   }
+  },
+  "attributes": {
+   "factory": 273,
+   "source": 279,
+   "factory_only": [],
+   "source_only": {
+    "vendor_hal_qccvndhal": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_hal_qccvndhal_client": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_hal_qccvndhal_server": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qccsyshal": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qccsyshal_client": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "vendor_qccsyshal_server": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy"
+   }
+  },
+  "attribute_memberships": {
+   "factory": 3500,
+   "source": 3584,
+   "factory_only": [],
+   "source_only": {
+    "userdebug-only policy (the factory image is a user build)": 57,
+    "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy": 26,
+    "AOSP android-10.0.0_r47 revision differs from the factory AOSP 10 base": 1
+   }
+  },
+  "rules": {
+   "per_permission_tuples": {
+    "factory": 66727,
+    "source": 75342,
+    "common": 65757
+   },
+   "by_kind": {
+    "allow": {
+     "factory": 40922,
+     "source": 42499,
+     "factory_only": 0,
+     "source_only": 1577
+    },
+    "auditallow": {
+     "factory": 18,
+     "source": 70,
+     "factory_only": 0,
+     "source_only": 52
+    },
+    "dontaudit": {
+     "factory": 351,
+     "source": 7386,
+     "factory_only": 0,
+     "source_only": 7035
+    },
+    "neverallow": {
+     "factory": 25436,
+     "source": 25387,
+     "factory_only": 970,
+     "source_only": 921
+    }
+   },
+   "factory_only_by_reason": {
+    "factory neverallow exception list of an AOSP rule; neverallows are not evaluated at boot (secilc -N) and no Source rule violates the Source form": {
+     "count": 970,
+     "sample": [
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "audio_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "audio_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "camera_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "camera_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "dm_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "dm_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "radio_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "radio_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "rpmsg_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "rpmsg_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "video_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not factorytest_app) appdomain)",
+       "video_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "blk_file",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "blk_file",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "chr_file",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "chr_file",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "dir",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "dir",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "fifo_file",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "fifo_file",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "file",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "file",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "lnk_file",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "lnk_file",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "sock_file",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not mediaprovider) {ephemeral_app isolated_app mediaprovider untrusted_app untrusted_app_25 untrusted_app_27 untrusted_app_all})",
+       "(and (not {XR_coredump_file app_data_file app_exec_data_file media_rw_data_file privapp_data_file sdcard_type user_profile_data_file}) {file_type fs_type})",
+       "sock_file",
+       "unlink"
+      ],
+      [
+       "neverallow",
+       "(and (not shell) appdomain)",
+       "(and (not appdomain) domain)",
+       "process",
+       "dyntransition"
+      ],
+      [
+       "neverallow",
+       "(and (not shell) appdomain)",
+       "(and (not {appdomain crash_dump rs}) domain)",
+       "process",
+       "transition"
+      ],
+      [
+       "neverallow",
+       "(and (not system_app) appdomain)",
+       "tee_device",
+       "chr_file",
+       "read"
+      ],
+      [
+       "neverallow",
+       "(and (not system_app) appdomain)",
+       "tee_device",
+       "chr_file",
+       "write"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "add_name"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "append"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "audit_access"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "create"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "execmod"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "execute"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "getattr"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "ioctl"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "link"
+      ],
+      [
+       "neverallow",
+       "(and (not {adbd app_zygote appdomain dexoptanalyzer installd profman rs runas sysoptservice system_server viewcompiler}) domain)",
+       "app_data_file",
+       "dir",
+       "lock"
+      ]
+     ]
+    }
+   },
+   "source_only_by_reason": {
+    "userdebug-only policy (the factory image is a user build)": 7742,
+    "neverallow form of AOSP r47/CodeLinaro (not evaluated at boot)": 921,
+    "AOSP android-10.0.0_r47 revision differs from the factory AOSP 10 base": 637,
+    "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy": 285
+   }
+  },
+  "extended_permission_rules": {
+   "factory": 450,
+   "source": 453,
+   "factory_only": [],
+   "source_only": [
+    [
+     "allowx",
+     "apex_test_prepostinstall",
+     "apex_test_prepostinstall_devpts",
+     "(ioctl chr_file ((range 0x5401 0x5403) 0x540b (range 0x540e 0x5411) (range 0x5413 0x5414) (range 0x5450 0x5451)))"
+    ],
+    [
+     "allowx",
+     "untrusted_app_all",
+     "debugfs_kcov",
+     "(ioctl file (0x6301 (range 0x6364 0x6365)))"
+    ],
+    [
+     "neverallowx",
+     "(all)",
+     "apex_test_prepostinstall_devpts",
+     "(ioctl chr_file (0x5412))"
+    ]
+   ]
+  },
+  "transitions": {
+   "factory": 220,
+   "source": 236,
+   "factory_only": [],
+   "source_only": {
+    "typetransition (and (not su) domain) crash_dump_exec process crash_dump": "AOSP android-10.0.0_r47 revision differs from the factory AOSP 10 base",
+    "typetransition apex_test_prepostinstall devpts chr_file apex_test_prepostinstall_devpts": "userdebug-only policy (the factory image is a user build)",
+    "typetransition apexd apex_test_prepostinstall_exec process apex_test_prepostinstall": "userdebug-only policy (the factory image is a user build)",
+    "typetransition dumpstate su_exec process su": "userdebug-only policy (the factory image is a user build)",
+    "typetransition init atrace_exec process atrace": "userdebug-only policy (the factory image is a user build)",
+    "typetransition init logcat_exec process logpersist": "AOSP android-10.0.0_r47 revision differs from the factory AOSP 10 base",
+    "typetransition init perfprofd_exec process perfprofd": "userdebug-only policy (the factory image is a user build)",
+    "typetransition init qti-display_exec process qti-display": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "typetransition init qti-testscripts_exec process qti-testscripts": "userdebug-only policy (the factory image is a user build)",
+    "typetransition init vendor_qccsyshal_qti_exec process vendor_qccsyshal_qti": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy",
+    "typetransition shell su_exec process su": "userdebug-only policy (the factory image is a user build)",
+    "typetransition su dumpstate_exec process dumpstate": "userdebug-only policy (the factory image is a user build)",
+    "typetransition su incident_exec process incident": "userdebug-only policy (the factory image is a user build)",
+    "typetransition su perfetto_exec process perfetto": "userdebug-only policy (the factory image is a user build)",
+    "typetransition su tmpfs file appdomain_tmpfs": "userdebug-only policy (the factory image is a user build)",
+    "typetransition vendor_qcc_app tmpfs file appdomain_tmpfs": "CodeLinaro device/qcom/sepolicy 830b6eb9 is newer than the factory QTI policy"
+   }
+  },
+  "genfscon": {
+   "factory": 348,
+   "source": 348,
+   "factory_only": [],
+   "source_only": []
+  },
+  "other_statements": {
+   "factory_only": [],
+   "source_only": [
+    "(typepermissive qti-testscripts)",
+    "(typepermissive su)"
+   ]
+  },
+  "contexts": {
+   "file": {
+    "factory": 689,
+    "source": 730,
+    "factory_only": [],
+    "different_label": {},
+    "source_only": [
+     "/(vendor|system/vendor)/bin/hw/android\\.hardware\\.camera\\.provider@2\\.[0-9]+-external-service_64",
+     "/cache/overlay/(system|product)/upper",
+     "/cache/overlay/(vendor|odm)/upper",
+     "/cache/overlay/oem/upper",
+     "/data/misc/qdma(/.*)?",
+     "/dev/socket/qdma_app(/.*)?",
+     "/mnt/scratch/overlay/(system|product)/upper",
+     "/mnt/scratch/overlay/(vendor|odm)/upper",
+     "/mnt/scratch/overlay/oem/upper",
+     "/system/apex/apex\\.test(/.*)?",
+     "/system/apex/apex\\.test/bin/apex_test_postInstallHook",
+     "/system/apex/apex\\.test/bin/apex_test_preInstallHook",
+     "/system/apex/apex\\.test/bin/surfaceflinger",
+     "/system/apex/com\\.android\\.conscrypt(/.*)?",
+     "/system/apex/com\\.android\\.conscrypt/lib(64)?(/.*)?",
+     "/system/apex/com\\.android\\.media(/.*)?",
+     "/system/apex/com\\.android\\.media/lib(64)?(/.*)",
+     "/system/apex/com\\.android\\.media\\.swcodec(/.*)?",
+     "/system/apex/com\\.android\\.media\\.swcodec/bin/mediaswcodec",
+     "/system/apex/com\\.android\\.media\\.swcodec/lib(64)?(/.*)",
+     "/system/apex/com\\.android\\.resolv(/.*)?",
+     "/system/apex/com\\.android\\.resolv/lib(64)?(/.*)",
+     "/system/apex/com\\.android\\.runtime\\.debug(/.*)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/bin/art_postinstall_hook(.*)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/bin/art_preinstall_hook(.*)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/bin/dex2oat(d)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/bin/dexoptanalyzer(d)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/bin/linker(64)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/bin/profman(d)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/etc/tz(/.*)?",
+     "/system/apex/com\\.android\\.runtime\\.debug/lib(64)?(/.*)?",
+     "/system/apex/com\\.android\\.runtime\\.release(/.*)?",
+     "/system/apex/com\\.android\\.runtime\\.release/bin/dex2oat",
+     "/system/apex/com\\.android\\.runtime\\.release/bin/dexoptanalyzer",
+     "/system/apex/com\\.android\\.runtime\\.release/bin/linker(64)?",
+     "/system/apex/com\\.android\\.runtime\\.release/bin/profman",
+     "/system/apex/com\\.android\\.runtime\\.release/etc/tz(/.*)?",
+     "/system/apex/com\\.android\\.runtime\\.release/lib(64)?(/.*)?",
+     "/system/apex/com\\.android\\.tzdata(/.*)?",
+     "/system/apex/com\\.android\\.tzdata/etc(/.*)?",
+     "/system/bin/qccsyshal@1.2-service"
+    ]
+   },
+   "property": {
+    "factory": 653,
+    "source": 654,
+    "factory_only": [],
+    "different_label": {},
+    "source_only": [
+     "ctl.android.hardware.dumpstate"
+    ]
+   },
+   "service": {
+    "factory": 289,
+    "source": 290,
+    "factory_only": [],
+    "different_label": {},
+    "source_only": [
+     "qtrservice"
+    ]
+   },
+   "hwservice": {
+    "factory": 87,
+    "source": 87,
+    "factory_only": [],
+    "different_label": {},
+    "source_only": []
+   },
+   "seapp": {
+    "factory": 25,
+    "source": 26,
+    "factory_only": [],
+    "different_label": {},
+    "source_only": [
+     "domain=vendor_qcc_app isPrivApp=true name=com.qualcomm.qti.qdma2 seinfo=platform type=system_app_data_file user=system"
+    ]
+   }
+  }
+ },
+ "labels": {
+  "files": {
+   "factory_system_paths": 5992,
+   "mismatches": 0,
+   "details": []
+  },
+  "properties": {
+   "names_resolved": 1181,
+   "mismatches": 1,
+   "details": [
+    {
+     "property": "ctl.android.hardware.dumpstate",
+     "factory": "u:object_r:ctl_default_prop:s0",
+     "factory_entry": "ctl.",
+     "source": "u:object_r:ctl_dumpstate_prop:s0",
+     "source_entry": "ctl.android.hardware.dumpstate",
+     "reason": "matched Source entry ctl.android.hardware.dumpstate is an AOSP android-10.0.0_r47 entry that the factory base lacks"
+    }
+   ]
+  },
+  "services": {
+   "service": {
+    "factory_entries": 289,
+    "mismatches": {}
+   },
+   "hwservice": {
+    "factory_entries": 87,
+    "mismatches": {}
+   }
+  }
+ },
+ "boot_policy_ok": true
+}

@@ -1,0 +1,16 @@
+{
+  "compiled_signatures_verified": true,
+  "public_method_hiddenapi_flags": [
+    "greylist"
+  ],
+  "arm32_arm64_outputs_verified": true,
+  "sha256": {
+    "lib/libandroid_runtime.so": "838beafeb7ec5781dd20e97c02f1c69ed37ceef059256606dbcacf717c6a128f",
+    "lib/libgui.so": "fe9d612fd276dbab141399edf2ce34d38c0af2179922c181565721183514c3dd",
+    "lib64/libandroid_runtime.so": "6b80360f4d4988da5258b7ed5dcb882e535b03ac7078d594363dfb8efa8f70d2",
+    "lib64/libgui.so": "ebbfb09967a04ab1a10c2d778ce9fac3d4fe6c63a4074987d3d82d8b0625261c",
+    "framework/framework.jar": "2c8fe886f5509034dc83f52cf319f6040064166e163f365b754d15fbaea9201f"
+  },
+  "runtime_tested": false,
+  "installed_on_device": false
+}

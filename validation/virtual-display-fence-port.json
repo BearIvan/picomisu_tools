@@ -1,0 +1,42 @@
+{
+  "native_commit": "3944b39afc912f44d6379adf5f4b53677f5694a5",
+  "patch": "patches/0017-pico-virtual-display-fence-registry.patch",
+  "build_exit_code": 0,
+  "runtime_verified": true,
+  "asan_tests_per_abi": 16,
+  "evidence": "validation/native-runtime-current.json",
+  "implemented": [
+    "per-buffer outstanding count and latest layer/slot replacement",
+    "final-release Layer callback outside registry mutex",
+    "replacement releasePendingBuffer after fence notification",
+    "own producer listener with weak VDS capture",
+    "disconnect clears callback and notifies strong-reference snapshot with NO_FENCE without clearing registry",
+    "signed legacy sink usage plus HW_COMPOSER",
+    "PROTECTED usage for secure encoder output",
+    "optional max-dequeued count 2",
+    "recovered ARM64 object shape and all 130 vtable entries",
+    "factory default producer virtual slots attachCachedBuffer/listenFreezeSelf"
+  ],
+  "factory_differences": [
+    "weak capture instead of raw this to avoid retained-listener use-after-free/reference cycle",
+    "null composition-layer guard",
+    "signed outstanding-count overflow guard"
+  ],
+  "pending": [
+    "ARM32 factory protocol/layout comparison",
+    "BufferQueueProducer listenFreezeSelf and FreezeManager behavior",
+    "display flags bit20 routing to two-buffer constructor option",
+    "real GPU fence and end-to-end VR composition qualification",
+    "all member type/behavior and broader compositor compatibility"
+  ],
+  "installed_on_device": false,
+  "additional_patch": "patches/0018-pico-virtual-display-abi-lifetime.patch",
+  "abi_evidence": "validation/virtual-display-abi.json",
+  "lifetime_cases_verified": [
+    "retained listener does not retain display",
+    "last display owner drops inside active callback without deadlock/UAF",
+    "concurrent disconnect waits for active callback before disconnecting sink",
+    "snapshot notifications permit registry reentry"
+  ],
+  "cached_buffer_evidence": "validation/cached-buffer-port.json"
+}

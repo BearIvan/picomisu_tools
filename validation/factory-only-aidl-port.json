@@ -1,0 +1,215 @@
+{
+ "title": "Factory AIDL signatures of 6 framework tables and the factory-only framework interfaces (CodeLinaro LA.UM.8.12.c3-64900, PICO, Smartisan)",
+ "patches": [
+  "patches/0106-framework-factory-aidl-signatures-and-interfaces.patch",
+  "patches/0107-factory-only-aidl-runtime-fixture.patch",
+  "patches/0108-bluetooth-pan-tethering-package.patch",
+  "patches/0109-bluetooth-pan-tethering-package-check.patch"
+ ],
+ "tables": {
+  "factory_interfaces": 857,
+  "identical": 838,
+  "identical_before": 820,
+  "factory_only_interfaces": 19,
+  "factory_only_before": 37,
+  "remaining_factory_only": [
+   "Landroid/casthal/IBatteryChangeListener$Stub;",
+   "Landroid/casthal/IScreenChangeListener$Stub;",
+   "Landroid/content/IClipboardSmtEx$Stub;",
+   "Landroid/os/IPowerManagerMonitorEx$Stub;",
+   "Landroid/os/IPowerManagerSmtEx$Stub;",
+   "Lcom/android/internal/app/IDataReportCallback$Stub;",
+   "Lcom/android/internal/app/IDataReportServer$Stub;",
+   "Lcom/android/internal/telephony/ISmsSecurityAgent$Stub;",
+   "Lcom/android/internal/telephony/ISmsSecurityService$Stub;",
+   "Lcom/qualcomm/qti/IPerfManager$Stub;",
+   "Lcom/qualcomm/wfd/service/IHIDEventListener$Stub;",
+   "Lcom/qualcomm/wfd/service/ISessionManagerService$Stub;",
+   "Lcom/qualcomm/wfd/service/IWfdActionListener$Stub;",
+   "Lcom/qualcomm/wfd/service/IWfdSession$Stub;",
+   "Lorg/codeaurora/internal/IDepersoResCallback$Stub;",
+   "Lorg/codeaurora/internal/IDsda$Stub;",
+   "Lorg/codeaurora/internal/IExtTelephony$Stub;",
+   "Lorg/codeaurora/internal/INetworkCallback$Stub;",
+   "Lvendor/qti/hardware/servicetracker/V1_0/IServicetracker$Stub;"
+  ]
+ },
+ "signature_check": {
+  "tool": "tools/compare-aidl-tables.py --signatures (full signature, in/out/inout, oneway per transaction of every common AIDL Proxy)",
+  "before": {
+   "compared": 738,
+   "identical": 732,
+   "differing": [
+    "IBackupAgent",
+    "IBluetoothPan",
+    "INetworkStatsService",
+    "IStatsManager",
+    "IVibratorService",
+    "ISystemGestureExclusionListener"
+   ]
+  },
+  "after": {
+   "compared": 756,
+   "identical": 756,
+   "differing": {}
+  }
+ },
+ "decisions": {
+  "ported_signature": {
+   "android.app.IBackupAgent.doFullBackup (code 3)": "PICO, factory DEX: in-place List<String> includePaths/excludePaths; BackupAgent$BackupServiceBinder -> ExtBackupAgentImpl.onFullBackup (domain:path filters, factory quirks kept), FullBackupEngine$FullBackupRunner passes the Pico task paths",
+   "android.bluetooth.IBluetoothPan.setBluetoothTethering (code 2)": "CodeLinaro system/bt + BluetoothPan (mContext.getOpPackageName) + packages/apps/Bluetooth PanService; the image server is the factory Bluetooth.apk with the same (ZLjava/lang/String;)V signature",
+   "android.net.INetworkStatsService.forceUpdateIfaces (code 7)": "CodeLinaro: VPN accounting in NetworkStatsFactory (updateVpnInfos, adjustForTunAnd464Xlat, migrateTun with several underlying interfaces, VpnInfo.underlyingIfaces String[]), NetworkStatsService/Recorder/Observers without VpnInfo, ConnectivityService, NetworkManagementService",
+   "android.os.IStatsManager.sendWatchdogRollbackOccurredAtom (code 24)": "CodeLinaro: rollbackReason/failingPackageName, PackageWatchdog failure reasons, RollbackPackageHealthObserver, AppErrors, StatsLog, statsd (StatsService, main, PowerStatsPuller, atoms.proto incl. biometric latency with LoggableMonitor/BiometricService, public StatsLog.write(int, Object...) as in the factory)",
+   "android.os.IVibratorService.vibrate (code 3)": "CodeLinaro: AudioAttributes instead of usageHint, DND bypass for privileged callers, USAGE_NOTIFICATION_EVENT in isNotification",
+   "android.view.ISystemGestureExclusionListener.onSystemGestureExclusionChanged (code 1)": "CodeLinaro: unrestricted region, exclusion restriction logging (atom 223), back gesture logging (224) in SystemUI EdgeBackGestureHandler, PointerLocationView, DeviceConfig debounce key"
+  },
+  "ported_factory_only_framework_jar": {
+   "android.app.IFreezeManager (3) / IUnFreezeCallback (1)": "consumers PicoSyshub, XRRuntime (reflection on android.app.FreezeManager); server sys-services FreezeManagerService (\"freeze\"), same protocol as the native libbinder FreezeManager (codes 1-2 only); FreezeManager and Binder.getLastFrozenPid JNI reconstructed",
+   "android.app.ISceneInfoManager (6) / IDataListener (2)": "consumer and server PicoSyshub (\"sceneinfo_service\"), client SmartisanPowerAdvisor in sys-services; SceneInfoManager, DataListener, SceneData reconstructed",
+   "android.app.IPrefetchManager (4) / IPrefetchObserver (1) / IPrefetchCallback (1)": "server sys-services PrefetchManagerService (\"prefetch\"); PrefetchInfo reconstructed, IPrefetchManagerService observer defaults; ActivityManagerSmtBase client left for the Smartisan chunk",
+   "android.os.IPowerAdvisor (15)": "consumers XRRuntime, PicoSyshub, OsTeaTracker, store2d (reflection); server sys-services SmartisanPowerAdvisor$BinderService (\"poweradvisor\")",
+   "com.android.internal.app.ITransferServer (31)": "consumers PicoFeedback, XRShell (reflection), sysmonitor-framework; server sysmonitor-services TransferServer (\"transferserver\"); AppMainMsgInfo reconstructed",
+   "com.android.internal.app.ISysTransServer (6)": "server sys-services SysTransServer (\"systransserver\"); native clients libgui/libhwui/libsysperftracker",
+   "com.android.internal.policy.IKeyguardVerifyCallback (1) / IKeyguardFingerprintVerifyCallback (5) / IKeyguardFaceIDVerifyCallback (1)": "consumer PicoKeyguard.apk (method signatures of its KeyguardService binder)",
+   "android.content.pm.IPackageManagerMonitorEx (0)": "services PackageManagerServiceMonitorEx extends its Stub as in the factory; consumers sys-services/sysmonitor-services",
+   "android.os.IDeviceIdleControllerSmtEx (1)": "server services DeviceIdleControllerSmtEx (Smartisan chunk, not registered with ServiceManager); needed by preserved sys JARs",
+   "android.dvr.IVirtualInputService (14)": "explicit transaction ids (codes 2,3,5-14,16,18); \"virtual_input\" has no server in the factory; client SmtPCUtilsSmtBase (Smartisan chunk)",
+   "android.pc.ISmtPCManager (1)": "no service in the factory (SmtPCUtilsSmtBase.getSmtPCManager returns null); clients SmtPCUtilsSmtBase/TntManager (Smartisan chunk)",
+   "com.android.internal.car.ICarStatsService (1)": "CodeLinaro; consumer is the native statsd CarStatsPuller (factory statsd strings present); no car service on PICO, statsd logs \"Car service is unavailable\" as on the factory"
+  },
+  "no_consumer_not_ported": {
+   "android.content.IClipboardSmtEx (3)": "only factory framework ClipboardManagerSmtBase references it (not_needed in api-consumers.json); no server in services.jar or any sys JAR, no app",
+   "android.os.IPowerManagerSmtEx (0)": "no reference in any factory container outside its own generated classes",
+   "android.os.IPowerManagerMonitorEx (0)": "only framework PowerManagerMonitorEx and services PowerManagerServiceBridgeEx (both not_needed); no app or sys JAR consumer",
+   "com.android.internal.telephony.ISmsSecurityAgent (1) / ISmsSecurityService (3)": "CodeLinaro telephony AIDL with SmsAuthorizationRequest; no implementer or caller in CodeLinaro opt-telephony/telephony-service, factory telephony-common/services or any factory app",
+   "vendor.qti.hardware.servicetracker.V1_0.IServicetracker (services.jar HIDL)": "CodeLinaro ActiveServices client; factory vendor/product/odm have no servicetracker HAL service or VINTF entry (only sepolicy contexts and the system compatibility matrix), so every factory lookup fails (getServicetrackerInstance returns false); Source skips the lookup with the same observable result"
+  },
+  "other_boot_jars_boot_classpath_decision": {
+   "com.android.internal.app.IDataReportCallback (2) / IDataReportServer (3), android.casthal.IBatteryChangeListener / IScreenChangeListener": "sysmonitor-framework.jar; server/consumer sysmonitor-services.jar -> Smartisan/sys-JAR chunk",
+   "com.qualcomm.qti.IPerfManager (7)": "QPerformance.jar (closed QTI); client com.qualcomm.qti.Performance loaded by framework BoostFramework/UxPerformance from /system/framework/QPerformance.jar, server factory /system/bin/perfservice (\"vendor.perfservice\"); keep the factory QPerformance/UxPerformance JARs with perfservice",
+   "com.qualcomm.wfd.service.ISessionManagerService (45) / IWfdSession (45) / IWfdActionListener (3) / IHIDEventListener (2)": "WfdCommon.jar (closed; CodeLinaro wfd-commonsys at the tag holds only libaac); server WfdService.apk (factory priv-app); framework consumer factory services ExtendedRemoteDisplayHelper (CodeLinaro + PICO PRODUCT_NAME_MERLINE) not in Source; keep factory WfdCommon.jar + WfdService.apk and port ExtendedRemoteDisplayHelper together",
+   "org.codeaurora.internal.IExtTelephony (44) / IDsda (2) / INetworkCallback (9) / IDepersoResCallback (1)": "telephony-ext.jar, open source: CodeLinaro platform/vendor/codeaurora/telephony internal/ (tag commit 27d00010). No \"extphone\" server in any factory container. Consumers: factory product Settings.apk (SettingsActivity.switchToFragment and Utils.isNetworkSettingsApkAvailable call IExtTelephony$Stub.asInterface unconditionally -> NoClassDefFoundError without the JAR), factory telephony-common CarrierServiceStateTracker, ConnectivityExt TCPBufferManager, sysmonitor-services NetworkUtilsMonitorEx. Needed on the Source BOOTCLASSPATH while the factory product Settings stays"
+  }
+ },
+ "hidden_api": "All new members have the factory flags: @hide BLACKLIST defaults, public overrides WHITELIST, FreezeManager.getService/IFreezeManagerSingleton GREYLIST (config/hiddenapi-greylist.txt), StatsLog.write(int, Object...) public API as in the factory.",
+ "static": {
+  "framework.jar": {
+   "changed_classes": 164,
+   "identical": 163,
+   "explained_differences": {
+    "Landroid/app/backup/BackupAgent;": "<init>: factory ExtImplFactory.getImpl(IExtBackupAgent.class, this) vs the Source convention new ExtBackupAgentImpl(this); every other member (doFullBackup with paths, DEBUG=true logging, factory log lines) is identical."
+   }
+  },
+  "services.jar": {
+   "changed_classes": 35,
+   "identical": 30,
+   "explained_differences": {
+    "Lcom/android/server/am/AppErrors;": "handleShowAnrUi: unported PICO IExtAppErrors.canShowAnrDialog and Smartisan peroptFlag delayed kill; only the PackageWatchdog FAILURE_REASON_* arguments belong to this chunk and are identical.",
+    "Lcom/android/server/backup/fullbackup/FullBackupEngine$FullBackupRunner;": "run(): factory MORE_DEBUG \"Writing manifest for\" logging (Source keeps the if (MORE_DEBUG) guard, as in the previous chunk); the 7-argument doFullBackup call with the include/exclude paths is identical.",
+    "Lcom/android/server/wm/DisplayContent;": "<init>: unported PICO IExtDisplayContent and Smartisan DisplayContentSmtBase, framework-res ID shift (17105053 vs 17105052); the gesture-exclusion members are identical to CodeLinaro/factory.",
+    "Lcom/android/server/wm/WindowManagerService;": "<init>: unported QTI BoostFramework mPerf, Smartisan WindowManagerServiceSmtBase, PICO IExtWindowManagerService, CodeLinaro HighRefreshRateBlacklist.create(Resources) and framework-res ID shifts; the ported mSystemGestureExclusionLogDebounceTimeoutMillis read and DeviceConfig listener lambda are identical.",
+    "Lcom/android/server/wm/WindowState;": "<init>: unported PICO IExtWindowState and factory localLOGV/DEBUG_ADD_REMOVE logging; the exclusion-restriction members are identical."
+   }
+  }
+ },
+ "native": {
+  "statsd": "Source /system/bin/statsd contains the factory strings com.android.internal.car.ICarStatsService, car_stats, Car service has died/is unavailable, CarStatsPuller::pull failed for %d, statsd terminated on receiving signal %d., Null resultReceiver given...; \"power.stats Hal not loaded\" absent in both",
+  "libandroid_runtime": "Binder.getLastFrozenPid JNI (plain native as in the factory) reads IPCThreadState::getLastFrozenPid of the existing native freeze port"
+ },
+ "faithful_factory_failures": [
+  "ExtBackupAgentImpl: include paths of one domain overwrite each other (map read by domain, written by token); -journal/-wal/.xml extras never added (token compared with \"database\"/\"sharedpref\")",
+  "FreezeManager.binderDeathCallback unlinks from unFreezeCallBacks for both registries",
+  "SceneInfoManager.getService dereferences sBinder after logging \"can't get service interface\"",
+  "statsd CarStatsPuller: no car service on PICO, pulls fail with \"Car service is unavailable\""
+ ],
+ "left_for_smartisan_chunk": [
+  "android.app.ActivityManagerSmtBase (prefetch singleton, register/unregisterPrefetchObserver, isPrefetch, registerStartPrefetchListener/StartPrefetchCallback) and ActivityManager.getSmtEx used by the PicoSyshub/XRRuntime FreezeManager init path",
+  "IPrefetchManagerService prefetch defaults and their services.jar callers",
+  "DeviceIdleControllerSmtEx server/LocalServiceSmtEx",
+  "PackageManagerServiceMonitorEx dex2oat idle observer",
+  "SmtPCUtilsSmtBase/SmtPCUtilsInnerBase, smartisanos.tnt.TntManager",
+  "PowerAdvisor, PowerAdvisorInternal, SysTransManager, ViewRootImplSmtBase systransserver client",
+  "sys-services/sysmonitor-services servers (FreezeManagerService, PrefetchManagerService, SmartisanPowerAdvisor, SysTransServer, TransferServer)"
+ ],
+ "left_for_other_chunks": [
+  "CodeLinaro NetworkDnsEventReported sampling (needs a DnsResolver subsampling port), settings_enums SETTINGS_AWARE_DISPLAY/GESTURE_TAP, RollbackManagerServiceImpl dump permission, FaceService start time",
+  "CodeLinaro NetworkStatsHistory.multiplySafe move, LockdownVpnTracker handler, NetworkManagementService invokeForAllObservers",
+  "CodeLinaro gestures.back_timeout in EdgeBackGestureHandler (no factory SystemUI to verify), unrelated DisplayContent/WMS/WindowState/DisplayPolicy hunks",
+  "boot classpath decision: telephony-ext.jar (CodeLinaro), QPerformance/UxPerformance.jar, WfdCommon.jar + ExtendedRemoteDisplayHelper, sysmonitor-framework.jar"
+ ],
+ "runtime": {
+  "package": "outputs/framework-boot-image-test-26",
+  "fixtures_per_abi": 29,
+  "factory_only_aidl_wire": {
+   "arm64": {
+    "scenarios": 332,
+    "matched": 332
+   },
+   "arm": {
+    "scenarios": 332,
+    "matched": 332
+   }
+  },
+  "regression_wire": {
+   "AppendedAidlFixture": {
+    "arm64": {
+     "scenarios": 1790,
+     "matched": 1790
+    },
+    "arm": {
+     "scenarios": 1790,
+     "matched": 1790
+    },
+    "unexpected": []
+   },
+   "ShiftedAidlFixture": {
+    "arm64": {
+     "scenarios": 1207,
+     "matched": 1207
+    },
+    "arm": {
+     "scenarios": 1207,
+     "matched": 1207
+    },
+    "unexpected": []
+   },
+   "PicoApiFixture": {
+    "arm64": {
+     "scenarios": 313,
+     "matched": 313
+    },
+    "arm": {
+     "scenarios": 313,
+     "matched": 313
+    },
+    "unexpected": []
+   },
+   "QcomApiFixture": {
+    "arm64": {
+     "scenarios": 1190,
+     "matched": 1190
+    },
+    "arm": {
+     "scenarios": 1190,
+     "matched": 1190
+    },
+    "unexpected": []
+   },
+   "AudioApiFixture": {
+    "arm64": {
+     "scenarios": 346,
+     "matched": 346
+    },
+    "arm": {
+     "scenarios": 346,
+     "matched": 346
+    },
+    "unexpected": []
+   }
+  },
+  "vr_policy": "76/78 + 2 expected on both ABIs",
+  "inspect_vr_canvas": "passed",
+  "headset": "adb 192.168.1.230:5555, temporary fixtures in /data/local/tmp as shell UID, removed; system partitions not modified"
+ },
+ "system_partitions_modified": false
+}

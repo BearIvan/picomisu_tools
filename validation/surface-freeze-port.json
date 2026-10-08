@@ -1,0 +1,52 @@
+{
+  "framework_commit": "972e291817872cc3ac7b3924df3918d73844ca80",
+  "native_commit": "028df933e0cebf3b011a7589406be38b0e4152f8",
+  "patch": "patches/0024-pico-surface-freeze-jni.patch",
+  "build_exit_code": 0,
+  "package": "outputs/bufferqueue-test-26",
+  "manifest_sha256": "6cd8d1b8b6d93d811ee9d1a576ecde815d20fdd085eb684ca83dfbb116ec1d0b",
+  "compiled_evidence": "validation/surface-freeze-compiled.json",
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 6,
+    "arm": 6
+  },
+  "fixtures": [
+    "fake-service-preflight",
+    "null-native-surface-is-ignored",
+    "null-producer-is-ignored",
+    "surface-jni-registers-local-producer",
+    "repeated-jni-registration-is-shared",
+    "jni-to-producer-slot-recovery"
+  ],
+  "implemented": [
+    "Surface.registerFreezeSelf ()V and nativeFreezeSelfListening (J)V",
+    "non-null VirtualDisplay constructor/setSurface listener registration",
+    "strong native Surface and producer references with null handling"
+  ],
+  "source_differences": [
+    "Java wrapper serializes native pointer access with Surface release through mLock",
+    "native wrapper keeps one strong producer snapshot instead of factory repeated getter snapshots"
+  ],
+  "actual_bridge_source_compiled_into_runtime_and_probe": true,
+  "factory_runtime_hash_checked_on_headset_before_address_call": true,
+  "gui_and_native_test_dependencies_match_previous_package": true,
+  "source_caller_integration_ported": true,
+  "compiled_java_callers_verified": true,
+  "native_jni_to_slot_recovery_tested_both_abis": true,
+  "java_execution_with_source_boot_classpath_qualified": true,
+  "real_process_freeze_performed": false,
+  "real_freeze_events_qualified": false,
+  "gpu_fences_qualified": false,
+  "full_runtime_abi_proven": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "pending": [
+    "real freeze events, GPU fences and full VR/runtime qualification"
+  ],
+  "scope": "native probe comparisons against pinned factory JNI plus Source app_process execution of VirtualDisplay constructor/setSurface and Surface wrappers on Source ART/13 boot JARs; local services and synthetic buffers, not full VR qualification",
+  "java_runtime_evidence": "validation/framework-boot-image.json",
+  "java_runtime_component_head": "dda074e6beafa16657264b8e4c508493dff6e6c5",
+  "latest_regression_evidence": "validation/native-runtime-current.json"
+}

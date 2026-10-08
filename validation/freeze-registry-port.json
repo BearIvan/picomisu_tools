@@ -1,0 +1,42 @@
+{
+  "native_commit": "e05868cdac45d39344ad8361c52cd8968748e1e0",
+  "patch": "patches/0021-pico-freeze-self-registry.patch",
+  "build_exit_code": 0,
+  "runtime_evidence": "validation/native-runtime-current.json",
+  "abi_evidence": "validation/freeze-registry-abi.json",
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 15,
+    "arm": 15
+  },
+  "asan_registry_tests_per_abi": {
+    "arm64": 4,
+    "arm": 4
+  },
+  "asan_scope": "actual FreezeManager.cpp compiled into test executable with ASan; fake service interposition, no real process freeze",
+  "implemented": [
+    "cached service lookup and dead/unavailable service handling",
+    "PID registration UID guard and inner/unregister facade",
+    "first self key registers one process callback",
+    "duplicate key preserves first callable and argument",
+    "PID-filtered self event delivery and local unregister",
+    "serialized external unregister with active callback"
+  ],
+  "source_differences": [
+    "managed records release callable ownership on removal instead of raw factory record leakage",
+    "recursive registry lock permits self removal and skips removed peer records in snapshot",
+    "private registry node value ownership differs; full private type ABI not claimed"
+  ],
+  "real_freeze_service_contacted_by_successful_probes": false,
+  "scope": "manager fake-service preflight, local self/PID behavior and source lifetime tests; ARM64 recovered prefix/vtables",
+  "self_pid_registry_ported": true,
+  "remote_registry_ported": false,
+  "producer_unfreeze_recovery_ported": true,
+  "producer_unfreeze_evidence": "validation/producer-unfreeze-port.json",
+  "frozen_reply_evidence": "validation/frozen-reply-port.json",
+  "pending": [
+    "remote registration maps, Binder death handling and callbacks",
+    "producer self-listener caller integration and real freeze/GPU fence qualification",
+    "complete private manager/producer type ABI and real-service/VR qualification"
+  ],
+  "system_partitions_modified": false
+}

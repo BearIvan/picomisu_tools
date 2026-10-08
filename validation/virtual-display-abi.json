@@ -1,0 +1,825 @@
+{
+  "factory_sha256": "d23904265c575d67c8818fa5eca24936d78ae137833e1c5383a7a4b09f3bdb51",
+  "factory_gui_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+  "source_sha256": "7d13c6934d591a9dbe34bf65607f8f7419c4e3a9c77aec6d6c3556870e709c2f",
+  "arm32_source_sha256": "cf49876a0d920204689078dcee9b856508498eea5044d13c8fe6e4cd319ab650",
+  "arm64_source_shape": {
+    "vtable_bytes": 1040,
+    "display": {
+      "bytes": 3600,
+      "fields": {
+        "mHwc": 1728,
+        "mDisplayId": 1736,
+        "mDisplayName": 1752,
+        "mSource": 1776,
+        "mDefaultOutputFormat": 1792,
+        "mOutputFormat": 1796,
+        "mOutputUsage": 1800,
+        "mProducerSlotSource": 1808,
+        "mProducerBuffers": 1816,
+        "mQueueBufferOutput": 2328,
+        "mSinkBufferWidth": 2408,
+        "mSinkBufferHeight": 2412,
+        "mCompositionType": 2416,
+        "mFbFence": 2424,
+        "mOutputFence": 2432,
+        "mFbProducerSlot": 2440,
+        "mOutputProducerSlot": 2444,
+        "mDbgState": 2448,
+        "mDbgLastCompositionType": 2452,
+        "mMustRecompose": 2456,
+        "mHwcBufferCache": 2464,
+        "mForceHwcCopy": 3488,
+        "mSecure": 3489,
+        "mSinkUsage": 3492,
+        "mSingleLayerFrames": 3496,
+        "mSingleLayerMutex": 3520,
+        "mMultiLayer": 3560,
+        "mReleaseListener": 3568,
+        "mUseTwoSinkBuffers": 3576
+      }
+    },
+    "record": {
+      "bytes": 32,
+      "fields": {
+        "slot": 4,
+        "buffer": 8,
+        "layer": 16,
+        "outstanding": 24
+      }
+    }
+  },
+  "arm32_source_shape": {
+    "vtable_bytes": 520,
+    "display": {
+      "bytes": 2096,
+      "fields": {
+        "mHwc": 1100,
+        "mDisplayId": 1104,
+        "mDisplayName": 1120,
+        "mSource": 1132,
+        "mDefaultOutputFormat": 1140,
+        "mOutputFormat": 1144,
+        "mOutputUsage": 1152,
+        "mProducerSlotSource": 1160,
+        "mProducerBuffers": 1168,
+        "mQueueBufferOutput": 1424,
+        "mSinkBufferWidth": 1496,
+        "mSinkBufferHeight": 1500,
+        "mCompositionType": 1504,
+        "mFbFence": 1508,
+        "mOutputFence": 1512,
+        "mFbProducerSlot": 1516,
+        "mOutputProducerSlot": 1520,
+        "mDbgState": 1524,
+        "mDbgLastCompositionType": 1528,
+        "mMustRecompose": 1532,
+        "mHwcBufferCache": 1536,
+        "mForceHwcCopy": 2048,
+        "mSecure": 2049,
+        "mSinkUsage": 2052,
+        "mSingleLayerFrames": 2056,
+        "mSingleLayerMutex": 2068,
+        "mMultiLayer": 2072,
+        "mReleaseListener": 2076,
+        "mUseTwoSinkBuffers": 2080
+      }
+    },
+    "record": {
+      "bytes": 20,
+      "fields": {
+        "slot": 4,
+        "buffer": 8,
+        "layer": 12,
+        "outstanding": 16
+      }
+    }
+  },
+  "arm64_slots_examined": 130,
+  "arm64_all_slots_matched": true,
+  "unmatched_slots": [],
+  "slot_checks": [
+    {
+      "offset": 0,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 8,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 16,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 24,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 32,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 40,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 48,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 56,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 64,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 72,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 80,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 88,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 96,
+      "kind": "private function identity from instruction research",
+      "matched": true
+    },
+    {
+      "offset": 104,
+      "kind": "private function identity from instruction research",
+      "matched": true
+    },
+    {
+      "offset": 112,
+      "kind": "private function identity from instruction research",
+      "matched": true
+    },
+    {
+      "offset": 120,
+      "kind": "private function identity from instruction research",
+      "matched": true
+    },
+    {
+      "offset": 128,
+      "kind": "private function identity from instruction research",
+      "matched": true
+    },
+    {
+      "offset": 136,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 144,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 152,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 160,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 168,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 176,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 184,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 192,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 200,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 208,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 216,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 224,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 232,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 240,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 248,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 256,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 264,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 272,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 280,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 288,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 296,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 304,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 312,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 320,
+      "kind": "private function identity from instruction research",
+      "matched": true
+    },
+    {
+      "offset": 328,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 336,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 344,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 352,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 360,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 368,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 376,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 384,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 392,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 400,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 408,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 416,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 424,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 432,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 440,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 448,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 456,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 464,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 472,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 480,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 488,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 496,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 504,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 512,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 520,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 528,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 536,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 544,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 552,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 560,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 568,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 576,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 584,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 592,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 600,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 608,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 616,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 624,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 632,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 640,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 648,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 656,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 664,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 672,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 680,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 688,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 696,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 704,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 712,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 720,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 728,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 736,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 744,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 752,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 760,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 768,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 776,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 784,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 792,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 800,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 808,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 816,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 824,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 832,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 840,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 848,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 856,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 864,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 872,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 880,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 888,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 896,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 904,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 912,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 920,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 928,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 936,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 944,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 952,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 960,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 968,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 976,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 984,
+      "kind": "vtable metadata",
+      "matched": true
+    },
+    {
+      "offset": 992,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 1000,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 1008,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 1016,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 1024,
+      "kind": "function symbol intersection",
+      "matched": true
+    },
+    {
+      "offset": 1032,
+      "kind": "function symbol intersection",
+      "matched": true
+    }
+  ],
+  "recovered_fields_match": true,
+  "source_record_matches_factory_observations": true,
+  "arm32_factory_comparison_complete": false,
+  "scope": "vtable identities/metadata and recovered member offsets; function behavior, all member types and full graphics compatibility are separate checks",
+  "concrete_bufferqueue_extensions_ported": false,
+  "instructions": [
+    {
+      "address": "0xedc2c",
+      "bytes": "00c28152",
+      "observation": "allocation size 3600"
+    },
+    {
+      "address": "0xade48",
+      "bytes": "9b863639",
+      "observation": "secure flag at 3489"
+    },
+    {
+      "address": "0xade4c",
+      "bytes": "9fa60db9",
+      "observation": "sink usage at 3492"
+    },
+    {
+      "address": "0xade6c",
+      "bytes": "98e23739",
+      "observation": "two-buffer option at 3576"
+    },
+    {
+      "address": "0xadf94",
+      "bytes": "e81740b9",
+      "observation": "read legacy sink query int32"
+    },
+    {
+      "address": "0xadfa4",
+      "bytes": "08011532",
+      "observation": "include HW_COMPOSER usage"
+    },
+    {
+      "address": "0xadfa8",
+      "bytes": "88a60db9",
+      "observation": "save sink usage"
+    },
+    {
+      "address": "0xae068",
+      "bytes": "e1031f32",
+      "observation": "two sink buffers: count 2"
+    },
+    {
+      "address": "0xae070",
+      "bytes": "081940f9",
+      "observation": "setMaxDequeuedBufferCount producer slot 48"
+    },
+    {
+      "address": "0xb01a0",
+      "bytes": "08a48db9",
+      "observation": "sign extend legacy sink usage"
+    },
+    {
+      "address": "0xb01a4",
+      "bytes": "09847639",
+      "observation": "read secure flag"
+    },
+    {
+      "address": "0xb01b0",
+      "bytes": "68008036",
+      "observation": "test HW_VIDEO_ENCODER bit 16"
+    },
+    {
+      "address": "0xb01b4",
+      "bytes": "080172b2",
+      "observation": "add PROTECTED bit 14"
+    }
+  ]
+}

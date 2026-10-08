@@ -1,0 +1,12 @@
+{
+  "native_commit": "df8b3ba206b0eb7ff349f10094217d1c50f1b75a",
+  "build_exit_code": 0,
+  "source_behavior_tests_passed": 4,
+  "render_surface_suite_arm64_passed": 35,
+  "factory_virtual_slot_matches": true,
+  "factory_behavior_comparison": "ARM64 static reconstruction; no direct factory attach execution",
+  "argument_validation_difference": "Null buffer returns BAD_VALUE and missing typed Surface returns NO_INIT instead of factory assumptions",
+  "full_compositor_abi_proven": false,
+  "production_direct_path_enabled": false,
+  "runtime_evidence": "validation/native-runtime-current.json"
+}

@@ -1,0 +1,357 @@
+{
+ "framework_commit": "ef65422f04fb6612d19130ae0e80537dab4a5271",
+ "soong_commit": "1725e6ee745ff1c24b11e3cd63d5c85e0d2162ad",
+ "patches": [
+  "patches/0039-soong-pico-hiddenapi-whitelist.patch",
+  "patches/0040-pico-permissions.patch",
+  "patches/0041-qcom-wifiinfo-generation.patch",
+  "patches/0042-smartisan-applicationinfo-smtbase.patch",
+  "patches/0043-pico-aidl-interfaces-clients.patch",
+  "patches/0044-pico-features-utils-whitelist.patch",
+  "patches/0045-pico-api-runtime-fixture.patch"
+ ],
+ "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+ "source_framework_sha256": "c5bbb9de7debbfecdfc008beeddb7eda99833ad38c308335e534562ea6bb4afa",
+ "probe_sha256": "38a3e89fa200182e0ae641d16c6ef1cbcd3f890da8ed6fb57c1391080be60a0e",
+ "package": "outputs/framework-boot-image-test-18",
+ "aidl_interfaces": {
+  "com.pvr.IPvrManagerService": {
+   "jar": "framework.jar",
+   "methods": 20,
+   "oneway": [
+    "sendEvent",
+    "sendPvrMessages"
+   ],
+   "transactions": {
+    "addPvrCallback": 4,
+    "addPvrCallbacks": 12,
+    "addPvrCallbacksNative": 16,
+    "addPvrCallbacksNativeWithEventType": 20,
+    "addPvrCallbacksWithEventType": 19,
+    "addSystemService": 2,
+    "getHeadstrapStatus": 11,
+    "getScreenBrightnessLevel": 8,
+    "getSystemFeatures": 3,
+    "removePvrCallback": 5,
+    "removePvrCallbacks": 13,
+    "sendEvent": 18,
+    "sendPvrMessage": 6,
+    "sendPvrMessages": 14,
+    "setClientStatus": 17,
+    "setCurrentScreenBrightnessLevel": 9,
+    "setLedStatus": 10,
+    "setSystemFeatures": 1,
+    "updateDistributionChannel": 15,
+    "updateUserSettings": 7
+   }
+  },
+  "com.pvr.IPvrCallback": {
+   "jar": "framework.jar",
+   "methods": 1,
+   "oneway": [
+    "onEventChanged"
+   ],
+   "transactions": {
+    "onEventChanged": 1
+   }
+  },
+  "com.pvr.IPvrCallbackNative": {
+   "jar": "framework.jar",
+   "methods": 1,
+   "oneway": [
+    "onEventChanged"
+   ],
+   "transactions": {
+    "onEventChanged": 1
+   }
+  },
+  "com.pvr.ISysDataSyncService": {
+   "jar": "framework.jar",
+   "methods": 9,
+   "oneway": [
+    "flushTeaTrackerEvents",
+    "onAppDied",
+    "onMetricEvent",
+    "onReportAid",
+    "onSlardarEvent",
+    "onTeaTrackerEvent",
+    "onUsageEvent"
+   ],
+   "transactions": {
+    "flushTeaTrackerEvents": 9,
+    "onAppDied": 2,
+    "onMetricEvent": 7,
+    "onReportAid": 3,
+    "onSlardarEvent": 8,
+    "onTeaTrackerEvent": 4,
+    "onUsageEvent": 1,
+    "queryProfile": 5,
+    "uploadProfile": 6
+   }
+  },
+  "com.pvr.configuration.IConfigServiceInterface": {
+   "jar": "framework.jar",
+   "methods": 71,
+   "oneway": [],
+   "transactions": {
+    "addClientMappingData": 16,
+    "addClientMappingDataJson": 17,
+    "addClientProperty": 6,
+    "addClientPropertyJson": 7,
+    "addConfigData": 26,
+    "addConfigDataJson": 27,
+    "addConfigGroupData": 37,
+    "addConfigGroupDataJson": 38,
+    "addLogTableData": 63,
+    "addLogTableDataJson": 64,
+    "addPermissionData": 46,
+    "addPermissionDataJson": 47,
+    "addRuleData": 55,
+    "addRuleDataJson": 56,
+    "deleteClientMappingData": 20,
+    "deleteClientMappingDataByClientId": 18,
+    "deleteClientMappingDataByPermissionId": 19,
+    "deleteClientProperty": 10,
+    "deleteClientPropertyByClientId": 8,
+    "deleteClientPropertyByPkg": 9,
+    "deleteConfigData": 30,
+    "deleteConfigDataByConfigId": 28,
+    "deleteConfigDataByPkg": 29,
+    "deleteConfigGroupData": 40,
+    "deleteConfigGroupDataByConfigGroupId": 39,
+    "deleteLogTableData": 66,
+    "deleteLogTableDataByLogId": 65,
+    "deletePermissionData": 49,
+    "deletePermissionDataByPermissionId": 48,
+    "deleteRuleData": 58,
+    "deleteRuleDataByRuleId": 57,
+    "getConfigProperty": 3,
+    "getConfigPropertyDirectAccess": 1,
+    "queryClientMappingData": 25,
+    "queryClientMappingDataByClientId": 23,
+    "queryClientMappingDataByPermissionId": 24,
+    "queryClientProperty": 15,
+    "queryClientPropertyByClientId": 13,
+    "queryClientPropertyByPkg": 14,
+    "queryConfigData": 36,
+    "queryConfigDataByConfigId": 34,
+    "queryConfigDataByConfigName": 35,
+    "queryConfigGroupData": 45,
+    "queryConfigGroupDataByConfigGroupId": 44,
+    "queryLogTableData": 70,
+    "queryLogTableDataByLogId": 69,
+    "queryPermissionData": 54,
+    "queryPermissionDataByPermissionId": 53,
+    "queryRuleData": 62,
+    "queryRuleDataByRuleId": 61,
+    "saveConfigData": 71,
+    "setConfigProperty": 4,
+    "setConfigPropertyDirectAccess": 2,
+    "updateClientMappingData": 21,
+    "updateClientMappingDataJson": 22,
+    "updateClientProperty": 11,
+    "updateClientPropertyJson": 12,
+    "updateConfigData": 32,
+    "updateConfigDataJson": 33,
+    "updateConfigGroupData": 41,
+    "updateConfigGroupData1": 42,
+    "updateConfigGroupDataJson": 43,
+    "updateConfiguration": 5,
+    "updateDefaultConfigData": 31,
+    "updateLogTableData": 67,
+    "updateLogTableDataJson": 68,
+    "updatePermissionData": 50,
+    "updatePermissionData1": 51,
+    "updatePermissionDataJson": 52,
+    "updateRuleData": 59,
+    "updateRuleDataJson": 60
+   }
+  },
+  "com.pico.api.app.IApiLayer": {
+   "jar": "framework.jar",
+   "methods": 27,
+   "oneway": [
+    "registerAppSession",
+    "registerBroadcastReceiverForNative",
+    "registerSettingsObserverForNative",
+    "requestShowAnrDialog",
+    "startActivityForNative",
+    "startServiceForNative",
+    "unregisterAppSession",
+    "unregisterBroadcastReceiverForNative",
+    "unregisterSettingsObserverForNative",
+    "updatePersistentServiceConnection",
+    "updateRunning2dAppList",
+    "updateSeethroughState",
+    "updateShowing3dApp",
+    "updateXrRuntimeState"
+   ],
+   "transactions": {
+    "getPowerState": 16,
+    "getRunning2dAppData": 6,
+    "getScreenState": 1,
+    "getSeethroughState": 3,
+    "getSettingsInt": 17,
+    "getSettingsString": 19,
+    "getShowing3dApp": 4,
+    "getTopAppOnDefaultDisplay": 7,
+    "getTopAppOnDefaultDisplayForNative": 15,
+    "getXrRuntimeDisplayState": 5,
+    "isInputMethodShowing": 2,
+    "putSettingsInt": 18,
+    "putSettingsString": 20,
+    "registerAppSession": 9,
+    "registerBroadcastReceiverForNative": 25,
+    "registerSettingsObserverForNative": 21,
+    "requestShowAnrDialog": 27,
+    "startActivityForNative": 23,
+    "startServiceForNative": 24,
+    "unregisterAppSession": 10,
+    "unregisterBroadcastReceiverForNative": 26,
+    "unregisterSettingsObserverForNative": 22,
+    "updatePersistentServiceConnection": 8,
+    "updateRunning2dAppList": 12,
+    "updateSeethroughState": 11,
+    "updateShowing3dApp": 13,
+    "updateXrRuntimeState": 14
+   }
+  },
+  "com.pico.api.app.IAppSession": {
+   "jar": "framework.jar",
+   "methods": 0,
+   "oneway": [],
+   "transactions": {}
+  },
+  "com.pxr.pxrapi.IScreenCaptureInterface": {
+   "jar": "framework.jar",
+   "methods": 2,
+   "oneway": [],
+   "transactions": {
+    "startCapture": 1,
+    "stopCapture": 2
+   }
+  },
+  "com.pxr.net.IPxrNetworkManager": {
+   "jar": "framework.jar",
+   "methods": 7,
+   "oneway": [],
+   "transactions": {
+    "getAverageLinkLayerQuality": 7,
+    "getLinkLayerQuality": 6,
+    "registerLinkLayerQualityChangedListener": 3,
+    "registerNetworkQualityChangedListener": 1,
+    "unregisterLinkLayerQualityChangedListener": 4,
+    "unregisterNetworkQualityChangedListener": 2,
+    "updateLinkLayerQuality": 5
+   }
+  },
+  "com.pxr.net.INetworkQualityListener": {
+   "jar": "framework.jar",
+   "methods": 1,
+   "oneway": [
+    "onNetworkQualityChanged"
+   ],
+   "transactions": {
+    "onNetworkQualityChanged": 1
+   }
+  },
+  "com.pxr.net.ILinkLayerQualityListener": {
+   "jar": "framework.jar",
+   "methods": 3,
+   "oneway": [
+    "onAverLinkLayerLevelChanged",
+    "onLinkLayerLevelChanged",
+    "onLinkLayerQualityChanged"
+   ],
+   "transactions": {
+    "onAverLinkLayerLevelChanged": 3,
+    "onLinkLayerLevelChanged": 2,
+    "onLinkLayerQualityChanged": 1
+   }
+  },
+  "com.pxr.bluetooth.IBluetoothPxr": {
+   "jar": "framework.jar",
+   "methods": 2,
+   "oneway": [],
+   "transactions": {
+    "getConnectedDevices": 2,
+    "registerDeviceStateCallback": 1
+   }
+  },
+  "com.pxr.bluetooth.IBluetoothPxrDeviceCallback": {
+   "jar": "framework.jar",
+   "methods": 2,
+   "oneway": [],
+   "transactions": {
+    "onDeviceBondStateChanged": 2,
+    "onDeviceConnectionStateChanged": 1
+   }
+  },
+  "com.pvr.pxrnotification.aidl.IPxrNotificationService": {
+   "jar": "services.jar",
+   "methods": 3,
+   "oneway": [],
+   "transactions": {
+    "addPxrCallback": 1,
+    "removePxrCallback": 3,
+    "sendPxrMessage": 2
+   }
+  },
+  "com.pvr.pxrnotification.aidl.IPxrNotificationCallback": {
+   "jar": "services.jar",
+   "methods": 1,
+   "oneway": [
+    "onEventChanged"
+   ],
+   "transactions": {
+    "onEventChanged": 1
+   }
+  }
+ },
+ "runtime_comparison": {
+  "arm64": {
+   "scenarios": 313,
+   "matched": 313,
+   "mismatched": {}
+  },
+  "arm": {
+   "scenarios": 313,
+   "matched": 313,
+   "mismatched": {}
+  }
+ },
+ "runtime_unexpected_differences": [],
+ "factory_run": {
+  "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true
+ },
+ "static_comparison": {
+  "framework.jar": {
+   "classes": 96,
+   "identical": 94,
+   "different": {
+    "Landroid/pico/utils/Features;": "disableSystemAlert inlines com.android.internal.R.id.spacer, whose value depends on the framework-res resource table layout",
+    "Landroid/pico/utils/PicoUtilsDeprecated;": "not needed by any factory consumer; not ported"
+   }
+  },
+  "services.jar": {
+   "classes": 6,
+   "identical": 6,
+   "different": {}
+  }
+ },
+ "static_unexplained": [],
+ "hidden_api": "factory flags reproduced: com.pxr.net via hiddenapi-greylist-packages, whitelisted PICO members and Manifest.permission fields via config/hiddenapi-whitelist.txt",
+ "not_ported": [
+  "server implementations (PxrNotificationService, PvrManagerService, IApiLayer, IPxrNetworkManager and other services live in factory sys-JARs/apps)",
+  "com.pxr.bluetooth adapter/profile/device-manager classes (no consumers)",
+  "android.pico.ns (no consumers)",
+  "PicoUtilsDeprecated (no consumers)",
+  "ApplicationInfoMonitorEx",
+  "framework-res translations of new permission strings"
+ ],
+ "hardware_qualified": false,
+ "system_partitions_modified": false
+}

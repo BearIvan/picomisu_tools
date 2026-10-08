@@ -1,0 +1,33 @@
+{
+  "native_commit": "3944b39afc912f44d6379adf5f4b53677f5694a5",
+  "patch": "patches/0019-pico-cached-buffer-attachment.patch",
+  "build_exit_code": 0,
+  "runtime_evidence": "validation/native-runtime-current.json",
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 10,
+    "arm": 10
+  },
+  "implemented": [
+    "five-entry cache of strong GraphicBuffer references",
+    "LRU refresh on fetch/register and eviction before existing-ID update",
+    "nonzero-ID lookup and attach with normal slot/fence bookkeeping",
+    "clear cache on successful disconnect under queue mutex"
+  ],
+  "factory_quirks_verified": [
+    "provided buffer keyed by its own ID even when supplied ID differs",
+    "cached attach omits generation check",
+    "zero ID retains selected slot buffer"
+  ],
+  "source_difference": "atomic process-wide access counter instead of unsynchronized factory counter",
+  "test_scope": "isolated source/factory comparison, default synthetic GraphicBuffers without GPU allocation, padded constructor storage; not proof of complete producer class layout",
+  "initial_comparison_discrepancy_fixed": "reconnect returned source success versus factory NAME_NOT_FOUND; recovered cache clear in disconnect and confirmed both now return -2",
+  "freeze_provider": "factory libbinder.so",
+  "freeze_behavior_ported": false,
+  "pending": [
+    "FreezeManager Binder/callback lifetime and listenFreezeSelf integration",
+    "complete BufferQueueProducer layout including unfreeze/performance fields",
+    "concurrent cache eviction while waiting for free slot",
+    "real GPU/VR cached-buffer path"
+  ],
+  "system_partitions_modified": false
+}

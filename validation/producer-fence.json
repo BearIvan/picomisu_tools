@@ -1,0 +1,120 @@
+{
+  "verified_at_utc": "2026-09-28T20:21:40.226499+00:00",
+  "native_commit": "623193beb245726c96f429ec519e53444ffed2ef",
+  "build_exit_code": 0,
+  "tests_passed": {
+    "arm64": 32,
+    "arm": 32
+  },
+  "factory_producer_fence_fixtures_matched": {
+    "arm64": 12,
+    "arm": 12
+  },
+  "producer_fence_wire_sha256": {
+    "arm64": "82c5568ec645b7079410bb7ae2ee5f29d4001915ca2831e392ea609d4f808ddd",
+    "arm": "cf0a2905fae41a2f060a52552e3ec8a847b18f7dd890ea5d028b307356e8b0fa"
+  },
+  "factory_libgui_sha256": {
+    "64": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+    "32": "09e91a368003bf8112abaf4adc98f1a78df9ac88ada3f9c81f1eb12f51e68db0"
+  },
+  "source_libgui_sha256": {
+    "64": "804c06a18970a69c14f54c3a2bce79bdb6747e5601301c2731104fa91ea3aa61",
+    "32": "ed445608c5df70b606438c2cc760e2c5ae204b53548061fe779bb17e94ee32ab"
+  },
+  "producer_vtable_group": {
+    "64": {
+      "BnProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "BpProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "HpProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "DummyProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "SurfaceProducerListenerProxy": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "VirtualDisplayProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      }
+    },
+    "32": {
+      "BnProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "BpProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "HpProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "DummyProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "SurfaceProducerListenerProxy": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      },
+      "VirtualDisplayProducerListener": {
+        "vtable_size_matches": true,
+        "primary_prefix_matches": true,
+        "primary_callback_order_matches": true
+      }
+    }
+  },
+  "used_missing_symbols_before": 19,
+  "used_missing_symbols_after": 15,
+  "resolved_used_symbols": [
+    "_ZN7android18BnProducerListener25onBufferReleasedWithFenceERKNS_2spINS_5FenceEEEmb",
+    "_ZN7android30VirtualDisplayProducerListener11setCallbackENSt3__18functionIFiRKNS_2spINS_5FenceEEEmbEEE",
+    "_ZTTN7android30VirtualDisplayProducerListenerE",
+    "_ZTVN7android30VirtualDisplayProducerListenerE"
+  ],
+  "changed_vtable_size_count": {
+    "64": 17,
+    "32": 17
+  },
+  "inspected_factory_elf_count": {
+    "64": 493,
+    "32": 0
+  },
+  "release_with_fence_transaction": 4,
+  "binder_test_transport": "local Bp/Hp -> BBinder relay -> Bn",
+  "fd_fixture": "pipe (FD ownership/transport, not a GPU sync fence)",
+  "actual_kernel_binder_ipc_tested": false,
+  "actual_gpu_fence_tested": false,
+  "consumer_fence_readiness_and_detach_path_ported": false,
+  "legacy_hidl_fence_event_defined": false,
+  "full_libgui_abi_compatibility_proven": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "factory_vr_services_replaced": false
+}

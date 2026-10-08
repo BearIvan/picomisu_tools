@@ -1,0 +1,22 @@
+{
+  "native_commit": "84d01afc2357164629dffc36af69db3dc7b756b6",
+  "build_exit_code": 0,
+  "asan_tests_per_abi": 5,
+  "runtime_verified": true,
+  "pending_release_cases": [
+    "matching buffer and slot inserts first fence",
+    "different ID leaves pending fence unchanged",
+    "different slot leaves pending fence unchanged"
+  ],
+  "additional_cases": [
+    "forward ID and null as zero",
+    "late callback after abandon ignored"
+  ],
+  "test_scope": "mock consumer/RenderEngine, pipe FD and initially unset pending fence; no GPU fence merge qualification",
+  "factory_differences": [
+    "guard abandoned or absent consumer",
+    "guard null buffer before pending ID comparison"
+  ],
+  "registry_and_listener_lifetime_port_complete": false,
+  "runtime_evidence": "validation/native-runtime-current.json"
+}

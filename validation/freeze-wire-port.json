@@ -1,0 +1,28 @@
+{
+  "native_commit": "f307874582898a03bcbe5bbc96f7a06b2f2b68c1",
+  "patch": "patches/0020-pico-freeze-binder-interfaces.patch",
+  "build_exit_code": 0,
+  "factory_comparison_fixtures_per_abi": {
+    "arm64": 12,
+    "arm": 12
+  },
+  "abi_evidence": "validation/freeze-wire-abi.json",
+  "runtime_evidence": "validation/native-runtime-current.json",
+  "implemented": [
+    "IFreezeManager register/unregister void proxies with factory Parcel order",
+    "IUnFreezeCallback one-way proxy and Bn callback dispatch",
+    "factory legacy short/trailing callback payload semantics"
+  ],
+  "real_freeze_service_contacted_by_probe": false,
+  "scope": "local BBinder relays and selected factory/source libbinder; no kernel IPC or real process freeze",
+  "manager_registry_ported": false,
+  "producer_unfreeze_recovery_ported": false,
+  "pending": [
+    "remote/frozen-PID registration and callback/death handling",
+    "producer listenFreezeSelf plus buffer-slot recovery",
+    "real service/IPC qualification and VR behavior"
+  ],
+  "system_partitions_modified": false,
+  "self_pid_registry_evidence": "validation/freeze-registry-port.json",
+  "self_pid_registry_ported": true
+}

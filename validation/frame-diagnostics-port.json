@@ -1,0 +1,48 @@
+{
+  "native_commit": "925ecca90db6b8a45962b32946184b34fe1e6251",
+  "framework_commit": "dda074e6beafa16657264b8e4c508493dff6e6c5",
+  "art_commit": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "patch": "patches/0031-pico-frame-diagnostics.patch",
+  "package": "outputs/bufferqueue-test-30",
+  "manifest_sha256": "0963b07bf380b1f0b220ba0675292828e378758bb5652a0117cb040f4520fff1",
+  "framework_package": "outputs/framework-boot-image-test-13",
+  "abis": {
+    "arm64": {
+      "tracker_fixtures_matched": 72,
+      "surface_client_fixtures_matched": 22,
+      "caller_query_fixtures_matched": 8,
+      "native_gtests_passed": 184,
+      "java_jni_art_fixtures_passed": 12,
+      "source_sha256": {
+        "libgui.so": "e01a41e9ec635cb8b6a2ea3e39809dc6fc49aff585852339ae0ad0a6a911a082",
+        "libbinder.so": "32bccd3904614bc3d8bacfb45f3847dcd5b5ef4f1f5700b825606203ba789e01"
+      },
+      "system_property_unchanged": true,
+      "caller_query_intercepted": true
+    },
+    "arm": {
+      "tracker_fixtures_matched": 72,
+      "surface_client_fixtures_matched": 22,
+      "caller_query_fixtures_matched": 8,
+      "native_gtests_passed": 184,
+      "java_jni_art_fixtures_passed": 12,
+      "source_sha256": {
+        "libgui.so": "8044733ed6e084a46d7abd100e0f872242eaa332c041a6b3f5f1117666a595d0",
+        "libbinder.so": "7b9e0d54898a39ada46745c4d396f5e3e5f893ce689e39435a864c6134485a9a"
+      },
+      "system_property_unchanged": true,
+      "caller_query_intercepted": true
+    }
+  },
+  "tracker_abi_evidence": "validation/egl-image-tracker-abi.json",
+  "surface_client_abi_evidence": "validation/surface-client-abi.json",
+  "remaining_used_arm64_gui_symbols": 5,
+  "system_partitions_modified": false,
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "full_graphics_abi_proven": false,
+  "real_egl_lifecycle_qualified": false,
+  "real_remote_caller_query_qualified": false,
+  "scope": "Actual source/factory tracker virtual calls and frame-history/query methods; process-local property, clock and ioctl interception; compiled Source Java/JNI/ART/Bionic group; no global graphics or VR replacement"
+}

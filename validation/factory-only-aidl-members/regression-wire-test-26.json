@@ -1,0 +1,57 @@
+{
+ "AppendedAidlFixture": {
+  "arm64": {
+   "scenarios": 1790,
+   "matched": 1790
+  },
+  "arm": {
+   "scenarios": 1790,
+   "matched": 1790
+  },
+  "unexpected": []
+ },
+ "ShiftedAidlFixture": {
+  "arm64": {
+   "scenarios": 1207,
+   "matched": 1207
+  },
+  "arm": {
+   "scenarios": 1207,
+   "matched": 1207
+  },
+  "unexpected": []
+ },
+ "PicoApiFixture": {
+  "arm64": {
+   "scenarios": 313,
+   "matched": 313
+  },
+  "arm": {
+   "scenarios": 313,
+   "matched": 313
+  },
+  "unexpected": []
+ },
+ "QcomApiFixture": {
+  "arm64": {
+   "scenarios": 1190,
+   "matched": 1190
+  },
+  "arm": {
+   "scenarios": 1190,
+   "matched": 1190
+  },
+  "unexpected": []
+ },
+ "AudioApiFixture": {
+  "arm64": {
+   "scenarios": 346,
+   "matched": 346
+  },
+  "arm": {
+   "scenarios": 346,
+   "matched": 346
+  },
+  "unexpected": []
+ }
+}

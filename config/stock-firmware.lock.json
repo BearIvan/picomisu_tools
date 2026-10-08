@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "build": "5.13.7-SEKO",
+  "url": "https://lf-stone-iot-va.dlpicovr.com/obj/stone-iot-us/5.13.7-202510301735-RELEASE-user-phoenix-b9665-42be801fae.zip",
+  "filename": "5.13.7-202510301735-RELEASE-user-phoenix-b9665-42be801fae.zip",
+  "bytes": 3723574018,
+  "sha256": "00b2610888995558878a7d246996e38da51729011f45dd7ef114f9396aa6feba",
+  "metadata": {
+    "post-sdk-level": "29",
+    "oem-state": "true",
+    "post-build": "Pico/Phoenix_ovs/PICOA8110:10/5.13.7/smartcm.1761817909:user/dev-keys",
+    "pre-device": "PICOA8110"
+  },
+  "images": {
+    "boot.img": {
+      "sha256": "35e0d0b1c4b0897cacab79e37017f718f62ed60d6c29028d231e8d0afa8d1cfa",
+      "bytes": 100663296
+    },
+    "recovery.img": {
+      "sha256": "68b368875f31aa57b4468eefbf45fa714b17f6c7091f8ea39105ca26c4db53c8",
+      "bytes": 104857600
+    },
+    "firmware-update/dtbo.img": {
+      "sha256": "1caaecf2e5ebdcd3eb35c77072b0c3299ae84fd099fa273cdcaab73405509630",
+      "bytes": 8388608
+    },
+    "firmware-update/vbmeta.img": {
+      "sha256": "66b83c8909ddd4fae126da88fd52945e6d72076ec35a7562a7c67992cf397327",
+      "bytes": 8192
+    },
+    "firmware-update/vbmeta_system.img": {
+      "sha256": "c304910337d0068630b791036413bd7a72d1c31722ea300d523f67ea8c3005fc",
+      "bytes": 4096
+    },
+    "META-INF/com/android/otacert": {
+      "sha256": "20c195fcdb5d4a795916cc9c6f2c0d4b0368f0a3753d92e6716759fe8f11d7e1",
+      "bytes": 1403
+    },
+    "system": {
+      "sha256": "f61a27aa0ab0a91883e7d6f44b30609cc918fc293083a405f0f39110d76266f2",
+      "bytes": 5704732672
+    },
+    "vendor": {
+      "sha256": "e12a4ce704c74fe31383c09b95c9e84754aba42c0a1c5288e710c2384d8cb8a9",
+      "bytes": 931934208
+    },
+    "product": {
+      "sha256": "c0b6558387141b4c2bedbe92b3d6dba8f02fd9aa98c90ead2b123d35d3369e0f",
+      "bytes": 324222976
+    },
+    "odm": {
+      "sha256": "af4ae71998ea03ba0a6c9b1bcecc0d9daf0e534de2bed2f10bd8749b9c6a6e77",
+      "bytes": 1032192
+    }
+  }
+}

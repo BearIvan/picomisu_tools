@@ -1,0 +1,13 @@
+{
+ "Landroid/bluetooth/BluetoothCodecConfig;": "sameCodecSpecificParameters: the factory uses Qualcomm codec numbering (4 = aptX Adaptive, 5 = LDAC); Source keeps AOSP numbering (LDAC = 4) because the Source Bluetooth stack is AOSP. References are identical, only the codec constants differ.",
+ "Landroid/util/BoostFramework;": "The factory creates Smartisan BoostFrameworkSmtBase (mSmtEx/getSmtEx) in every constructor; that Smartisan class loads DPerformance.jar and is part of stage 3.",
+ "Landroid/view/View;": "onVisibilityAggregated: isAggregatedVisible and gesture-exclusion resend belong to a different upstream change; the content-capture parts are identical.",
+ "Landroid/view/ViewRootImpl;": "<init>/performDraw: PICO ExtImplFactory creation, mHaveMoveEvent, skip-draw logging and resource IDs (stage 2 hooks and resource layout), not the content-capture port.",
+ "Landroid/webkit/WebView;": "<init>: PICO mCallback field unrelated to content capture.",
+ "Lcom/android/server/UiModeManagerService;": "onStart/adjustStatusBarCarModeLocked differ only in inlined framework-res resource IDs.",
+ "Lcom/android/server/biometrics/face/FaceService$FaceServiceWrapper;": "remove/setFeature/getFeature match up to access$N and lambda numbering; enroll lacks the re-enrollment notification cancel and ENROLL_TIMEOUT_SEC=75, which need later upstream BiometricServiceBase/EnrollClient changes.",
+ "Lcom/android/server/locksettings/LockSettingsService;": "checkCredential: the factory passes an int ChallengeType to doVerifyCredential (separate upstream change); the ported password retention is identical.",
+ "Lcom/android/server/wifi/WifiServiceImpl;": "setWifiEnabled2 carries the PICO wifi_feature_for_customer_enabled check and savePackageControlWifiSate (no donor); getNumConcurrentStaSupported differs only in a framework-res resource ID. The QTI second STA, DPP, getCapabilities and doDriverCmd are ported with the CodeLinaro service (0063, validation/qti-wifi-port.json).",
+ "Lcom/android/server/wifi/WifiConfigManager;": "mergeWithInternalWifiConfiguration also merges the PICO needLogin/autoConnect fields (no donor; the fields exist in the Source WifiConfiguration since 0062).",
+ "Lcom/android/bluetooth/btservice/AdapterService;": "getSocketOpt/setSocketOpt/setClockSyncConfig/startClockSync call the QTI vendor stack (libbluetooth_qti) in the factory; the AOSP Source stack returns the donor's failure values (-1/false)."
+}

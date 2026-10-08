@@ -1,0 +1,20 @@
+{
+  "native_commit": "a40f1f012a157f20c1df608de4c6590e5cb89d27",
+  "build_exit_code": 0,
+  "abis": [
+    64,
+    32
+  ],
+  "strict_consumer_listener_audit_passed": true,
+  "patch_series_reproduces_committed_trees": true,
+  "runtime_status": "passed in isolated package 12; see native-runtime-current.json",
+  "expected_tests_per_abi": 51,
+  "expected_consumer_probe_fixtures_per_abi": 5,
+  "expected_producer_probe_fixtures_per_abi": 12,
+  "package": "outputs/bufferqueue-test-08",
+  "last_verified_runtime_tests_per_abi": 42,
+  "installed_on_device": false,
+  "full_libgui_abi_proven": false,
+  "runtime_verified": true,
+  "latest_runtime_evidence": "validation/native-runtime-current.json"
+}

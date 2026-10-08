@@ -1,0 +1,293 @@
+{
+ "fixture": "AppendedAidlFixture",
+ "prefix": "appended-aidl",
+ "component_commits": {
+  "frameworks/native": "6492c7e475412061aae739f0693b8abbeae1274e",
+  "frameworks/base": "64998570f9b9d35017998c1ea9b08e9bcdbbeda3",
+  "art": "fe5349b2731357313891c9e0ced8340edb4887a8",
+  "build/soong": "519f8544b04ca8b6415793881e426a457215bef1",
+  "system/bt": "decd8cbb75dc68be59b9c95581b5d2b456f88979",
+  "packages/apps/Bluetooth": "7901ce4963d41339794367b85f3c607a4f6cff0e",
+  "packages/services/Telecomm": "6f4c3eafcde6b1fcf6d9cbf3e18cf909515a9401",
+  "frameworks/opt/net/wifi": "6cb69f3f6fa34203b18a06c3f44de6afae3abf95",
+  "system/connectivity/wificond": "08e3be564b3e3fac0ecd1e239eefb074b275b920",
+  "frameworks/opt/telephony": "ad8c52cc0ae89303fa13e1f9351ea61d1322974e",
+  "packages/services/Telephony": "eb80603f8dea569b5c014c415822e05bf189bd9a",
+  "vendor/qcom/opensource/interfaces": "f93d150520021878a53ab03748a136e38f359af3",
+  "hardware/interfaces": "bdd5ff1520f054ca7624194592651c698715c313",
+  "prebuilts/abi-dumps/vndk": "caff0280e109e265570456a540c7390d1f3acbc2",
+  "packages/apps/Settings": "8f55e58798961b8e279383c50bc4922ca7c13ce2",
+  "build/make": "162fc14ee97c7250e27f7506f812ab854a588efc",
+  "system/vold": "06a50b10bd9f9e398450e4f3ab1ea56fcc6be884",
+  "system/core": "e50e65e1f3878c0816e671407ee81d3d51fc2d88",
+  "system/extras": "72fdb7cfdc0a3a84191e9ebdc48cd8a18b682565",
+  "packages/modules/NetworkStack": "d0ce5f35272d80fa895e1184824aa90a2618ce7a",
+  "packages/apps/Nfc": "6b1d334fc3f55a2a3e2138bb3483a9db4e21deb8",
+  "system/sepolicy": "b70dcb852d79b48b8698d71b0199482b85910d3a",
+  "device/qcom/sepolicy": "830b6eb97a27468a23fe5e91ef912d4df0d22066",
+  "frameworks/av": "6d43a9fa28aa82d6994c411785e00dfc99c52e72",
+  "frameworks/opt/net/ims": "c71c952e1f1e67ad981a78791b4ff3f33d5f92cf",
+  "prebuilts/abi-dumps/ndk": "db302bf0671beae1dc362a87409bd9b75af37292",
+  "frameworks/layoutlib": "3719f7d7fed0f5668284d8bf1e0f303320783247"
+ },
+ "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+ "source_framework_sha256": "ec7499a3d60560b173ea29b7a8c880930a808ac4d89e37c43fdfa1a859ea1b92",
+ "probe_sha256": "29f53b0baa1d5cf1a2b22546cb920547a9c26a22be7fd55bea45d34315b223a4",
+ "package": "outputs/framework-boot-image-test-25",
+ "interfaces": {
+  "android.app.IActivityManager": {
+   "methods": 200,
+   "oneway": [
+    "finishReceiver",
+    "removeContentProvider",
+    "serviceDoneExecuting"
+   ]
+  },
+  "android.app.IApplicationThread": {
+   "methods": 58,
+   "oneway": [
+    "attachAgent",
+    "bindApplication",
+    "clearDnsCache",
+    "completePrefetchBindApplication",
+    "configArtTracer",
+    "dispatchPackageBroadcast",
+    "dumpActivity",
+    "dumpDbInfo",
+    "dumpGfxInfo",
+    "dumpHeap",
+    "dumpMemInfo",
+    "dumpMemInfoProto",
+    "dumpProvider",
+    "dumpService",
+    "handleTrustStorageUpdate",
+    "notifyCleartextNetwork",
+    "onPrefetchRealStart",
+    "performDirectAction",
+    "processInBackground",
+    "profilerControl",
+    "requestAssistContextExtras",
+    "requestDirectActions",
+    "runIsolatedEntryPoint",
+    "scheduleActivityTimeout",
+    "scheduleApplicationInfoChanged",
+    "scheduleBindService",
+    "scheduleCrash",
+    "scheduleCreateBackupAgent",
+    "scheduleCreateService",
+    "scheduleDestroyBackupAgent",
+    "scheduleEnterAnimationComplete",
+    "scheduleExit",
+    "scheduleInstallProvider",
+    "scheduleLocalVoiceInteractionStarted",
+    "scheduleLowMemory",
+    "scheduleMethodTrace",
+    "scheduleOnNewActivityOptions",
+    "scheduleReceiver",
+    "scheduleRegisteredReceiver",
+    "scheduleServiceArgs",
+    "scheduleSleeping",
+    "scheduleStopService",
+    "scheduleSuicide",
+    "scheduleTransaction",
+    "scheduleTranslucentConversionComplete",
+    "scheduleTrimMemory",
+    "scheduleUnbindService",
+    "setCoreSettings",
+    "setNetworkBlockSeq",
+    "setProcessState",
+    "setSchedulingGroup",
+    "startBinderTracking",
+    "stopBinderTrackingAndDump",
+    "unstableProviderDied",
+    "updateHttpProxy",
+    "updatePackageCompatibilityInfo",
+    "updateTimePrefs",
+    "updateTimeZone"
+   ]
+  },
+  "android.app.backup.IBackupManager": {
+   "methods": 60,
+   "oneway": []
+  },
+  "android.app.backup.IFullBackupRestoreObserver": {
+   "methods": 8,
+   "oneway": [
+    "onBackupPackage",
+    "onBackupRestoreErr",
+    "onEndBackup",
+    "onEndRestore",
+    "onRestorePackage",
+    "onStartBackup",
+    "onStartRestore",
+    "onTimeout"
+   ]
+  },
+  "android.content.pm.IPackageInstallerSession": {
+   "methods": 18,
+   "oneway": []
+  },
+  "android.content.pm.IPackageManager": {
+   "methods": 211,
+   "oneway": [
+    "notifyDexLoad",
+    "notifyPackageUse",
+    "registerDexModule"
+   ]
+  },
+  "android.hardware.ICameraServiceListener": {
+   "methods": 5,
+   "oneway": [
+    "onCameraAccessPrioritiesChanged",
+    "onCameraClosed",
+    "onCameraOpened",
+    "onStatusChanged",
+    "onTorchStatusChanged"
+   ]
+  },
+  "android.hardware.input.IInputManager": {
+   "methods": 28,
+   "oneway": []
+  },
+  "android.hardware.usb.IUsbManager": {
+   "methods": 27,
+   "oneway": []
+  },
+  "android.media.IPlayer": {
+   "methods": 8,
+   "oneway": [
+    "applyVolumeShaper",
+    "pause",
+    "setExtVolume",
+    "setPan",
+    "setStartDelayMs",
+    "setVolume",
+    "start",
+    "stop"
+   ]
+  },
+  "android.net.INetworkPolicyListener": {
+   "methods": 6,
+   "oneway": [
+    "onMeteredIfacesChanged",
+    "onRestrictBackgroundChanged",
+    "onSubscriptionOverride",
+    "onSubscriptionPlansChanged",
+    "onUidPoliciesChanged",
+    "onUidRulesChanged"
+   ]
+  },
+  "android.os.IPowerManager": {
+   "methods": 34,
+   "oneway": [
+    "powerHint"
+   ]
+  },
+  "android.os.ISchedulingPolicyService": {
+   "methods": 3,
+   "oneway": []
+  },
+  "android.view.IRecentsAnimationController": {
+   "methods": 9,
+   "oneway": []
+  },
+  "android.view.IWindowSession": {
+   "methods": 35,
+   "oneway": [
+    "reportSystemGestureExclusionChanged"
+   ]
+  },
+  "com.android.ims.internal.IImsUt": {
+   "methods": 20,
+   "oneway": []
+  },
+  "com.android.internal.app.IBatteryStats": {
+   "methods": 90,
+   "oneway": [
+    "noteBluetoothControllerActivity",
+    "noteModemControllerActivity",
+    "noteWifiControllerActivity"
+   ]
+  },
+  "android.app.IActivityManagerSmtEx": {
+   "methods": 27,
+   "oneway": [
+    "checkHprof",
+    "createHprof",
+    "cropHprofDone",
+    "setAppSlowMainOperations",
+    "setProcessRunningCpuset",
+    "setSmtExtraInfo"
+   ]
+  },
+  "android.app.IActivityManagerSysMoEx": {
+   "methods": 5,
+   "oneway": []
+  },
+  "android.content.pm.IPackageManagerSmtEx": {
+   "methods": 6,
+   "oneway": []
+  },
+  "android.view.IWindowSessionSmtEx": {
+   "methods": 2,
+   "oneway": []
+  },
+  "com.android.internal.app.IBatteryStatsOptEx": {
+   "methods": 7,
+   "oneway": []
+  },
+  "android.app.ISysClient": {
+   "methods": 4,
+   "oneway": [
+    "collectBroadcastInfo",
+    "collectInputInfo",
+    "collectServiceInfo",
+    "findCurrentMainMsgs"
+   ]
+  },
+  "android.app.IMemClient": {
+   "methods": 2,
+   "oneway": [
+    "disableDumpHprof",
+    "dumpHprof"
+   ]
+  },
+  "android.app.IActivityLifeCycleObserver": {
+   "methods": 5,
+   "oneway": [
+    "onActivityDestroy",
+    "onActivityPauseBackground",
+    "onActivityResumeForeground",
+    "onActivityStartForeground",
+    "onActivityStopBackground"
+   ]
+  },
+  "android.app.IAppStartEventObserver": {
+   "methods": 1,
+   "oneway": [
+    "onReportAppStartEvent"
+   ]
+  }
+ },
+ "comparison": {
+  "arm64": {
+   "scenarios": 1790,
+   "matched": 1790,
+   "mismatched": {}
+  },
+  "arm": {
+   "scenarios": 1790,
+   "matched": 1790,
+   "mismatched": {}
+  }
+ },
+ "unexpected_differences": [],
+ "factory_run": {
+  "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true
+ },
+ "system_partitions_modified": false,
+ "component_commits_note": "Package built from the working trees that were committed unchanged as these commits (0097-0105)."
+}

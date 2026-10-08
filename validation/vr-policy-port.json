@@ -1,0 +1,1302 @@
+{
+  "framework_commit": "bcc8cbf1cbad386c0aede87e444b5437e21ee0d1",
+  "patches": [
+    "patches/0034-pico-package-info-vr-extensions.patch",
+    "patches/0035-pico-package-parser-vr-metadata.patch",
+    "patches/0036-pico-activity-thread-force-render.patch",
+    "patches/0037-pico-view-root-vr-skip-draw.patch",
+    "patches/0038-vr-policy-runtime-fixtures.patch",
+    "patches/0058-pico-vr-chain-hooks.patch"
+  ],
+  "factory_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+  "source_framework_sha256": "056c91d2a6c63cb65f5c7f0ab8070bcd3f95b4e8a6f55e3793ad1cee66b99439",
+  "probe_sha256": "230105f309c39ebe441ecf5521d18dd216746110423ceac83987ad41fcee9663",
+  "package": "outputs/framework-boot-image-test-28",
+  "policy_scenarios_per_abi": 78,
+  "factory_run": {
+    "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+    "fingerprint_unchanged": true,
+    "boot_completed": true,
+    "temporary_files_removed": true
+  },
+  "comparison": {
+    "arm64": {
+      "scenarios": {
+        "activity.copy": {
+          "value": "3/true/true/left/1/p/true",
+          "match": true
+        },
+        "activity.default": {
+          "value": "0/false/false/far/0/null",
+          "match": true
+        },
+        "activity.ext-parcel": {
+          "value": "03000000040000006c0065006600740000000000010000000100000070000000",
+          "match": true
+        },
+        "activity.ext-read": {
+          "value": "3/true/true/left/1/p/0",
+          "match": true
+        },
+        "activity.feature.empty": {
+          "value": "0/false/false/near/3/null",
+          "match": true
+        },
+        "activity.feature.full": {
+          "value": "0/false/false/near/3/a=1",
+          "match": true
+        },
+        "activity.feature.navigation": {
+          "value": "0/false/false/far/2/null",
+          "match": true
+        },
+        "activity.feature.null": {
+          "value": "0/false/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.0": {
+          "value": "0/false/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.1": {
+          "value": "1/true/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.2": {
+          "value": "2/false/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.3": {
+          "value": "3/true/true/far/0/null",
+          "match": true
+        },
+        "activity.force-arg-ignored": {
+          "value": "2/false/false/far/0/null",
+          "match": true
+        },
+        "activity.force-then-vr": {
+          "value": "3/true/true/far/0/null",
+          "match": true
+        },
+        "activity.parcel": {
+          "value": "3/true/true/left/1/p/0",
+          "match": true
+        },
+        "app.copy": {
+          "value": "5/true/true/true/7/240/11/12/13/14/0/1/9/0/true",
+          "match": true
+        },
+        "app.default": {
+          "value": "0/false/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.ext-parcel": {
+          "value": "05000000f00000000b0000000c0000000d0000000e00000000000000010000000700000009000000",
+          "match": true
+        },
+        "app.ext-read": {
+          "value": "5/true/true/true/7/240/11/12/13/14/0/1/9/0/0",
+          "match": true
+        },
+        "app.flag.0": {
+          "value": "0/false/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.1": {
+          "value": "1/true/true/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.2": {
+          "value": "2/false/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.3": {
+          "value": "3/true/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.4": {
+          "value": "4/false/false/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.5": {
+          "value": "5/true/true/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.6": {
+          "value": "6/false/false/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.7": {
+          "value": "7/true/false/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.orientation.default": {
+          "value": "1",
+          "match": true
+        },
+        "app.orientation.force": {
+          "value": "1/1",
+          "match": true
+        },
+        "app.orientation.launch": {
+          "value": "0",
+          "match": true
+        },
+        "app.orientation.map": {
+          "value": "-1,-1,0,1,-1,-1,-1,-1,0,1,0,1,-1,0,1,-1,-1,",
+          "match": true
+        },
+        "app.parcel": {
+          "value": "5/true/true/true/7/240/11/12/13/14/0/1/9/0/0",
+          "match": true
+        },
+        "parser.base.et-calibration": {
+          "value": "||[com.picovr.permission.EYE_TRACKING]",
+          "match": true
+        },
+        "parser.base.et-calibration-repeated": {
+          "value": "||[com.picovr.permission.EYE_TRACKING]",
+          "match": true
+        },
+        "parser.base.et-calibration-requested": {
+          "value": "||[com.picovr.permission.EYE_TRACKING]",
+          "match": true
+        },
+        "parser.base.et-other": {
+          "value": "||[]",
+          "match": true
+        },
+        "parser.base.features": {
+          "value": "true/true/[com.tobii.usercalibration.neo3]",
+          "match": true
+        },
+        "parser.base.other-package": {
+          "value": "com.picovr.permission.FACE_TRACKING,com.picovr.permission.EYE_TRACKING,org.picomisu.permission.OTHER,|org.picomisu.group.EYE,org.picomisu.group.FACE,org.picomisu.group.OTHER,|[]",
+          "match": true
+        },
+        "parser.base.platform": {
+          "value": "com.picovr.permission.FACE_TRACKING,com.picovr.permission.EYE_TRACKING,org.picomisu.permission.OTHER,|org.picomisu.group.EYE,org.picomisu.group.FACE,org.picomisu.group.OTHER,|[]",
+          "match": true
+        },
+        "parser.intent-categories": {
+          "value": "true|3|1|Daydream:1/true/false/far/0/null|NoAction:0/false/false/far/0/null|OpenXr:1/true/false/far/0/null|Component:1/true/false/far/0/null|FlatDaydream:0/false/false/far/0/null|Plain:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.missing-target": {
+          "value": "true|2|-1|Alias:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.second-tag": {
+          "value": "true|7|-1|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.tag-order": {
+          "value": "true|3|-1|Upper:1/true/false/far/0/null|Other:1/true/false/far/0/q|Plain:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.vr-app-metadata": {
+          "value": "true|7|6|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null|Forced:3/true/true/near/1/null|Alias:3/true/true/near/1/null|AppDetailsActivity:0/false/false/far/0/null|AfterDetails:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.vr-app-metadata-repeated": {
+          "value": "true|7|6|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null|Forced:3/true/true/near/1/null|Alias:3/true/true/near/1/null|AppDetailsActivity:0/false/false/far/0/null|AfterDetails:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.white-list": {
+          "value": "true|3|-1|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null",
+          "match": true
+        },
+        "thread.empty": {
+          "value": "true",
+          "match": true
+        },
+        "thread.match-2d": {
+          "value": "true",
+          "match": true
+        },
+        "thread.match-force-only": {
+          "value": "true",
+          "match": true
+        },
+        "thread.match-vr": {
+          "value": "false",
+          "match": true
+        },
+        "thread.match-vr-force": {
+          "value": "true",
+          "match": true
+        },
+        "thread.no-activity": {
+          "factory": "exception:java.lang.NullPointerException",
+          "source": "true",
+          "match": false,
+          "expected_difference": "Record without an Activity: factory dereferences it, Source skips it"
+        },
+        "thread.no-decor-vr": {
+          "value": "true",
+          "match": true
+        },
+        "thread.other-root-vr": {
+          "value": "true",
+          "match": true
+        },
+        "vdc.apply.override": {
+          "value": "0/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2",
+          "match": true
+        },
+        "vdc.apply.override-again": {
+          "value": "0/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2",
+          "match": true
+        },
+        "vdc.apply.platform": {
+          "value": "0/false/false/false/-1/320/1000/2000/3000/4000/-1/-1/-1/-1",
+          "match": true
+        },
+        "vdc.load-skipped": {
+          "value": "0/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2/true/1",
+          "match": true
+        },
+        "vdc.parse-vr-flags": {
+          "value": "2/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2",
+          "match": true
+        },
+        "vdc.parse.empty": {
+          "value": "true|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=0, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.full": {
+          "value": "true|VirtualDisplayConfig{mPackageName='org.picomisu.full', mVirtualDisplayDensity=320, mVirtualDisplayPortraitWidth=100, mVirtualDisplayPortraitHeight=200, mVirtualDisplayLandscapeWidth=300, mVirtualDisplayLandscapeHeight=400, mForceOrientation=1, mDefaultOrientation=0}",
+          "match": true
+        },
+        "vdc.parse.invalid": {
+          "value": "false|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=12, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.numbers": {
+          "value": "true|VirtualDisplayConfig{mPackageName='org.picomisu.numbers', mVirtualDisplayDensity=240, mVirtualDisplayPortraitWidth=-5, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.other-platform": {
+          "value": "false|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=0, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.this-platform": {
+          "value": "true|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=150, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "viewroot.cached-disabled": {
+          "value": "false,false",
+          "match": true
+        },
+        "viewroot.cached-policy": {
+          "value": "true,true,false,true,false",
+          "match": true
+        },
+        "viewroot.default-setting": {
+          "value": "true/checked=true",
+          "match": true
+        },
+        "viewroot.display-1": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.force-render": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.no-activity-thread": {
+          "factory": "exception:java.lang.NullPointerException",
+          "source": "false",
+          "match": false,
+          "expected_difference": "No ActivityThread: factory dereferences it, Source renders normally"
+        },
+        "viewroot.no-match": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.non-vr": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.permission-controller": {
+          "value": "false/checked=false",
+          "match": true
+        },
+        "viewroot.setting-0": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.setting-1": {
+          "value": "true/checked=true",
+          "match": true
+        },
+        "viewroot.setting-2": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.setting-invalid": {
+          "value": "true/checked=true",
+          "match": true
+        }
+      },
+      "matched": 76,
+      "expected_differences": 2
+    },
+    "arm": {
+      "scenarios": {
+        "activity.copy": {
+          "value": "3/true/true/left/1/p/true",
+          "match": true
+        },
+        "activity.default": {
+          "value": "0/false/false/far/0/null",
+          "match": true
+        },
+        "activity.ext-parcel": {
+          "value": "03000000040000006c0065006600740000000000010000000100000070000000",
+          "match": true
+        },
+        "activity.ext-read": {
+          "value": "3/true/true/left/1/p/0",
+          "match": true
+        },
+        "activity.feature.empty": {
+          "value": "0/false/false/near/3/null",
+          "match": true
+        },
+        "activity.feature.full": {
+          "value": "0/false/false/near/3/a=1",
+          "match": true
+        },
+        "activity.feature.navigation": {
+          "value": "0/false/false/far/2/null",
+          "match": true
+        },
+        "activity.feature.null": {
+          "value": "0/false/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.0": {
+          "value": "0/false/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.1": {
+          "value": "1/true/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.2": {
+          "value": "2/false/false/far/0/null",
+          "match": true
+        },
+        "activity.flag.3": {
+          "value": "3/true/true/far/0/null",
+          "match": true
+        },
+        "activity.force-arg-ignored": {
+          "value": "2/false/false/far/0/null",
+          "match": true
+        },
+        "activity.force-then-vr": {
+          "value": "3/true/true/far/0/null",
+          "match": true
+        },
+        "activity.parcel": {
+          "value": "3/true/true/left/1/p/0",
+          "match": true
+        },
+        "app.copy": {
+          "value": "5/true/true/true/7/240/11/12/13/14/0/1/9/0/true",
+          "match": true
+        },
+        "app.default": {
+          "value": "0/false/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.ext-parcel": {
+          "value": "05000000f00000000b0000000c0000000d0000000e00000000000000010000000700000009000000",
+          "match": true
+        },
+        "app.ext-read": {
+          "value": "5/true/true/true/7/240/11/12/13/14/0/1/9/0/0",
+          "match": true
+        },
+        "app.flag.0": {
+          "value": "0/false/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.1": {
+          "value": "1/true/true/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.2": {
+          "value": "2/false/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.3": {
+          "value": "3/true/false/false/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.4": {
+          "value": "4/false/false/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.5": {
+          "value": "5/true/true/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.6": {
+          "value": "6/false/false/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.flag.7": {
+          "value": "7/true/false/true/-1/0/0/0/0/0/-1/0/-1/0",
+          "match": true
+        },
+        "app.orientation.default": {
+          "value": "1",
+          "match": true
+        },
+        "app.orientation.force": {
+          "value": "1/1",
+          "match": true
+        },
+        "app.orientation.launch": {
+          "value": "0",
+          "match": true
+        },
+        "app.orientation.map": {
+          "value": "-1,-1,0,1,-1,-1,-1,-1,0,1,0,1,-1,0,1,-1,-1,",
+          "match": true
+        },
+        "app.parcel": {
+          "value": "5/true/true/true/7/240/11/12/13/14/0/1/9/0/0",
+          "match": true
+        },
+        "parser.base.et-calibration": {
+          "value": "||[com.picovr.permission.EYE_TRACKING]",
+          "match": true
+        },
+        "parser.base.et-calibration-repeated": {
+          "value": "||[com.picovr.permission.EYE_TRACKING]",
+          "match": true
+        },
+        "parser.base.et-calibration-requested": {
+          "value": "||[com.picovr.permission.EYE_TRACKING]",
+          "match": true
+        },
+        "parser.base.et-other": {
+          "value": "||[]",
+          "match": true
+        },
+        "parser.base.features": {
+          "value": "true/true/[com.tobii.usercalibration.neo3]",
+          "match": true
+        },
+        "parser.base.other-package": {
+          "value": "com.picovr.permission.FACE_TRACKING,com.picovr.permission.EYE_TRACKING,org.picomisu.permission.OTHER,|org.picomisu.group.EYE,org.picomisu.group.FACE,org.picomisu.group.OTHER,|[]",
+          "match": true
+        },
+        "parser.base.platform": {
+          "value": "com.picovr.permission.FACE_TRACKING,com.picovr.permission.EYE_TRACKING,org.picomisu.permission.OTHER,|org.picomisu.group.EYE,org.picomisu.group.FACE,org.picomisu.group.OTHER,|[]",
+          "match": true
+        },
+        "parser.intent-categories": {
+          "value": "true|3|1|Daydream:1/true/false/far/0/null|NoAction:0/false/false/far/0/null|OpenXr:1/true/false/far/0/null|Component:1/true/false/far/0/null|FlatDaydream:0/false/false/far/0/null|Plain:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.missing-target": {
+          "value": "true|2|-1|Alias:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.second-tag": {
+          "value": "true|7|-1|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.tag-order": {
+          "value": "true|3|-1|Upper:1/true/false/far/0/null|Other:1/true/false/far/0/q|Plain:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.vr-app-metadata": {
+          "value": "true|7|6|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null|Forced:3/true/true/near/1/null|Alias:3/true/true/near/1/null|AppDetailsActivity:0/false/false/far/0/null|AfterDetails:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.vr-app-metadata-repeated": {
+          "value": "true|7|6|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null|Forced:3/true/true/near/1/null|Alias:3/true/true/near/1/null|AppDetailsActivity:0/false/false/far/0/null|AfterDetails:0/false/false/far/0/null",
+          "match": true
+        },
+        "parser.white-list": {
+          "value": "true|3|-1|Plain:1/true/false/far/0/null|Flat:0/false/false/far/0/null",
+          "match": true
+        },
+        "thread.empty": {
+          "value": "true",
+          "match": true
+        },
+        "thread.match-2d": {
+          "value": "true",
+          "match": true
+        },
+        "thread.match-force-only": {
+          "value": "true",
+          "match": true
+        },
+        "thread.match-vr": {
+          "value": "false",
+          "match": true
+        },
+        "thread.match-vr-force": {
+          "value": "true",
+          "match": true
+        },
+        "thread.no-activity": {
+          "factory": "exception:java.lang.NullPointerException",
+          "source": "true",
+          "match": false,
+          "expected_difference": "Record without an Activity: factory dereferences it, Source skips it"
+        },
+        "thread.no-decor-vr": {
+          "value": "true",
+          "match": true
+        },
+        "thread.other-root-vr": {
+          "value": "true",
+          "match": true
+        },
+        "vdc.apply.override": {
+          "value": "0/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2",
+          "match": true
+        },
+        "vdc.apply.override-again": {
+          "value": "0/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2",
+          "match": true
+        },
+        "vdc.apply.platform": {
+          "value": "0/false/false/false/-1/320/1000/2000/3000/4000/-1/-1/-1/-1",
+          "match": true
+        },
+        "vdc.load-skipped": {
+          "value": "0/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2/true/1",
+          "match": true
+        },
+        "vdc.parse-vr-flags": {
+          "value": "2/false/false/false/-1/320/555/2000/3000/777/2/-1/-1/2",
+          "match": true
+        },
+        "vdc.parse.empty": {
+          "value": "true|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=0, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.full": {
+          "value": "true|VirtualDisplayConfig{mPackageName='org.picomisu.full', mVirtualDisplayDensity=320, mVirtualDisplayPortraitWidth=100, mVirtualDisplayPortraitHeight=200, mVirtualDisplayLandscapeWidth=300, mVirtualDisplayLandscapeHeight=400, mForceOrientation=1, mDefaultOrientation=0}",
+          "match": true
+        },
+        "vdc.parse.invalid": {
+          "value": "false|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=12, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.numbers": {
+          "value": "true|VirtualDisplayConfig{mPackageName='org.picomisu.numbers', mVirtualDisplayDensity=240, mVirtualDisplayPortraitWidth=-5, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.other-platform": {
+          "value": "false|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=0, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "vdc.parse.this-platform": {
+          "value": "true|VirtualDisplayConfig{mPackageName='null', mVirtualDisplayDensity=150, mVirtualDisplayPortraitWidth=0, mVirtualDisplayPortraitHeight=0, mVirtualDisplayLandscapeWidth=0, mVirtualDisplayLandscapeHeight=0, mForceOrientation=-1, mDefaultOrientation=-1}",
+          "match": true
+        },
+        "viewroot.cached-disabled": {
+          "value": "false,false",
+          "match": true
+        },
+        "viewroot.cached-policy": {
+          "value": "true,true,false,true,false",
+          "match": true
+        },
+        "viewroot.default-setting": {
+          "value": "true/checked=true",
+          "match": true
+        },
+        "viewroot.display-1": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.force-render": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.no-activity-thread": {
+          "factory": "exception:java.lang.NullPointerException",
+          "source": "false",
+          "match": false,
+          "expected_difference": "No ActivityThread: factory dereferences it, Source renders normally"
+        },
+        "viewroot.no-match": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.non-vr": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.permission-controller": {
+          "value": "false/checked=false",
+          "match": true
+        },
+        "viewroot.setting-0": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.setting-1": {
+          "value": "true/checked=true",
+          "match": true
+        },
+        "viewroot.setting-2": {
+          "value": "false/checked=true",
+          "match": true
+        },
+        "viewroot.setting-invalid": {
+          "value": "true/checked=true",
+          "match": true
+        }
+      },
+      "matched": 76,
+      "expected_differences": 2
+    }
+  },
+  "unexpected_differences": [],
+  "static_comparison": [
+    {
+      "method": "Landroid/app/ExtActivityThreadImpl;->isActivityForceRender(Landroid/view/ViewRootImpl;)Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true,
+      "note": "Source adds a null check for ActivityClientRecord.activity"
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;-><init>(Landroid/content/pm/ActivityInfo;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->clone(Landroid/content/pm/IExtActivityInfo;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->copyFrom(Landroid/content/pm/ActivityInfo;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->get2dAppPosition()Ljava/lang/String;",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->get2dAppTheme()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->getAppProperties()Ljava/lang/String;",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->getVrActivityFlag()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->isVrActivity()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->isVrActivityForceRender()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->readFromParcel(Landroid/os/Parcel;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->setVrActivity(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->setVrActivityForceRenderFlag(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->updateAppFeature(Landroid/os/Bundle;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtActivityInfoImpl;->writeToParcel(Landroid/os/Parcel;I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;-><init>(Landroid/content/pm/ApplicationInfo;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->copyFrom(Landroid/content/pm/ApplicationInfo;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppDefaultOrientation()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppDensity()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppForceOrientation()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppLandscapeHeight()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppLandscapeWidth()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppOrientation()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppOrientation(I)I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppPortraitHeight()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->get2dAppPortraitWidth()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->getDisplayId()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->getLaunchActivityOrientation()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->getVrAppFlag()I",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->isAllComponentVr()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->isVrApp()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->isVrApplication()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->readFromParcel(Landroid/os/Parcel;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppDefaultOrientation(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppDensity(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppForceOrientation(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppLandscapeHeight(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppLandscapeWidth(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppPortraitHeight(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->set2dAppPortraitWidth(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->setDisplayId(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->setLaunchActivityOrientation(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->setVrAppFlag(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtApplicationInfoImpl;->writeToParcel(Landroid/os/Parcel;)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/ExtPackageParserImpl;->parseVrFlags(Landroid/content/pm/PackageParser$Package;)Landroid/content/pm/PackageParser$Package;",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/content/pm/PackageParser;->parsePackage(Ljava/io/File;IZ)Landroid/content/pm/PackageParser$Package;",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true,
+      "note": "Smartisan library-file verification is outside the VR chain"
+    },
+    {
+      "method": "Landroid/pico/utils/PicoSystemConfig;->readPicoConfig(I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/pico/utils/PicoSystemConfig;->readPicoConfigFromXml(Ljava/io/File;I)V",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/view/ExtViewRootImplImpl;->canSkipDraw()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true,
+      "note": "Source adds a null check for ActivityThread.currentActivityThread()"
+    },
+    {
+      "method": "Landroid/view/ExtViewRootImplImpl;->isSkipDrawVrActivity()Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    },
+    {
+      "method": "Landroid/view/ViewRootImpl;->drawSoftware(Landroid/view/Surface;Landroid/view/View$AttachInfo;IIZLandroid/graphics/Rect;Landroid/graphics/Rect;)Z",
+      "in_factory": true,
+      "in_source": true,
+      "factory_only_calls": [],
+      "source_only_calls": [],
+      "factory_only_fields": [],
+      "source_only_fields": [],
+      "factory_only_strings": [],
+      "source_only_strings": [],
+      "calls_match_or_explained": true
+    }
+  ],
+  "static_unexplained": [],
+  "ported_subset": {
+    "IExtActivityInfo": "complete factory interface",
+    "IExtApplicationInfo": "complete factory interface",
+    "IExtPackageParser": "complete factory interface (parseVrFlags, parseBaseApkCommon)",
+    "ExtPackageParserUtils": "complete (2D virtual-display configuration)",
+    "PicoSystemConfig": "complete",
+    "IExtActivityThread": "complete factory interface with ActivityThread hooks",
+    "IExtViewRootImpl": "complete factory interface with ViewRootImpl/ThreadedRenderer hooks and android.pico.ns"
+  },
+  "not_ported": [
+    "ActivityInfoSmtBase Parcel data preceding the PICO extension",
+    "factory ExtImplFactory reflection; Source creates implementations directly"
+  ],
+  "hardware_vr_qualified": false,
+  "system_partitions_modified": false
+}

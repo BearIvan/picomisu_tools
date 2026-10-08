@@ -1,0 +1,44 @@
+{
+ "Landroid/app/IBackupAgent$Stub$Proxy;": [
+  [
+   "3",
+   "('doFullBackup', '(Landroid/os/ParcelFileDescriptor;JILandroid/app/backup/IBackupManager;ILjava/util/List;Ljava/util/List;)V', True, ['in', 'in', 'in', 'in', 'in', 'in', 'in'])",
+   "('doFullBackup', '(Landroid/os/ParcelFileDescriptor;JILandroid/app/backup/IBackupManager;I)V', True, ['in', 'in', 'in', 'in', 'in'])"
+  ]
+ ],
+ "Landroid/bluetooth/IBluetoothPan$Stub$Proxy;": [
+  [
+   "2",
+   "('setBluetoothTethering', '(ZLjava/lang/String;)V', False, ['in', 'in'])",
+   "('setBluetoothTethering', '(Z)V', False, ['in'])"
+  ]
+ ],
+ "Landroid/net/INetworkStatsService$Stub$Proxy;": [
+  [
+   "7",
+   "('forceUpdateIfaces', '([Landroid/net/Network;[Landroid/net/NetworkState;Ljava/lang/String;)V', False, ['in', 'in', 'in'])",
+   "('forceUpdateIfaces', '([Landroid/net/Network;[Lcom/android/internal/net/VpnInfo;[Landroid/net/NetworkState;Ljava/lang/String;)V', False, ['in', 'in', 'in', 'in'])"
+  ]
+ ],
+ "Landroid/os/IStatsManager$Stub$Proxy;": [
+  [
+   "24",
+   "('sendWatchdogRollbackOccurredAtom', '(ILjava/lang/String;JILjava/lang/String;)V', True, ['in', 'in', 'in', 'in', 'in'])",
+   "('sendWatchdogRollbackOccurredAtom', '(ILjava/lang/String;J)V', True, ['in', 'in', 'in'])"
+  ]
+ ],
+ "Landroid/os/IVibratorService$Stub$Proxy;": [
+  [
+   "3",
+   "('vibrate', '(ILjava/lang/String;Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;Ljava/lang/String;Landroid/os/IBinder;)V', False, ['in', 'in', 'in', 'in', 'in', 'in'])",
+   "('vibrate', '(ILjava/lang/String;Landroid/os/VibrationEffect;ILjava/lang/String;Landroid/os/IBinder;)V', False, ['in', 'in', 'in', 'in', 'in', 'in'])"
+  ]
+ ],
+ "Landroid/view/ISystemGestureExclusionListener$Stub$Proxy;": [
+  [
+   "1",
+   "('onSystemGestureExclusionChanged', '(ILandroid/graphics/Region;Landroid/graphics/Region;)V', True, ['in', 'in', 'in'])",
+   "('onSystemGestureExclusionChanged', '(ILandroid/graphics/Region;)V', True, ['in', 'in'])"
+  ]
+ ]
+}

@@ -1,0 +1,2 @@
+Lcom/android/internal/telephony/PhoneSwitcher;->getActiveDataSubId()I
+Lcom/android/internal/telephony/SubscriptionController;->getActiveDataSubscriptionId()I

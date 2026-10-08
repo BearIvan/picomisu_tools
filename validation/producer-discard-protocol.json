@@ -1,0 +1,11 @@
+{
+  "factory_libgui_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+  "abi": 64,
+  "on_buffer_released_transaction": 1,
+  "needs_release_notify_transaction": 2,
+  "on_buffers_discarded_transaction": 3,
+  "release_with_fence_transaction": 4,
+  "discard_payload_from_verified_disassembly": "Parcel::readInt32Vector",
+  "discard_virtual_call_offset_bytes": 32,
+  "factory_dispatch_table_checked": true
+}

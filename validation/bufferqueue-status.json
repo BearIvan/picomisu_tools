@@ -1,0 +1,19 @@
+{
+  "native_commit": "58abcaf30139d805e382c29daae189e5da473133",
+  "build_exit_code": 0,
+  "isolated_device_tests": {
+    "arm": 6,
+    "arm64": 6
+  },
+  "fingerprint_unchanged": true,
+  "boot_completed": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false,
+  "factory_vr_services_replaced": false,
+  "libgui_sha256": {
+    "arm": "a4b882ca3908c82bca9666129fa316295468dc9c413c51a006c16b46af2d4ad7",
+    "arm64": "a8632344de1dcd9f3bfe8f4b35a7331c9af458232bb9184d18290e07fe780888"
+  },
+  "java_jni_runtime_tested": false,
+  "full_vr_port_complete": false
+}

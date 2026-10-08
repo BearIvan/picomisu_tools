@@ -1,0 +1,315 @@
+{
+  "native_commit": "028df933e0cebf3b011a7589406be38b0e4152f8",
+  "factory_binder_arm64_sha256": "9e5bdf585d73baddf17bbc646b4daea0e2b15d4fb6d8dc244d08412dd1be86a9",
+  "package": "outputs/bufferqueue-test-24",
+  "build_exit_code": 0,
+  "observations": [
+    {
+      "abi": "arm64",
+      "checkpoints": [
+        {
+          "checkpoint": "persistent-first",
+          "registrations": 1,
+          "removals": 0,
+          "links-a": 1,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "persistent-duplicate",
+          "registrations": 2,
+          "removals": 0,
+          "links-a": 2,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "persistent-two-keys",
+          "registrations": 3,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "wrong-pid",
+          "registrations": 3,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "once-first",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "once-second",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "key-remove",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "token-remove",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "death-after-pid-change",
+          "registrations": 5,
+          "removals": 0,
+          "links-a": 4,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        }
+      ],
+      "arm64_map_sizes": [
+        {
+          "checkpoint": "persistent-first",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "persistent-duplicate",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "persistent-two-keys",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "wrong-pid",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "once-first",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "once-second",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "key-remove",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "token-remove",
+          "once": 0,
+          "persistent": 0
+        },
+        {
+          "checkpoint": "death-after-pid-change",
+          "once": 0,
+          "persistent": 0
+        }
+      ]
+    },
+    {
+      "abi": "arm",
+      "checkpoints": [
+        {
+          "checkpoint": "persistent-first",
+          "registrations": 1,
+          "removals": 0,
+          "links-a": 1,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "persistent-duplicate",
+          "registrations": 2,
+          "removals": 0,
+          "links-a": 2,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "persistent-two-keys",
+          "registrations": 3,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "wrong-pid",
+          "registrations": 3,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 0,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "once-first",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "once-second",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "key-remove",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "token-remove",
+          "registrations": 4,
+          "removals": 0,
+          "links-a": 3,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        },
+        {
+          "checkpoint": "death-after-pid-change",
+          "registrations": 5,
+          "removals": 0,
+          "links-a": 4,
+          "links-b": 1,
+          "unlinks-a": 0,
+          "unlinks-b": 0,
+          "first": 0,
+          "replacement": 0,
+          "second": 0,
+          "once": 0
+        }
+      ],
+      "arm64_map_sizes": []
+    }
+  ],
+  "factory_self_delivery_control_passed_both_abis": true,
+  "all_binder_write_read_exchanges_intercepted": true,
+  "fake_service_preflight_passed_both_abis": true,
+  "source_remote_registry_implemented": false,
+  "factory_callbacks_delivered_in_tested_remote_paths": false,
+  "factory_gui_freeze_imports": [
+    "getInstance",
+    "registerSelfUnFreezeListener",
+    "unRegisterSelfUnFreezeListener"
+  ],
+  "inference": "ARM64 local map copies and empty root maps agree with absent remote deliveries; this does not prove every possible remote path",
+  "scope": "synthetic frozen PID, fake manager/service and local token/death notifications; no real process freeze or complete remote API qualification",
+  "fingerprint_unchanged": true,
+  "temporary_files_removed": true,
+  "system_partitions_modified": false
+}

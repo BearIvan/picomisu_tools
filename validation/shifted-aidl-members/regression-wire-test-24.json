@@ -1,0 +1,66 @@
+{
+ "PicoApiFixture": {
+  "package": "outputs/framework-boot-image-test-24",
+  "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+  "comparison": {
+   "arm64": {
+    "scenarios": 313,
+    "matched": 313
+   },
+   "arm": {
+    "scenarios": 313,
+    "matched": 313
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  }
+ },
+ "QcomApiFixture": {
+  "package": "outputs/framework-boot-image-test-24",
+  "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+  "comparison": {
+   "arm64": {
+    "scenarios": 1190,
+    "matched": 1190
+   },
+   "arm": {
+    "scenarios": 1190,
+    "matched": 1190
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  }
+ },
+ "AudioApiFixture": {
+  "package": "outputs/framework-boot-image-test-24",
+  "probe_sha256": "60db4579dfc877f850c7a232b9a6dbe7976717e7b524e92df80dbe218cbbd29d",
+  "comparison": {
+   "arm64": {
+    "scenarios": 346,
+    "matched": 346
+   },
+   "arm": {
+    "scenarios": 346,
+    "matched": 346
+   }
+  },
+  "unexpected_differences": [],
+  "factory_run": {
+   "installed_framework_sha256": "ea5998f856b692f8cd112b26d65e6a4f371dca825348bf5b247eabc56274ed0e",
+   "fingerprint_unchanged": true,
+   "boot_completed": true,
+   "temporary_files_removed": true
+  }
+ },
+ "problems": []
+}

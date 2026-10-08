@@ -1,0 +1,98 @@
+{
+  "inputs": {
+    "factory_plat_sepolicy": {
+      "path": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root/system/etc/selinux/plat_sepolicy.cil",
+      "sha256": "592c6a9bf9c6f184bb599bce22cca0483722e12c1123e4a241d9637282390903"
+    },
+    "factory_mapping": {
+      "path": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-system/root/system/etc/selinux/mapping/29.0.cil",
+      "sha256": "683bc8a90afe98b03f02314006f0658adb4c7521d1936abacbc7834f63cda7eb"
+    },
+    "factory_plat_pub_versioned": {
+      "path": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/stock-5.13.7-partitions/vendor/etc/selinux/plat_pub_versioned.cil",
+      "sha256": "162d18c8592bfeb349de5defc9c984dcff5aeda1f4882ba0d70aad26fa399c81"
+    },
+    "source_baseline": {
+      "path": "/mnt/wsl/PHYSICALDRIVE5p3/home/red_panda/RedPandaAndroid/pico4-pro/analysis/sepolicy-source-baseline/plat_sepolicy.cil",
+      "sha256": "ef222459ac49b876dd1c550e424045c3de4d8c33e7f10b154ed560168bb2490d",
+      "content": "AOSP android-10.0.0_r47 system/sepolicy + CodeLinaro device/qcom/sepolicy 830b6eb9 generic/qva public+private, without device/pico policy"
+    }
+  },
+  "reconstructed": {
+    "types": 286,
+    "public_types": 246,
+    "attributes": 10,
+    "counts": {
+      "private_allow": 8278,
+      "private_allowx": 24,
+      "private_dontaudit": 38,
+      "private_memberships": 89,
+      "private_neverallow": 102,
+      "private_types": 40,
+      "private_typetransition": 39,
+      "public_allow": 6468,
+      "public_allowx": 1,
+      "public_attributes": 10,
+      "public_dontaudit": 1,
+      "public_memberships": 14,
+      "public_neverallow": 69,
+      "public_types": 246
+    },
+    "declaration_segments": {
+      "aosp_private": 2,
+      "aosp_public": 41,
+      "device_private": 38,
+      "device_public": 215
+    },
+    "genfscon": 64,
+    "contexts": {
+      "file_contexts": 148,
+      "property_contexts": 94,
+      "service_contexts": 46,
+      "hwservice_contexts": 4
+    },
+    "neverallow_exception_list_changes_not_reconstructed": 1530
+  },
+  "files": {
+    "private/file_contexts": {
+      "sha256": "07c8276894a0177c81178920a9e28bd9dbfc1b0b019911d6f89ae6e7beeae867",
+      "lines": 152
+    },
+    "private/genfs_contexts": {
+      "sha256": "d4c41697d0fd825b9bb262e1df00fbb7da3bbda1c815575110d86a5e16036967",
+      "lines": 68
+    },
+    "private/hwservice_contexts": {
+      "sha256": "cbd8585ce636946deae1118326a8d397dc98eee6ab328b6f3fd412de733a66a2",
+      "lines": 8
+    },
+    "private/pico_factory.te": {
+      "sha256": "b3d7bde5cd729d425c949711cdcf915fd0563d292073005eabfa6b0033ff7b73",
+      "lines": 2012
+    },
+    "private/property_contexts": {
+      "sha256": "a6deb40c774bbb730b57d9e71e665bc06c357ec39045370ee7a4aaf5f329ed87",
+      "lines": 98
+    },
+    "private/service_contexts": {
+      "sha256": "ecb4746fe685e8bcc7336eccb00a9b5ea8a2181884160da572a20609dad97ed8",
+      "lines": 50
+    },
+    "public/attributes": {
+      "sha256": "5967ef559ff1bad7821ae2877f7a4dcff004169261cb49afad6d1f626ef38c69",
+      "lines": 14
+    },
+    "public/pico_factory.te": {
+      "sha256": "d87fb29f59102593ee4e1c15e6cc004bdc28ddb90461ce8a360a628686d47790",
+      "lines": 1639
+    },
+    "system/sepolicy/private/pico_factory.te": {
+      "sha256": "9b810b62081fdaa9754851ffe001196242e803230634237c5a5b699d7c01274f",
+      "lines": 69
+    },
+    "system/sepolicy/public/pico_factory.te": {
+      "sha256": "c1feb9e69c9a78f18e762e0cc1a6b1843ac3c6330eeed52a989e308d0f6c6c7d",
+      "lines": 46
+    }
+  }
+}

@@ -1,0 +1,3 @@
+Landroid/net/shared/ProvisioningConfiguration;->mRapidCommit:Z
+Landroid/net/shared/ProvisioningConfiguration;->mDiscoverSent:Z
+Landroid/net/shared/ProvisioningConfiguration;-><init>(Landroid/net/shared/ProvisioningConfiguration;)V

@@ -1,0 +1,22 @@
+{
+ "donors": {
+  "CodeLinaro LA.UM.8.12.c3-64900-sm8250.0": "IAccountManager, INotificationManager, ITaskStackListener, IBluetoothManager (system/bt 336e28a2 + frameworks/base), IBiometricService, INetworkMonitorCallbacks, IIpClient, IIpClientCallbacks (services/net aidl version 5, packages/modules/NetworkStack 2479fe58), INfcAdapter (packages/apps/Nfc 9d913001), IInstalld (frameworks/native bf08d9a8), IUserManager, IVold (system/vold 020b06ad), IWindow, IConnectionService (+ Telecomm/TeleService), IIccPhoneBook, ISms, ITelephonyRegistry (frameworks/opt/telephony, frameworks/base 4eb3b752); CodeLinaro tables equal the factory tables for these interfaces",
+  "android-11.0.0_r48 + factory DEX": "IDisplayManager.createVirtualDisplayExt: VirtualDisplayConfig (with the AnnotationValidations checks as static members, as in the factory), DisplayManager/DisplayManagerGlobal clients, BinderService/createVirtualDisplayInternal/VirtualDisplayAdapter/DisplayDevice displayIdToMirror; the Android 10 createVirtualDisplay builds a VirtualDisplayConfig and delegates, and both accept the \"android\" package name like the factory",
+  "factory DEX (PICO, no donor)": "INetworkMonitor.updateDnsEvent/updateDnsEvents (codes 8/9, oneway), NetworkMonitorManager.updateDnsEvent(s), ConnectivityService DNS event batching (5 s gate, 30 entries), NetworkStackService$NetworkMonitorImpl forwarding"
+ },
+ "on_dns_event_evidence": "Factory ConnectivityService$5.onDnsEvent equals Source ConnectivityService$4.onDnsEvent after removing register moves (anonymous class numbering differs because the factory has an extra CodeLinaro PhoneStateListener); addDnsEventInfo/clearDnsEventInfo identical.",
+ "not_ported": {
+  "NetworkStatusCollect telemetry": "Factory NetworkMonitor.updateDnsEvent(s) only feed android.net.networkstatuscollect.NetworkStatusCollect (TcpSocketTracker, DNS/data-stall collection) which reports to the ByteDance Slardar service (com.bytedance.os.slardar.ACTION_SLARDAR_SERVICE, OsTeaTracker). Telemetry, deliberately not ported; the Source methods receive the calls with the factory signatures.",
+  "networkstack frozen versions": "The PICO methods are inserted in the middle of the frozen version 5 INetworkMonitor, so the Android 10 aidl_interface checkapi between versions fails; networkstack-aidl-interfaces keeps only version 5 (ipmemorystore keeps 1,2,3,5). The factory ships version 5 with the same table.",
+  "vold wrapped keys": "fscrypt_clear_user_key_auth ports the non-wrapped-key path only. The factory vendor fstab uses fileencryption=ice,wrappedkey for /data and /metadata; wrapped-key (ICE) support is missing in the Source vold/fs_mgr as a whole, independent of this table port - a separate vold port is required before the Source image can mount the existing userdata.",
+  "SystemUI BubbleController": "CodeLinaro BubbleController reacts to onSingleTaskDisplayDrawn/Empty using the Android 10 QPR bubbles rewrite (Bubble.getDisplayId, BubbleData.notifyDisplayEmpty); not ported. The factory image has no SystemUI; the SystemUI shared listener dispatch is ported.",
+  "statsd atoms": "Only the NotificationRemoteViews pulled atom (10066) is added to atoms.proto; the other CodeLinaro atoms (VmsClientStats 10065, BackGesture, ExclusionRectStateChanged, VmsClientConnectionStateChanged) belong to other features.",
+  "PICO capture displays": "Factory VirtualDisplayAdapter additionally computes a capture type/token (CaptureDisplayUtils, CaptureSurfaceAgent) and the Smartisan skip-single-layer flag; PICO subsystems without donor.",
+  "Call.Details RTT remote": "CAPABILITY_SUPPORTS_RTT_REMOTE (CodeLinaro RTT feature) not ported."
+ },
+ "components": {
+  "new": ["system/vold (0082)", "packages/modules/NetworkStack (0083)", "packages/apps/Nfc (0084)"],
+  "updated": ["frameworks/base (0075-0079)", "system/bt (0080)", "frameworks/native (0081)", "frameworks/opt/telephony (0085)", "packages/services/Telephony (0086)", "packages/services/Telecomm (0087)"]
+ },
+ "problems": []
+}

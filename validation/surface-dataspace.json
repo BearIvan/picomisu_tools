@@ -1,0 +1,25 @@
+{
+  "donor_commit": "71e1890b755f126274e8225875050c7b785006e4",
+  "function_body_matches_donor": true,
+  "function_body_sha256": "11cd309135a89d30333a01eaf14ced34875b559995a9f5d7c9159f07adfcba5f",
+  "factory_arm64_sha256": "7b52e5bc29cf5d68c1b24ce6701535dcae64131e3c83b685713ea4a0b4b6dcc5",
+  "factory_arm64_function_address": "0xc649c",
+  "factory_arm64_control_flow_manually_inspected": true,
+  "legacy_attach_and_queue_api_retained": true,
+  "test_cases": [
+    "success restores dataspace then disconnects",
+    "null buffer returns BAD_VALUE before surface access",
+    "six sequential failure points return their error immediately"
+  ],
+  "test_scope": "Source Surface subclass with recording hooks and empty GraphicBuffer; no GPU allocation or compositor",
+  "runtime_verified": true,
+  "factory_runtime_comparison_verified": false,
+  "build_verified": true,
+  "installed_on_device": false,
+  "native_commit": "5d98c5270eb4de584e9be9c4742fd7f78ccdb652",
+  "build_exit_code": 0,
+  "expected_tests_per_abi": 54,
+  "package": "outputs/bufferqueue-test-10",
+  "runtime_status": "passed in isolated package 12; see native-runtime-current.json",
+  "latest_runtime_evidence": "validation/native-runtime-current.json"
+}
