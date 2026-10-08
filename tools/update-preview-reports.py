@@ -126,9 +126,9 @@ SPL 2019-09-05; покрытие патчами безопасности гиб�
 регистрации служб, стереоизображения, 6DoF, контроллеров, passthrough,
 границы, IPD, глаз/лица и OpenXR-приложения. Они ещё не выполнены на этой системе.
 '''
-    (ROOT / 'vr-integration.md').write_text(text, encoding='utf-8')
+    (ROOT / 'docs/research/vr-integration.md').write_text(text, encoding='utf-8')
     (ROOT / 'outputs/vr-preview-01/README.md').write_text(text, encoding='utf-8')
-    readme_file = ROOT / 'README.md'
+    readme_file = ROOT / 'docs/research/project-notes.md'
     readme = readme_file.read_text(encoding='utf-8')
     first = readme.split('\n\n', 2)
     first[1] = ('Собран первый проверочный гибридный образ PICO AOSP VR preview 01. '

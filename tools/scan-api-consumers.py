@@ -271,7 +271,7 @@ G = {}
 
 
 def load_candidates():
-    gaps = json.loads((ROOT / 'API-GAPS.json').read_text())
+    gaps = json.loads((ROOT / 'docs/research/API-GAPS.json').read_text())
     candidates = {}
     for jar, data in gaps['jars'].items():
         for clazz in data['classes_added_in_factory_jar']:
@@ -788,7 +788,7 @@ def main():
                                 'decided_by': entry['kind'], 'reason': entry['reason']})
     report = {
         'snapshot': gaps['snapshot'], 'pico_build': gaps['pico_build'], 'aosp_tag': gaps['aosp_tag'],
-        'api_gaps_sha256': hashlib.sha256((ROOT / 'API-GAPS.json').read_bytes()).hexdigest(),
+        'api_gaps_sha256': hashlib.sha256((ROOT / 'docs/research/API-GAPS.json').read_bytes()).hexdigest(),
         'source_component_commits': gaps['source_component_commits'],
         'factory_system_image_sha256': json.loads((pico.REPORTS / 'factory-system.json').read_text())['image_sha256'],
         'factory_effective_classpath': {'boot': factory_boot_paths, 'system_server': factory_server_paths,
