@@ -1,6 +1,6 @@
 <p align="center"><img src="logo/picomisu.png" alt="Picomisu" width="320"></p>
 
-> Picomisu build and install tools, checked out at `picomisu/` by `repo sync`. Build: `picomisu/build.sh`. Guide: [picomisu_manifest](https://github.com/BearIvan/picomisu_manifest#readme).
+> Picomisu build and install tools, checked out at `picomisu/` by `repo sync`. Build: `picomisu/build.sh`. Guide: [picomisu](https://github.com/BearIvan/picomisu#readme).
 
 # Picomisu — AOSP 10 с VR для PICO 4 Pro SEKO
 
