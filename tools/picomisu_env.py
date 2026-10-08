@@ -27,7 +27,8 @@ if _top:
     SOURCE = TOP
     # A variant out dir (user build) keeps the host tools of the main out dir.
     HOST_OUT = Path(os.environ.get('PICOMISU_HOST_OUT') or OUT / 'host/linux-x86')
-    AVBTOOL = TOP / 'external/avb/avbtool.py'
+    # AVB 1.4 for Python 3 (the CAF tree's avbtool is AVB 1.1 for Python 2), see tools/third_party/avb.
+    AVBTOOL = ROOT / 'tools/third_party/avb/avbtool.py'
 else:
     LEGACY = True
     VOLUME = Path('/mnt/wsl/PHYSICALDRIVE5p3')
