@@ -1,6 +1,6 @@
 <p align="center"><img src="logo/picomisu.png" alt="Picomisu" width="320"></p>
 
-> Инструменты Picomisu на ПК. Сборка и установка: [picomisu_manifest](https://github.com/BearIvan/picomisu_manifest) (BUILD.md, INSTALL.md).
+> Picomisu build and install tools, checked out at `picomisu/` by `repo sync`. Build: `picomisu/build.sh`. Guide: [picomisu_manifest](https://github.com/BearIvan/picomisu_manifest#readme).
 
 # Picomisu — AOSP 10 с VR для PICO 4 Pro SEKO
 
