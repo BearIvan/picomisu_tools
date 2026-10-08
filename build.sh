@@ -23,7 +23,11 @@ sudo=${PICOMISU_SUDO:-sudo}
 stock=$PICOMISU_WORK/stock/5.13.7-SEKO
 version=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["version"])' device/pico/PICOA8110/release.json)
 step() { printf '\n==> %s\n' "$*"; }
-as_root() { $sudo --preserve-env=PICOMISU_TOP,OUT_DIR,PICOMISU_WORK,PICOMISU_BOOT,PICOMISU_HOST_OUT python3 "$@"; }
+as_root() {
+    $sudo --preserve-env=PICOMISU_TOP,OUT_DIR,PICOMISU_WORK,PICOMISU_BOOT,PICOMISU_HOST_OUT python3 "$@"
+    # Directories the root step created stay writable for the next (user) step.
+    $sudo --preserve-env=PICOMISU_WORK chown -R "$(id -u):$(id -g)" "$PICOMISU_WORK"
+}
 
 [[ $(id -u) != 0 ]] || { echo "Run as a normal user; root steps use sudo." >&2; exit 1; }
 test -f build/envsetup.sh -a -d device/pico/PICOA8110 || { echo "Not a picomisu repo checkout: $top" >&2; exit 1; }
