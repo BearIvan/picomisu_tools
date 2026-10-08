@@ -53,8 +53,11 @@ if ! ldconfig -p | grep -q 'libncurses.so.5'; then
 fi
 
 step "3/6 Build: system image and host tools"
-picomisu/build/build-caf.sh systemimage apksigner aapt2 e2fsck e2fsdroid img2simg mke2fs simg2img \
-    zipalign checkvintf avbtool signapk host_init_verifier
+# Host tools by their output files: a module name would also build (and install into system) its
+# device variant, e.g. img2simg/simg2img.
+host=$OUT_DIR/host/linux-x86
+picomisu/build/build-caf.sh systemimage "$host/framework/apksigner.jar" \
+    $(printf "$host/bin/%s " aapt2 e2fsck e2fsdroid img2simg mke2fs simg2img zipalign checkvintf host_init_verifier)
 
 step "4/6 Factory system tree and APK inventory"
 as_root picomisu/tools/extract-vr-system.py
