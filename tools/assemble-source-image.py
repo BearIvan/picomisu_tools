@@ -58,9 +58,9 @@ env = pico.env
 # texts byte for byte.
 if os.environ.get('PICO_TRIAL'):
     NAME = os.environ['PICO_TRIAL']
-    CONFIG = env.DEVICE / (NAME + '.json')
+    CONFIG = pico.env.DEVICE / (NAME + '.json')
 else:
-    CONFIG = env.DEVICE / 'release.json'
+    CONFIG = pico.env.DEVICE / 'release.json'
     NAME = 'source-' + json.loads(CONFIG.read_text())['version']
 TOKEN = NAME.upper().replace('-', '_')
 STAGE = PROJECT / 'staging' / NAME
@@ -70,7 +70,7 @@ META = STAGE / 'image-metadata'
 OUTPUT = PROJECT / 'outputs' / NAME
 FACTORY = PROJECT / 'analysis/stock-5.13.7-system/root'
 PARTITIONS = PROJECT / 'analysis/stock-5.13.7-partitions'
-STOCK = env.STOCK
+STOCK = pico.env.STOCK
 FACTORY_REPORT = pico.REPORTS / 'factory-system.json'
 FILE_CONTEXTS = PRODUCT / 'obj/ETC/file_contexts.bin_intermediates/file_contexts.bin'
 JAVA = SOURCE_TREE / 'prebuilts/jdk/jdk9/linux-x86/bin/java'
@@ -79,7 +79,7 @@ AAPT2 = HOST / 'aapt2'
 TIMESTAMP = 1790719200  # 2026-09-30T00:00:00Z, fixed for reproducible images
 # Releases whose filesystem UUID, directory hash seed and verity salt were derived from the release name.
 LEGACY_IMAGE_IDS = {'source-2.%02d' % n for n in range(12)} | {'source-1.%02d' % n for n in range(5)}
-USER = env.USER
+USER = pico.env.USER
 
 digest = pico.digest
 
@@ -580,7 +580,7 @@ def stage():
         # Relative sources are in the device tree; ~ is the building user's home.
         source_file = Path(os.path.expanduser(spec['from']))
         if not source_file.is_absolute():
-            source_file = env.DEVICE / source_file
+            source_file = pico.env.DEVICE / source_file
         if not source_file.exists() and spec.get('optional'):
             continue
         shutil.copyfile(source_file, TREE / path)
@@ -637,7 +637,7 @@ def build():
     if os.environ.get('PICOMISU_BOOT'):
         current_boot = Path(os.environ['PICOMISU_BOOT']).resolve()
         boot_report = {'current_boot_sha256': digest(current_boot), 'source': 'PICOMISU_BOOT'}
-    elif env.LEGACY:
+    elif pico.env.LEGACY:
         boot_report = json.loads((pico.REPORTS / 'current-boot.json').read_text())
         current_boot = Path(boot_report['current_boot_file'])
         if digest(current_boot) != boot_report['current_boot_sha256']:
@@ -645,7 +645,7 @@ def build():
     else:
         current_boot = STOCK / 'boot.img'
         boot_report = {'current_boot_sha256': digest(current_boot), 'source': 'factory OTA boot.img'}
-        if boot_report['current_boot_sha256'] != env.LOCK['images']['boot.img']['sha256']:
+        if boot_report['current_boot_sha256'] != pico.env.LOCK['images']['boot.img']['sha256']:
             raise RuntimeError('Factory boot differs from the lock')
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for name in ['system.img', 'vbmeta.img', 'vbmeta_system.img', 'system.sparse.img']:
@@ -663,11 +663,11 @@ def build():
         lines.append('%s %d %d %s capabilities=0x%x\n' % (path, entry['uid'], entry['gid'], entry['mode'],
                                                         entry.get('capabilities', 0)))
     fs_config.write_text(''.join(lines))
-    if env.LEGACY:
+    if pico.env.LEGACY:
         lp = json.loads((ROOT / 'reports/board/lp-metadata.json').read_text())
         partition_size = next(p['bytes'] for p in lp['metadata'][0]['partitions'] if p['name'] == 'system')
     else:
-        partition_size = env.LOCK['images']['system']['bytes']
+        partition_size = pico.env.LOCK['images']['system']['bytes']
     if partition_size != 5704732672:
         raise RuntimeError('Unexpected logical system size')
     maximum = int(builder.avb_command('add_hashtree_footer', '--partition_size', partition_size,
@@ -700,7 +700,7 @@ def build():
     elif cfg.get('base_fs'):
         # The block layout of the previous release, kept in the device tree (base_fs/<version>.txt).
         base_release = 'source-' + cfg['base_release']
-        base_fs_in = env.DEVICE / cfg['base_fs']
+        base_fs_in = pico.env.DEVICE / cfg['base_fs']
         base_args = ['-d', base_fs_in]
     population = run([HOST / 'e2fsdroid', '-e', '-s', '-T', TIMESTAMP, '-C', fs_config, '-S', FILE_CONTEXTS,
                       '-D', base_fs_out] + base_args + ['-f', TREE, '-a', '/', raw], env=env)
