@@ -14,7 +14,6 @@ import shutil
 import time
 import zipfile
 
-import brotli
 
 
 BLOCK = 4096
@@ -69,6 +68,7 @@ def reconstruct(archive, partition, destination, image_size):
     partial = destination / f"{partition}.img.partial"
     if final.exists() or partial.exists():
         raise FileExistsError(f"Refusing to overwrite image: {final}")
+    import brotli  # only needed when images are reconstructed (python3-brotli)
     decompressor = brotli.Decompressor()
     index = 0
     written_in_range = 0

@@ -53,7 +53,7 @@ STAGE, TREE, OUTPUT = asm.STAGE, asm.TREE, asm.OUTPUT
 FACTORY, PARTITIONS = asm.FACTORY, asm.PARTITIONS
 CHECK = STAGE / 'check'
 HOST = asm.HOST
-REPORT = ROOT / 'validation' / (asm.NAME + '.json')
+REPORT = (ROOT if asm.env.LEGACY else asm.env.WORK) / 'validation' / (asm.NAME + '.json')
 
 
 def dynamic_symbols(path):
@@ -596,6 +596,7 @@ def main():
                                                    'avb_root_rollback_index', 'avb_system_rollback_index',
                                                    'system_security_patch_property', 'current_boot_sha256',
                                                    'super_lp_metadata_rebuilt']}
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n')
     java_gaps = {p: r['unresolved_on_source'] for p, r in report['java'].items() if r.get('unresolved_on_source')}
     summary = {

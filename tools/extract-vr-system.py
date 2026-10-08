@@ -15,13 +15,17 @@ import shutil
 import stat
 import struct
 import subprocess
+import importlib.util as _util
 
-ROOT = Path(__file__).resolve().parents[1]
-VOLUME = Path('/mnt/wsl/PHYSICALDRIVE5p3')
-PROJECT = VOLUME / 'home/red_panda/RedPandaAndroid/pico4-pro'
+_spec = _util.spec_from_file_location('picomisu_env', Path(__file__).with_name('picomisu_env.py'))
+env = _util.module_from_spec(_spec)
+_spec.loader.exec_module(env)
+ROOT = env.ROOT
+VOLUME = env.VOLUME
+PROJECT = env.WORK
 DEST = PROJECT / 'analysis/stock-5.13.7-system'
-IMAGE = PROJECT / 'stock/5.13.7-SEKO/system.img'
-REPORT = ROOT / 'reports/vr-integration/factory-system.json'
+IMAGE = env.STOCK / 'system.img'
+REPORT = env.REPORTS / 'vr-integration/factory-system.json'
 
 
 def digest(path):
@@ -61,19 +65,46 @@ def metadata(path, relative):
     return result
 
 
+def extract_partitions():
+    """Factory vendor/product/odm file trees (content only) for staging and image checks."""
+    out = PROJECT / 'analysis/stock-5.13.7-partitions'
+    if out.is_dir():
+        return
+    temporary = out.with_name(out.name + '.tmp')
+    if temporary.exists():
+        shutil.rmtree(temporary)
+    for partition in ['vendor', 'product', 'odm']:
+        image = env.STOCK / (partition + '.img')
+        expected = env.LOCK['images'][partition]
+        if image.stat().st_size != expected['bytes'] or digest(image) != expected['sha256']:
+            raise RuntimeError('Factory %s image differs from the lock' % partition)
+        (temporary / partition).mkdir(parents=True)
+        subprocess.run(['debugfs', '-R', 'rdump / ' + str(temporary / partition), str(image)],
+                       check=True, capture_output=True)
+    user = pwd.getpwnam(env.USER)
+    for folder, directories, files in os.walk(temporary):
+        for name in directories + files:
+            os.chown(Path(folder) / name, user.pw_uid, user.pw_gid, follow_symlinks=False)
+    os.chown(temporary, user.pw_uid, user.pw_gid)
+    temporary.rename(out)
+    print(json.dumps({'factory_partitions': str(out)}), flush=True)
+
+
 def main():
     if os.geteuid() != 0:
         raise RuntimeError('Read-only loop mount requires WSL root')
-    mounted = json.loads(subprocess.check_output(
-        ['findmnt', '--json', '-o', 'FSTYPE,UUID', '--target', str(VOLUME)], text=True))['filesystems']
-    if mounted != [{'fstype': 'ext4', 'uuid': 'a00da05f-1eb2-44b6-99f0-9109391f67dc'}]:
-        raise RuntimeError('Expected physical ext4 volume is not mounted')
-    trusted = json.loads((ROOT / 'reports/verification.json').read_text())['downloaded_factory_ota']
-    if not (trusted['whole_package_signature_verified'] and
-            trusted['signer_matches_installed_ota_trust_store'] and
-            trusted['avb_verification_exit_code'] == 0 and 'system' in trusted['avb_images_checked']):
-        raise RuntimeError('Factory authentication has not passed')
-    expected = json.loads((ROOT / 'reports/baseline-5.13.7/verification.json').read_text())['images']['system']
+    env.guard_volume()
+    extract_partitions()
+    if env.LEGACY:
+        trusted = json.loads((ROOT / 'reports/verification.json').read_text())['downloaded_factory_ota']
+        if not (trusted['whole_package_signature_verified'] and
+                trusted['signer_matches_installed_ota_trust_store'] and
+                trusted['avb_verification_exit_code'] == 0 and 'system' in trusted['avb_images_checked']):
+            raise RuntimeError('Factory authentication has not passed')
+        expected = json.loads((ROOT / 'reports/baseline-5.13.7/verification.json').read_text())['images']['system']
+    else:
+        # The pinned factory OTA (config/stock-firmware.lock.json) is the trust anchor.
+        expected = env.LOCK['images']['system']
     if IMAGE.stat().st_size != expected['bytes'] or digest(IMAGE) != expected['sha256']:
         raise RuntimeError('Factory system changed after authentication')
     if REPORT.exists():
@@ -90,7 +121,7 @@ def main():
     mount.mkdir(exist_ok=True)
     if os.path.ismount(mount) or list(mount.iterdir()):
         raise RuntimeError('Read-only mount point is already in use')
-    user = pwd.getpwnam('redpanda')
+    user = pwd.getpwnam(env.USER)
     entries = []
     subprocess.run(['mount', '-t', 'ext4', '-o', 'loop,ro,noload', str(IMAGE), str(mount)], check=True)
     try:

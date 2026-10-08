@@ -21,13 +21,22 @@ def main():
             print(json.dumps({'already_verified': True, 'packages': len(previous['packages'])}))
             return
         raise RuntimeError('Preserve existing unfinished verification')
-    verified = json.loads((pico.ROOT / 'reports/baseline-5.13.7/verification.json').read_text())
+    if pico.env.LEGACY:
+        verified = json.loads((pico.ROOT / 'reports/baseline-5.13.7/verification.json').read_text())
+    else:
+        # The pinned factory OTA is the trust anchor; the APK list comes from the image itself.
+        verified = {'images': pico.env.LOCK['images']}
     packages = []
     for partition in ['product', 'vendor', 'odm']:
-        image = pico.PROJECT / 'stock/5.13.7-SEKO' / (partition + '.img')
+        image = pico.env.STOCK / (partition + '.img')
         if pico.digest(image) != verified['images'][partition]['sha256']:
             raise RuntimeError('Factory partition changed: ' + partition)
-        inventory = json.loads((pico.ROOT / f'reports/baseline-5.13.7/{partition}-files.json').read_text())
+        if pico.env.LEGACY:
+            inventory = json.loads((pico.ROOT / f'reports/baseline-5.13.7/{partition}-files.json').read_text())
+        else:
+            tree = pico.PROJECT / 'analysis/stock-5.13.7-partitions' / partition
+            inventory = [{'path': '/' + str(path.relative_to(tree)), 'bytes': path.stat().st_size}
+                         for path in sorted(tree.rglob('*.apk')) if path.is_file() and not path.is_symlink()]
         for entry in inventory:
             if not entry['path'].endswith('.apk'):
                 continue

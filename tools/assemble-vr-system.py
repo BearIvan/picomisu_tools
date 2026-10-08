@@ -16,19 +16,23 @@ import shutil
 import subprocess
 import zipfile
 
-ROOT = Path(__file__).resolve().parents[1]
-VOLUME = Path('/mnt/wsl/PHYSICALDRIVE5p3')
-PROJECT = VOLUME / 'home/red_panda/RedPandaAndroid/pico4-pro'
-SOURCE = PROJECT / 'source' / os.environ.get('PICO_SOURCE_TREE', 'aosp-10')
+import importlib.util as _util
+_spec = _util.spec_from_file_location('picomisu_env', Path(__file__).with_name('picomisu_env.py'))
+env = _util.module_from_spec(_spec)
+_spec.loader.exec_module(env)
+ROOT = env.ROOT
+VOLUME = env.VOLUME
+PROJECT = env.WORK
+SOURCE = env.SOURCE
 # PICO_OUT_TREE selects another out dir of the same tree (e.g. caf-10-user for the user variant).
-OUT = PROJECT / 'out' / os.environ.get('PICO_OUT_TREE', os.environ.get('PICO_SOURCE_TREE', 'aosp-10'))
+OUT = env.OUT
 PRODUCT = OUT / 'target/product/PICOA8110'
 # Host tools always come from the tree's main out dir (a variant out dir builds only the image).
-HOST_OUT = PROJECT / 'out' / os.environ.get('PICO_SOURCE_TREE', 'aosp-10') / 'host/linux-x86'
+HOST_OUT = env.HOST_OUT
 HOST = HOST_OUT / 'bin'
 STAGE = PROJECT / 'staging/vr-preview-01'
 TREE = STAGE / 'root'
-REPORTS = ROOT / 'reports/vr-integration'
+REPORTS = env.REPORTS / 'vr-integration'
 
 
 def digest(path):
@@ -40,10 +44,7 @@ def digest(path):
 
 
 def guard_volume():
-    found = json.loads(subprocess.check_output(
-        ['findmnt', '--json', '-o', 'FSTYPE,UUID', '--target', str(VOLUME)], text=True))['filesystems']
-    if found != [{'fstype': 'ext4', 'uuid': 'a00da05f-1eb2-44b6-99f0-9109391f67dc'}]:
-        raise RuntimeError('Expected physical ext4 volume is not mounted')
+    env.guard_volume()
 
 
 def read_symbols(path):
@@ -130,7 +131,7 @@ def apk_identity(path):
     uid = re.search(r':sharedUserId\([^)]*\)="([^"]+)"', manifest)
     if not package:
         raise RuntimeError('Missing APK package name: ' + str(path))
-    signer_jar = Path('/mnt/c/Users/RedPanda/AppData/Local/Android/Sdk/build-tools/35.0.1/lib/apksigner.jar')
+    signer_jar = HOST_OUT / 'framework/apksigner.jar'
     java = SOURCE / 'prebuilts/jdk/jdk9/linux-x86/bin/java'
     verified = subprocess.run([str(java), '-jar', str(signer_jar), 'verify', '--verbose', '--print-certs',
                                '--min-sdk-version', '29', str(path)], check=True, capture_output=True, text=True)

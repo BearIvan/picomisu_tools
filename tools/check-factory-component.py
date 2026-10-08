@@ -57,7 +57,7 @@ spec.loader.exec_module(api)
 ROOT = pico.ROOT
 FACTORY = fbt.FACTORY
 SOURCE = fbt.SOURCE
-SOURCE_TREE = pico.PROJECT / 'source' / os.environ.get('PICO_SOURCE_TREE', 'aosp-10')
+SOURCE_TREE = pico.SOURCE
 WHITELIST = SOURCE_TREE / 'build/make/core/tasks/check_boot_jars/package_whitelist.txt'
 KEPT = ('factory_binary', 'codelinaro_source')
 

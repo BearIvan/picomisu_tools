@@ -19,13 +19,13 @@ import uuid
 spec = importlib.util.spec_from_file_location('pico_assembler', Path(__file__).with_name('assemble-vr-system.py'))
 pico = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(pico)
-AVB_FILE = pico.PROJECT.parent / 'source/external/avb/avbtool.py'
+AVB_FILE = pico.env.AVBTOOL
 AVB_SPEC = importlib.util.spec_from_file_location('pico_avbtool', AVB_FILE)
 avb = importlib.util.module_from_spec(AVB_SPEC)
 AVB_SPEC.loader.exec_module(avb)
 KEY = pico.SOURCE / 'external/avb/test/data/testkey_rsa4096.pem'
 OUTPUT = pico.PROJECT / 'outputs/vr-preview-01'
-STOCK = pico.PROJECT / 'stock/5.13.7-SEKO'
+STOCK = pico.env.STOCK
 TIMESTAMP = 1790603988
 
 

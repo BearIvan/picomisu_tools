@@ -7,18 +7,18 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import importlib.util as _util
 
-ROOT = Path(__file__).resolve().parents[1]
-VOLUME = Path('/mnt/wsl/PHYSICALDRIVE5p3')
-PROJECT = VOLUME / 'home/red_panda/RedPandaAndroid/pico4-pro'
+_spec = _util.spec_from_file_location('picomisu_env', Path(__file__).with_name('picomisu_env.py'))
+penv = _util.module_from_spec(_spec)
+_spec.loader.exec_module(penv)
+ROOT = penv.ROOT
+PROJECT = penv.WORK
 COMPAT = PROJECT / 'toolchains/host-compat'
 
 
 def main():
-    state = json.loads(subprocess.check_output(
-        ['findmnt', '--json', '-o', 'FSTYPE,UUID', '--target', str(VOLUME)], text=True))['filesystems']
-    if state != [{'fstype': 'ext4', 'uuid': 'a00da05f-1eb2-44b6-99f0-9109391f67dc'}]:
-        raise RuntimeError('Expected physical ext4 volume is not mounted')
+    penv.guard_volume()
     COMPAT.mkdir(parents=True, exist_ok=True)
     apt = COMPAT / 'apt'
     for name in ['lists/partial', 'cache/archives/partial']:
@@ -52,11 +52,12 @@ def main():
                          'file': str(filename), 'authenticated_apt_metadata': True})
     library_path = COMPAT / 'root/lib/x86_64-linux-gnu'
     env = dict(os.environ, LD_LIBRARY_PATH=str(library_path))
-    clang = PROJECT / 'source/aosp-10/prebuilts/clang/host/linux-x86/clang-3289846/bin/clang.real'
-    check = subprocess.run([str(clang), '--version'], env=env, check=True, capture_output=True, text=True)
+    clang = (PROJECT / 'source/aosp-10' if penv.LEGACY else penv.TOP) / 'prebuilts/clang/host/linux-x86/clang-3289846/bin/clang.real'
+    check = subprocess.run([str(clang), '--version'], env=env, check=True, capture_output=True, text=True) if clang.exists() else None
     report = {'packages': packages, 'library_path': str(library_path),
-              'clang_version_check': check.stdout.strip(), 'ubuntu_packages_installed': False}
-    destination = ROOT / 'reports/aosp-preparation/host-compat.json'
+              'clang_version_check': check.stdout.strip() if check else None, 'ubuntu_packages_installed': False}
+    destination = penv.REPORTS / 'aosp-preparation/host-compat.json'
+    destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report))
 

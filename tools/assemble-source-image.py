@@ -51,11 +51,18 @@ SOURCE_TREE = pico.SOURCE
 OUT = pico.OUT
 PRODUCT = pico.PRODUCT
 HOST = pico.HOST
-# PICO_TRIAL selects the trial (config device/pico/PICOA8110/<name>.json, staging and outputs
-# per name); source-trial-01 keeps its original UUID, salts and texts byte for byte.
-NAME = os.environ.get('PICO_TRIAL', 'source-trial-01')
+env = pico.env
+# The release recipe is device/pico/PICOA8110/release.json; its "version" names the release
+# (source-<version>: staging, outputs). PICO_TRIAL selects an old per-release config
+# device/pico/PICOA8110/<name>.json instead; source-trial-01 keeps its original UUID, salts and
+# texts byte for byte.
+if os.environ.get('PICO_TRIAL'):
+    NAME = os.environ['PICO_TRIAL']
+    CONFIG = env.DEVICE / (NAME + '.json')
+else:
+    CONFIG = env.DEVICE / 'release.json'
+    NAME = 'source-' + json.loads(CONFIG.read_text())['version']
 TOKEN = NAME.upper().replace('-', '_')
-CONFIG = ROOT / 'device/pico/PICOA8110' / (NAME + '.json')
 STAGE = PROJECT / 'staging' / NAME
 SRC_TREE = STAGE / 'source-tree'
 TREE = STAGE / 'root'
@@ -63,8 +70,8 @@ META = STAGE / 'image-metadata'
 OUTPUT = PROJECT / 'outputs' / NAME
 FACTORY = PROJECT / 'analysis/stock-5.13.7-system/root'
 PARTITIONS = PROJECT / 'analysis/stock-5.13.7-partitions'
-STOCK = PROJECT / 'stock/5.13.7-SEKO'
-FACTORY_REPORT = ROOT / 'reports/vr-integration/factory-system.json'
+STOCK = env.STOCK
+FACTORY_REPORT = pico.REPORTS / 'factory-system.json'
 FILE_CONTEXTS = PRODUCT / 'obj/ETC/file_contexts.bin_intermediates/file_contexts.bin'
 JAVA = SOURCE_TREE / 'prebuilts/jdk/jdk9/linux-x86/bin/java'
 APKSIGNER = pico.HOST_OUT / 'framework/apksigner.jar'
@@ -72,13 +79,31 @@ AAPT2 = HOST / 'aapt2'
 TIMESTAMP = 1790719200  # 2026-09-30T00:00:00Z, fixed for reproducible images
 # Releases whose filesystem UUID, directory hash seed and verity salt were derived from the release name.
 LEGACY_IMAGE_IDS = {'source-2.%02d' % n for n in range(12)} | {'source-1.%02d' % n for n in range(5)}
-USER = 'redpanda'
+USER = env.USER
 
 digest = pico.digest
 
 
 def config():
-    return json.loads(CONFIG.read_text())
+    """The release recipe; in release.json, name and trial_properties may use {version},
+    {version_id} (2_21) and {incremental}."""
+    cfg = json.loads(CONFIG.read_text())
+    if 'version' not in cfg:
+        return cfg
+    values = {'version': cfg['version'], 'version_id': cfg['version'].replace('.', '_'),
+              'incremental': cfg['incremental']}
+
+    def expand(value):
+        if isinstance(value, str):
+            return value.format(**values) if '{' in value else value
+        if isinstance(value, list):
+            return [expand(item) for item in value]
+        if isinstance(value, dict):
+            return {key: expand(item) for key, item in value.items()}
+        return value
+    for key in ['name', 'trial_properties']:
+        cfg[key] = expand(cfg[key])
+    return cfg
 
 
 def run(arguments, **kwargs):
@@ -315,7 +340,7 @@ def stage():
     source_packages = packages(source, SRC_TREE)
     other_partition_packages = set()
     for name in ['factory-apks.json', 'additional-factory-apks.json']:
-        for package in json.loads((ROOT / 'reports/vr-integration' / name).read_text())['packages']:
+        for package in json.loads((pico.REPORTS / name).read_text())['packages']:
             other_partition_packages.add(package['package'])
     factory_all = set(factory_packages) | other_partition_packages
 
@@ -552,7 +577,12 @@ def stage():
         parent = path.rsplit('/', 1)[0] if '/' in path else ''
         if parent not in final:
             raise RuntimeError('Extra file parent missing: ' + path)
-        source_file = Path(spec['from'])
+        # Relative sources are in the device tree; ~ is the building user's home.
+        source_file = Path(os.path.expanduser(spec['from']))
+        if not source_file.is_absolute():
+            source_file = env.DEVICE / source_file
+        if not source_file.exists() and spec.get('optional'):
+            continue
         shutil.copyfile(source_file, TREE / path)
         final[path] = {'path': '/' + path, 'kind': 'file', 'uid': spec['uid'], 'gid': spec['gid'],
                        'mode': spec['mode'], 'capabilities': 0, 'origin': 'trial-extra',
@@ -602,10 +632,21 @@ def build():
     if plan['config_sha256'] != digest(CONFIG):
         raise RuntimeError('Config changed after --stage; restage')
     cfg = config()
-    boot_report = json.loads((pico.REPORTS / 'current-boot.json').read_text())
-    current_boot = Path(boot_report['current_boot_file'])
-    if digest(current_boot) != boot_report['current_boot_sha256']:
-        raise RuntimeError('Saved current boot changed')
+    # vbmeta carries the hash of the boot image the headset runs: PICOMISU_BOOT (e.g. a Magisk boot
+    # read from the headset), else the legacy saved boot, else the factory boot of the pinned OTA.
+    if os.environ.get('PICOMISU_BOOT'):
+        current_boot = Path(os.environ['PICOMISU_BOOT']).resolve()
+        boot_report = {'current_boot_sha256': digest(current_boot), 'source': 'PICOMISU_BOOT'}
+    elif env.LEGACY:
+        boot_report = json.loads((pico.REPORTS / 'current-boot.json').read_text())
+        current_boot = Path(boot_report['current_boot_file'])
+        if digest(current_boot) != boot_report['current_boot_sha256']:
+            raise RuntimeError('Saved current boot changed')
+    else:
+        current_boot = STOCK / 'boot.img'
+        boot_report = {'current_boot_sha256': digest(current_boot), 'source': 'factory OTA boot.img'}
+        if boot_report['current_boot_sha256'] != env.LOCK['images']['boot.img']['sha256']:
+            raise RuntimeError('Factory boot differs from the lock')
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for name in ['system.img', 'vbmeta.img', 'vbmeta_system.img', 'system.sparse.img']:
         if (OUTPUT / name).exists():
@@ -622,8 +663,11 @@ def build():
         lines.append('%s %d %d %s capabilities=0x%x\n' % (path, entry['uid'], entry['gid'], entry['mode'],
                                                         entry.get('capabilities', 0)))
     fs_config.write_text(''.join(lines))
-    lp = json.loads((ROOT / 'reports/board/lp-metadata.json').read_text())
-    partition_size = next(p['bytes'] for p in lp['metadata'][0]['partitions'] if p['name'] == 'system')
+    if env.LEGACY:
+        lp = json.loads((ROOT / 'reports/board/lp-metadata.json').read_text())
+        partition_size = next(p['bytes'] for p in lp['metadata'][0]['partitions'] if p['name'] == 'system')
+    else:
+        partition_size = env.LOCK['images']['system']['bytes']
     if partition_size != 5704732672:
         raise RuntimeError('Unexpected logical system size')
     maximum = int(builder.avb_command('add_hashtree_footer', '--partition_size', partition_size,
@@ -652,6 +696,11 @@ def build():
         base_fs_in = PROJECT / 'staging' / base_release / 'image-metadata' / 'base_fs.txt'
         if not base_fs_in.exists():
             raise RuntimeError('No base_fs for ' + base_release + ': ' + str(base_fs_in))
+        base_args = ['-d', base_fs_in]
+    elif cfg.get('base_fs'):
+        # The block layout of the previous release, kept in the device tree (base_fs/<version>.txt).
+        base_release = 'source-' + cfg['base_release']
+        base_fs_in = env.DEVICE / cfg['base_fs']
         base_args = ['-d', base_fs_in]
     population = run([HOST / 'e2fsdroid', '-e', '-s', '-T', TIMESTAMP, '-C', fs_config, '-S', FILE_CONTEXTS,
                       '-D', base_fs_out] + base_args + ['-f', TREE, '-a', '/', raw], env=env)
