@@ -1,0 +1,1 @@
+# Soong/Make finder: do not scan the host tools (build/soong/ui/build/finder.go pruneFiles)

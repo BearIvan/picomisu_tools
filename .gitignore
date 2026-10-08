@@ -16,5 +16,3 @@ outputs/
 device/pico/PICOA8110/factory-libs/factory/
 /keys/
 
-# Device tree: clone of picomisu_device_pico_PICOA8110
-/device/
