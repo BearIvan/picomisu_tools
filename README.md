@@ -8,10 +8,11 @@ the headset, and they install it. `repo sync` checks this repository out at `pic
 Picomisu tree.
 
 **The build and install guide is in the [manifest README](https://github.com/BearIvan/picomisu#readme).**
-To build:
+To build and install:
 
 ```bash
 picomisu/build.sh
+picomisu/install.sh
 ```
 
 ## Main tools
@@ -19,6 +20,7 @@ picomisu/build.sh
 | Path | Purpose |
 |---|---|
 | `build.sh` | Builds the release with one command: factory firmware, factory files, `make`, release image and checks |
+| `install.sh`, `tools/picomisu-install.py` | Installs the release on the headset over USB, or returns it to factory; builds and writes the updater recovery |
 | `build/build-caf.sh` | Sets up the CAF build environment (`lunch aosp_pico4pro-*`, `make`) |
 | `config/stock-firmware.lock.json` | URL and SHA-256 of the factory PICO OS 5.13.7 OTA and its images |
 | `tools/prepare-stock.py`, `tools/extract-stock.py` | Download the pinned OTA and reconstruct the factory partition images |
