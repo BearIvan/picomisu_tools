@@ -49,3 +49,8 @@ The build does not need them.
 
 This repository holds no PICO factory binaries. The release pipeline reads the factory images
 reconstructed from the pinned OTA and checks them against `config/stock-firmware.lock.json`.
+
+## License
+
+[GNU General Public License v3.0](LICENSE). `tools/third_party/avb` (avbtool from AOSP) keeps its
+MIT license.

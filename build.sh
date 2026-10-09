@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the Picomisu release image from a repo checkout. No arguments:
 #
-#   repo init -u https://github.com/BearIvan/picomisu_manifest.git -b main --depth=1
+#   repo init -u https://github.com/BearIvan/picomisu.git -b main --depth=1
 #   repo sync -c -j8
 #   picomisu/build.sh
 #
