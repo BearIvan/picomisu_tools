@@ -16,7 +16,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 _tree = os.environ.get('PICO_SOURCE_TREE', 'aosp-10')
-_top = os.environ.get('PICOMISU_TOP') or (str(ROOT.parent) if (ROOT.parent / 'build/envsetup.sh').exists() else '')
+# build/envsetup.sh is a repo link; Windows (\wsl.localhost) does not follow it, so test its target.
+_top = os.environ.get('PICOMISU_TOP') or (str(ROOT.parent) if (ROOT.parent / 'build/make/envsetup.sh').exists() else '')
 
 if _top:
     LEGACY = False
@@ -38,7 +39,7 @@ else:
     HOST_OUT = WORK / 'out' / _tree / 'host/linux-x86'
     AVBTOOL = WORK.parent / 'source/external/avb/avbtool.py'
 
-DEVICE = ROOT / 'device/pico/PICOA8110'
+DEVICE = (ROOT if LEGACY else TOP) / 'device/pico/PICOA8110'
 STOCK = WORK / 'stock/5.13.7-SEKO'
 REPORTS = (WORK / 'reports' if not LEGACY else ROOT / 'reports')
 # The non-root user that owns staging files written by the root steps.
